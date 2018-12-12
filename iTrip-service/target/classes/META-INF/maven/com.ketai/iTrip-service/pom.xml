@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ketai</groupId>
+		<artifactId>iTrip</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>iTrip-service</artifactId>
+	<name>iTrip-service</name>
+	<dependencies>
+		<!-- 这里只要导入dao模块即可，因为dao模块中包含了pojo模块，所以不需要导入pojo了 -->
+		<dependency>
+			<groupId>com.ketai</groupId>
+			<artifactId>iTrip-dao</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+</project>

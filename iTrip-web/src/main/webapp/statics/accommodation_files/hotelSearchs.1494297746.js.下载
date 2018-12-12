@@ -1,0 +1,779 @@
+function copy_clip() {
+  var $o = $j("#copylinkinput");
+  str = $o.text();
+  $o.select();
+  if ( window.clipboardData && clipboardData.setData ) {
+    if (clipboardData.setData( 'text', str )) {
+    } else {
+      $j("#copylinkmsg").html("您的浏览器设置不允许脚本访问剪切板").show();
+    }
+  } else {
+    $j("#copylinkmsg").html("您的浏览器不支持脚本复制,请尝试手动复制").show();
+  }
+}
+
+var today = new Date();
+var factor = (today.getHours() < 19) ? 0 : 1;
+var searchKeywordsDefault = '输入驿站名称或地址';
+
+function searchHotels(name,val){
+  var fromUrl = $j("#fromUrl").val();
+  if(name == "type"){
+    fromUrl = $j("input[name='type'][value='" + val +"']").attr("typeurl");
+  } else if(name == "price"){
+    $j("input[name='price'][type='hidden']").attr("name",name);
+  }else if(name == "zoneid"){
+    $j("input[name='zoneid'][type='hidden']").attr("name",name);
+  }
+  var star = $j("#star").val();
+  
+  if(star != ""){
+    fromUrl = "star" + star;
+  }
+  var link = (fromUrl == "" ? "/hotels/" : ("/" + fromUrl + "/")) + $j("#placeEnName").val();
+  
+  if(name == "type"){
+    
+  } else if(name == "zoneid"){
+    if(val != ""){
+      link += "/" + val;
+      if(/^[0-9]+$/.test(val)) {
+        link += "/sq";
+      } 
+    }
+  } else {
+    var zoneid = $j("#zoneid").val();
+    if(zoneid != ""){
+      link += "/" + zoneid + "/sq";
+    }
+  }
+  
+  var price_sort = "/";
+  if(name == "price"){
+    price_sort += (val == "" ? 0 : val); 
+  }else{
+    var price = $j("#price").val();
+    price_sort += (price == "" ? 0 : price);
+  }
+  var sort = $j("#sort").val();
+  price_sort += "_" + (sort == "" ? "default" : sort);
+  if(price_sort != "/0_default"){
+    link += price_sort;
+  }
+  showWait();
+  //location.href = link;
+  $j("#dateParamFrom").attr("action",link);
+  $j("#dateParamFrom").submit();
+}
+
+(function(){
+  $j("#from").YododoAutocomplete({
+    placetype : 'j',
+    pidcallbackfunc : selectDate
+  });
+  $j("#starttime").YododoDatePicker({
+    factor : factor,
+    limitFactor : 90,
+    endFactor : factor + 1,
+    endtimeLimitFactor : 97
+  });
+  $j('#hostel-name').inputTip(searchKeywordsDefault, 'searchTable');
+  
+  $j("#spsubmit").click(function(){
+    $j("#sp-errMsg").html("");
+    var spstart = parseInt($j("#spstart").val()),
+        spend = parseInt($j("#spend").val());
+      if(!spstart || spstart < 0) {
+        $j("#sp-errMsg").html("您输入的价格不正确正确，请重新输入");
+        $j("#spstart").focus();
+        return false;
+      }
+      if(!spend || spend < 0 || spstart > spend) {
+        $j("#sp-errMsg").html("您输入的价格不正确正确，请重新输入");
+        $j("#spend").focus();
+        return false;
+      }
+      
+      if(spstart > spend) {
+        $j("#sp-errMsg").val("您输入的价格不正确正确，请重新输入");
+        $j("#spend").focus();
+        return false;
+      }
+      $j("#spprice").val(spstart + "-" + spend).attr("checked","checked");
+      searchHotels("price", spstart + "-" + spend);
+      return false;
+  });
+  
+  $j(".slei-b li :radio,#zone li :radio, #hoteltype li :radio").siblings("span").click(function(){
+    $j(this).siblings().attr("checked","checked");
+    var val = $j(this).siblings().val();
+    var name = $j(this).siblings().attr("name");
+    searchHotels(name, val)
+  });
+  
+  $j(".slei-b li :radio,#zone li :radio").click(function(){
+    $j(this).siblings().click();
+  });
+  
+  $j(".priceLink,.zoneLink, .typeLink").click(function(){
+    $j(this).parent().siblings().removeClass("current");
+    $j(this).parent().attr("class","current");  
+    return false;
+  });
+  
+})();
+
+function selectDate(pid) {
+  $j("#starttime").focus();
+}
+
+function search() {
+  $j("#googlemap").search($j("#searchKey").val());
+}
+
+window.onscroll=function(){
+  var scrollTop = document.body.scrollTop|document.documentElement.scrollTop;
+  if(scrollTop > 50) {
+    $j("#headerRightTop").show();
+  }
+};
+$j("#headerRightTop").click(function(){
+  _gaq.push(['_trackEvent', 'headerRightTop', 'hotel']);  
+});
+
+var pageBaiduMap = null;
+function hotelMapShow(bJd, bWd) {
+  $j.blockUI({
+    message: $j("#pageBaiduMapDiv"),
+    fadeIn: 700, fadeOut: 700,
+    overlayCSS:{cursor: 'default'},
+    css: {
+      top : ($j(window).height() - 460) / 2 + 'px',
+      left : ($j(window).width() - 850) / 2 + 'px',
+      width : '850px'
+    }
+  });
+  pageBaiduMap = $j("#pageBaiduMap").mapHotelMarker(pageHotelMarkers, '${place.name}',{'target': '${target}'});
+  pageBaiduMap.panTo(bJd, bWd);
+  $j('#pageBaiduMapDiv').bind('mousewheel', function(){
+    $j("#pageBaiduMap").close();
+  });
+}
+
+$j(document).ready(function() {
+  //pageBaiduMap = $j("#bottomBaiduMapDiv").mapHotelMarker(pageHotelMarkers, '${place.name}',{'target': '${target}'});
+  $j('.rlist .x8').mouseenter(function (){
+    $j(this).children('.price-tip-container').children('.price-tip-box').show();
+  });
+  $j('.rlist .x8').mouseleave(function (){
+    $j(this).children('.price-tip-container').children('.price-tip-box').hide();
+  });
+  $j("#baiduMapClose").click(function() {
+    pageBaiduMap.destroy();
+    $j.unblockUI();
+    pageBaiduMap=null;
+  });
+  $j("#searchKey").keydown(function(e) {
+     if (e.keyCode == 13) {
+       $j("#searchMapBtn").click();
+     }
+  });
+  // Imitation tab toggle map
+  $j('#content #view-mode ul li').click(function(){
+    if ( $j(this).hasClass('unactived') ) {
+      $j(this).parents('#content').children('#e-map').slideToggle('fast', loadBaiduMap);
+      $j(this).parents('ul').children('li').toggleClass('unactived');
+    }
+  });
+
+  $j("body").click(function() {
+    $j('#popup_box').hide();
+  });
+  $j("#destination").click(function(event) {
+    $j('#popup_box').show();
+    event.stopPropagation();
+    $j('#popup_box').show();
+  });
+  $j('#popup_box').click(function(event) {
+    event.stopPropagation();
+  });
+
+  $j("a[id$='-trigger']").click(function(){
+    var $span = $j(this),
+    spanId = $span.attr("id"),
+    divId = spanId.substr(0,spanId.length -8);
+    if(divId == "spot"){
+      $j("#"+ divId).attr("style","top:48px;");
+    }else if (divId == "district"){
+      $j("#"+ divId).attr("style","top:72px;");
+    }
+    $j("#district,#zone,#spot").hide();
+    $j("#district,#zone,#spot").hide();
+    $j("#"+ divId).show();
+  });
+});
+
+function STroomImgList(roomListId,rid){ 
+  var roomImgId = "roomImgs_" + roomListId;
+  if(document.getElementById(roomImgId).style.display=='none'){
+    document.getElementById(roomImgId).style.display="";
+    document.getElementById("roomname_"+roomListId).className = "ico-inner-up";
+  }
+  else{
+    document.getElementById(roomImgId).style.display="none";
+    document.getElementById("roomname_"+roomListId).className = "ico-inner-down";
+  }
+  //$j(roomImgId).slideToggle();
+  $j.ajax({
+    url: '/hotel/ajaxHotelRoomPhotos.ydd',
+    type: 'GET',
+    data: 'rid='+rid+'&roomListId='+roomListId,
+    timeout: 10000,
+    success: function(msg){
+      $j('#roomImg_'+roomListId).html(msg);
+      $j(".pic dl dd .simg img").mouseover(function(){
+        var $this = $j(this);
+        var tooltip = $this.attr("src").replace("_s","") ;    
+        $this.parentsUntil("dl","dd").find(".bimg").show();
+        $this.parentsUntil("dl","dd").find(".bimg img:first-child").attr("src",tooltip).attr("alt","大图预览");        
+      }).mouseout(function(){
+        $j(this).parentsUntil("dl","dd").find(".bimg").hide();
+      });
+    }
+  });
+}
+
+function showWait(){
+  Dialog.info(
+    "<br/>",
+    { width:255, height:142, effectOptions:{duration:0}, zIndex:1000 }
+  );
+  return true;
+}
+
+function checkForm(form){
+  if (isValidForm(form)) {
+    var result = true;
+    var pid = $('pid').value.strip();
+    var placeName = $('placeName').value.strip();
+    var targetUrl = $('targetUrl').value.strip();
+    if(pid.length == 0){
+      writeErrMsg('from', '请输入希望查找景区！');
+      result = false;
+    }
+
+    var starttime = $('starttime').value;
+    var endtime = $('endtime').value;
+    if((starttime == '' || starttime.length == 0) && !(endtime == '' || endtime.length == 0)){
+      writeErrMsg('starttime', '入住日期不能为空！');
+      result = false;
+    }
+    if((endtime == '' || endtime.length == 0) && !(starttime == '' || starttime.length == 0)){
+      writeErrMsg('endtime', '离开日期不能为空！');
+      result = false;
+    }
+
+    //check whether date is valid
+    if(starttime.length!= 0 && endtime.length!= 0){
+      var beginDate = $j.datepicker.parseDate('yy-mm-dd', starttime);
+      var endDate = $j.datepicker.parseDate('yy-mm-dd', endtime);
+      if(endDate.getTime() < beginDate.getTime()){
+        writeErrMsg("endtime", "离开日期不得小于入住日期！");
+        result = false;
+      }
+      if((endDate.getTime() - beginDate.getTime())/(1000*60*60*24) > 15){
+        writeErrMsg("starttime", "一次只能查询15天内的房价！");
+        result = false;
+      }
+    }
+
+    if(result) {
+      /*var hostelName = $('hostel-name').value.strip();
+      if(hostelName == searchKeywordsDefault){
+        $('hostel-name').value = '';
+        hostelName = "";
+      }*/
+
+      if(targetUrl.length != 0){
+        $j(form).attr("action",targetUrl);
+        showWait();
+        return true;
+      }else{
+        $j(".nodate").show();
+        return false;
+      }
+    }
+    return false;
+  }
+  return false;
+}
+function showMoreCondition(typeid){
+  if(document.getElementById(typeid).style.display=='none'){
+    document.getElementById(typeid).style.display="";
+  }
+  else{
+    document.getElementById(typeid).style.display="none";
+  }
+}
+
+function goMapSearch() {
+  var starttime = _datepickerGetStringTrim('starttime');
+  var endtime = _datepickerGetStringTrim('endtime');
+  var paramStr = "";
+  if(starttime.length!= 0 && endtime.length!= 0){
+    var beginDate = $j.datepicker.parseDate('yy-mm-dd', starttime);
+    var endDate = $j.datepicker.parseDate('yy-mm-dd', endtime);
+    if(endDate.getTime() < beginDate.getTime()){
+      clearErrMsg("starttime");
+      writeErrMsg("endtime", "离开日不得小于入住日！");
+      return false;
+    }
+    if((endDate.getTime() - beginDate.getTime())/(1000*60*60*24) > 7){
+      clearErrMsg("starttime");
+      writeErrMsg("endtime", "只能查询一周内的房价！");
+      return false;
+    }
+    paramStr = "?checkin="+starttime + "&checkout="+endtime;
+  }
+  if ($j("#pid").val() == "") {
+    window.location="/hotel/map/Shanghai" + paramStr;
+  } else {
+    $j("#goMapCheckin").val(starttime);
+    $j("#goMapCheckout").val(endtime);
+    var placeName = $j("#placeName").val();
+    $j("#goMapForm").attr("action","/hotel/map/" + placeName).submit();
+  }
+}
+
+$j("#orderDiv a").click(function(){
+  var aa = $j(this).attr("href");
+  $j("#dateParamFrom").attr("action",$j(this).attr("href"));
+  $j("#dateParamFrom").submit();
+  return false;
+});
+
+$j("#hostel-list li .hintro strong > a:first-child,#hotHotelTop li a,#hostel-list li .hintro a.himg").click(function(){
+  var starttime = $j("#starttime").val();
+  var endtime = $j("#endtime").val();
+  var href = $j(this).attr("href");
+  href = href + "?starttime=" + starttime + "&endtime=" + endtime;
+  window.open(href);
+  return false; 
+});
+
+
+var canclosediv = true;
+function changeCanCloseDivStatus(flag){
+  canclosediv = flag;
+}
+$j("#citySearchTableAjax").load("/hotel/ajaxCitySearchTable.ydd",{"searchType" : "hotel"}, function(){
+  $j("#searchTable a[id^='quicklinkdiv_']").click(function(){
+    var sid = $j(this).attr("id");
+    var placeName = $j(this).attr("placeName");
+    var splits = sid.split("_");
+    $j("#" + splits[0] + "_" + splits[1] + "_content").hide();
+    if(splits[2] != 'close') {
+      $j("#" + splits[1]).val($j(this).html());
+      $j("#pid").val(splits[2]);
+      $j("#placeName").val(placeName);
+      $j("#targetUrl").val("/hotels/" + placeName);
+    }
+  });
+
+  $j("#from").click(function(){
+    var sid = $j(this).attr("id");
+    $j("#" + "quicklinkdiv" + "_" + sid + "_content").show();
+    $j("#" + sid).focus().select();
+  });
+
+  document.onmousedown=function(event){
+    if(canclosediv){
+      $j("#searchTable div[id^='quicklinkdiv_'][id$='_content']").hide();
+      $j("#searchTable div[id^='quicklinkdiv_'][id$='_title']").show();
+    }
+  };
+});
+
+$j('#hostel-list .himg img.lazy').jail();
+
+$j.ajax({
+  url: '/hotel/getAjaxRoomPrice.ydd',
+  type: 'GET',
+  data: 'hotelIds='+$j("#hotelIds").text()+'&starttime='+$j("#starttime").val()+'&endtime='+$j("#endtime").val()+'&pricefrom='+$j("#pricefrom").val()+'&priceto='+$j("#priceto").val()+'&sort='+$j("#sort").val(),
+  timeout: 10000,
+  success: function(msg){
+    var posNumsStr =  $j("#posNums").val();
+    var posNums = posNumsStr.split("_");
+    for(var i = 0; i < posNums.length; i++){
+      var posNum = posNums[i];
+      if(posNum.length > 1){
+        var msghtml = $j(msg);
+        var content = msghtml.filter("#"+posNum).children();
+        var moreRoomLinkContent = msghtml.filter("#more-"+posNum);
+        var priceContainer = $j("#"+posNum);
+        if(priceContainer.attr("yddInn") == "1") {
+          content.find(".x9[tag='fanxian']").html('<i class="fcgreen" style="position: absolute; color:red; left:-5px; top:0; width: 130px;"><img src="http://img1.yododo.com.cn/images/hotel/events/20160706/zhe2.gif" style="width:18px;">加入会员，享8.8折<span style="top:0; bottom:auto; z-index: 1111"><img src="http://img1.yododo.com.cn/images/hotel/events/20160706/d2d.png" style="border: 10px solid #fff;" width="150"><br />微信扫一扫，享8.8折</span></i>');
+        }
+        priceContainer.html(content).after(msghtml.filter("#more-"+posNum));
+      }
+    }
+    
+    $j("a[id^='lookall_h']").click(function(){
+      var id = $j(this).attr("id");
+      var hotelnum;
+      if(id.length == 10){
+        hotelnum = id.substring(id.length-1,id.length);
+      }else if(id.length == 11){
+        hotelnum = id.substring(id.length-2,id.length);
+      }
+      var classname = $j("#lookall_h"+hotelnum).attr("class");
+      if(classname == "fleft ico-inner-down"){
+        $j("#h" + hotelnum +" > span").attr("style","text-align: center;display: block;")
+        $j("#lookall_h"+hotelnum).attr("class","fleft ico-inner-up");
+        var site1content = $j("#h" + hotelnum + "_r4").html();
+        if((typeof(site1content) == "undefined" ||site1content == "")){
+          var hid = $j("#hotelid_" + hotelnum).text();
+          $j.ajax({
+            url: '/hotel/getAjaxRoomPrice.ydd',
+            type: 'GET',
+            data: 'hotelIds='+ hid +'_' + hotelnum +'__&starttime='+$j("#starttime").val()+'&endtime='+$j("#endtime").val()+'&pricefrom='+$j("#pricefrom").val()+'&priceto='+$j("#priceto").val()+'&sort='+$j("#sort").val()+'&site=1',
+            timeout: 10000,
+            success: function(msg){
+              //$j("#h" + hotelnum +" > span").hide();
+              var msghtml = $j(msg);
+              var content = msghtml.filter("#h"+hotelnum).children();
+              $j("#h"+hotelnum).append(content);
+              /*if (isFromSearchEngine()) {
+                  var seopromnum = seopromRemainNum();
+                  $j(".seopromnum").each(function(){
+                    $j(this).attr("title",$j(this).attr("title").replace("16个", seopromnum + "个"));
+                  })
+                  $j("div.headhover").mouseover(function(event){
+                    if(checkHover(event,this)){  
+                      $j(this).find(".seopromnum").poshytip("show");
+                    }
+                  }).mouseout(function(event){
+                    if(checkHover(event,this)){  
+                      $j(this).find(".seopromnum").poshytip("hide");
+                    }
+                  });
+                
+                $j(".seopromnum").show();
+                $j("span .x9 span .fcred,span[tag=fanxian]").hide();
+                  $j("span .fcsalebox").poshytip({
+                    className: 'tip-yellowsimple',
+                    allowTipHover: false,
+                    showOn: 'none',
+                    alignTo: 'target',
+                    alignX: 'center',
+                    offsetY: 5,
+                    showTimeout: 1,
+                    bgImageFrameSize: 9,
+                    content: function(){
+                      return $j(this).attr("tip");
+                    }
+                  });
+                } else {*/
+                  $j(".rlist .room .x1 span[class='ico-c'],.rlist .room .x9 span[class='bonusbox']").poshytip({
+                    className: 'tip-yellowsimple',
+                    allowTipHover: false,
+                    alignTo: 'target',
+                    alignX: 'center',
+                    offsetY: 5,
+                    showTimeout: 1,
+                    bgImageFrameSize: 9
+                  });
+                }
+            /*}*/
+          });
+        }else{
+          $j("div[id^='h"+hotelnum+"_r']:gt(2)").show();
+        }
+          $j("#h" + hotelnum +" > span").hide();
+      }else if(classname == "fleft ico-inner-up"){
+        $j("#lookall_h"+hotelnum).attr("class","fleft ico-inner-down");
+        $j("div[id^='h"+hotelnum+"_r']:gt(2)").hide();
+      }
+    });
+    $j(".rlist .room .x1 span[class='ico-c']").poshytip({
+      className: 'tip-yellowsimple',
+      allowTipHover: false,
+      alignTo: 'target',
+      alignX: 'center',
+      offsetY: 5,
+      showTimeout: 1,
+      bgImageFrameSize: 9
+    });
+    /*****促****/
+    $j("div[id^='cu-']").each(function(){
+      var cuHid = $j(this).attr("id");
+      var chid = cuHid.split('-')[1];
+      var cuTip = $j("#cuTip-" + chid);
+      $j(".himg [id^='hotelpar_" + chid + "']").addClass("mt35");
+      cuTip.show();
+      $j("#cuInfo-" + chid).html($j(this).html());
+      cuTip.mouseover(function(){
+        $j("#cuInfo-" + chid).show();
+      });
+      cuTip.mouseout(function(){
+        $j("#cuInfo-" + chid).hide();
+      });
+    });
+    /*if (isFromSearchEngine()) {
+      var seopromnum = seopromRemainNum();
+      $j(".seopromnum").each(function(){
+        $j(this).attr("title",$j(this).attr("title").replace("16个", seopromnum + "个"));
+      })
+      inn = 0;
+      $j("div.headhover").mouseover(function(event){
+        if(checkHover(event,this)){  
+          $j(this).find(".seopromnum").poshytip("show");
+        }
+      }).mouseout(function(event){
+        if(checkHover(event,this)){  
+          $j(this).find(".seopromnum").poshytip("hide");
+        }
+      });
+      
+      $j(".seopromnum").show();
+      $j("span .x9 span .fcred,span[tag=fanxian]").hide();
+      $j("span .fcsalebox").poshytip({
+        className: 'tip-yellowsimple',
+        allowTipHover: false,
+        showOn: 'none',
+        alignTo: 'target',
+        alignX: 'center',
+        offsetY: 5,
+        showTimeout: 1,
+        bgImageFrameSize: 9,
+        content: function(){
+          return $j(this).attr("tip");
+        }
+      });
+    } else {*/
+      $j(".rlist .room .x9 span[class='fcorange2'],.rlist .room .x9 span[class='bonusbox']").poshytip({
+        className: 'tip-yellowsimple',
+        allowTipHover: false,
+        alignTo: 'target',
+        alignX: 'center',
+        offsetY: 5,
+        showTimeout: 1,
+        bgImageFrameSize: 9
+      });
+    /*}*/
+  }
+});
+
+
+$j(function(){
+
+  //给标签增加提示效果
+  $j(".level-ts span[class='fcorange2']").poshytip({
+    className: 'tip-yellowsimple',
+    allowTipHover: false,
+    alignTo: 'target',
+    alignX: 'center',
+    offsetY: 5,
+    showTimeout: 1,
+    bgImageFrameSize: 9
+  })
+  
+
+})
+$j("a[id^='lookallElong_h']").click(function(){
+    var id = $j(this).attr("id");
+    if(id.length != 0){
+      var hotelnum;
+      if(id.length == 15){
+        hotelnum = id.substring(id.length-1,id.length);
+      }else if(id.length == 16){
+        hotelnum = id.substring(id.length-2,id.length);
+      }
+      var classname = $j("#lookallElong_h"+hotelnum).attr("class");
+      if(classname == "fleft ico-inner-down"){
+        $j("#lookallElong_h"+hotelnum).attr("class","fleft ico-inner-up");
+        $j("div[id^='h"+hotelnum+"_r']:gt(2)").show();
+      }else if(classname == "fleft ico-inner-up"){
+        $j("#lookallElong_h"+hotelnum).attr("class","fleft ico-inner-down");
+        $j("div[id^='h"+hotelnum+"_r']:gt(2)").hide();
+      }
+    }
+  });
+
+$j("#hotelInfoToggle").click(function(){
+  $j("#reviewList").toggle();
+  var mark = $j("#hotelInfoToggleMark").html();
+  if(mark == '+'){
+    $j("#hotelInfoToggleMark").html("-");
+  }else if(mark == '-'){
+    $j("#hotelInfoToggleMark").html("+");
+  }
+});
+
+$j("#unionAD a").click(function(){
+  $j("#unionAD").hide();
+})
+
+$j("#zone").click(function(){
+  $j("#zone").hide();
+})
+
+
+$j("body").click(function(){
+  $j(".nodate").hide();
+})
+
+
+$j().ready(function(){
+  $j("#SMSExtension").click(function(){
+    $j("#SMSExtensionBox").toggle();
+  });
+  $j("#dj-close").click(function(){
+    $j(this).parent().hide();
+    $j("#sendmsmMsg").text("");
+    $j("#clearPhone").click();
+  });
+
+  $j("#clearPhone").click(function(){
+    $j(this).siblings().val("");
+  });
+
+  function changeImg(){
+    var imgSrc = $j("#mvcode").next();
+    var src = imgSrc.attr("src");
+    var timestamp = (new Date()).valueOf();
+    src = "/common/verify_code.jsp" + "?timestamp=" + timestamp;
+    imgSrc.attr("src",src);
+  }
+  
+  
+  $j("#sendsms").click(function(){
+    var reg = /^[0-9]*$/; 
+    var mobile = $j("#mobile").val();
+    var verifycode = $j("#mvcode").val();
+    var flag = 0;
+    if(!reg.test(mobile) || mobile == "" || mobile.length != 11){
+      $j("#sendmsmMsg").text("请输入正确的手机号!").show();
+      return;
+    }
+    if(verifycode == "" || verifycode.length !=4){
+      $j("#sendmsmMsg").text("请输入正确的验证码!").show();
+      return;
+    }
+    $j("#sendmsmMsg").text("正在发送。。。").show();
+    var suid = $j("#sessionSuid").val();
+    var ondutymid = $j("#ondutymid").val();
+    var pid = $j("#pid").val();
+    var rcmdFrom = $j("#rcmdFrom").val();
+    $j.ajax({
+      url: '/hotel/ajaxSendHotelRcmdMsg.ydd?ondutymid=' + ondutymid + '&pid=' + pid + '&rcmdFrom=' + rcmdFrom + '&rcmdtype=batch',
+      type: 'GET',
+      data: 'mobile='+mobile + '&verifycode=' + verifycode,
+      timeout: 10000,
+      error: function(){
+        changeImg();
+        $j("#sendmsmMsg").text("发送失败!").show();
+      },
+      success: function(msg){
+          changeImg();
+        if(msg == '1'){
+          $j("#sendmsmMsg").text("请输入正确的验证码!").show();
+        }else if(msg == '2'){
+          $j("#sendmsmMsg").text("请输入正确的手机号!").show();
+        }else if(msg == '3'){
+          $j("#sendmsmMsg").text("发送失败!").show();
+        }else{
+          $j("#sendmsmMsg").text("已发送!").show();
+          $j("#mobile").val("");
+        }
+        $j("#mvcode").val("");
+      }
+    });
+  });
+  $j("#closeBar").click(function(){
+    $j(this).parents(".fenxb").hide();
+  });
+  
+  $j("#copylink").click(function(){
+    $j("#copylinkdiv").toggle();
+    $j("#copylinkmsg").html("").hide();
+  });
+  $j("#copylinkdiv .close").click(function(){
+    $j("#copylinkdiv").hide();
+    $j("#copylinkmsg").html("").hide();
+  });
+});
+
+function isFromSearchEngine(){
+  var fromid_cookie = $j.cookie("fromid");
+  var ref_sale_cookie = $j.cookie("ref_sale");
+  var ref_sale2_cookie = $j.cookie("ref_sale2");
+  if ((fromid_cookie == null || fromid_cookie.length == 0) 
+      && (ref_sale_cookie || ref_sale2_cookie) ) {
+      if ((ref_sale_cookie && (ref_sale_cookie.indexOf("baidu") > -1 || ref_sale_cookie.indexOf("soso") > -1 
+          || ref_sale_cookie.indexOf("so.com") > -1 || ref_sale_cookie.indexOf("sogou") > -1 )) || (ref_sale2_cookie && (ref_sale2_cookie.indexOf("baidu") > -1 || ref_sale2_cookie.indexOf("soso") > -1 
+          || ref_sale2_cookie.indexOf("so.com") > -1 || ref_sale2_cookie.indexOf("sogou") > -1 )) ) {
+        return true;
+      }
+      return false;
+  }
+}
+
+function seopromRemainNum(){
+  var countpromnum = 16;
+  var seopromtime = getcookie("_se_pro_time");
+  var nowtime = new Date().getTime();
+  if (seopromtime) {
+    seopromtime = parseInt(seopromtime);
+    if (nowtime < (seopromtime + 1000 * 10)  ) {
+      return countpromnum;
+    } else if (nowtime >= (seopromtime + 1000 * 10) && nowtime < (seopromtime + 1000 * 30)){
+      return countpromnum - 1;
+    } else if (nowtime >= (seopromtime + 1000 * 60) && nowtime < (seopromtime + 1000 * 90)){
+      return countpromnum - 3;
+    } else if (nowtime >= (seopromtime + 1000 * 90) && nowtime < (seopromtime + 1000 * 150)){
+      return countpromnum - 5;
+    } else if (nowtime >= (seopromtime + 1000 * 150) && nowtime < (seopromtime + 1000 * 300)){
+      return countpromnum - 10;
+    } else {
+      return 3;
+    }
+  } else {
+    setCookie("_se_pro_time", nowtime, 86400000);
+    return countpromnum;
+  }
+}
+/** 
+ * 下面是一些基础函数，解决mouseover与mouserout事件不停切换的问题（问题不是由冒泡产生的） 
+ */  
+function checkHover(e, target) {  
+    if (getEvent(e).type == "mouseover") {  
+        return !contains(target, getEvent(e).relatedTarget  
+                || getEvent(e).fromElement)  
+                && !((getEvent(e).relatedTarget || getEvent(e).fromElement) === target);  
+    } else {  
+        return !contains(target, getEvent(e).relatedTarget  
+                || getEvent(e).toElement)  
+                && !((getEvent(e).relatedTarget || getEvent(e).toElement) === target);  
+    }  
+}  
+  
+function contains(parentNode, childNode) {  
+    if (parentNode.contains) {  
+        return parentNode != childNode && parentNode.contains(childNode);  
+    } else {  
+        return !!(parentNode.compareDocumentPosition(childNode) & 16);  
+    }  
+}  
+//取得当前window对象的事件  
+function getEvent(e) {  
+    return e || window.event;  
+}  
+$j("a[id^='parLead']").mouseover(function(){
+  var id = $j(this).attr("id");
+  var showParid = "showPar" + id.substring(7);
+  $j("a[id^='parLead']").removeClass();
+  $j(this).addClass("current");
+  $j("ul[id^='showPar']").hide();
+  $j("#" + showParid).show();
+});
