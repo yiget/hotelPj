@@ -20,7 +20,6 @@
         <setting name="defaultExecutorType" value="SIMPLE"/>
 
 
-
         <setting name="mapUnderscoreToCamelCase" value="true"/>
 
         <!--允许JDBC支持自动生成主键,需要驱动的兼容-->

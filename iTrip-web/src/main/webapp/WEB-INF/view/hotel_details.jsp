@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0112)http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5?tab=roomlist&starttime=2018-12-02&endtime=2018-12-03 -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script charset="utf-8" src="./hotel_details_files/v.js.下载"></script><script async="" type="text/javascript" src="./hotel_details_files/v2"></script>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script charset="utf-8" src="statics/hotel_details_files/v.js.下载"></script><script async="" type="text/javascript" src="statics/hotel_details_files/v2"></script>
 
 <meta name="robots" content="all">
   <meta http-equiv="imagetoolbar" content="no">
@@ -19,10 +19,10 @@
 <link rel="apple-touch-icon" href="http://img1.yododo.com.cn/favicon_256x256.png">
 <link rel="canonical" href="http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5">
 <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5">
-<link rel="stylesheet" type="text/css" href="./hotel_details_files/h1482760026.css" media="screen" charset="utf-8"><!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="statics/hotel_details_files/h1482760026.css" media="screen" charset="utf-8"><!--[if lt IE 7]>
   <link rel="stylesheet" type="text/css" media="screen" href="http://img1.yododo.com.cn/css/ie.1492403414.css"/>
   <![endif]-->
-<link href="./hotel_details_files/cn2014-commons.1509415012.css" type="text/css" rel="stylesheet"><script async="" type="text/javascript" src="./hotel_details_files/dxwyzYsv8r4k_sadbi-bnq.js.下载"></script><script type="text/javascript" src="./hotel_details_files/f.txt" async=""></script><script async="" type="text/javascript" src="./hotel_details_files/ti.js.下载"></script><script src="./hotel_details_files/hm.js.下载" async="true"></script><script type="text/javascript">
+<link href="statics/hotel_details_files/cn2014-commons.1509415012.css" type="text/css" rel="stylesheet"><script async="" type="text/javascript" src="statics/hotel_details_files/dxwyzYsv8r4k_sadbi-bnq.js.下载"></script><script type="text/javascript" src="statics/hotel_details_files/f.txt" async=""></script><script async="" type="text/javascript" src="statics/hotel_details_files/ti.js.下载"></script><script src="statics/hotel_details_files/hm.js.下载" async="true"></script><script type="text/javascript">
 var _hmt = _hmt || [];
 var _gaq = _gaq || [];
 
@@ -80,14 +80,14 @@ function addTrackEvent(action, opt_label, opt_value){
 } 
 
 </script>
-<script type="text/javascript" src="./hotel_details_files/h-431559847.js.下载" charset="utf-8"></script><script type="text/javascript"> var $j = jQuery.noConflict(); </script>
-<script src="./hotel_details_files/ga.js.下载" async="true"></script><script src="./hotel_details_files/share.js.下载"></script><script src="./hotel_details_files/f(1).txt"></script><link rel="stylesheet" href="./hotel_details_files/slide_share.css"></head>
+<script type="text/javascript" src="statics/hotel_details_files/h-431559847.js.下载" charset="utf-8"></script><script type="text/javascript"> var $j = jQuery.noConflict(); </script>
+<script src="statics/hotel_details_files/ga.js.下载" async="true"></script><script src="statics/hotel_details_files/share.js.下载"></script><script src="statics/hotel_details_files/f(1).txt"></script><link rel="stylesheet" href="statics/hotel_details_files/slide_share.css"></head>
 <body>
 
   <div class="head-cn-t clearfix">
             <div class="w984">
               <a class="fleft" title="多多驿站致力于为全球自助游爱好者提供旅游目的地客栈、旅舍、家庭旅馆的住宿预订平台" href="home.jsp">
-                <img alt="多多驿站-自助游住宿订房首选品牌" src="./hotel_details_files/logo-2.png">
+                <img alt="多多驿站-自助游住宿订房首选品牌" src="statics/hotel_details_files/logo-2.png">
               </a>
               <div class="head-menu-t clearfix">
                 <a href="home.jsp" title="游多多客栈首页">首页</a>
@@ -98,7 +98,7 @@ function addTrackEvent(action, opt_label, opt_value){
 <a href="http://www.yododo.cn/hotel/events/parIndex.html" target="_blank" title="客栈趴">客栈趴</a>
 <div class="h-m-ts" onclick="window.location.href=&#39;http://www.yododo.cn/hotel/events/cellphone.html&#39;">APP下载
   <div class="hiddendiv" style="width:180px;">
-    <img alt="游多多客栈手机客户端" src="./hotel_details_files/2d-1.gif">
+    <img alt="游多多客栈手机客户端" src="statics/hotel_details_files/2d-1.gif">
   </div>
 </div>
 <div class="h-m-ts">优惠活动
@@ -173,7 +173,7 @@ function addTrackEvent(action, opt_label, opt_value){
     </div>
   </div>
 </div>
-<script type="text/javascript" src="./hotel_details_files/jquery.blockUI-2.60.min.1492403413.js.下载"></script>
+<script type="text/javascript" src="statics/hotel_details_files/jquery.blockUI-2.60.min.1492403413.js.下载"></script>
 <script type="text/javascript">
   //<![CDATA[
   var loginSuccessCallback = null;
@@ -251,8 +251,8 @@ function addTrackEvent(action, opt_label, opt_value){
   }
   //]]>
 </script>
-<link rel="stylesheet" href="./hotel_details_files/jquery-ui-1.9.custom.1492403414.css">
-<link rel="stylesheet" type="text/css" href="./hotel_details_files/h-1470041606.css" media="screen" charset="utf-8"><div class="cn-crumb w984 clearfix">
+<link rel="stylesheet" href="statics/hotel_details_files/jquery-ui-1.9.custom.1492403414.css">
+<link rel="stylesheet" type="text/css" href="statics/hotel_details_files/h-1470041606.css" media="screen" charset="utf-8"><div class="cn-crumb w984 clearfix">
     <div class="fleft">
     当前位置：&nbsp;
     <a href="http://www.yododo.cn/">旅游住宿</a> <span>&gt;</span>
@@ -296,14 +296,14 @@ function addTrackEvent(action, opt_label, opt_value){
                         <span>驿站照片</span>
                     </a>
                 <a href="javascript:;" class="iw2" style="background-image:url(http://img0.yododo.com.cn/files/review/0148/01480C5D30520149FF80808148087FA7_m.jpg);">
-                    <div><img src="./hotel_details_files/01480C5D30520149FF80808148087FA7.jpg" alt=""></div>
-            </a><a href="javascript:;" class="iw3" style="background-image:url(http://img3.yododo.com.cn/files/review/0148/01480C5D24510148FF80808148087FA7_m.jpg);"><div><img src="./hotel_details_files/01480C5D24510148FF80808148087FA7.jpg" alt=""></div>
-            </a><a href="javascript:;" class="iw2" style="background-image:url(http://img0.yododo.com.cn/files/review/0148/01480C5CF6790147FF80808148087FA7_m.jpg);"><div><img src="./hotel_details_files/01480C5CF6790147FF80808148087FA7.jpg" alt=""></div>
-            </a><a href="javascript:;" class="iw3" style="background-image:url(http://img0.yododo.com.cn/files/review/0148/01480C5CCF360146FF80808148087FA7_m.jpg);"><div><img src="./hotel_details_files/01480C5CCF360146FF80808148087FA7.jpg" alt=""></div>
-            </a><a href="javascript:;" class="iw2" style="background-image:url(http://img3.yododo.com.cn/files/review/0148/01480C5CAA010145FF80808148087FA7_m.jpg);"><div><img src="./hotel_details_files/01480C5CAA010145FF80808148087FA7.jpg" alt=""></div>
-            </a><a href="javascript:;" class="iw2" style="background-image:url(http://img2.yododo.com.cn/files/review/0148/01480C5C84780144FF80808148087FA7_m.jpg);"><div><img src="./hotel_details_files/01480C5C84780144FF80808148087FA7.jpg" alt=""></div>
-            </a><a href="javascript:;" class="iw4" style="background-image:url(http://img1.yododo.com.cn/files/review/0148/01480C5C76D70143FF80808148087FA7_m.jpg);"><div><img src="./hotel_details_files/01480C5C76D70143FF80808148087FA7.jpg" alt=""></div>
-            </a><a href="javascript:;" class="iw4" style="background-image:url(http://img3.yododo.com.cn/files/review/0148/01480C5C6CDA0142FF80808148087FA7_m.jpg);"><div><img src="./hotel_details_files/01480C5C6CDA0142FF80808148087FA7.jpg" alt=""></div>
+                    <div><img src="statics/hotel_details_files/01480C5D30520149FF80808148087FA7.jpg" alt=""></div>
+            </a><a href="javascript:;" class="iw3" style="background-image:url(http://img3.yododo.com.cn/files/review/0148/01480C5D24510148FF80808148087FA7_m.jpg);"><div><img src="statics/hotel_details_files/01480C5D24510148FF80808148087FA7.jpg" alt=""></div>
+            </a><a href="javascript:;" class="iw2" style="background-image:url(http://img0.yododo.com.cn/files/review/0148/01480C5CF6790147FF80808148087FA7_m.jpg);"><div><img src="statics/hotel_details_files/01480C5CF6790147FF80808148087FA7.jpg" alt=""></div>
+            </a><a href="javascript:;" class="iw3" style="background-image:url(http://img0.yododo.com.cn/files/review/0148/01480C5CCF360146FF80808148087FA7_m.jpg);"><div><img src="statics/hotel_details_files/01480C5CCF360146FF80808148087FA7.jpg" alt=""></div>
+            </a><a href="javascript:;" class="iw2" style="background-image:url(http://img3.yododo.com.cn/files/review/0148/01480C5CAA010145FF80808148087FA7_m.jpg);"><div><img src="statics/hotel_details_files/01480C5CAA010145FF80808148087FA7.jpg" alt=""></div>
+            </a><a href="javascript:;" class="iw2" style="background-image:url(http://img2.yododo.com.cn/files/review/0148/01480C5C84780144FF80808148087FA7_m.jpg);"><div><img src="statics/hotel_details_files/01480C5C84780144FF80808148087FA7.jpg" alt=""></div>
+            </a><a href="javascript:;" class="iw4" style="background-image:url(http://img1.yododo.com.cn/files/review/0148/01480C5C76D70143FF80808148087FA7_m.jpg);"><div><img src="statics/hotel_details_files/01480C5C76D70143FF80808148087FA7.jpg" alt=""></div>
+            </a><a href="javascript:;" class="iw4" style="background-image:url(http://img3.yododo.com.cn/files/review/0148/01480C5C6CDA0142FF80808148087FA7_m.jpg);"><div><img src="statics/hotel_details_files/01480C5C6CDA0142FF80808148087FA7.jpg" alt=""></div>
             </a></div>
         <div class="clearfix">
             <div class="fleft">
@@ -327,7 +327,7 @@ function addTrackEvent(action, opt_label, opt_value){
                             <span class="partialDisplay">本来时间改期想退订的，退不了就放弃了，还好吧</span><i class="iconfont pabs2"></i>
                         </div>
                     </div>
-            <a class="tcmap" href="javascript:;" id="smallMapBtn" title="驿站地图" rel="nofollow"><img src="./hotel_details_files/staticimage" alt="西双版纳新沙宾馆位置图"><span>查看地图</span></a>
+            <a class="tcmap" href="javascript:;" id="smallMapBtn" title="驿站地图" rel="nofollow"><img src="statics/hotel_details_files/staticimage" alt="西双版纳新沙宾馆位置图"><span>查看地图</span></a>
     </div>
 </div>
 
@@ -375,31 +375,31 @@ function addTrackEvent(action, opt_label, opt_value){
                 <strong class="head"><i class="iconfont"></i>周边驿站推荐</strong>
                 <ul class="cn-box-d s4 s5">
                     <li>
-                            <a href="http://www.yododo.cn/hotel/0163394BCAB200E9FF80808163381F39"><img src="./hotel_details_files/0163394F325800EFFF80808163381F39_sx.jpg" title="西双版纳派尔威汉唐酒店"></a>
+                            <a href="http://www.yododo.cn/hotel/0163394BCAB200E9FF80808163381F39"><img src="statics/hotel_details_files/0163394F325800EFFF80808163381F39_sx.jpg" title="西双版纳派尔威汉唐酒店"></a>
                             <p><a class="fcorange2" href="http://www.yododo.cn/hotel/0163394BCAB200E9FF80808163381F39" target="_blank">西双版纳派尔威汉唐酒店</a></p>
                             <p class="fcgary">直线距离0.86公里</p>
                             <p>¥<a class="fcorange" href="http://www.yododo.cn/hotel/0163394BCAB200E9FF80808163381F39" target="_blank">258</a>起</p>
                         </li>
                     <li>
-                            <a href="http://www.yododo.cn/hotel/016228FA798A0069FF8080816226C3C0"><img src="./hotel_details_files/01622907067E008FFF8080816226C3C0_sx.jpg" title="西双版纳那年住这国际青年旅舍"></a>
+                            <a href="http://www.yododo.cn/hotel/016228FA798A0069FF8080816226C3C0"><img src="statics/hotel_details_files/01622907067E008FFF8080816226C3C0_sx.jpg" title="西双版纳那年住这国际青年旅舍"></a>
                             <p><a class="fcorange2" href="http://www.yododo.cn/hotel/016228FA798A0069FF8080816226C3C0" target="_blank">西双版纳那年住这国际青年旅舍</a></p>
                             <p class="fcgary">直线距离2.24公里</p>
                             <p>¥<a class="fcorange" href="http://www.yododo.cn/hotel/016228FA798A0069FF8080816226C3C0" target="_blank">25</a>起</p>
                         </li>
                     <li>
-                            <a href="http://www.yododo.cn/hotel/0148637F00BB012CFF8080814862F2DF"><img src="./hotel_details_files/0155442C9FC50055FF80808155436A19_sx.jpg" title="西双版纳尚客优快捷酒店曼听公园店"></a>
+                            <a href="http://www.yododo.cn/hotel/0148637F00BB012CFF8080814862F2DF"><img src="statics/hotel_details_files/0155442C9FC50055FF80808155436A19_sx.jpg" title="西双版纳尚客优快捷酒店曼听公园店"></a>
                             <p><a class="fcorange2" href="http://www.yododo.cn/hotel/0148637F00BB012CFF8080814862F2DF" target="_blank">西双版纳尚客优快捷酒店曼听公园店</a></p>
                             <p class="fcgary">直线距离0.95公里</p>
                             <p>¥<a class="fcorange" href="http://www.yododo.cn/hotel/0148637F00BB012CFF8080814862F2DF" target="_blank">179</a>起</p>
                         </li>
                     <li>
-                            <a href="http://www.yododo.cn/hotel/01231250403820A9FF8080812310525E"><img src="./hotel_details_files/01231278873823B3FF8080812310525E_sx.jpg" title="西双版纳晓娟家庭旅馆"></a>
+                            <a href="http://www.yododo.cn/hotel/01231250403820A9FF8080812310525E"><img src="statics/hotel_details_files/01231278873823B3FF8080812310525E_sx.jpg" title="西双版纳晓娟家庭旅馆"></a>
                             <p><a class="fcorange2" href="http://www.yododo.cn/hotel/01231250403820A9FF8080812310525E" target="_blank">西双版纳晓娟家庭旅馆</a></p>
                             <p class="fcgary">直线距离2.46公里</p>
                             <p>¥<a class="fcorange" href="http://www.yododo.cn/hotel/01231250403820A9FF8080812310525E" target="_blank">130</a>起</p>
                         </li>
                     <li>
-                            <a href="http://www.yododo.cn/hotel/013C969C6B240252FF8080813C92DA02"><img src="./hotel_details_files/0149132C584A239BFF8080814910ACF7_sx.jpg" title="西双版纳南洋小镇客栈"></a>
+                            <a href="http://www.yododo.cn/hotel/013C969C6B240252FF8080813C92DA02"><img src="statics/hotel_details_files/0149132C584A239BFF8080814910ACF7_sx.jpg" title="西双版纳南洋小镇客栈"></a>
                             <p><a class="fcorange2" href="http://www.yododo.cn/hotel/013C969C6B240252FF8080813C92DA02" target="_blank">西双版纳南洋小镇客栈</a></p>
                             <p class="fcgary">直线距离2.06公里</p>
                             <p>¥<a class="fcorange" href="http://www.yododo.cn/hotel/013C969C6B240252FF8080813C92DA02" target="_blank">100</a>起</p>
@@ -431,7 +431,7 @@ function addTrackEvent(action, opt_label, opt_value){
      </div>
    
    <div class="room" id="room_51071" style="z-index:3;">
-      <a class="pabs" href="javascript:;" onclick="$j(&#39;#pic_51071&#39;).toggle();return false;"><img alt="" title="阳台标准间" src="./hotel_details_files/01404C7635D50021FF808081404B2E36_s.jpg"></a>
+      <a class="pabs" href="javascript:;" onclick="$j(&#39;#pic_51071&#39;).toggle();return false;"><img alt="" title="阳台标准间" src="statics/hotel_details_files/01404C7635D50021FF808081404B2E36_s.jpg"></a>
 
       <div class="head clearfix">
         <span class="x1">
@@ -456,34 +456,34 @@ function addTrackEvent(action, opt_label, opt_value){
         <dl class="clearfix">
           <dd>
               <a class="simg" href="javascript:;">
-                <img class="lazy" title="" alt="" src="./hotel_details_files/0152EDCACCBF0081FF80808152EC0ADA_m.jpg" style="display: block;">
+                <img class="lazy" title="" alt="" src="statics/hotel_details_files/0152EDCACCBF0081FF80808152EC0ADA_m.jpg" style="display: block;">
               </a>
               <span style="display: none;" class="bimg">
-                <img class="lazy" title="" alt="大图预览" src="./hotel_details_files/0152EDCACCBF0081FF80808152EC0ADA.jpg" style="display: inline;">
+                <img class="lazy" title="" alt="大图预览" src="statics/hotel_details_files/0152EDCACCBF0081FF80808152EC0ADA.jpg" style="display: inline;">
               </span>
             </dd>
           <dd>
               <a class="simg" href="javascript:;">
-                <img class="lazy" title="" alt="" src="./hotel_details_files/0152EDCABFBB0080FF80808152EC0ADA_m.jpg" style="display: block;">
+                <img class="lazy" title="" alt="" src="statics/hotel_details_files/0152EDCABFBB0080FF80808152EC0ADA_m.jpg" style="display: block;">
               </a>
               <span style="display: none;" class="bimg">
-                <img class="lazy" title="" alt="大图预览" src="./hotel_details_files/0152EDCABFBB0080FF80808152EC0ADA.jpg" style="display: inline;">
+                <img class="lazy" title="" alt="大图预览" src="statics/hotel_details_files/0152EDCABFBB0080FF80808152EC0ADA.jpg" style="display: inline;">
               </span>
             </dd>
           <dd>
               <a class="simg" href="javascript:;">
-                <img class="lazy" title="" alt="" src="./hotel_details_files/0152EDCABCAB007FFF80808152EC0ADA_m.jpg" style="display: block;">
+                <img class="lazy" title="" alt="" src="statics/hotel_details_files/0152EDCABCAB007FFF80808152EC0ADA_m.jpg" style="display: block;">
               </a>
               <span style="display: none;" class="bimg">
-                <img class="lazy" title="" alt="大图预览" src="./hotel_details_files/0152EDCABCAB007FFF80808152EC0ADA.jpg" style="display: inline;">
+                <img class="lazy" title="" alt="大图预览" src="statics/hotel_details_files/0152EDCABCAB007FFF80808152EC0ADA.jpg" style="display: inline;">
               </span>
             </dd>
           <dd>
               <a class="simg" href="javascript:;">
-                <img class="lazy" title="" alt="" src="./hotel_details_files/01404C7635D50021FF808081404B2E36_m.jpg" style="display: block;">
+                <img class="lazy" title="" alt="" src="statics/hotel_details_files/01404C7635D50021FF808081404B2E36_m.jpg" style="display: block;">
               </a>
               <span style="display: none;" class="bimg">
-                <img class="lazy" title="" alt="大图预览" src="./hotel_details_files/01404C7635D50021FF808081404B2E36.jpg" style="display: inline;">
+                <img class="lazy" title="" alt="大图预览" src="statics/hotel_details_files/01404C7635D50021FF808081404B2E36.jpg" style="display: inline;">
               </span>
             </dd>
           </dl>
@@ -493,7 +493,7 @@ function addTrackEvent(action, opt_label, opt_value){
       </div>
     </div>
   <div class="room" id="room_51424" style="z-index:2;">
-      <a class="pabs" href="javascript:;" onclick="$j(&#39;#pic_51424&#39;).toggle();return false;"><img alt="" title="阳台大床房" src="./hotel_details_files/01404C81B6840025FF808081404B2E36_s.jpg"></a>
+      <a class="pabs" href="javascript:;" onclick="$j(&#39;#pic_51424&#39;).toggle();return false;"><img alt="" title="阳台大床房" src="statics/hotel_details_files/01404C81B6840025FF808081404B2E36_s.jpg"></a>
 
       <div class="head clearfix">
         <span class="x1">
@@ -517,34 +517,34 @@ function addTrackEvent(action, opt_label, opt_value){
         <dl class="clearfix">
           <dd>
               <a class="simg" href="javascript:;">
-                <img class="lazy" title="" alt="" src="./hotel_details_files/0152EDCAD7D40084FF80808152EC0ADA_m.jpg" style="display: block;">
+                <img class="lazy" title="" alt="" src="statics/hotel_details_files/0152EDCAD7D40084FF80808152EC0ADA_m.jpg" style="display: block;">
               </a>
               <span style="display: none;" class="bimg">
-                <img class="lazy" title="" alt="大图预览" src="./hotel_details_files/0152EDCAD7D40084FF80808152EC0ADA.jpg" style="display: inline;">
+                <img class="lazy" title="" alt="大图预览" src="statics/hotel_details_files/0152EDCAD7D40084FF80808152EC0ADA.jpg" style="display: inline;">
               </span>
             </dd>
           <dd>
               <a class="simg" href="javascript:;">
-                <img class="lazy" title="" alt="" src="./hotel_details_files/0152EDCAD2D20083FF80808152EC0ADA_m.jpg" style="display: block;">
+                <img class="lazy" title="" alt="" src="statics/hotel_details_files/0152EDCAD2D20083FF80808152EC0ADA_m.jpg" style="display: block;">
               </a>
               <span style="display: none;" class="bimg">
-                <img class="lazy" title="" alt="大图预览" src="./hotel_details_files/0152EDCAD2D20083FF80808152EC0ADA.jpg" style="display: inline;">
+                <img class="lazy" title="" alt="大图预览" src="statics/hotel_details_files/0152EDCAD2D20083FF80808152EC0ADA.jpg" style="display: inline;">
               </span>
             </dd>
           <dd>
               <a class="simg" href="javascript:;">
-                <img class="lazy" title="" alt="" src="./hotel_details_files/0152EDCACFF90082FF80808152EC0ADA_m.jpg" style="display: block;">
+                <img class="lazy" title="" alt="" src="statics/hotel_details_files/0152EDCACFF90082FF80808152EC0ADA_m.jpg" style="display: block;">
               </a>
               <span style="display: none;" class="bimg">
-                <img class="lazy" title="" alt="大图预览" src="./hotel_details_files/0152EDCACFF90082FF80808152EC0ADA.jpg" style="display: inline;">
+                <img class="lazy" title="" alt="大图预览" src="statics/hotel_details_files/0152EDCACFF90082FF80808152EC0ADA.jpg" style="display: inline;">
               </span>
             </dd>
           <dd>
               <a class="simg" href="javascript:;">
-                <img class="lazy" title="" alt="" src="./hotel_details_files/01404C81B6840025FF808081404B2E36_m.jpg" style="display: block;">
+                <img class="lazy" title="" alt="" src="statics/hotel_details_files/01404C81B6840025FF808081404B2E36_m.jpg" style="display: block;">
               </a>
               <span style="display: none;" class="bimg">
-                <img class="lazy" title="" alt="大图预览" src="./hotel_details_files/01404C81B6840025FF808081404B2E36.jpg" style="display: inline;">
+                <img class="lazy" title="" alt="大图预览" src="statics/hotel_details_files/01404C81B6840025FF808081404B2E36.jpg" style="display: inline;">
               </span>
             </dd>
           </dl>
@@ -554,7 +554,7 @@ function addTrackEvent(action, opt_label, opt_value){
       </div>
     </div>
   <div class="room" id="room_51425" style="z-index:1;">
-      <a class="pabs" href="javascript:;" onclick="$j(&#39;#pic_51425&#39;).toggle();return false;"><img alt="" title="阳台三人房" src="./hotel_details_files/01404C865A370026FF808081404B2E36_s.jpg"></a>
+      <a class="pabs" href="javascript:;" onclick="$j(&#39;#pic_51425&#39;).toggle();return false;"><img alt="" title="阳台三人房" src="statics/hotel_details_files/01404C865A370026FF808081404B2E36_s.jpg"></a>
 
       <div class="head clearfix">
         <span class="x1">
@@ -578,26 +578,26 @@ function addTrackEvent(action, opt_label, opt_value){
         <dl class="clearfix">
           <dd>
               <a class="simg" href="javascript:;">
-                <img class="lazy" title="" alt="" src="./hotel_details_files/0152EDCAB96F007EFF80808152EC0ADA_m.jpg" style="display: block;">
+                <img class="lazy" title="" alt="" src="statics/hotel_details_files/0152EDCAB96F007EFF80808152EC0ADA_m.jpg" style="display: block;">
               </a>
               <span style="display: none;" class="bimg">
-                <img class="lazy" title="" alt="大图预览" src="./hotel_details_files/0152EDCAB96F007EFF80808152EC0ADA.jpg" style="display: inline;">
+                <img class="lazy" title="" alt="大图预览" src="statics/hotel_details_files/0152EDCAB96F007EFF80808152EC0ADA.jpg" style="display: inline;">
               </span>
             </dd>
           <dd>
               <a class="simg" href="javascript:;">
-                <img class="lazy" title="" alt="" src="./hotel_details_files/0152EDCAB5EC007DFF80808152EC0ADA_m.jpg" style="display: block;">
+                <img class="lazy" title="" alt="" src="statics/hotel_details_files/0152EDCAB5EC007DFF80808152EC0ADA_m.jpg" style="display: block;">
               </a>
               <span style="display: none;" class="bimg">
-                <img class="lazy" title="" alt="大图预览" src="./hotel_details_files/0152EDCAB5EC007DFF80808152EC0ADA.jpg" style="display: inline;">
+                <img class="lazy" title="" alt="大图预览" src="statics/hotel_details_files/0152EDCAB5EC007DFF80808152EC0ADA.jpg" style="display: inline;">
               </span>
             </dd>
           <dd>
               <a class="simg" href="javascript:;">
-                <img class="lazy" title="" alt="" src="./hotel_details_files/01404C865A370026FF808081404B2E36_m.jpg" style="display: block;">
+                <img class="lazy" title="" alt="" src="statics/hotel_details_files/01404C865A370026FF808081404B2E36_m.jpg" style="display: block;">
               </a>
               <span style="display: none;" class="bimg">
-                <img class="lazy" title="" alt="大图预览" src="./hotel_details_files/01404C865A370026FF808081404B2E36.jpg" style="display: inline;">
+                <img class="lazy" title="" alt="大图预览" src="statics/hotel_details_files/01404C865A370026FF808081404B2E36.jpg" style="display: inline;">
               </span>
             </dd>
           </dl>
@@ -687,7 +687,7 @@ function addTrackEvent(action, opt_label, opt_value){
 <ul class="dp-dp">
       <li id="review_015FFFBE96820CBCFF8080815FFEC497">
           <a class="user" style="text-decoration: none;" rel="nofollow" target="_blank" href="http://www.yododo.com/user/013A63E699822D57FF8080813A609643">
-                <img name="userheadbox_013A63E699822D57FF8080813A609643" src="./hotel_details_files/1.jpg" alt="雪碧加冰茶已经住过西双版纳新沙宾馆，并对住宿进行了评价">
+                <img name="userheadbox_013A63E699822D57FF8080813A609643" src="statics/hotel_details_files/1.jpg" alt="雪碧加冰茶已经住过西双版纳新沙宾馆，并对住宿进行了评价">
                  </a>
             
           <p>
@@ -706,7 +706,7 @@ function addTrackEvent(action, opt_label, opt_value){
             </li>
       <li id="review_015DC68C844C05B2FF8080815DC688EE">
           <a class="user" style="text-decoration: none;" rel="nofollow" target="_blank" href="http://www.yododo.com/user/011795E1197D01BFFF808081179504FB">
-                <img name="userheadbox_011795E1197D01BFFF808081179504FB" src="./hotel_details_files/1.jpg" alt="横望山人已经住过西双版纳新沙宾馆，并对住宿进行了评价">
+                <img name="userheadbox_011795E1197D01BFFF808081179504FB" src="statics/hotel_details_files/1.jpg" alt="横望山人已经住过西双版纳新沙宾馆，并对住宿进行了评价">
                  </a>
             
           <p>
@@ -725,7 +725,7 @@ function addTrackEvent(action, opt_label, opt_value){
             </li>
       <li id="review_0148352B38C61444FF80808148328213">
           <a class="user" style="text-decoration: none;" rel="nofollow" target="_blank" href="http://www.yododo.com/user/0148006E04A101A6FF80808147FD7391">
-                <img name="userheadbox_0148006E04A101A6FF80808147FD7391" src="./hotel_details_files/1.jpg" alt="188****7416已经住过西双版纳新沙宾馆，并对住宿进行了评价">
+                <img name="userheadbox_0148006E04A101A6FF80808147FD7391" src="statics/hotel_details_files/1.jpg" alt="188****7416已经住过西双版纳新沙宾馆，并对住宿进行了评价">
                  </a>
             
           <p>
@@ -744,7 +744,7 @@ function addTrackEvent(action, opt_label, opt_value){
             </li>
       <li id="review_01482EA7FCFB05E0FF808081482D5E9D">
           <a class="user" style="text-decoration: none;" rel="nofollow" target="_blank" href="http://www.yododo.com/user/0147FD01233806C7FF80808147FC834B">
-                <img name="userheadbox_0147FD01233806C7FF80808147FC834B" src="./hotel_details_files/1.jpg" alt="188****7550已经住过西双版纳新沙宾馆，并对住宿进行了评价">
+                <img name="userheadbox_0147FD01233806C7FF80808147FC834B" src="statics/hotel_details_files/1.jpg" alt="188****7550已经住过西双版纳新沙宾馆，并对住宿进行了评价">
                  </a>
             
           <p>
@@ -763,7 +763,7 @@ function addTrackEvent(action, opt_label, opt_value){
             </li>
       <li id="review_01477666ADF609B3FF8080814774A95A">
           <a class="user" style="text-decoration: none;" rel="nofollow" target="_blank" href="http://www.yododo.com/user/01474977540B0148FF8080814749162E">
-                <img name="userheadbox_01474977540B0148FF8080814749162E" src="./hotel_details_files/1.jpg" alt="131****4067已经住过西双版纳新沙宾馆，并对住宿进行了评价">
+                <img name="userheadbox_01474977540B0148FF8080814749162E" src="statics/hotel_details_files/1.jpg" alt="131****4067已经住过西双版纳新沙宾馆，并对住宿进行了评价">
                  </a>
             
           <p>
@@ -782,7 +782,7 @@ function addTrackEvent(action, opt_label, opt_value){
             </li>
       <li id="review_01477663573A0970FF8080814774A95A">
           <a class="user" style="text-decoration: none;" rel="nofollow" target="_blank" href="http://www.yododo.com/user/01474977540B0148FF8080814749162E">
-                <img name="userheadbox_01474977540B0148FF8080814749162E" src="./hotel_details_files/1.jpg" alt="131****4067已经住过西双版纳新沙宾馆，并对住宿进行了评价">
+                <img name="userheadbox_01474977540B0148FF8080814749162E" src="statics/hotel_details_files/1.jpg" alt="131****4067已经住过西双版纳新沙宾馆，并对住宿进行了评价">
                  </a>
             
           <p>
@@ -816,7 +816,7 @@ $j("em").click(function(){
                         <ul class="dp-dp" style="border-top: none">
       <li>
           <a class="user" rel="nofollow" target="_blank" title="qianshou828" href="http://www.yododo.com/user/012D3791FAEC4D79FF8080812D33BAD3">
-            <img alt="qianshou828" src="./hotel_details_files/white.gif" class="lazy" data-href="http://img0.yododo.com.cn/images/systemuserlogo/1.jpg">
+            <img alt="qianshou828" src="statics/hotel_details_files/white.gif" class="lazy" data-href="http://img0.yododo.com.cn/images/systemuserlogo/1.jpg">
           </a>
           <p>
             <a rel="nofollow" href="http://www.yododo.com/user/012D3791FAEC4D79FF8080812D33BAD3" title="qianshou828" target="_blank">qianshou828</a><span class="fcgary">问：</span><a rel="nofollow" href="http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5" title="西双版纳新沙宾馆">西双版纳新沙宾馆</a>
@@ -832,7 +832,7 @@ $j("em").click(function(){
         </li>
       <li>
           <a class="user" rel="nofollow" target="_blank" title="丝露花雨" href="http://www.yododo.com/user/0145416A90BE075CFF8080814540E3F0">
-            <img alt="丝露花雨" src="./hotel_details_files/white.gif" class="lazy" data-href="http://img0.yododo.com.cn/images/systemuserlogo/1.jpg">
+            <img alt="丝露花雨" src="statics/hotel_details_files/white.gif" class="lazy" data-href="http://img0.yododo.com.cn/images/systemuserlogo/1.jpg">
           </a>
           <p>
             <a rel="nofollow" href="http://www.yododo.com/user/0145416A90BE075CFF8080814540E3F0" title="丝露花雨" target="_blank">丝露花雨</a><span class="fcgary">问：</span><a rel="nofollow" href="http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5" title="西双版纳新沙宾馆">西双版纳新沙宾馆</a>
@@ -1006,7 +1006,7 @@ $j("em").click(function(){
         </div>
     <div class="n13-gotop">
     <a rel="nofollow" title="返回页面顶部" id="headerRightTop" href="javascript:window.scrollTo(0,0);" style="" class="gt1"><p>回顶部</p></a>
-    <a rel="nofollow" href="http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03#" class="gt3">手机预订更优惠<span title="游多多微信二维码"><img alt="游多多微信二维码" src="./hotel_details_files/2d-1.gif"><div style="margin-top:7px;">手机预订赠100元
+    <a rel="nofollow" href="http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03#" class="gt3">手机预订更优惠<span title="游多多微信二维码"><img alt="游多多微信二维码" src="statics/hotel_details_files/2d-1.gif"><div style="margin-top:7px;">手机预订赠100元
     </div></span></a>
 </div>
 
@@ -1027,7 +1027,7 @@ $j("em").click(function(){
         </div>
         <div class="h-r-bimg h-r-bimg-l">
             <div class="bimg" id="roomPhotoShowArea">
-                <img src="./hotel_details_files/photo_l.gif" alt="暂无图片">
+                <img src="statics/hotel_details_files/photo_l.gif" alt="暂无图片">
                 <a href="javascript:;" title="向左" id="roomPhoto-goleft" class="dot-left"><i class="iconfont" title="向左">
                     </i></a>
                 <a href="javascript:;" title="向右" id="roomPhoto-goright" class="dot-right"><i class="iconfont" title="向右">
@@ -1051,8 +1051,8 @@ $j("em").click(function(){
 <div class="maskdiv2" style="display:none">&nbsp;</div>
 
 <script type="text/javascript"> $j("#smallMapBtn").html('<img src="http://api.map.baidu.com/staticimage?width=240&height=140&center=100.808698,22.015831&zoom=15&markers=100.808698,22.015831&markerStyles=m,o" alt="西双版纳新沙宾馆位置图"/><span>查看地图</span>'); </script>
-        <script type="text/javascript" src="./hotel_details_files/api"></script><script type="text/javascript" src="./hotel_details_files/getscript"></script><link rel="stylesheet" type="text/css" href="./hotel_details_files/bmap.css">  
-<link rel="stylesheet" type="text/css" href="./hotel_details_files/h811864636.css" media="screen" charset="utf-8"><script type="text/javascript" src="./hotel_details_files/h-1760648725.js.下载" charset="utf-8"></script><script type="text/javascript">
+        <script type="text/javascript" src="statics/hotel_details_files/api"></script><script type="text/javascript" src="statics/hotel_details_files/getscript"></script><link rel="stylesheet" type="text/css" href="statics/hotel_details_files/bmap.css">  
+<link rel="stylesheet" type="text/css" href="statics/hotel_details_files/h811864636.css" media="screen" charset="utf-8"><script type="text/javascript" src="statics/hotel_details_files/h-1760648725.js.下载" charset="utf-8"></script><script type="text/javascript">
     var baiduJd = '100.808698';
     var baiduWd = '22.015831';
     var today = new Date();
@@ -1062,10 +1062,10 @@ $j("em").click(function(){
     var startDate = "2018-12-02";
     var endDate = "2018-12-03";
 </script>
-<script type="text/javascript" src="./hotel_details_files/jquery-ui-1.9.2.min.1492403413.js.下载"></script>
-<script type="text/javascript" src="./hotel_details_files/shadowbox.1492403413.js.下载"></script>
-<script type="text/javascript" src="./hotel_details_files/jquery.blockUI-2.60.min.1492403413.js.下载"></script>
-<script type="text/javascript" src="./hotel_details_files/h268481374.js.下载" charset="utf-8"></script><script type="text/javascript" src="./hotel_details_files/h-802115204.js.下载" charset="utf-8"></script><script type="text/javascript">
+<script type="text/javascript" src="statics/hotel_details_files/jquery-ui-1.9.2.min.1492403413.js.下载"></script>
+<script type="text/javascript" src="statics/hotel_details_files/shadowbox.1492403413.js.下载"></script>
+<script type="text/javascript" src="statics/hotel_details_files/jquery.blockUI-2.60.min.1492403413.js.下载"></script>
+<script type="text/javascript" src="statics/hotel_details_files/h268481374.js.下载" charset="utf-8"></script><script type="text/javascript" src="statics/hotel_details_files/h-802115204.js.下载" charset="utf-8"></script><script type="text/javascript">
     Shadowbox.init({
         skipSetup: true,
         language: "zh-CN",
@@ -1167,16 +1167,16 @@ $j("em").click(function(){
                 </div>
                 <div class="fright">
                     <div id="bottom_banners" class="tcenter">
-                        <a href="http://www.zx110.org/picp/?sn=310112100042838" style="margin-right: 5px"><img alt="沪公网备" src="./hotel_details_files/picp_bg.v007.png" border="0" height="35"></a>
-                        <a href="https://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=xhp65grx9wosfrm47t2j8adygdhzfgfo5mngm8eq" target="_blank" style="margin-right: 5px"><img src="./hotel_details_files/sgs.gif" border="0" height="38"></a>
-                        <a target="_blank" href="http://www.zx110.org/" style="margin-right: 5px"><img height="38" border="0" alt="" src="./hotel_details_files/zx110.png"></a>
-                        <img height="38" border="0" alt="上海网警-网络110" src="./hotel_details_files/ydd-110.png">
+                        <a href="http://www.zx110.org/picp/?sn=310112100042838" style="margin-right: 5px"><img alt="沪公网备" src="statics/hotel_details_files/picp_bg.v007.png" border="0" height="35"></a>
+                        <a href="https://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=xhp65grx9wosfrm47t2j8adygdhzfgfo5mngm8eq" target="_blank" style="margin-right: 5px"><img src="statics/hotel_details_files/sgs.gif" border="0" height="38"></a>
+                        <a target="_blank" href="http://www.zx110.org/" style="margin-right: 5px"><img height="38" border="0" alt="" src="statics/hotel_details_files/zx110.png"></a>
+                        <img height="38" border="0" alt="上海网警-网络110" src="statics/hotel_details_files/ydd-110.png">
                     </div>
                 </div>
             </div>
         </div>
-    <script type="text/javascript" src="./hotel_details_files/prototype.1492403413.js.下载"></script>
-<script type="text/javascript" src="./hotel_details_files/h2066826076.js.下载" charset="utf-8"></script><script type="text/javascript">
+    <script type="text/javascript" src="statics/hotel_details_files/prototype.1492403413.js.下载"></script>
+<script type="text/javascript" src="statics/hotel_details_files/h2066826076.js.下载" charset="utf-8"></script><script type="text/javascript">
 
 (function() {
   var ga = document.createElement('script');

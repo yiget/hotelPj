@@ -42,8 +42,9 @@ public class LoginContext {
 			if(userService.getLogin(user).size()==0) { //密码错误
 				verifyfailed = "failpwd";
 			}else {		//登陆成功
-				//request.getSession().setAttribute("", value);
+				request.getSession().setAttribute("user", user);
 				verifyfailed = "verifyfailed";
+				
 			}
 		}
 		return verifyfailed;

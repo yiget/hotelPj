@@ -36,13 +36,27 @@
 		<aspectjweaver.version>1.7.2</aspectjweaver.version>
 		<commons-fileupload.version>1.3.1</commons-fileupload.version>
 		<commons-io.version>2.4</commons-io.version>
+		<kaptcha.version>2.3.2</kaptcha.version>
 	</properties>
 
 	<dependencies>
+			<dependency>
+			<groupId>com.github.penggle</groupId>
+			<artifactId>kaptcha</artifactId>
+			<version>${kaptcha.version}</version>
+		</dependency>
+	
 		<dependency>
 			<groupId>com.alipay.sdk</groupId>
 			<artifactId>alipay-sdk-java</artifactId>
 			<version>${alipay.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+
 		</dependency>
 
 		<dependency>
@@ -63,11 +77,11 @@
 		</dependency>
 
 		<dependency>
-		    <groupId>org.yaml</groupId>
-		    <artifactId>snakeyaml</artifactId>
-		    <version>1.17</version>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>1.17</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>

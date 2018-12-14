@@ -21,4 +21,16 @@ public class UserServiceImpl implements UserService {
 		return userMapper.getLogin(user);
 	}
 
+	@Override
+	public User getRegister(User user) {
+		// TODO Auto-generated method stub
+		return userMapper.getRegister(user);
+	}
+
+	@Override
+	public int getQueryUserName(User user) {
+		// TODO Auto-generated method stub
+		return userMapper.getQueryUserName(user);
+	}
+
 }

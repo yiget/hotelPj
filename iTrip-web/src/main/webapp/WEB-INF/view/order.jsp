@@ -132,7 +132,7 @@ function addTrackEvent(action, opt_label, opt_value){
       </form>
     </div>
     <div class="fright">
-      <div style="margin-bottom:15px;">没有帐号？<a href="javascript:window.location.href=&#39;/my/register.ydd?rd=&#39;+getRdHref()" class="fcorange">立即注册</a></div>
+      <div style="margin-bottom:15px;">没有帐号？<a href="javascript:window.location.href=relos" class="fcorange">立即注册</a></div>
       <div style="margin-bottom:25px;" class="ft14">合作网站直接登录</div>
       <div>
         <button title="用QQ帐号登录" class="qqlogin" onclick="javascript:window.location.href=&#39;http://www.yododo.com/user/connect/qq/login.ydd?rd=&#39;+getRdHref()" type="button">用QQ帐号登录</button>
@@ -202,7 +202,7 @@ function addTrackEvent(action, opt_label, opt_value){
                  "ajaxRememberMe" : rememberMe
                }, function(json){
             if( json == 'verifyfailed'){
-            	window.location.reload();
+            	window.location.href="gethome";
             }else if( json == 'failemail'){
             	$j('#errMsg').html('用户名错误!');
             }else{

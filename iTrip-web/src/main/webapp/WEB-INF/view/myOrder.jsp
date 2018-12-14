@@ -16,7 +16,7 @@
     @font-face {font-family: "ydd";src: url("/css/ydd.eot"); src: url("/css/ydd.eot#iefix") format("embedded-opentype"), url("/css/ydd.ttf")  format("truetype"); }
     .iconfont {font-family:"ydd";font-style: normal;font-weight: normal; -webkit-font-smoothing: antialiased;}
   </style>
-  <link rel="stylesheet" type="text/css" href="./myOrder_files/h1482760026.css" media="screen" charset="utf-8"><!--[if lt IE 7]>
+  <link rel="stylesheet" type="text/css" href="statics/myOrder_files/h1482760026.css" media="screen" charset="utf-8"><!--[if lt IE 7]>
     <link rel="stylesheet" type="text/css" media="screen" href="http://img1.yododo.com.cn/css/ie.1492403414.css"/>
     <![endif]-->
   <link rel="icon" href="http://img0.yododo.com/favicon.ico" sizes="16x16">
@@ -26,11 +26,11 @@
   <!--[if IE]><link rel="shortcut icon" href="http://img0.yododo.com/favicon.ico"/><![endif]-->
   <link rel="apple-touch-icon" href="http://img1.yododo.com/favicon_256x256.png">
   <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.yododo.cn/my/orders/">
-  <link type="text/css" rel="stylesheet" href="./myOrder_files/newhotel-commons.1492403414.css">
-  <script async="" type="text/javascript" src="./myOrder_files/v2"></script><script charset="utf-8" src="./myOrder_files/v.js.下载"></script><script async="" type="text/javascript" src="./myOrder_files/dxwyzYsv8r4k_sadbi-bnq.js.下载"></script><script async="" type="text/javascript" src="./myOrder_files/ti.js.下载"></script><script src="./myOrder_files/hm.js.下载" async="true"></script><script type="text/javascript" src="./myOrder_files/prototype.1492403413.js.下载"></script>
-  <script type="text/javascript" src="./myOrder_files/jquery-1.8.3.min.1492403413.js.下载"></script>
+  <link type="text/css" rel="stylesheet" href="statics/myOrder_files/newhotel-commons.1492403414.css">
+  <script async="" type="text/javascript" src="statics/myOrder_files/v2"></script><script charset="utf-8" src="statics/myOrder_files/v.js.下载"></script><script async="" type="text/javascript" src="statics/myOrder_files/dxwyzYsv8r4k_sadbi-bnq.js.下载"></script><script async="" type="text/javascript" src="statics/myOrder_files/ti.js.下载"></script><script src="statics/myOrder_files/hm.js.下载" async="true"></script><script type="text/javascript" src="statics/myOrder_files/prototype.1492403413.js.下载"></script>
+  <script type="text/javascript" src="statics/myOrder_files/jquery-1.8.3.min.1492403413.js.下载"></script>
   <script type="text/javascript"> var $j = jQuery.noConflict(); </script>
-  <script type="text/javascript" src="./myOrder_files/h1754007746.js.下载" charset="utf-8"></script><script type="text/javascript">
+  <script type="text/javascript" src="statics/myOrder_files/h1754007746.js.下载" charset="utf-8"></script><script type="text/javascript">
 var _hmt = _hmt || [];
 var _gaq = _gaq || [];
 
@@ -91,8 +91,8 @@ function addTrackEvent(action, opt_label, opt_value){
 } 
 
 </script>
-<script src="./myOrder_files/ga.js.下载" async="true"></script><script src="./myOrder_files/f.txt" async="true"></script><script src="./myOrder_files/logger.js.下载"></script><script src="./myOrder_files/f(1).txt"></script><link href="./myOrder_files/bdsstyle.css" rel="stylesheet" type="text/css"></head>
-<body><iframe frameborder="0" style="display: none;" src="./myOrder_files/saved_resource.html"></iframe><div id="bdshare" style="right: 0px; top: 415px; position: fixed; height: 330px; overflow: hidden;"><img src="./myOrder_files/r0.gif" alt="" style="float:left;margin-top:58px;"><iframe id="bdsIfr" style="position:absolute;display:none;z-index:9999;" frameborder="0" src="./myOrder_files/saved_resource(1).html"></iframe><div id="bdshare_l" style="display: none; left: 24px;"><div id="bdshare_l_c"><h6>分享到</h6><ul><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_mshare mshare">一键分享</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_qzone qqkj">QQ空间</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_tsina xlwb">新浪微博</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_bdysc bdysc">百度云收藏</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_renren rrw">人人网</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_tqq txwb">腾讯微博</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_bdxc bdxc">百度相册</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_kaixin001 kxw">开心网</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_tqf txpy">腾讯朋友</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_tieba bdtb">百度贴吧</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_douban db">豆瓣网</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_tsohu shwb">搜狐微博</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_bdhome bdhome">百度新首页</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_sqq sqq">QQ好友</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_thx thx">和讯微博</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_more">更多...</a></li></ul><p><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="goWebsite">百度分享</a></p></div></div></div>
+<script src="statics/myOrder_files/ga.js.下载" async="true"></script><script src="statics/myOrder_files/f.txt" async="true"></script><script src="statics/myOrder_files/logger.js.下载"></script><script src="statics/myOrder_files/f(1).txt"></script><link href="statics/myOrder_files/bdsstyle.css" rel="stylesheet" type="text/css"></head>
+<body><iframe frameborder="0" style="display: none;" src="statics/myOrder_files/saved_resource.html"></iframe><div id="bdshare" style="right: 0px; top: 415px; position: fixed; height: 330px; overflow: hidden;"><img src="statics/myOrder_files/r0.gif" alt="" style="float:left;margin-top:58px;"><iframe id="bdsIfr" style="position:absolute;display:none;z-index:9999;" frameborder="0" src="statics/myOrder_files/saved_resource(1).html"></iframe><div id="bdshare_l" style="display: none; left: 24px;"><div id="bdshare_l_c"><h6>分享到</h6><ul><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_mshare mshare">一键分享</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_qzone qqkj">QQ空间</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_tsina xlwb">新浪微博</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_bdysc bdysc">百度云收藏</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_renren rrw">人人网</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_tqq txwb">腾讯微博</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_bdxc bdxc">百度相册</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_kaixin001 kxw">开心网</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_tqf txpy">腾讯朋友</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_tieba bdtb">百度贴吧</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_douban db">豆瓣网</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_tsohu shwb">搜狐微博</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_bdhome bdhome">百度新首页</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_sqq sqq">QQ好友</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_thx thx">和讯微博</a></li><li><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="bds_more">更多...</a></li></ul><p><a href="http://www.yododo.cn/my/myHotelOrders.ydd#" class="goWebsite">百度分享</a></p></div></div></div>
    <script type="text/javascript">
   //<![CDATA[
   function ajaxSynchroLogin(loginname, loginpassword, reloadCallback){
@@ -132,7 +132,7 @@ function addTrackEvent(action, opt_label, opt_value){
 <div class="head-cn-t clearfix">
     <div class="w984">
       <a class="fleft" title="游多多客栈致力于为全球自助游爱好者提供旅游目的地客栈、旅舍、家庭旅馆的住宿预订平台" href="http://www.yododo.cn/">
-          <img src="./myOrder_files/logo-2.png" alt="游多多客栈-自助游住宿订房首选品牌">
+          <img src="statics/myOrder_files/logo-2.png" alt="游多多客栈-自助游住宿订房首选品牌">
       </a>
       <div class="head-menu-t clearfix">
          <a href="home.jsp" title="游多多客栈首页">首页</a>
@@ -143,7 +143,7 @@ function addTrackEvent(action, opt_label, opt_value){
 <a href="http://www.yododo.cn/hotel/events/parIndex.html" target="_blank" title="客栈趴">客栈趴</a>
 <div class="h-m-ts" onclick="window.location.href=&#39;http://www.yododo.cn/hotel/events/cellphone.html&#39;">APP下载
   <div class="hiddendiv" style="width:180px;">
-    <img alt="游多多客栈手机客户端" src="./myOrder_files/2d-1.gif">
+    <img alt="游多多客栈手机客户端" src="statics/myOrder_files/2d-1.gif">
   </div>
 </div>
 <div class="h-m-ts">优惠活动
@@ -164,8 +164,8 @@ function addTrackEvent(action, opt_label, opt_value){
   </div>
   <div class="h70"> </div><div class="new-hotel-innerbox" style="background-color: transparent;">
 
-<link type="text/css" rel="stylesheet" href="./myOrder_files/newhotel-user.1492403414.css">
-<script type="text/javascript" src="./myOrder_files/jquery.blockUI-2.60.min.1492403413.js.下载"></script>
+<link type="text/css" rel="stylesheet" href="statics/myOrder_files/newhotel-user.1492403414.css">
+<script type="text/javascript" src="statics/myOrder_files/jquery.blockUI-2.60.min.1492403413.js.下载"></script>
 
 <script type="text/javascript">
   //<![CDATA[
@@ -324,13 +324,13 @@ function confirmOrderRefund() {
 }
 //]]>
 </script>
-<script type="text/javascript" src="./myOrder_files/spcjs.php"></script><script type="text/javascript" src="./myOrder_files/spc.php"></script><script type="text/javascript" src="./myOrder_files/fl.js.下载"></script>
+<script type="text/javascript" src="statics/myOrder_files/spcjs.php"></script><script type="text/javascript" src="statics/myOrder_files/spc.php"></script><script type="text/javascript" src="statics/myOrder_files/fl.js.下载"></script>
 
 
 <div id="mycenter-top-hidden" style="position:absolute; left:-10000px; top:-10000px;">
   <script type="text/javascript">//<![CDATA[
   OA_show('mycenter-top');
-  //]]></script><a href="http://opx.yododo.com/delivery/ck.php?oaparams=2__bannerid=697__zoneid=114__cb=330dda5f20__oadest=http%3A%2F%2Fwww.yododo.com%2Fhotel%2Fevents%2Fxfbz.html" target="_blank"><img src="./myOrder_files/cb9aad20a059cdc36d0b0a4552a7f02b.png" width="728" height="70" alt="消费者保障服务" title="消费者保障服务" border="0"></a><div id="beacon_330dda5f20" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./myOrder_files/lg.php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+  //]]></script><a href="http://opx.yododo.com/delivery/ck.php?oaparams=2__bannerid=697__zoneid=114__cb=330dda5f20__oadest=http%3A%2F%2Fwww.yododo.com%2Fhotel%2Fevents%2Fxfbz.html" target="_blank"><img src="statics/myOrder_files/cb9aad20a059cdc36d0b0a4552a7f02b.png" width="728" height="70" alt="消费者保障服务" title="消费者保障服务" border="0"></a><div id="beacon_330dda5f20" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="statics/myOrder_files/lg.php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
 
 </div>
 <script type="text/javascript">//<![CDATA[
@@ -389,7 +389,7 @@ function confirmOrderRefund() {
           Copyright © 2006-2018 Yododo.cn, All rights reserved. <a class="fcgary" href="http://img1.yododo.com/images/yododo_icp.jpg" target="_blank" rel="nofollow">沪ICP证B2-20120026</a> <a class="fcgary" href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">沪ICP备06029079号</a><br>
           游多多网络科技（上海）有限公司 上海浦江镇联航路1188号浦江智谷10号楼3楼H座 电话：021-60503308
         </div>
-        <div id="bottom_banners" style="height:auto"><a href="http://www.zx110.org/" target="_blank"><img src="./myOrder_files/zx110.png" alt="" border="0" width="65" height="45"></a> <a id="kx_verify" style="display: inline-block;" href="https://ss.knet.cn/verifyseal.dll?sn=e11122111010006271308004&amp;ct=df&amp;a=1&amp;pa=604481" target="_blank" kx_type="图标式"><img style="border:currentColor;" oncontextmenu="return false;" alt="可信网站" src="./myOrder_files/cnnic.png"></a><img height="45" src="./myOrder_files/ydd-110.png" border="0" alt="上海网警-网络110"></div>
+        <div id="bottom_banners" style="height:auto"><a href="http://www.zx110.org/" target="_blank"><img src="statics/myOrder_files/zx110.png" alt="" border="0" width="65" height="45"></a> <a id="kx_verify" style="display: inline-block;" href="https://ss.knet.cn/verifyseal.dll?sn=e11122111010006271308004&amp;ct=df&amp;a=1&amp;pa=604481" target="_blank" kx_type="图标式"><img style="border:currentColor;" oncontextmenu="return false;" alt="可信网站" src="statics/myOrder_files/cnnic.png"></a><img height="45" src="statics/myOrder_files/ydd-110.png" border="0" alt="上海网警-网络110"></div>
         <script type="text/javascript">
           $j().ready(function() {
             document.getElementById("bottom_banners").innerHTML = //"<a href='http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20110608130045381' target='_blank'><img src='http://img0.yododo.com/images/sgs.gif' alt='' border='0' width='47' height='47'/></a> " +
@@ -400,7 +400,7 @@ function confirmOrderRefund() {
         </script>
       </div>
     </div>
-  <script type="text/javascript" src="./myOrder_files/h1566728320.js.下载" charset="utf-8"></script><script type="text/javascript">
+  <script type="text/javascript" src="statics/myOrder_files/h1566728320.js.下载" charset="utf-8"></script><script type="text/javascript">
     //<![CDATA[
     function startHover() {
     }
@@ -549,7 +549,7 @@ function confirmOrderRefund() {
   //document.documentElement.firstChild.appendChild(_bdhm);
 })();
 </script>
-<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=0&amp;uid=690748" src="./myOrder_files/bds_s_v2.js.下载"></script>
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=0&amp;uid=690748" src="statics/myOrder_files/bds_s_v2.js.下载"></script>
     
   <script type="text/javascript">
     var bds_config = {"bdTop":415, 'bdPopTitle':'分享/收藏到...', 'snsKey':{'tsina':'604114270','qzone':'215206'}, 'wbUid':1670774563 };
@@ -579,7 +579,7 @@ function confirmOrderRefund() {
     window.status='如果您喜欢多多驿站，请推荐给您身边的朋友！';
     //]]>
   </script>
-<script type="text/javascript" src="./myOrder_files/singleLogin.1492403413.js.下载"></script>
+<script type="text/javascript" src="statics/myOrder_files/singleLogin.1492403413.js.下载"></script>
 <script type="text/javascript">
   //<![CDATA[
   $j().ready(function(){

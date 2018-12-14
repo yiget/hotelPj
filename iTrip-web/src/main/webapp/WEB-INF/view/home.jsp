@@ -1,5 +1,7 @@
+<%@page import="java.lang.annotation.Target"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0021)http://www.yododo.cn/ -->
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -19,10 +21,10 @@
 <link rel="apple-touch-icon" href="http://img1.yododo.com.cn/favicon_256x256.png">
 <link rel="canonical" href="http://www.yododo.cn/">
 <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.yododo.cn/">
-<link rel="stylesheet" type="text/css" href="./home_files/h1482760026.css" media="screen" charset="utf-8"><!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="statics/home_files/h1482760026.css" media="screen" charset="utf-8"><!--[if lt IE 7]>
   <link rel="stylesheet" type="text/css" media="screen" href="http://img1.yododo.com.cn/css/ie.1492403414.css"/>
   <![endif]-->
-<link href="./home_files/cn2014-commons.1509415012.css" type="text/css" rel="stylesheet"><script async="" type="text/javascript" src="./home_files/v2"></script><script charset="utf-8" src="./home_files/v.js.下载"></script><script async="" type="text/javascript" src="./home_files/dxwyzYsv8r4k_sadbi-bnq.js.下载"></script><script type="text/javascript" src="./home_files/f.txt" async=""></script><script async="" type="text/javascript" src="./home_files/ti.js.下载"></script><script src="./home_files/hm.js.下载" async="true"></script><script type="text/javascript">
+<link href="statics/home_files/cn2014-commons.1509415012.css" type="text/css" rel="stylesheet"><script async="" type="text/javascript" src="statics/home_files/v2"></script><script charset="utf-8" src="statics/home_files/v.js.下载"></script><script async="" type="text/javascript" src="statics/home_files/dxwyzYsv8r4k_sadbi-bnq.js.下载"></script><script type="text/javascript" src="statics/home_files/f.txt" async=""></script><script async="" type="text/javascript" src="statics/home_files/ti.js.下载"></script><script src="statics/home_files/hm.js.下载" async="true"></script><script type="text/javascript">
 var _hmt = _hmt || [];
 var _gaq = _gaq || [];
 
@@ -80,14 +82,14 @@ function addTrackEvent(action, opt_label, opt_value){
 } 
 
 </script>
-<script type="text/javascript" src="./home_files/h-431559847.js.下载" charset="utf-8"></script><script type="text/javascript"> var $j = jQuery.noConflict(); </script>
-<script src="./home_files/ga.js.下载" async="true"></script><script src="./home_files/f(1).txt"></script></head>
+<script type="text/javascript" src="statics/home_files/h-431559847.js.下载" charset="utf-8"></script><script type="text/javascript"> var $j = jQuery.noConflict(); </script>
+<script src="statics/home_files/ga.js.下载" async="true"></script><script src="statics/home_files/f(1).txt"></script></head>
 <body>
 
   <div class="head-cn-t clearfix">
             <div class="w984">
               <a class="fleft" title="多多驿站致力于为全球自助游爱好者提供旅游目的地客栈、旅舍、家庭旅馆的住宿预订平台" href="home.jsp">
-                <img alt="多多驿站-自助游住宿订房首选品牌" src="./home_files/logo-2.png">
+                <img alt="多多驿站-自助游住宿订房首选品牌" src="statics/home_files/logo-2.png">
               </a>
               <div class="head-menu-t clearfix">
                 <a class="current" href="home.jsp" title="游多多客栈首页">首页</a>
@@ -98,7 +100,7 @@ function addTrackEvent(action, opt_label, opt_value){
 <a href="http://www.yododo.cn/hotel/events/parIndex.html" target="_blank" title="客栈趴">客栈趴</a>
 <div class="h-m-ts" onclick="window.location.href=&#39;http://www.yododo.cn/hotel/events/cellphone.html&#39;">APP下载
   <div class="hiddendiv" style="width:180px;">
-    <img alt="游多多客栈手机客户端" src="./home_files/2d-1.gif">
+    <img alt="游多多客栈手机客户端" src="statics/home_files/2d-1.gif">
   </div>
 </div>
 <div class="h-m-ts">优惠活动
@@ -109,7 +111,19 @@ function addTrackEvent(action, opt_label, opt_value){
     <a href="http://www.yododo.cn/hotel/events/hotel-guide.html?cityName=Fenghuang" target="_blank">游凤凰</a>
   </div>
   <div class="hot-1"><div class="hot-rect"></div>hot</div>
-</div></div>
+  </div></div>
+  <c:if test="${not empty user }">
+              <div class="head-loginbox">
+                    <a class="ft14" href="http://www.yododo.cn/my/myCenter.ydd" target="_blank"><i title="橙一橙" class="ft22 iconfont fcwhite"></i>${user.username}</a>
+                        <div class="tright"><a rel="nofollow" href="http://www.yododo.cn/my/myHotelOrders.ydd">我的订单</a>
+                        <a rel="nofollow" href="http://www.yododo.cn/my/myInbox.ydd" target="_blank">消息(0)</a><a href="javascript:void(0)" onclick="ajaxLogout();return false;" rel="nofollow">退出</a></div>
+                      </div>
+                <div class="ydd400" title="客服电话：400-021-1100，服务时间：9点-21点"><i class="iconfont"></i>400-021-1100</div>
+            </div>
+          </div>
+          <div class="h70"> </div>
+  </c:if>
+  <c:if test="${empty user }">
               <div class="head-loginbox">
                     <span class="w40">
                       <a href="http://www.yododo.cn/my/register.ydd" rel="nofollow"><i title="注册" class="ft22 iconfont fcwhite"></i><br>注册</a>
@@ -129,6 +143,7 @@ function addTrackEvent(action, opt_label, opt_value){
       <form action="http://www.yododo.cn/user/login.ydd" method="post" id="popupLoginForm" onsubmit="return checkPopupLoginForm(this)">
         <table width="100%" cellspacing="0" cellpadding="0" border="0">
           <tbody>
+          
           <tr>
             <td colspan="2"><strong class="ft16">登录游多多</strong></td>
           </tr>
@@ -156,11 +171,13 @@ function addTrackEvent(action, opt_label, opt_value){
             <td>&nbsp;</td>
             <td><input type="submit" value="登录" name="submit" class="btn-f"></td>
           </tr>
+
           </tbody>
         </table>
 
       </form>
     </div>
+
     <div class="fright">
       <div style="margin-bottom:15px;">没有帐号？<a href="javascript:window.location.href=&#39;/my/register.ydd?rd=&#39;+getRdHref()" class="fcorange">立即注册</a></div>
       <div style="margin-bottom:25px;" class="ft14">合作网站直接登录</div>
@@ -173,7 +190,8 @@ function addTrackEvent(action, opt_label, opt_value){
     </div>
   </div>
 </div>
-<script type="text/javascript" src="./home_files/jquery.blockUI-2.60.min.1492403413.js.下载"></script>
+    </c:if>
+<script type="text/javascript" src="statics/home_files/jquery.blockUI-2.60.min.1492403413.js.下载"></script>
 <script type="text/javascript">
   //<![CDATA[
   var loginSuccessCallback = null;
@@ -251,8 +269,8 @@ function addTrackEvent(action, opt_label, opt_value){
   }
   //]]>
 </script>
-<link rel="stylesheet" href="./home_files/jquery-ui-1.9.custom.1492403414.css">
-<link rel="stylesheet" href="./home_files/jquery-ui-cnAutoComplete.1492403414.css">
+<link rel="stylesheet" href="statics/home_files/jquery-ui-1.9.custom.1492403414.css">
+<link rel="stylesheet" href="statics/home_files/jquery-ui-cnAutoComplete.1492403414.css">
 
 <div class="cn-indextop">
   <div class="topshow">
@@ -479,41 +497,41 @@ function addTrackEvent(action, opt_label, opt_value){
     <ul id="lunbo_pics" class="imgbox clearfix" style="width: 10080px; margin-left: 0px;">
   
   <li style="width: 1519px;">
-      <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="./home_files/20170920045411.jpg">
+      <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/20170920045411.jpg">
       <a href="http://www.yododo.cn/hotel/015011CA67320034FF8080815011070B" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);">
         <p class="ft14 fb">敦煌丝绸驿游多多客栈</p>
         <p><span class="fb">99%</span>满意度，来自<span class="fb">99</span>条点评</p>
       </a>
     </li>
   <li style="width: 1519px;">
-      <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="./home_files/20170920045501.jpg">
+      <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/20170920045501.jpg">
       <a href="http://www.yododo.cn/hotel/0155488E37400239FF80808155467D0E" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);">
         <p class="ft14 fb">恩施大峡谷峡谷居游多多精品客栈</p>
         <p><span class="fb">100%</span>满意度，来自<span class="fb">102</span>条点评</p>
       </a>
     </li>
   <li style="width: 1519px;">
-      <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="./home_files/20170920045559.jpg">
+      <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/20170920045559.jpg">
       <a href="http://www.yododo.cn/hotel/015BAD188DC10001FF8080815BAD188C" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);">
         <p class="ft14 fb">拉萨暮野民居游多多客栈（八廓古城店）</p>
         <p><span class="fb">100%</span>满意度，来自<span class="fb">87</span>条点评</p>
       </a>
     </li>
   <li style="width: 1519px;">
-      <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="./home_files/20170920045639.jpg">
+      <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/20170920045639.jpg">
       <a href="http://www.yododo.cn/hotel/015374855A7000E3FF80808153724F25" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);">
         <p class="ft14 fb">清迈花满楼游多多客栈Ban Kong Rao Yododo Resort</p>
         <p><span class="fb">100%</span>满意度，来自<span class="fb">668</span>条点评</p>
       </a>
     </li>
   <li style="width: 1519px;">
-      <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="./home_files/20170920050025.jpg">
+      <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/20170920050025.jpg">
       <a href="http://www.yododo.cn/hotel/0133348D27EE12ACFF808081333249F8" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);">
         <p class="ft14 fb">西塘云来集游多多客栈二号</p>
         <p><span class="fb">99%</span>满意度，来自<span class="fb">240</span>条点评</p>
       </a>
     </li><li style="width: 1519px;">
-      <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="./home_files/20170920045225.jpg">
+      <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/20170920045225.jpg">
       <a href="http://www.yododo.cn/hotel/01479AFF7C7D03D8FF80808147987C98" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);">
         <p class="ft14 fb">大理清歌·思雅小筑游多多客栈</p>
         <p><span class="fb">99%</span>满意度，来自<span class="fb">214</span>条点评</p>
@@ -1027,13 +1045,13 @@ function addTrackEvent(action, opt_label, opt_value){
 
 <div class="w984 mauto bottomevent clearfix">
   <a href="http://www.yododo.cn/hotel/events/bcwl.html" target="_blank">
-    <img alt="纯棉布草，品牌物料，高性价比日耗品" src="./home_files/b1.jpg">
+    <img alt="纯棉布草，品牌物料，高性价比日耗品" src="statics/home_files/b1.jpg">
   </a>
   <a href="http://www.yododo.cn/hotel/events/yddinn-2016.html" target="_blank">
-    <img alt="每座客栈的背后都有一段客栈历史和一个鲜为人知的老板故事" src="./home_files/b2-3.jpg">
+    <img alt="每座客栈的背后都有一段客栈历史和一个鲜为人知的老板故事" src="statics/home_files/b2-3.jpg">
   </a>
   <a href="http://www.yododo.cn/hotel/events/ydddesign.html" target="_blank">
-    <img alt="游多多设计-专业客栈，民宿设计" src="./home_files/b3-3.jpg">
+    <img alt="游多多设计-专业客栈，民宿设计" src="statics/home_files/b3-3.jpg">
   </a>
 </div>
 
@@ -1053,12 +1071,12 @@ function addTrackEvent(action, opt_label, opt_value){
 
 <div class="bgf4" style="padding: 30px 0">
   <div class="cn-box noline-b bgc1 w984 mauto"><strong class="head">旅游住宿推荐</strong><ul class="cn-bottom-link-li clearfix"><li><a href="http://www.yododo.cn/hotels/Xiamen">厦门住宿</a></li><li><a href="http://www.yododo.cn/hotels/Fenghuang">凤凰住宿</a></li><li><a href="http://www.yododo.cn/hotels/Hangzhou">杭州住宿</a></li><li><a href="http://www.yododo.cn/hotels/Xitang">西塘住宿</a></li><li><a href="http://www.yododo.cn/hotels/Lijiang">丽江住宿</a></li><li><a href="http://www.yododo.cn/hotels/Wuzhen">乌镇住宿</a></li><li><a href="http://www.yododo.cn/hotels/Zhangjiajie">张家界住宿</a></li><li><a href="http://www.yododo.cn/hotels/Lasa">拉萨住宿</a></li><li><a href="http://www.yododo.cn/hotels/Shanghai">上海住宿</a></li><li><a href="http://www.yododo.cn/hotels/Chengdu">成都住宿</a></li><li><a href="http://www.yododo.cn/hotels/Yangshuo">阳朔住宿</a></li><li><a href="http://www.yododo.cn/hotels/Qingdao">青岛住宿</a></li><li><a href="http://www.yododo.cn/hotels/Beijing">北京住宿</a></li><li><a href="http://www.yododo.cn/hotels/Sanya">三亚住宿</a></li><li><a href="http://www.yododo.cn/hotels/Xian">西安住宿</a></li><li><a href="http://www.yododo.cn/hotels/Wuyishan">武夷山住宿</a></li><li><a href="http://www.yododo.cn/hotels/Dali">大理住宿</a></li><li><a href="http://www.yododo.cn/hotels/Luguhu">泸沽湖住宿</a></li><li><a href="http://www.yododo.cn/hotels/Guilin">桂林住宿</a></li><li><a href="http://www.yododo.cn/hotels/Wuyuan">婺源住宿</a></li><li><a href="http://www.yododo.cn/hotels/Beihai">北海住宿</a></li><li><a href="http://www.yododo.cn/hotels/Jiuzhaigou">九寨沟住宿</a></li><li><a href="http://www.yododo.cn/hotels/Huangshan">黄山住宿</a></li><li><a href="http://www.yododo.cn/hotels/Pingyao">平遥住宿</a></li><li><a href="http://www.yododo.cn/hotels/HongKong">香港住宿</a></li><li><a href="http://www.yododo.cn/hotels/Nanjing">南京住宿</a></li><li><a href="http://www.yododo.cn/hotels/Xijiangqianhumiaozhai">西江千户苗寨住宿</a></li><li><a href="http://www.yododo.cn/hotels/Xining">西宁住宿</a></li><li><a href="http://www.yododo.cn/hotels/Wuhan">武汉住宿</a></li><li><a href="http://www.yododo.cn/hotels/Suzhou">苏州住宿</a></li><li><a href="http://www.yododo.cn/hotels/Changbaishan">长白山住宿</a></li><li><a href="http://www.yododo.cn/hotels/Zhangzhou">漳州住宿</a></li><li><a href="http://www.yododo.cn/hotels/Qinhuangdao">秦皇岛住宿</a></li><li><a href="http://www.yododo.cn/hotels/Xianggelila">香格里拉住宿</a></li><li><a href="http://www.yododo.cn/hotels/Chongqing">重庆市住宿</a></li><li><a href="http://www.yododo.cn/hotels/Taishan">泰山住宿</a></li><li><a href="http://www.yododo.cn/hotels/Luoyang">洛阳住宿</a></li><li><a href="http://www.yododo.cn/hotels/Qinghaihu">青海湖住宿</a></li><li><a href="http://www.yododo.cn/hotels/Yangzhou">扬州住宿</a></li><li><a href="http://www.yododo.cn/hotels/Haerbin">哈尔滨住宿</a></li><li><a href="http://www.yododo.cn/hotels/Shaoxing">绍兴住宿</a></li><li><a href="http://www.yododo.cn/hotels/Huashan">华山住宿</a></li><li><a href="http://www.yododo.cn/hotels/Changsha">长沙住宿</a></li><li><a href="http://www.yododo.cn/hotels/Hongcun">宏村住宿</a></li><li><a href="http://www.yododo.cn/hotels/Dunhuang">敦煌住宿</a></li><li><a href="http://www.yododo.cn/hotels/Kunming">昆明住宿</a></li><li><a href="http://www.yododo.cn/hotels/Guangzhou">广州住宿</a></li><li><a href="http://www.yododo.cn/hotels/Emeishan">峨眉山住宿</a></li><li><a href="http://www.yododo.cn/hotels/Hailuogou">海螺沟住宿</a></li><li><a href="http://www.yododo.cn/hotels/Shengsi">嵊泗住宿</a></li><li><a href="http://www.yododo.cn/hotels/Shaoguan">韶关住宿</a></li><li><a href="http://www.yododo.cn/hotels/Zhenyuan">镇远住宿</a></li><li><a href="http://www.yododo.cn/hotels/Penglai">蓬莱住宿</a></li><li><a href="http://www.yododo.cn/hotels/Zhouzhuang">周庄住宿</a></li></ul><strong class="head">家庭旅馆推荐</strong><ul class="cn-bottom-link-li clearfix"><li><a href="http://www.yododo.cn/lvguan/Xiamen">鼓浪屿家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Sanya">三亚家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Qingdao">青岛家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Beijing">北京家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Xiamen">厦门家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Chengdu">成都家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Tianjin">天津家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Xian">西安家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/HongKong">香港家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Zhengzhou">郑州家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Shijiazhuang">石家庄家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Changchun">长春家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Qinhuangdao/Nandaihe">南戴河家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Haerbin">哈尔滨家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Hangzhou">杭州家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Chongqing">重庆家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Shenzhen">深圳家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Qinhuangdao/Beidaihe">北戴河家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Nanjing">南京家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Shanghai">上海家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Guangzhou">广州家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Dalian">大连家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Haikou">海口家庭旅馆</a></li><li><a href="http://www.yododo.cn/lvguan/Macau">澳门家庭旅馆</a></li></ul><strong class="head">客栈推荐</strong><ul class="cn-bottom-link-li clearfix"><li><a href="http://www.yododo.cn/hotels/Lijiang">丽江客栈</a></li><li><a href="http://www.yododo.cn/kezhan/Xiamen">厦门客栈</a></li><li><a href="http://www.yododo.cn/kezhan/Xitang">西塘客栈</a></li><li><a href="http://www.yododo.cn/kezhan/Sanya">三亚客栈</a></li><li><a href="http://www.yododo.cn/hotels/Dali">大理客栈</a></li><li><a href="http://www.yododo.cn/kezhan/Zhangjiajie">张家界客栈</a></li><li><a href="http://www.yododo.cn/hotels/Yangshuo">阳朔客栈</a></li><li><a href="http://www.yododo.cn/kezhan/Fenghuang">凤凰客栈</a></li></ul><strong class="head">青年旅社推荐</strong><ul class="cn-bottom-link-li clearfix"><li><a href="http://www.yododo.cn/lvshe/Shanghai">上海青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Beijing">北京青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Hangzhou">杭州青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/HongKong">香港青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Xiamen">厦门青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Qingdao">青岛青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Chengdu">成都青年旅社</a></li><li><a href="http://www.yododo.cn/hotels/Xian">西安青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Nanjing">南京青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Shenzhen">深圳青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Dalian">大连青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Macau">澳门青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Xiamen">鼓浪屿青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Suzhou">苏州青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Haerbin">哈尔滨青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Guangzhou">广州青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Lijiang">丽江青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Sanya">三亚青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Changsha">长沙青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Lasa">拉萨青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Tianjin">天津青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Shaoxing">绍兴青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Yangzhou">扬州青年旅社</a></li><li><a href="http://www.yododo.cn/lvshe/Yangshuo">阳朔青年旅社</a></li></ul></div>
-  <script type="text/javascript" src="./home_files/jquery-ui-1.9.2.min.1492403413.js.下载"></script>
-  <script type="text/javascript" src="./home_files/jail.min.1492403413.js.下载"></script>
-  <script type="text/javascript" src="./home_files/jquery.inputTip.1492403413.js.下载"></script>
-  <script type="text/javascript" src="./home_files/jquery.yddCnAutocomplete.1492403413.js.下载"></script>
-  <script type="text/javascript" src="./home_files/jquery.yddDatePicker.1492403413.js.下载"></script>
-  <script type="text/javascript" src="./home_files/index2.1492403413.js.下载"></script>
+  <script type="text/javascript" src="statics/home_files/jquery-ui-1.9.2.min.1492403413.js.下载"></script>
+  <script type="text/javascript" src="statics/home_files/jail.min.1492403413.js.下载"></script>
+  <script type="text/javascript" src="statics/home_files/jquery.inputTip.1492403413.js.下载"></script>
+  <script type="text/javascript" src="statics/home_files/jquery.yddCnAutocomplete.1492403413.js.下载"></script>
+  <script type="text/javascript" src="statics/home_files/jquery.yddDatePicker.1492403413.js.下载"></script>
+  <script type="text/javascript" src="statics/home_files/index2.1492403413.js.下载"></script>
 
   <script type="text/javascript">
     //<![CDATA[
@@ -1294,16 +1312,16 @@ function addTrackEvent(action, opt_label, opt_value){
                 </div>
                 <div class="fright">
                     <div id="bottom_banners" class="tcenter">
-                        <a href="http://www.zx110.org/picp/?sn=310112100042838" style="margin-right: 5px"><img alt="沪公网备" src="./home_files/picp_bg.v007.png" border="0" height="35"></a>
-                        <a href="https://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=xhp65grx9wosfrm47t2j8adygdhzfgfo5mngm8eq" target="_blank" style="margin-right: 5px"><img src="./home_files/sgs.gif" border="0" height="38"></a>
-                        <a target="_blank" href="http://www.zx110.org/" style="margin-right: 5px"><img height="38" border="0" alt="" src="./home_files/zx110.png"></a>
-                        <img height="38" border="0" alt="上海网警-网络110" src="./home_files/ydd-110.png">
+                        <a href="http://www.zx110.org/picp/?sn=310112100042838" style="margin-right: 5px"><img alt="沪公网备" src="statics/home_files/picp_bg.v007.png" border="0" height="35"></a>
+                        <a href="https://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=xhp65grx9wosfrm47t2j8adygdhzfgfo5mngm8eq" target="_blank" style="margin-right: 5px"><img src="statics/home_files/sgs.gif" border="0" height="38"></a>
+                        <a target="_blank" href="http://www.zx110.org/" style="margin-right: 5px"><img height="38" border="0" alt="" src="statics/home_files/zx110.png"></a>
+                        <img height="38" border="0" alt="上海网警-网络110" src="statics/home_files/ydd-110.png">
                     </div>
                 </div>
             </div>
         </div>
-    <script type="text/javascript" src="./home_files/prototype.1492403413.js.下载"></script>
-<script type="text/javascript" src="./home_files/h2066826076.js.下载" charset="utf-8"></script><script type="text/javascript">
+    <script type="text/javascript" src="statics/home_files/prototype.1492403413.js.下载"></script>
+<script type="text/javascript" src="statics/home_files/h2066826076.js.下载" charset="utf-8"></script><script type="text/javascript">
 
 (function() {
   var ga = document.createElement('script');

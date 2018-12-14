@@ -83,6 +83,12 @@ public class IndexController {
 		return"order";
 	}
 	
+	
+	@RequestMapping("gethome")
+	public String gethome() {
+		return"home";
+	}
+	
 	/**
 	 *  异步回调方法
 	 * @param params 请求参数

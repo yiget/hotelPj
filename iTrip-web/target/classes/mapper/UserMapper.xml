@@ -22,5 +22,13 @@
     </if>
     
   </select>
-  
+ 
+ <select id="getRegister" parameterType="org.itrip.pojo.User" resultType="org.itrip.pojo.User">
+ 	select *from user where username=#{username}
+ </select>
+ 	
+  <insert id="getQueryUserName" parameterType="org.itrip.pojo.User">
+        insert into user(id,username,password) values(null,#{username},#{password})
+</insert>
+ 
 </mapper>
