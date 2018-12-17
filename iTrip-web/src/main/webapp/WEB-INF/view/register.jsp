@@ -2,37 +2,77 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0036)http://www.yododo.cn/my/register.ydd -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <title>会员注册-个人中心 | 多多驿站 - 旅游住宿订房首选品牌
-      </title>
-  <meta http-equiv="imagetoolbar" content="no">
-  <meta name="robots" content="all">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="mobile-agent" content="format=html5;url=http://m.yododo.cn/register.ydd">
-  <style type="text/css">
-    /* 20140108 font ico */
-    @font-face {font-family: "ydd";src: url("/css/ydd.eot"); src: url("/css/ydd.eot#iefix") format("embedded-opentype"), url("/css/ydd.ttf")  format("truetype"); }
-    .iconfont {font-family:"ydd";font-style: normal;font-weight: normal; -webkit-font-smoothing: antialiased;}
-  </style>
-  <link rel="stylesheet" type="text/css" href="statics/register_files/h1482760026.css" media="screen" charset="utf-8"><!--[if lt IE 7]>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>会员注册-个人中心 | 多多驿站 - 旅游住宿订房首选品牌</title>
+	<meta http-equiv="imagetoolbar" content="no">
+		<meta name="robots" content="all">
+			<meta name="keywords" content="">
+				<meta name="description" content="">
+					<meta name="mobile-agent"
+						content="format=html5;url=http://m.yododo.cn/register.ydd">
+						<style type="text/css">
+/* 20140108 font ico */
+@font-face {
+	font-family: "ydd";
+	src: url("/css/ydd.eot");
+	src: url("/css/ydd.eot#iefix") format("embedded-opentype"),
+		url("/css/ydd.ttf") format("truetype");
+}
+
+.iconfont {
+	font-family: "ydd";
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+</style>
+						<link rel="stylesheet" type="text/css"
+							href="statics/register_files/h1482760026.css" media="screen"
+							charset="utf-8">
+							<!--[if lt IE 7]>
     <link rel="stylesheet" type="text/css" media="screen" href="http://img1.yododo.com.cn/css/ie.1492403414.css"/>
     <![endif]-->
-   
-  <link rel="icon" href="http://img0.yododo.com/favicon.ico" sizes="16x16">
-  <link rel="icon" href="http://img1.yododo.com/favicon_32x32.ico" sizes="32x32">
-  <link rel="icon" href="http://img2.yododo.com/favicon_128x128.png" sizes="128x128">
-  <link rel="icon" href="http://img3.yododo.com/favicon_256x256.png" sizes="256x256">
-  <!--[if IE]><link rel="shortcut icon" href="http://img0.yododo.com/favicon.ico"/><![endif]-->
-  <link rel="apple-touch-icon" href="http://img1.yododo.com/favicon_256x256.png">
-  <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.yododo.cn/register.ydd">
-  <link type="text/css" rel="stylesheet" href="statics/register_files/newhotel-commons.1492403414.css">
-  <script async="" type="text/javascript" src="statics/register_files/v2"></script><script charset="utf-8" src="statics/register_files/v.js.下载"></script><script async="" type="text/javascript" src="statics/register_files/dxwyzYsv8r4k_sadbi-bnq.js.下载"></script><script async="" type="text/javascript" src="statics/register_files/ti.js.下载"></script><script src="statics/register_files/hm.js.下载" async="true"></script><script type="text/javascript" src="statics/register_files/prototype.1492403413.js.下载"></script>
-  <script type="text/javascript" src="statics/register_files/jquery-1.8.3.min.1492403413.js.下载"></script>
-  
-  <script type="text/javascript"> var $j = jQuery.noConflict(); </script>
-  <script type="text/javascript" src="statics/register_files/h1754007746.js.下载" charset="utf-8"></script><script type="text/javascript">
+
+							<link rel="icon" href="http://img0.yododo.com/favicon.ico"
+								sizes="16x16">
+								<link rel="icon" href="http://img1.yododo.com/favicon_32x32.ico"
+									sizes="32x32">
+									<link rel="icon"
+										href="http://img2.yododo.com/favicon_128x128.png"
+										sizes="128x128">
+										<link rel="icon"
+											href="http://img3.yododo.com/favicon_256x256.png"
+											sizes="256x256">
+											<!--[if IE]><link rel="shortcut icon" href="http://img0.yododo.com/favicon.ico"/><![endif]-->
+											<link rel="apple-touch-icon"
+												href="http://img1.yododo.com/favicon_256x256.png">
+												<link rel="alternate"
+													media="only screen and (max-width: 640px)"
+													href="http://m.yododo.cn/register.ydd">
+													<link type="text/css" rel="stylesheet"
+														href="statics/register_files/newhotel-commons.1492403414.css">
+														<script async="" type="text/javascript"
+															src="statics/register_files/v2"></script>
+														<script charset="utf-8"
+															src="statics/register_files/v.js.下载"></script>
+														<script async="" type="text/javascript"
+															src="statics/register_files/dxwyzYsv8r4k_sadbi-bnq.js.下载"></script>
+														<script async="" type="text/javascript"
+															src="statics/register_files/ti.js.下载"></script>
+														<script src="statics/register_files/hm.js.下载" async="true"></script>
+														<script type="text/javascript"
+															src="statics/register_files/prototype.1492403413.js.下载"></script>
+														<script type="text/javascript"
+															src="statics/register_files/jquery-1.8.3.min.1492403413.js.下载"></script>
+
+														<script type="text/javascript"> var $j = jQuery.noConflict(); </script>
+														<script type="text/javascript"
+															src="statics/register_files/h1754007746.js.下载"
+															charset="utf-8"></script>
+														<script type="text/javascript">
   
 var _hmt = _hmt || [];
 var _gaq = _gaq || [];
@@ -91,9 +131,66 @@ function addTrackEvent(action, opt_label, opt_value){
 } 
 
 </script>
-<script src="statics/register_files/ga.js.下载" async="true"></script><script src="statics/register_files/f.txt" async="true"></script><script src="statics/register_files/logger.js.下载"></script><script src="statics/register_files/f(1).txt"></script><link href="statics/register_files/bdsstyle.css" rel="stylesheet" type="text/css"></head>
-<body><iframe frameborder="0" style="display: none;" src="statics/register_files/saved_resource.html"></iframe><div id="bdshare" style="right: 0px; top: 415px; position: fixed; height: 330px; overflow: hidden;"><img src="statics/register_files/r0.gif" alt="" style="float:left;margin-top:58px;"><iframe id="bdsIfr" style="position:absolute;display:none;z-index:9999;" frameborder="0" src="statics/register_files/saved_resource(1).html"></iframe><div id="bdshare_l" style="display: none; left: 24px;"><div id="bdshare_l_c"><h6>分享到</h6><ul><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_mshare mshare">一键分享</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_qzone qqkj">QQ空间</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_tsina xlwb">新浪微博</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_bdysc bdysc">百度云收藏</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_renren rrw">人人网</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_tqq txwb">腾讯微博</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_bdxc bdxc">百度相册</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_kaixin001 kxw">开心网</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_tqf txpy">腾讯朋友</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_tieba bdtb">百度贴吧</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_douban db">豆瓣网</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_tsohu shwb">搜狐微博</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_bdhome bdhome">百度新首页</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_sqq sqq">QQ好友</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_thx thx">和讯微博</a></li><li><a href="http://www.yododo.cn/my/register.ydd#" class="bds_more">更多...</a></li></ul><p><a href="http://www.yododo.cn/my/register.ydd#" class="goWebsite">百度分享</a></p></div></div></div>
-   <script type="text/javascript">
+														<script src="statics/register_files/ga.js.下载" async="true"></script>
+														<script src="statics/register_files/f.txt" async="true"></script>
+														<script src="statics/register_files/logger.js.下载"></script>
+														<script src="statics/register_files/f(1).txt"></script>
+														<link href="statics/register_files/bdsstyle.css"
+															rel="stylesheet" type="text/css">
+</head>
+<body>
+	<iframe frameborder="0" style="display: none;"
+		src="statics/register_files/saved_resource.html"></iframe>
+	<div id="bdshare"
+		style="right: 0px; top: 415px; position: fixed; height: 330px; overflow: hidden;">
+		<img src="statics/register_files/r0.gif" alt=""
+			style="float: left; margin-top: 58px;"><iframe id="bdsIfr"
+				style="position: absolute; display: none; z-index: 9999;"
+				frameborder="0" src="statics/register_files/saved_resource(1).html"></iframe>
+			<div id="bdshare_l" style="display: none; left: 24px;">
+				<div id="bdshare_l_c">
+					<h6>分享到</h6>
+					<ul>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_mshare mshare">一键分享</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_qzone qqkj">QQ空间</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_tsina xlwb">新浪微博</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_bdysc bdysc">百度云收藏</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_renren rrw">人人网</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_tqq txwb">腾讯微博</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_bdxc bdxc">百度相册</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_kaixin001 kxw">开心网</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_tqf txpy">腾讯朋友</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_tieba bdtb">百度贴吧</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_douban db">豆瓣网</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_tsohu shwb">搜狐微博</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_bdhome bdhome">百度新首页</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_sqq sqq">QQ好友</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_thx thx">和讯微博</a></li>
+						<li><a href="http://www.yododo.cn/my/register.ydd#"
+							class="bds_more">更多...</a></li>
+					</ul>
+					<p>
+						<a href="http://www.yododo.cn/my/register.ydd#" class="goWebsite">百度分享</a>
+					</p>
+				</div>
+			</div>
+	</div>
+	<script type="text/javascript">
   //<![CDATA[
   function ajaxSynchroLogin(username, password, reloadCallback){
     ajaxSynchroLogin2(username, password, reloadCallback, false);
@@ -128,49 +225,71 @@ function addTrackEvent(action, opt_label, opt_value){
 
   //]]>
 </script>
-<div id="gotop"></div>
-<div class="head-cn-t clearfix">
-    <div class="w984">
-      <a class="fleft" title="游多多客栈致力于为全球自助游爱好者提供旅游目的地客栈、旅舍、家庭旅馆的住宿预订平台" href="http://www.yododo.cn/">
-          <img src="statics/register_files/logo-2.png" alt="游多多客栈-自助游住宿订房首选品牌">
-      </a>
-      <div class="head-menu-t clearfix">
-         <a href="http://www.yododo.cn/" title="游多多客栈首页">首页</a>
-<a href="http://www.yododo.cn/hotelinn" title="游多多品牌客栈">品牌客栈</a>
-<a href="http://www.yododo.cn/hotel/hotelmap" title="旅游住宿大全" target="_blank">旅游住宿</a>
-<a href="http://www.yododo.cn/hotel/map" target="_blank" title="地图搜索">地图搜索</a>
-<a class="dn " href="http://www.yododo.cn/hotel/hotelexp" onclick="try{_gaq.push([&#39;_trackEvent&#39;, &#39;cnheadermenu&#39;, &#39;hotelexp&#39;]);}catch(e){}" target="_blank" title="免费体验">免费体验</a>
-<a href="http://www.yododo.cn/hotel/events/parIndex.html" target="_blank" title="客栈趴">客栈趴</a>
-<div class="h-m-ts" onclick="window.location.href=&#39;http://www.yododo.cn/hotel/events/cellphone.html&#39;">APP下载
-  <div class="hiddendiv" style="width:180px;">
-    <img alt="游多多客栈手机客户端" src="statics/register_files/2d-1.gif">
-  </div>
-</div>
-<div class="h-m-ts">优惠活动
-  <div class="hiddendiv">
-    <a href="http://www.yododo.cn/hotel/events/hotel-guide.html?cityName=Xitang" target="_blank">全景西塘</a>
-    <a href="http://www.yododo.cn/hotel/events/hotel-guide.html?cityName=Hangzhou" target="_blank">畅游杭州 </a>
-    <a href="http://www.yododo.cn/hotel/events/hotel-guide.html?cityName=Lijiang" target="_blank">玩转丽江</a>
-    <a href="http://www.yododo.cn/hotel/events/hotel-guide.html?cityName=Fenghuang" target="_blank">游凤凰</a>
-  </div>
-  <div class="hot-1"><div class="hot-rect"></div>hot</div>
-</div></div>
-      <div class="head-loginbox">
-            <span class="w40">
-              <a href="http://www.yododo.cn/my/register.ydd"><i title="注册" class="ft22 iconfont fcwhite"></i><br>注册</a>
-            </span>
-            <span class="w40">
-              <a href="http://www.yododo.cn/user/login.ydd" onclick="showPopupLogin(true);return false;"><i title="登录" class="ft22 iconfont fcwhite"></i><br>登录</a>
-            </span>
-          </div>
-        </div>
-  </div>
-  <div class="h70"> </div><div class="new-hotel-innerbox" style="background-color: transparent;">
+	<div id="gotop"></div>
+	<div class="head-cn-t clearfix">
+		<div class="w984">
+			<a class="fleft" title="游多多客栈致力于为全球自助游爱好者提供旅游目的地客栈、旅舍、家庭旅馆的住宿预订平台"
+				href="http://www.yododo.cn/"> <img
+				src="statics/register_files/logo-2.png" alt="游多多客栈-自助游住宿订房首选品牌"></a>
+			<div class="head-menu-t clearfix">
+				<a href="http://www.yododo.cn/" title="游多多客栈首页">首页</a> <a
+					href="http://www.yododo.cn/hotelinn" title="游多多品牌客栈">品牌客栈</a> <a
+					href="http://www.yododo.cn/hotel/hotelmap" title="旅游住宿大全"
+					target="_blank">旅游住宿</a> <a href="http://www.yododo.cn/hotel/map"
+					target="_blank" title="地图搜索">地图搜索</a> <a class="dn "
+					href="http://www.yododo.cn/hotel/hotelexp"
+					onclick="try{_gaq.push([&#39;_trackEvent&#39;, &#39;cnheadermenu&#39;, &#39;hotelexp&#39;]);}catch(e){}"
+					target="_blank" title="免费体验">免费体验</a> <a
+					href="http://www.yododo.cn/hotel/events/parIndex.html"
+					target="_blank" title="客栈趴">客栈趴</a>
+				<div class="h-m-ts"
+					onclick="window.location.href=&#39;http://www.yododo.cn/hotel/events/cellphone.html&#39;">
+					APP下载
+					<div class="hiddendiv" style="width: 180px;">
+						<img alt="游多多客栈手机客户端" src="statics/register_files/2d-1.gif">
+					</div>
+				</div>
+				<div class="h-m-ts">
+					优惠活动
+					<div class="hiddendiv">
+						<a
+							href="http://www.yododo.cn/hotel/events/hotel-guide.html?cityName=Xitang"
+							target="_blank">全景西塘</a> <a
+							href="http://www.yododo.cn/hotel/events/hotel-guide.html?cityName=Hangzhou"
+							target="_blank">畅游杭州 </a> <a
+							href="http://www.yododo.cn/hotel/events/hotel-guide.html?cityName=Lijiang"
+							target="_blank">玩转丽江</a> <a
+							href="http://www.yododo.cn/hotel/events/hotel-guide.html?cityName=Fenghuang"
+							target="_blank">游凤凰</a>
+					</div>
+					<div class="hot-1">
+						<div class="hot-rect"></div>
+						hot
+					</div>
+				</div>
+			</div>
+			<div class="head-loginbox">
+				<span class="w40"> <a
+					href="http://www.yododo.cn/my/register.ydd"><i title="注册"
+						class="ft22 iconfont fcwhite"></i><br>注册</a>
+				</span> <span class="w40"> <a
+					href="http://www.yododo.cn/user/login.ydd"
+					onclick="showPopupLogin(true);return false;"><i title="登录"
+						class="ft22 iconfont fcwhite"></i><br>登录</a>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="h70"></div>
+	<div class="new-hotel-innerbox" style="background-color: transparent;">
 
-<div id="newcrumb" class="ncrumb clearfix">
-  <div>当前位置：&nbsp;</div><div><a href="http://www.yododo.cn/">游多多客栈首页</a><span>&gt;</span>注册</div>
-</div>
-<script type="text/javascript">
+		<div id="newcrumb" class="ncrumb clearfix">
+			<div>当前位置：&nbsp;</div>
+			<div>
+				<a href="http://www.yododo.cn/">游多多客栈首页</a><span>&gt;</span>注册
+			</div>
+		</div>
+		<script type="text/javascript">
 //<![CDATA[
 function checkEmail(email) {
   if (email == null || email == "") {
@@ -399,60 +518,86 @@ $j(function(){
 });
 //]]>
 </script>
-<style type="text/css">
-.valid {border: 1px solid #00be00;padding-left: 18px;background: url(http://img2.yododo.com/images/icon_accept.gif) no-repeat 0;background-color: #e6ffe6;width: 200px;}
-.invalid {border: 1px solid #be0000;padding-left: 18px;background: url(http://img3.yododo.com/images/icon_warn.gif) no-repeat 0;background-color: #ffe6e6;width: 200px;}
+		<style type="text/css">
+.valid {
+	border: 1px solid #00be00;
+	padding-left: 18px;
+	background: url(http://img2.yododo.com/images/icon_accept.gif) no-repeat
+		0;
+	background-color: #e6ffe6;
+	width: 200px;
+}
+
+.invalid {
+	border: 1px solid #be0000;
+	padding-left: 18px;
+	background: url(http://img3.yododo.com/images/icon_warn.gif) no-repeat 0;
+	background-color: #ffe6e6;
+	width: 200px;
+}
 </style>
-<div class="new-page">
-  <div class="userreg-box clearfix" style="height: auto; padding-bottom: 10px; padding:80px 0;">
-    <div class="userreg-nav-box">
-        <div class="userreg-nav">
-        <a class="userregcurrent" href="javascript:void(0);" title="会员免费注册">会员免费注册</a>
-        <a href="http://www.yododo.cn/hotel/register.ydd" title="驿站开店注册" target="_blank">驿站开店注册</a>
-        <div id="reg-none">如果您已持有会员卡，请前往<a href="javascript:void(0);" class="huiyuan">会员卡注册</a></div>
-          </div>
-    </div>
-    
-    <div class="regleftbox" style="float:none;">
-  <form name="UserForm" id="registForm" method="post" action="register.ydd" class="normalForm" onsubmit="return checkForm(this);"><input type="text" name="user.regtype" maxlength="12" value="CN" id="regtype" style="display: none;" class="text01 w160" title="注册来源"><div id="regtype-errMsg" class="errMsg" style="display: none;"></div>
-        <table width="658" border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 15px">
-        
-          <tbody><tr>
-            <td align="right">用 户 名:</td>
-            <td class="required">
-              <input type="text" name="username" maxlength="12" value=""  id="username" class="inputwidthout" title="用户名"><div id="username-result-box" style="margin:5px 0; display: none;"></div>
-            </td>
-            <td>
-              <span id="name-errMsg" class="tipsone">可以使用英文开头的英文，数字，下划线组合</span>
-                </td>
-          </tr>
-          <tr>
-            <td align="right">登录密码:</td>
-            <td class="required">
-              <input type="password" name="password" maxlength="32" value="" id="password" class="inputwidthout" title="请输入您的登录密码"></td>
-            <td>
-              <span id="password-errMsg" class="tipsone">请输入6-12位数字，字母组合，不区分大小写</span>
-                </td>
-          </tr>
-            <tr style="display: none;">
-                        <td align="right">会员卡号:</td>
-                        <td>
-                            <input type="text" name="memberShipCard" maxlength="32" value="" id="memberShipCard" class="inputwidthout" title="请输入您的会员卡号"></td>
-                        <td>
-                            <span id="memberShipCard-errMsg" class="tipsone">请输入您的会员卡号</span>
-                                </td>
-                    </tr>
-                <tr>
-                <td align="right">验 证 码:</td>
-                <td>
-                    <input type="text" name="verifycode" id="verifycode" class="authcode" size="4" maxlength="4" style="width:111px;">
-                	<img src="code.do" id="kanbuq"><a id=""href="javascript:;" onclick="change();">看不清换一张</a></img>
-                </td>
-                <td>
-                    <span id="verifycode-errMsg" class="tipsone">点击图片可切换验证码</span>
-                        </td>
-            </tr>
-      <!--     <tr>
+		<div class="new-page">
+			<div class="userreg-box clearfix"
+				style="height: auto; padding-bottom: 10px; padding: 80px 0;">
+				<div class="userreg-nav-box">
+					<div class="userreg-nav">
+						<a class="userregcurrent" href="javascript:void(0);"
+							title="会员免费注册">会员免费注册</a> <a
+							href="http://www.yododo.cn/hotel/register.ydd" title="驿站开店注册"
+							target="_blank">驿站开店注册</a>
+						<div id="reg-none">
+							如果您已持有会员卡，请前往<a href="javascript:void(0);" class="huiyuan">会员卡注册</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="regleftbox" style="float: none;">
+					<form name="UserForm" id="registForm" method="post"
+						action="register.ydd" class="normalForm"
+						onsubmit="return checkForm(this);">
+						<input type="text" name="user.regtype" maxlength="12" value="CN"
+							id="regtype" style="display: none;" class="text01 w160"
+							title="注册来源"><div id="regtype-errMsg" class="errMsg"
+								style="display: none;"></div>
+							<table width="658" border="0" cellpadding="0" cellspacing="0"
+								style="margin-bottom: 15px">
+
+								<tbody>
+									<tr>
+										<td align="right">用 户 名:</td>
+										<td class="required"><input type="text" name="username"
+											maxlength="12" value="" id="username" class="inputwidthout"
+											title="用户名"><div id="username-result-box"
+													style="margin: 5px 0; display: none;"></div></td>
+										<td><span id="name-errMsg" class="tipsone">可以使用英文开头的英文，数字，下划线组合</span>
+										</td>
+									</tr>
+									<tr>
+										<td align="right">登录密码:</td>
+										<td class="required"><input type="password"
+											name="password" maxlength="32" value="" id="password"
+											class="inputwidthout" title="请输入您的登录密码"></td>
+										<td><span id="password-errMsg" class="tipsone">请输入6-12位数字，字母组合，不区分大小写</span>
+										</td>
+									</tr>
+									<tr style="display: none;">
+										<td align="right">会员卡号:</td>
+										<td><input type="text" name="memberShipCard"
+											maxlength="32" value="" id="memberShipCard"
+											class="inputwidthout" title="请输入您的会员卡号"></td>
+										<td><span id="memberShipCard-errMsg" class="tipsone">请输入您的会员卡号</span>
+										</td>
+									</tr>
+									<tr>
+										<td align="right">验 证 码:</td>
+										<td><input type="text" name="verifycode" id="verifycode"
+											class="authcode" size="4" maxlength="4" style="width: 111px;">
+												<img src="code.do" id="kanbuq"><a id=""
+													href="javascript:;" onclick="change();">看不清换一张</a></img></td>
+										<td><span id="verifycode-errMsg" class="tipsone">点击图片可切换验证码</span>
+										</td>
+									</tr>
+									<!--     <tr>
             <td width="150" align="right">手机号码:</td>
             <td width="240" class="required">
               <input name="user.info.mobile" id="mobile" title="手机号码" maxlength="11" class="inputwidthout" style="width:130px;font-size: 12px;" placeholder="目前仅支持中国大陆">
@@ -473,30 +618,32 @@ $j(function(){
           		<span id="mobileVerify-errMsg" class="tipsone">请输入<b>有效的</b>6位手机短信验证码，才能激活账号</span>
           			</td>
           </tr> -->
-          
 
 
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="2">
-              <input type="checkbox" id="customerprotocol" checked="checked">我已经阅读并已同意“游多多客栈用户协议”
-            </td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>
-              <div id="submit-errMsg" class="fcred"></div>
-              <input class="submitreg-btn" type="submit" name="submit" title="提交注册信息" value="">
-            </td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td valign="top" align="right" style="line-height:20px;">
-              游多多客栈&nbsp;<br>用户协议:
-            </td>
-            <td colspan="2">
-              <textarea id="protocol" name="protocol" rows="5" style="width:480px; font-size: 12px; line-height: 22px; color: #666; padding: 15px">1. 接受条款
+
+									<tr>
+										<td>&nbsp;</td>
+										<td colspan="2"><input type="checkbox"
+											id="customerprotocol" checked="checked">我已经阅读并已同意“游多多客栈用户协议”
+										</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td>
+											<div id="submit-errMsg" class="fcred"></div> <input
+											class="submitreg-btn" type="submit" name="submit"
+											title="提交注册信息" value="">
+										</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td valign="top" align="right" style="line-height: 20px;">
+											游多多客栈&nbsp;<br>用户协议: 
+										</td>
+										<td colspan="2"><textarea id="protocol" name="protocol"
+												rows="5"
+												style="width: 480px; font-size: 12px; line-height: 22px; color: #666; padding: 15px">1. 接受条款
 &nbsp;&nbsp;&nbsp;&nbsp;欢迎光临游多多(yododo)旅行网（下简称“游多多”）。游多多在您确认以下条款后为您提供服务。这些条款可由上海友游网络技术有限公司随时更新，且不须另行通知。
 &nbsp;&nbsp;&nbsp;&nbsp;您在使用游多多各项服务之前，请务必仔细阅读本服务条款。如您不同意服务条款或上海友游网络技术有限公司随时对其的修改，您可以立刻停止使用游多多提供的服务；您一旦使用了游多多提供的服务，即视为您已了解并完全同意服务条款各项内容，包括游多多对服务条款随时所做的任何修改。
 &nbsp;&nbsp;&nbsp;&nbsp;2. 服务说明
@@ -558,89 +705,166 @@ $j(function(){
 &nbsp;&nbsp;&nbsp;&nbsp;b.未行使或执行本服务条款任何权利或规定，不构成对前述权利或权利之放弃。
 &nbsp;&nbsp;&nbsp;&nbsp;c.本服务条款之任何规定因与中华人民共和国法律抵触而无效，本服务条款其他规定仍应具有完整的效力。
 &nbsp;&nbsp;&nbsp;&nbsp;18.用户和游多多一致同意签订本协议、执行和解释及争议的解决均适用中国法律；如发生游多多服务条款与中华人民共和国法律相抵触时，则这些条款将完全按法律规定重新解释，而其它条款则依旧具有法律效力。如游多多与用户就本协议发生任何争议，应首先友好协商解决，协商不成时，任何一方均可向游多多所在地的人民法院提起诉讼。</textarea>
-              <div id="protocol-errMsg"></div>
-            </td>
-          </tr>
-        </tbody></table>
-      </form></div>
-  
+											<div id="protocol-errMsg"></div></td>
+									</tr>
+								</tbody>
+							</table>
+					</form>
+				</div>
 
-</div>
 
-<script type="text/javascript">
+			</div>
+
+			<script type="text/javascript">
 //<![CDATA[
 var OA_zones = {
   'register-right' : 115
 };
 //]]>
 </script>
-<script type="text/javascript" src="statics/register_files/spcjs.php"></script><script type="text/javascript" src="statics/register_files/spc.php"></script><script type="text/javascript" src="statics/register_files/fl.js.下载"></script>
+			<script type="text/javascript" src="statics/register_files/spcjs.php"></script>
+			<script type="text/javascript" src="statics/register_files/spc.php"></script>
+			<script type="text/javascript" src="statics/register_files/fl.js.下载"></script>
 
 
-<div id="register-right-hidden" style="position:absolute; left:-10000px; top:-10000px;">
-  <script type="text/javascript">//<![CDATA[
+			<div id="register-right-hidden"
+				style="position: absolute; left: -10000px; top: -10000px;">
+				<script type="text/javascript">//<![CDATA[
   OA_show('register-right');
-  //]]></script><div id="beacon_2ec28a3899" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="statics/register_files/lg.php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+  //]]></script>
+				<div id="beacon_2ec28a3899"
+					style="position: absolute; left: 0px; top: 0px; visibility: hidden;">
+					<img src="statics/register_files/lg.php" width="0" height="0"
+						alt="" style="width: 0px; height: 0px;">
+				</div>
 
-</div>
-<script type="text/javascript">//<![CDATA[
+			</div>
+			<script type="text/javascript">//<![CDATA[
   OpenX_positionDivs();
 //]]></script>
-</div> <div class="new-hotel-bottom">
-      <div class="new-hotel-innerbox" style="padding: 0 12px 12px 0; background-color: transparent;">
-        <div class="box1">
-            <style>
-                 .cn-helplink dl{ padding-left: 10px;}
-                 .cn-helplink dd{ padding-left: 0}
-               </style>
-              <div class="cn-helplink pd10 clearfix">
-                <dl>
-                  <dt><i class="iconfont"></i>多多驿站帮助中心</dt>
-                  <dd><a href="http://www.yododo.cn/help.ydd#reserve-method" rel="nofollow">预订常见问题</a></dd>
-                  <dd><a href="http://www.yododo.cn/help.ydd#reserve-method" rel="nofollow">预订流程说明</a></dd>
-                  <dd><a href="http://www.yododo.cn/ask/" target="_blank">驿站咨询</a></dd>
-                </dl>
-                <dl>
-                  <dt><i class="iconfont"></i>旅游住宿购物保障</dt>
-                  <dd><a href="http://www.yododo.cn/hotel/events/xfbz.html" rel="nofollow">入住保障体系</a></dd>
-                  <dd><a href="http://www.yododo.cn/hotel/events/xfbz.html#refund-process" rel="nofollow">无房退款说明</a></dd>
-                </dl>
-                <dl>
-                  <dt><i class="iconfont"></i>多多驿站客服</dt>
-                  <dd>客服电话：400-021-1100<br>(服务时间：9点-21点)</dd>
-                  <dd><a href="http://www.yododo.cn/hotel/events/yddinn.html" target="_blank">游多多客栈品牌加盟：15502128824</a></dd>
-                </dl>
-                <dl>
-                  <dt><i class="iconfont"></i>商家合作与维护</dt>
-                  <dd>微信：15502132924</dd>
-                  <dd><a href="http://www.yododo.cn/hotel/events/register-guide.html" rel="nofollow">免费开店</a></dd>
-                  <dd><a href="http://www.yododo.cn/hotel/events/register-guide.html#commonquestion" rel="nofollow">开店常见问题</a></dd>
-                </dl>
-                <dl>
-                  <dt><i class="iconfont"></i>专业服务</dt>
-                  <dd><a href="http://www.yododo.cn/hotelmgr/home.ydd" target="_blank" rel="nofollow">管理驿站</a></dd>
-                  <dd><a href="http://www.yododo.cn/hotel/events/cellphone.html" target="_blank" rel="nofollow">多多微店</a></dd>
-                  <dd><a href="http://www.yododo.cn/inndistr/login.ydd" target="_blank" rel="nofollow">登录客栈通</a></dd>
-                </dl>
-              </div>
+		</div>
+		<div class="new-hotel-bottom">
+			<div class="new-hotel-innerbox"
+				style="padding: 0 12px 12px 0; background-color: transparent;">
+				<div class="box1">
+					<style>
+.cn-helplink dl {
+	padding-left: 10px;
+}
 
-          </div>
-        </div>
-      <div class="box2">
-        <div class="ndp-aboutus">
-            <a rel="nofollow" href="http://www.yododo.cn/about.ydd">关于我们</a>
-              <a rel="nofollow" href="http://www.yododo.cn/join.ydd">加入我们</a>
-              <a rel="nofollow" href="http://www.yododo.cn/law.ydd">法律声明</a>
-            <a href="http://www.yododo.cn/business.ydd">商家合作</a>
-              <a rel="nofollow" href="http://weibo.com/yododo" target="_blank">多多微博</a>
-            <a rel="nofollow" href="http://www.yododo.cn/contact.ydd">联系我们</a>
-          </div>
-        <div style="height: auto; line-height: 22px; margin-bottom: 10px">
-          Copyright © 2006-2018 Yododo.cn, All rights reserved. <a class="fcgary" href="http://img1.yododo.com/images/yododo_icp.jpg" target="_blank" rel="nofollow">沪ICP证B2-20120026</a> <a class="fcgary" href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">沪ICP备06029079号</a><br>
-          游多多网络科技（上海）有限公司 上海浦江镇联航路1188号浦江智谷10号楼3楼H座 电话：021-60503308
-        </div>
-        <div id="bottom_banners" style="height:auto"><a href="http://www.zx110.org/" target="_blank"><img src="statics/register_files/zx110.png" alt="" border="0" width="65" height="45"></a> <a id="kx_verify" style="display: inline-block;" href="https://ss.knet.cn/verifyseal.dll?sn=e11122111010006271308004&amp;ct=df&amp;a=1&amp;pa=604481" target="_blank" kx_type="图标式"><img style="border:currentColor;" oncontextmenu="return false;" alt="可信网站" src="statics/register_files/cnnic.png"></a><img height="45" src="statics/register_files/ydd-110.png" border="0" alt="上海网警-网络110"></div>
-        <script type="text/javascript">
+.cn-helplink dd {
+	padding-left: 0
+}
+</style>
+					<div class="cn-helplink pd10 clearfix">
+						<dl>
+							<dt>
+								<i class="iconfont"></i>多多驿站帮助中心
+							</dt>
+							<dd>
+								<a href="http://www.yododo.cn/help.ydd#reserve-method"
+									rel="nofollow">预订常见问题</a>
+							</dd>
+							<dd>
+								<a href="http://www.yododo.cn/help.ydd#reserve-method"
+									rel="nofollow">预订流程说明</a>
+							</dd>
+							<dd>
+								<a href="http://www.yododo.cn/ask/" target="_blank">驿站咨询</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<i class="iconfont"></i>旅游住宿购物保障
+							</dt>
+							<dd>
+								<a href="http://www.yododo.cn/hotel/events/xfbz.html"
+									rel="nofollow">入住保障体系</a>
+							</dd>
+							<dd>
+								<a
+									href="http://www.yododo.cn/hotel/events/xfbz.html#refund-process"
+									rel="nofollow">无房退款说明</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<i class="iconfont"></i>多多驿站客服
+							</dt>
+							<dd>
+								客服电话：400-021-1100<br>(服务时间：9点-21点)
+							</dd>
+							<dd>
+								<a href="http://www.yododo.cn/hotel/events/yddinn.html"
+									target="_blank">游多多客栈品牌加盟：15502128824</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<i class="iconfont"></i>商家合作与维护
+							</dt>
+							<dd>微信：15502132924</dd>
+							<dd>
+								<a href="http://www.yododo.cn/hotel/events/register-guide.html"
+									rel="nofollow">免费开店</a>
+							</dd>
+							<dd>
+								<a
+									href="http://www.yododo.cn/hotel/events/register-guide.html#commonquestion"
+									rel="nofollow">开店常见问题</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<i class="iconfont"></i>专业服务
+							</dt>
+							<dd>
+								<a href="http://www.yododo.cn/hotelmgr/home.ydd" target="_blank"
+									rel="nofollow">管理驿站</a>
+							</dd>
+							<dd>
+								<a href="http://www.yododo.cn/hotel/events/cellphone.html"
+									target="_blank" rel="nofollow">多多微店</a>
+							</dd>
+							<dd>
+								<a href="http://www.yododo.cn/inndistr/login.ydd"
+									target="_blank" rel="nofollow">登录客栈通</a>
+							</dd>
+						</dl>
+					</div>
+
+				</div>
+			</div>
+			<div class="box2">
+				<div class="ndp-aboutus">
+					<a rel="nofollow" href="http://www.yododo.cn/about.ydd">关于我们</a> <a
+						rel="nofollow" href="http://www.yododo.cn/join.ydd">加入我们</a> <a
+						rel="nofollow" href="http://www.yododo.cn/law.ydd">法律声明</a> <a
+						href="http://www.yododo.cn/business.ydd">商家合作</a> <a
+						rel="nofollow" href="http://weibo.com/yododo" target="_blank">多多微博</a>
+					<a rel="nofollow" href="http://www.yododo.cn/contact.ydd">联系我们</a>
+				</div>
+				<div style="height: auto; line-height: 22px; margin-bottom: 10px">
+					Copyright © 2006-2018 Yododo.cn, All rights reserved. <a
+						class="fcgary" href="http://img1.yododo.com/images/yododo_icp.jpg"
+						target="_blank" rel="nofollow">沪ICP证B2-20120026</a> <a
+						class="fcgary" href="http://www.miitbeian.gov.cn/" target="_blank"
+						rel="nofollow">沪ICP备06029079号</a><br> 游多多网络科技（上海）有限公司
+						上海浦江镇联航路1188号浦江智谷10号楼3楼H座 电话：021-60503308 
+				</div>
+				<div id="bottom_banners" style="height: auto">
+					<a href="http://www.zx110.org/" target="_blank"><img
+						src="statics/register_files/zx110.png" alt="" border="0"
+						width="65" height="45"></a> <a id="kx_verify"
+						style="display: inline-block;"
+						href="https://ss.knet.cn/verifyseal.dll?sn=e11122111010006271308004&amp;ct=df&amp;a=1&amp;pa=604481"
+						target="_blank" kx_type="图标式"><img
+						style="border: currentColor;" oncontextmenu="return false;"
+						alt="可信网站" src="statics/register_files/cnnic.png"></a><img
+						height="45" src="statics/register_files/ydd-110.png" border="0"
+						alt="上海网警-网络110">
+				</div>
+				<script type="text/javascript">
           $j().ready(function() {
             document.getElementById("bottom_banners").innerHTML = //"<a href='http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20110608130045381' target='_blank'><img src='http://img0.yododo.com/images/sgs.gif' alt='' border='0' width='47' height='47'/></a> " +
             "<a href='http://www.zx110.org/' target='_blank'><img src='http://img1.yododo.com/images/zx110.png' alt='' border='0' width='65' height='45'/></a> " +
@@ -648,9 +872,11 @@ var OA_zones = {
             "<img height='45' src='http://img0.yododo.com/images/ydd-110.png' border='0' alt='上海网警-网络110'/>";
           });
         </script>
-      </div>
-    </div>
-  <script type="text/javascript" src="statics/register_files/h72924583.js.下载" charset="utf-8"></script><script type="text/javascript">
+			</div>
+		</div>
+		<script type="text/javascript"
+			src="statics/register_files/h72924583.js.下载" charset="utf-8"></script>
+		<script type="text/javascript">
     //<![CDATA[
     function startHover() {
     }
@@ -778,7 +1004,7 @@ var OA_zones = {
     }
     //]]>
   </script>
-<script type="text/javascript">
+		<script type="text/javascript">
 
 (function() {
   var ga = document.createElement('script');
@@ -788,7 +1014,7 @@ var OA_zones = {
   document.documentElement.firstChild.appendChild(ga);
 })();
 </script>
-<script type="text/javascript">
+		<script type="text/javascript">
 (function() {
 
   var _bdid = '6d012964209ae261eb52768ce9189563';
@@ -803,14 +1029,16 @@ var OA_zones = {
   //document.documentElement.firstChild.appendChild(_bdhm);
 })();
 </script>
-<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=0&amp;uid=690748" src="statics/register_files/bds_s_v2.js.下载"></script>
-    
-  <script type="text/javascript">
+		<script type="text/javascript" id="bdshare_js"
+			data="type=slide&amp;img=0&amp;uid=690748"
+			src="statics/register_files/bds_s_v2.js.下载"></script>
+
+		<script type="text/javascript">
     var bds_config = {"bdTop":415, 'bdPopTitle':'分享/收藏到...', 'snsKey':{'tsina':'604114270','qzone':'215206'}, 'wbUid':1670774563 };
     document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
   </script>
-<!-- pre-process scripts -->
-<script type="text/javascript">
+		<!-- pre-process scripts -->
+		<script type="text/javascript">
   //<![CDATA[
   //attachButtonStyle();
   try {
@@ -822,27 +1050,28 @@ var OA_zones = {
   document.onselectstart = null;
   //]]>
 </script>
-<script type="text/javascript">
+		<script type="text/javascript">
     if(document.location.protocol=='http:'){
       var Tynt=Tynt||[];Tynt.push('dxwyzYsv8r4k_sadbi-bnq');Tynt.i={"st":true,"ap":"延伸阅读：","as":"(本文转载自多多驿站)"};
       (function(){var s=document.createElement('script');s.async="async";s.type="text/javascript";s.src='http://tcr.tynt.com/ti.js';var h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})();
     }
   </script>
-<script type="text/javascript">
+		<script type="text/javascript">
     //<![CDATA[
     window.status='如果您喜欢多多驿站，请推荐给您身边的朋友！';
     //]]>
   </script>
-<script type="text/javascript" src="statics/register_files/singleLogin.1492403413.js.下载"></script>
-<script type="text/javascript">
+		<script type="text/javascript"
+			src="statics/register_files/singleLogin.1492403413.js.下载"></script>
+		<script type="text/javascript">
   //<![CDATA[
   $j().ready(function(){
     
   });
   //-->
 </script>
-<!-- Google Code for remarketing -->
-<script type="text/javascript">
+		<!-- Google Code for remarketing -->
+		<script type="text/javascript">
   /* <![CDATA[ */
   var google_conversion_id = 1008496340;
   var google_conversion_label = "BC6yCPyN2AUQ1N3x4AM";
@@ -857,4 +1086,6 @@ var OA_zones = {
   /* ]]> */
 </script>
 
-</div></body></html>
+	</div>
+</body>
+</html>

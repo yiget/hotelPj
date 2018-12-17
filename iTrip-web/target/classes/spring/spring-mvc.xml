@@ -23,7 +23,7 @@
 		比如我们在 JSP 中引入一个 js 文件：src="${webRoot}/js/jQuery-core/jquery-1.6.1.min.js -->
 	<mvc:resources mapping="/statics/**"
 		location="/WEB-INF/statics/" />
-	
+
 
 	<!-- 对模型视图名称的解析，即在模型视图名称添加前后缀(如果最后一个还是表示文件夹,则最后的斜杠不要漏了) 使用JSP -->
 	<!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- -->
@@ -68,36 +68,39 @@
 
 	</bean>
 	<!--fastjson支持配置结束 -->
- <bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">  
-      <property name="config">  
-          <bean class="com.google.code.kaptcha.util.Config">  
-              <constructor-arg>  
-                  <props> 
-                      <!-- 是否有边框 可选yes 或者 no --> 
-                      <prop key="kaptcha.border">yes</prop>  
-                      <!-- 边框颜色 -->
-                      <prop key="kaptcha.border.color">105,179,90</prop>  
-                      <!-- 验证码文本字符颜色 -->
-                      <prop key="kaptcha.textproducer.font.color">blue</prop>  
-                      <!-- 验证码文本字符大小 -->
-                      <prop key="kaptcha.textproducer.font.size">45</prop>  
-                      <!-- 验证码图片的宽度 默认200 -->
-                      <prop key="kaptcha.image.width">125</prop>  
-                      <!-- 验证码图片的高度 默认50 -->
-                      <prop key="kaptcha.image.height">45</prop>  
-                      <!-- 验证码文本字符长度  默认为5 -->
-                      <prop key="kaptcha.textproducer.char.length">4</prop>  
-                      <!-- 验证码文本字体样式  默认为new Font("Arial", 1, fontSize), new Font("Courier", 1, fontSize)  -->
-                      <prop key="kaptcha.textproducer.font.names">宋体,楷体,微软雅黑</prop>  
-                  </props>  
-              </constructor-arg>  
-          </bean>  
-      </property>  
-  </bean>
+	<bean id="captchaProducer"
+		class="com.google.code.kaptcha.impl.DefaultKaptcha">
+		<property name="config">
+			<bean class="com.google.code.kaptcha.util.Config">
+				<constructor-arg>
+					<props>
+						<!-- 是否有边框 可选yes 或者 no -->
+						<prop key="kaptcha.border">yes</prop>
+						<!-- 边框颜色 -->
+						<prop key="kaptcha.border.color">105,179,90</prop>
+						<!-- 验证码文本字符颜色 -->
+						<prop key="kaptcha.textproducer.font.color">blue</prop>
+						<!-- 验证码文本字符大小 -->
+						<prop key="kaptcha.textproducer.font.size">45</prop>
+						<!-- 验证码图片的宽度 默认200 -->
+						<prop key="kaptcha.image.width">125</prop>
+						<!-- 验证码图片的高度 默认50 -->
+						<prop key="kaptcha.image.height">45</prop>
+						<!-- 验证码文本字符长度 默认为5 -->
+						<prop key="kaptcha.textproducer.char.length">4</prop>
+						<!-- 验证码文本字体样式 默认为new Font("Arial", 1, fontSize), new Font("Courier", 
+							1, fontSize) -->
+						<prop key="kaptcha.textproducer.font.names">宋体,楷体,微软雅黑</prop>
+					</props>
+				</constructor-arg>
+			</bean>
+		</property>
+	</bean>
 	<!-- springmvc 消息转换器 -->
 	<mvc:annotation-driven>
 		<!--不使用默认消息转换器 -->
-		<mvc:message-converters register-defaults="false">
+		<mvc:message-converters
+			register-defaults="false">
 			<!--spring消息转换器 -->
 			<bean
 				class="org.springframework.http.converter.ByteArrayHttpMessageConverter" />
@@ -110,7 +113,8 @@
 				<constructor-arg value="UTF-8" />
 			</bean>
 			<!--使用fastjson作为json转换工具 -->
-			<bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+			<bean
+				class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
 				<property name="supportedMediaTypes">
 					<list>
 						<!--顺序保持这样,避免IE下载出错 -->

@@ -2,222 +2,1304 @@
 /* CSS Document */
 
 /* floatbox */
-.ydd-floatbox,.ydd-floatbox3{position:absolute;background-color:rgba(173,176,179,.5);border:1px solid rgba(239,241,242,.3); background-color:#D7D6D8\9; border:1px solid #EFF1F2\9; padding:1px; border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;height:auto; font-size:10pt}
-.ydd-floatbox{ width:auto;}
-.ydd-floatbox .zinner,.ydd-floatbox3 .zinner{ background: #fff url(http://img1.yododo.com/images/newhotel/sprite_newhotel.v003.png) 0px -441px no-repeat;  position:relative; border:1px solid #f60;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;margin-bottom:0px; position:relative}
-.ydd-floatbox .zinner .zbottom,.ydd-floatbox3 .zinner .zbottom{ height:31px; background-color:#FFF1D7; text-align:center; padding:7px 10px 0 10px;border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px; margin-bottom:0}
-.ydd-floatbox .zinner .znr,.ydd-floatbox3 .zinner .znr{ padding:10px; height:auto;}
-.ydd-floatbox .zinner .dot,.ydd-floatbox3 .zinner .dot{ position:absolute; display:block; width:12px; height:16px; line-height:16px; overflow:hidden; top:13px; background-image:url(http://img2.yododo.com/images/newhotel/sprite_newhotel_dot1.v010.png);background-repeat: no-repeat;}
-.leftdot .zinner .dot{ background-position:-1px -218px;left:-9px;}
-.rightdot .zinner .dot{background-position:-26px -218px;right:-12px;_right:-10px;}
-.updot .zinner .dot{background-position:-10px -209px;top:-9px;_top:-8px;right:35px;width:16px; height:9px; line-height:9px;}
-.downdot .zinner .dot{background-position:-10px -234px;right:35px;top: auto;bottom:-9px;_bottom:-6px;width:16px; height:9px; line-height:9px;}
-.ydd-floatbox td{ padding:6px 0}
-.ydd-floatbox td input{ border:1px solid #ccc; height:22px; padding:0 5px;}
-.ydd-floatbox .zinner p{ margin-bottom:5px;}
+.ydd-floatbox, .ydd-floatbox3 {
+	position: absolute;
+	background-color: rgba(173, 176, 179, .5);
+	border: 1px solid rgba(239, 241, 242, .3);
+	background-color: #D7D6D8\9;
+	border: 1px solid #EFF1F2\9;
+	padding: 1px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	height: auto;
+	font-size: 10pt
+}
 
-.ydd-floatbox2{position:absolute; border:1px solid #999999; background-color:#FFF; padding:2px 5px; border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;font-size:10pt}
-.ydd-floatbox2 .zinner{ padding:0 5px; position:relative;margin-bottom:0px;}
-.ydd-floatbox2 .dot{ position:absolute; display:block; width:9px; height:8px; line-height:8px; overflow:hidden;background-image:url(http://img2.yododo.com/images/newhotel/sprite_newhotel_dot1.v010.png);background-repeat: no-repeat;}
-.leftdot1 .zinner .dot{background-position:-55px -226px;left:5px;bottom:-10px;_bottom:-7px}
-.rightdot1 .zinner .dot{background-position:-46px -226px;right:5px;bottom:-10px;_bottom:-7px}
-.updot1 .zinner .dot{background-position:-55px -218px;left:5px;top:-10px;_top:-9px}
-.downdot1 .zinner .dot{background-position:-46px -218px;right:5px;top:-10px;_top:-9px}
+.ydd-floatbox {
+	width: auto;
+}
 
-.dot-new {background-color: #339900;border-radius: 3px 3px 3px 3px;color: #FFFFFF;display: inline-block;font-size: 10px;height: 15px;line-height: 15px;margin: 0 2px;padding: 0 5px;}
+.ydd-floatbox .zinner, .ydd-floatbox3 .zinner {
+	background: #fff
+		url(http://img1.yododo.com/images/newhotel/sprite_newhotel.v003.png)
+		0px -441px no-repeat;
+	position: relative;
+	border: 1px solid #f60;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-bottom: 0px;
+	position: relative
+}
+
+.ydd-floatbox .zinner .zbottom, .ydd-floatbox3 .zinner .zbottom {
+	height: 31px;
+	background-color: #FFF1D7;
+	text-align: center;
+	padding: 7px 10px 0 10px;
+	border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	margin-bottom: 0
+}
+
+.ydd-floatbox .zinner .znr, .ydd-floatbox3 .zinner .znr {
+	padding: 10px;
+	height: auto;
+}
+
+.ydd-floatbox .zinner .dot, .ydd-floatbox3 .zinner .dot {
+	position: absolute;
+	display: block;
+	width: 12px;
+	height: 16px;
+	line-height: 16px;
+	overflow: hidden;
+	top: 13px;
+	background-image:
+		url(http://img2.yododo.com/images/newhotel/sprite_newhotel_dot1.v010.png);
+	background-repeat: no-repeat;
+}
+
+.leftdot .zinner .dot {
+	background-position: -1px -218px;
+	left: -9px;
+}
+
+.rightdot .zinner .dot {
+	background-position: -26px -218px;
+	right: -12px;
+	_right: -10px;
+}
+
+.updot .zinner .dot {
+	background-position: -10px -209px;
+	top: -9px;
+	_top: -8px;
+	right: 35px;
+	width: 16px;
+	height: 9px;
+	line-height: 9px;
+}
+
+.downdot .zinner .dot {
+	background-position: -10px -234px;
+	right: 35px;
+	top: auto;
+	bottom: -9px;
+	_bottom: -6px;
+	width: 16px;
+	height: 9px;
+	line-height: 9px;
+}
+
+.ydd-floatbox td {
+	padding: 6px 0
+}
+
+.ydd-floatbox td input {
+	border: 1px solid #ccc;
+	height: 22px;
+	padding: 0 5px;
+}
+
+.ydd-floatbox .zinner p {
+	margin-bottom: 5px;
+}
+
+.ydd-floatbox2 {
+	position: absolute;
+	border: 1px solid #999999;
+	background-color: #FFF;
+	padding: 2px 5px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	font-size: 10pt
+}
+
+.ydd-floatbox2 .zinner {
+	padding: 0 5px;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+.ydd-floatbox2 .dot {
+	position: absolute;
+	display: block;
+	width: 9px;
+	height: 8px;
+	line-height: 8px;
+	overflow: hidden;
+	background-image:
+		url(http://img2.yododo.com/images/newhotel/sprite_newhotel_dot1.v010.png);
+	background-repeat: no-repeat;
+}
+
+.leftdot1 .zinner .dot {
+	background-position: -55px -226px;
+	left: 5px;
+	bottom: -10px;
+	_bottom: -7px
+}
+
+.rightdot1 .zinner .dot {
+	background-position: -46px -226px;
+	right: 5px;
+	bottom: -10px;
+	_bottom: -7px
+}
+
+.updot1 .zinner .dot {
+	background-position: -55px -218px;
+	left: 5px;
+	top: -10px;
+	_top: -9px
+}
+
+.downdot1 .zinner .dot {
+	background-position: -46px -218px;
+	right: 5px;
+	top: -10px;
+	_top: -9px
+}
+
+.dot-new {
+	background-color: #339900;
+	border-radius: 3px 3px 3px 3px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-size: 10px;
+	height: 15px;
+	line-height: 15px;
+	margin: 0 2px;
+	padding: 0 5px;
+}
 
 /* page */
-.ydd-page{ padding:10px 0; margin:0 auto; font-size:10pt}
-.ydd-page a:link,.ydd-page a:visited{ display:inline-block; width:auto; color:#353535; text-decoration:none; height:18px; border:1px solid #F27120; background-color:#fff; text-align:center; line-height:16px; padding:0 5px; margin:0 3px 0 0}
-.ydd-page a:hover,.ydd-page a.current:link,.ydd-page a.current:visited{ background-color:#F27120;color:#fff;}
-.ydd-page a.p-none:link,.ydd-page a.p-none:visited,.ydd-page a.p-none:hover{border:1px solid #9A9A9A; color:#9A9A9A; cursor:default; background-color:#fff;}
-.ydd-page span{ color:#9A9A9A; margin:0 3px 0 0}
+.ydd-page {
+	padding: 10px 0;
+	margin: 0 auto;
+	font-size: 10pt
+}
+
+.ydd-page a:link, .ydd-page a:visited {
+	display: inline-block;
+	width: auto;
+	color: #353535;
+	text-decoration: none;
+	height: 18px;
+	border: 1px solid #F27120;
+	background-color: #fff;
+	text-align: center;
+	line-height: 16px;
+	padding: 0 5px;
+	margin: 0 3px 0 0
+}
+
+.ydd-page a:hover, .ydd-page a.current:link, .ydd-page a.current:visited
+	{
+	background-color: #F27120;
+	color: #fff;
+}
+
+.ydd-page a.p-none:link, .ydd-page a.p-none:visited, .ydd-page a.p-none:hover
+	{
+	border: 1px solid #9A9A9A;
+	color: #9A9A9A;
+	cursor: default;
+	background-color: #fff;
+}
+
+.ydd-page span {
+	color: #9A9A9A;
+	margin: 0 3px 0 0
+}
 
 /* city select */
-.city-sel-box,.csb-box{position:absolute;background-color:rgba(173,176,179,.5);border:1px solid rgba(239,241,242,.3); background-color:#D7D6D8\9; border:1px solid #EFF1F2\9;  border-radius:3px;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;height:auto;border-top:none; border-left:none; font-size:10pt; z-index: 50}
-.city-sel-box .csb-inner,.csb-box .csb-inner{border: 1px solid #CCCCCC; background-color:#fff; padding-bottom:5px; _width:380px; margin:0 0}
-.csb-inner table{ margin:0 10px}
-.csb-inner table td{ padding:3px}
-.csb-inner li{ margin-right: 0;}
-.csb-head{width:360px; margin-bottom:5px; background-color:#F2F2F2; padding:0 10px; height:30px; line-height:30px}
-.csb-head span{ float:left}
-.csb-head a,.floatfix-inner a{ float:right; display:block; width:12px; height:12px; background: url("http://img1.yododo.com/images/market/sprite_mall.v009.png") -990px -150px no-repeat; overflow:hidden; text-indent:12px; margin-top:10px}
-.csb-menu{ width:360px;padding:0 10px; margin-bottom:5px}
-.csb-menu a:link,.csb-menu a:visited{ float:left; display:block; padding:0 9px 5px 9px; border-bottom:2px solid #ddd; height:20px; line-height:20px;color:#f60; text-decoration:none}
-.csb-menu a.current:link,.csb-menu a.current:visited,.csb-menu a:hover{border-bottom:2px solid #f60;}
-.csb-list{ padding:0 10px; width:360px; overflow:hidden; margin:0 0}
-.csb-list li{ float:left; padding-right:5px; width:55px; height:28px; line-height:28px; overflow:hidden }
-.csb-list li a:link,.csb-list li a:visited{ color:#444; text-decoration:none}
-.csb-list li a:hover{ color:#f60; text-decoration:underline}
-.csb-list li.hot a:link,.csb-list li.hot a:visited{ color:#f60}
-.floatfix-inner a{margin-top:0;float:none}
+.city-sel-box, .csb-box {
+	position: absolute;
+	background-color: rgba(173, 176, 179, .5);
+	border: 1px solid rgba(239, 241, 242, .3);
+	background-color: #D7D6D8\9;
+	border: 1px solid #EFF1F2\9;
+	border-radius: 3px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	height: auto;
+	border-top: none;
+	border-left: none;
+	font-size: 10pt;
+	z-index: 50
+}
+
+.city-sel-box .csb-inner, .csb-box .csb-inner {
+	border: 1px solid #CCCCCC;
+	background-color: #fff;
+	padding-bottom: 5px;
+	_width: 380px;
+	margin: 0 0
+}
+
+.csb-inner table {
+	margin: 0 10px
+}
+
+.csb-inner table td {
+	padding: 3px
+}
+
+.csb-inner li {
+	margin-right: 0;
+}
+
+.csb-head {
+	width: 360px;
+	margin-bottom: 5px;
+	background-color: #F2F2F2;
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px
+}
+
+.csb-head span {
+	float: left
+}
+
+.csb-head a, .floatfix-inner a {
+	float: right;
+	display: block;
+	width: 12px;
+	height: 12px;
+	background:
+		url("http://img1.yododo.com/images/market/sprite_mall.v009.png")
+		-990px -150px no-repeat;
+	overflow: hidden;
+	text-indent: 12px;
+	margin-top: 10px
+}
+
+.csb-menu {
+	width: 360px;
+	padding: 0 10px;
+	margin-bottom: 5px
+}
+
+.csb-menu a:link, .csb-menu a:visited {
+	float: left;
+	display: block;
+	padding: 0 9px 5px 9px;
+	border-bottom: 2px solid #ddd;
+	height: 20px;
+	line-height: 20px;
+	color: #f60;
+	text-decoration: none
+}
+
+.csb-menu a.current:link, .csb-menu a.current:visited, .csb-menu a:hover
+	{
+	border-bottom: 2px solid #f60;
+}
+
+.csb-list {
+	padding: 0 10px;
+	width: 360px;
+	overflow: hidden;
+	margin: 0 0
+}
+
+.csb-list li {
+	float: left;
+	padding-right: 5px;
+	width: 55px;
+	height: 28px;
+	line-height: 28px;
+	overflow: hidden
+}
+
+.csb-list li a:link, .csb-list li a:visited {
+	color: #444;
+	text-decoration: none
+}
+
+.csb-list li a:hover {
+	color: #f60;
+	text-decoration: underline
+}
+
+.csb-list li.hot a:link, .csb-list li.hot a:visited {
+	color: #f60
+}
+
+.floatfix-inner a {
+	margin-top: 0;
+	float: none
+}
 
 /* normal float box */
-.norf-box{ background-color: #fff;}
-.norf-inner{ padding: 15px;}
-.norf-head{margin-bottom:5px; background-color:#F2F2F2; padding:0 10px; height:30px; line-height:30px}
-.norf-head span{ float:left}
-.norf-head a{ float:right; display:block; width:12px; height:12px; background: url("http://img1.yododo.com/images/market/sprite_mall.v009.png") -990px -150px no-repeat; overflow:hidden; text-indent:12px; margin-top:10px}
+.norf-box {
+	background-color: #fff;
+}
+
+.norf-inner {
+	padding: 15px;
+}
+
+.norf-head {
+	margin-bottom: 5px;
+	background-color: #F2F2F2;
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px
+}
+
+.norf-head span {
+	float: left
+}
+
+.norf-head a {
+	float: right;
+	display: block;
+	width: 12px;
+	height: 12px;
+	background:
+		url("http://img1.yododo.com/images/market/sprite_mall.v009.png")
+		-990px -150px no-repeat;
+	overflow: hidden;
+	text-indent: 12px;
+	margin-top: 10px
+}
 /* ydd new input button */
-.y-s-search{position:relative}
-.y-i-input01,.y-i-input02,.y-i-input03{ margin-bottom:15px}
-.y-i-input01,.y-i-input02,.y-i-input03{background: url(http://img2.yododo.com/images/sprite_ydd_module.v001.png) 0 -36px no-repeat; height:34px; line-height:34px; overflow:hidden;}
-.y-i-input01 input,.y-i-input02 input,.y-i-input03 input{border:0; margin:2px 10px; padding:0 0; height:30px; line-height:30px; overflow:hidden; float:left; background-color: transparent; cursor:pointer; color:#989898}
-.y-i-input01 button,.y-i-input03 button{border:none; display:block; width:39px; height:34px; line-height:34px; text-indent:39px; background: #EEF9FF url(http://img2.yododo.com/images/sprite_ydd_module.v001.png) -354px -36px; float:right; cursor:pointer}
-.y-i-input02{background: url(http://img2.yododo.com/images/sprite_ydd_module.v001.png) 0 -72px no-repeat;}
-.y-i-input03{background: url(http://img2.yododo.com/images/sprite_ydd_module.v001.png) 0 -108px no-repeat;}
-.y-i-input03 button{width:34px;background: #EEF9FF url(http://img2.yododo.com/images/sprite_ydd_module.v001.png) -399px -36px;}
-.gl-topad .y-i-input01{background: url(http://img1.yododo.com/images/sprite_wei_xl_ico_ie6.v001.png) 0 -256px no-repeat;}
-.gl-topad .y-i-input01 input{width: 140px;}
-.gl-topad .y-i-input01 button{background: url(http://img1.yododo.com/images/sprite_wei_s_ico.v001.png) repeat scroll -11px -496px #0265CB;}
+.y-s-search {
+	position: relative
+}
+
+.y-i-input01, .y-i-input02, .y-i-input03 {
+	margin-bottom: 15px
+}
+
+.y-i-input01, .y-i-input02, .y-i-input03 {
+	background:
+		url(http://img2.yododo.com/images/sprite_ydd_module.v001.png) 0 -36px
+		no-repeat;
+	height: 34px;
+	line-height: 34px;
+	overflow: hidden;
+}
+
+.y-i-input01 input, .y-i-input02 input, .y-i-input03 input {
+	border: 0;
+	margin: 2px 10px;
+	padding: 0 0;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	float: left;
+	background-color: transparent;
+	cursor: pointer;
+	color: #989898
+}
+
+.y-i-input01 button, .y-i-input03 button {
+	border: none;
+	display: block;
+	width: 39px;
+	height: 34px;
+	line-height: 34px;
+	text-indent: 39px;
+	background: #EEF9FF
+		url(http://img2.yododo.com/images/sprite_ydd_module.v001.png) -354px
+		-36px;
+	float: right;
+	cursor: pointer
+}
+
+.y-i-input02 {
+	background:
+		url(http://img2.yododo.com/images/sprite_ydd_module.v001.png) 0 -72px
+		no-repeat;
+}
+
+.y-i-input03 {
+	background:
+		url(http://img2.yododo.com/images/sprite_ydd_module.v001.png) 0 -108px
+		no-repeat;
+}
+
+.y-i-input03 button {
+	width: 34px;
+	background: #EEF9FF
+		url(http://img2.yododo.com/images/sprite_ydd_module.v001.png) -399px
+		-36px;
+}
+
+.gl-topad .y-i-input01 {
+	background:
+		url(http://img1.yododo.com/images/sprite_wei_xl_ico_ie6.v001.png) 0
+		-256px no-repeat;
+}
+
+.gl-topad .y-i-input01 input {
+	width: 140px;
+}
+
+.gl-topad .y-i-input01 button {
+	background: url(http://img1.yododo.com/images/sprite_wei_s_ico.v001.png)
+		repeat scroll -11px -496px #0265CB;
+}
 
 /* button */
-.ydd-btn01,.ydd-btn01:link,.ydd-btn01:visited{ display: inline-block; _width:90px; border:0; border:none; color:#fff; text-decoration:none; height:25px; line-height:22px; padding:0 15px; text-align:center; overflow:hidden; background: url(http://img2.yododo.com/images/sprite_ydd_module.v001.png) 0 -181px no-repeat;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px; cursor:pointer}
-.ydd-btn02,.ydd-btn02:link,.ydd-btn02:visited,.ydd-btn03,.ydd-btn03:link,.ydd-btn03:visited{ display: inline-block; border:0; border:none; color:#fff; text-decoration:none; height:36px; line-height:36px; padding:0 15px 0 50px;  overflow:hidden; font-size:16px; font-weight:bold; background: #0089CF url(http://img3.yododo.com/images/sprite_ydd_dot_ico.v004.png) -16px -437px no-repeat;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px; cursor:pointer}
+.ydd-btn01, .ydd-btn01:link, .ydd-btn01:visited {
+	display: inline-block;
+	_width: 90px;
+	border: 0;
+	border: none;
+	color: #fff;
+	text-decoration: none;
+	height: 25px;
+	line-height: 22px;
+	padding: 0 15px;
+	text-align: center;
+	overflow: hidden;
+	background:
+		url(http://img2.yododo.com/images/sprite_ydd_module.v001.png) 0 -181px
+		no-repeat;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	cursor: pointer
+}
+
+.ydd-btn02, .ydd-btn02:link, .ydd-btn02:visited, .ydd-btn03, .ydd-btn03:link,
+	.ydd-btn03:visited {
+	display: inline-block;
+	border: 0;
+	border: none;
+	color: #fff;
+	text-decoration: none;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 15px 0 50px;
+	overflow: hidden;
+	font-size: 16px;
+	font-weight: bold;
+	background: #0089CF
+		url(http://img3.yododo.com/images/sprite_ydd_dot_ico.v004.png) -16px
+		-437px no-repeat;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	cursor: pointer
+}
 
 /* ----- ydd-mms by scott 111207 ----- */
-.hz-xx2{position:fixed;_position:absolute;font-size:12px;z-index: 9; line-height: 17px;}
-.hz-xx2 .hz-xx-inner{border: 1px solid #5ABBED;font-size: 12px; width:160px; paddingbackground-color: #fff\0; background-color:rgba(255, 255, 255, 0.95); *background-color:#fff; padding: 10px; position: relative;}
-.hz-xx2 .hz-xx-inner .fcorange{ margin: 0 3px; font-size: 14px}
+.hz-xx2 {
+	position: fixed;
+	_position: absolute;
+	font-size: 12px;
+	z-index: 9;
+	line-height: 17px;
+}
+
+.hz-xx2 .hz-xx-inner {
+	border: 1px solid #5ABBED;
+	font-size: 12px;
+	width: 160px;
+	paddingbackground-color: #fff\0;
+	background-color: rgba(255, 255, 255, 0.95);
+	*background-color: #fff;
+	padding: 10px;
+	position: relative;
+}
+
+.hz-xx2 .hz-xx-inner .fcorange {
+	margin: 0 3px;
+	font-size: 14px
+}
 /*.hz-xx2 .hz-xx-inner table{ margin-bottom: 10px;}*/
-.hz-xx2 .hz-xx-inner td{ padding: 2px 0;font-size: 12px;}
-.hz-xx2 .hz-xx-inner td a:link,.hz-xx2 .hz-xx-inner td a:visited{ text-decoration: none; color: #666 }
-.hz-xx2 .hz-xx-inner td a:hover,.hz-xx2 .hz-xx-inner td a:hover .fcorange{ color: #1992D1}
-.hz-xx2 .hz-xx-inner .close-xx,.yddcheckin-box .close-xx{display: block;position:absolute;right:3px;top:3px;width:15px;height: 15px; text-decoration:none;  line-height: 12px; overflow: hidden;background: #4AB7EE url(http://img1.yododo.com/images/n13_yddtop_sprite.v003.png) -7px -839px no-repeat;}
-a.yddcheckin:link,a.yddcheckin:visited,a.yddcheckined:link,a.yddcheckined:visited{ display:inline-block; text-decoration:none;  height: 28px; line-height: 28px; color: #fff; font-weight: bold; font-size: 14px;  padding: 0 10px 0 36px;background: #4AB7EE url(http://img1.yododo.com/images/n13_yddtop_sprite.v003.png) 0px -799px no-repeat;}
-a.yddcheckined:link,a.yddcheckined:visited{ background: none; padding: 0 10px; background-color: #9D9D9D; font-weight: normal;}
-.yddcheckin-box{box-shadow: 1px 1px 3px 0 rgba(34, 25, 25, 0.5); padding: 30px 10px 10px 10px; background-color: #fff; width: 580px; height: 250px; overflow: hidden; position: absolute; left:50%; top:50%; margin: -125px 0 0 -290px; z-index: 1000; line-height: 26px}
-.yddcheckin-box .bgblue{ width: 255px; height: 55px; background-color: #4CB7EF; line-height: 55px; padding: 0 10px; margin:35px 0 25px -10px; color:#fff; font-weight: bold; font-size: 16px}
-.yddcheckin-box .fleft{ width: 270px;}
-.yddcheckin-box .fright,.yddcheckin-box .fright img{ width: 300px}
-.yddcheckin-box .fcyellow,.yddcheckin-box .fcorange{ margin: 0 5px; font-weight: bold;}
-.yddcheckin-box .fcyellow{ color: #fff100; font-size: 26px; font-weight: normal;}
-.yddcheckin-box .fcorange{ font-size: 14px;}
+.hz-xx2 .hz-xx-inner td {
+	padding: 2px 0;
+	font-size: 12px;
+}
+
+.hz-xx2 .hz-xx-inner td a:link, .hz-xx2 .hz-xx-inner td a:visited {
+	text-decoration: none;
+	color: #666
+}
+
+.hz-xx2 .hz-xx-inner td a:hover, .hz-xx2 .hz-xx-inner td a:hover .fcorange
+	{
+	color: #1992D1
+}
+
+.hz-xx2 .hz-xx-inner .close-xx, .yddcheckin-box .close-xx {
+	display: block;
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	width: 15px;
+	height: 15px;
+	text-decoration: none;
+	line-height: 12px;
+	overflow: hidden;
+	background: #4AB7EE
+		url(http://img1.yododo.com/images/n13_yddtop_sprite.v003.png) -7px
+		-839px no-repeat;
+}
+
+a.yddcheckin:link, a.yddcheckin:visited, a.yddcheckined:link, a.yddcheckined:visited
+	{
+	display: inline-block;
+	text-decoration: none;
+	height: 28px;
+	line-height: 28px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 0 10px 0 36px;
+	background: #4AB7EE
+		url(http://img1.yododo.com/images/n13_yddtop_sprite.v003.png) 0px
+		-799px no-repeat;
+}
+
+a.yddcheckined:link, a.yddcheckined:visited {
+	background: none;
+	padding: 0 10px;
+	background-color: #9D9D9D;
+	font-weight: normal;
+}
+
+.yddcheckin-box {
+	box-shadow: 1px 1px 3px 0 rgba(34, 25, 25, 0.5);
+	padding: 30px 10px 10px 10px;
+	background-color: #fff;
+	width: 580px;
+	height: 250px;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -125px 0 0 -290px;
+	z-index: 1000;
+	line-height: 26px
+}
+
+.yddcheckin-box .bgblue {
+	width: 255px;
+	height: 55px;
+	background-color: #4CB7EF;
+	line-height: 55px;
+	padding: 0 10px;
+	margin: 35px 0 25px -10px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px
+}
+
+.yddcheckin-box .fleft {
+	width: 270px;
+}
+
+.yddcheckin-box .fright, .yddcheckin-box .fright img {
+	width: 300px
+}
+
+.yddcheckin-box .fcyellow, .yddcheckin-box .fcorange {
+	margin: 0 5px;
+	font-weight: bold;
+}
+
+.yddcheckin-box .fcyellow {
+	color: #fff100;
+	font-size: 26px;
+	font-weight: normal;
+}
+
+.yddcheckin-box .fcorange {
+	font-size: 14px;
+}
 
 /* ydd huizhang */
-.c-hz-list li{ width:20px; height:20px; margin:3px 5px 3px 0; float:left;}
-.a-hz a,.b-hz a,.c-hz a{ background-image:url(http://img2.yododo.com/images/medal/a-hz.v001.png); display:block; background-repeat:no-repeat;width:116px; height:123px;line-height:225px; overflow: hidden; text-decoration:none}
-.a-hz .shjz{ background-position:0 0}
-.a-hz .ytyl{ background-position:-116px 0}
-.a-hz .ccml{ background-position:-232px 0}
-.a-hz .ddtz{ background-position:-348px 0}
-.a-hz .xsnd{ background-position:-464px 0}
-.a-hz .sxtb{ background-position:0 -123px}
-.a-hz .txwh{ background-position:-116px -123px}
-.a-hz .mbsh{ background-position:-232px -123px}
-.a-hz .gldr{ background-position:-348px -123px}
-.a-hz .smyy{ background-position:-464px -123px}
-.a-hz .ddzx{ background-position:0 -246px}
-.a-hz .jsy{ background-position:-116px -246px}
-.a-hz .jckj{ background-position:-232px -246px}
-.a-hz .szqr{ background-position:-348px -246px}
-.a-hz .zhsh{ background-position:-464px -246px}
-.a-hz .ygls{ background-position:0 -369px}
-.a-hz .jpty{ background-position:-116px -369px}
-.b-hz a{width:100px; height:103px; line-height: 205px}
-.b-hz .shjz{ background-position:-16px -20px}
-.b-hz .ytyl{ background-position:-132px -20px}
-.b-hz .ccml{ background-position:-248px -20px}
-.b-hz .ddtz{ background-position:-364px -20px}
-.b-hz .xsnd{ background-position:-480px -20px}
-.b-hz .sxtb{ background-position:-16px -143px}
-.b-hz .txwh{ background-position:-132px -143px}
-.b-hz .mbsh{ background-position:-248px -143px}
-.b-hz .gldr{ background-position:-364px -143px}
-.b-hz .smyy{ background-position:-480px -143px}
-.b-hz .ddzx{ background-position:-16px -266px}
-.b-hz .jsy{ background-position:-132px -266px}
-.b-hz .jckj{ background-position:-248px -266px}
-.b-hz .szqr{ background-position:-364px -266px}
-.b-hz .zhsh{ background-position:-480px -266px}
-.b-hz .ygls{ background-position:-16px -389px}
-.b-hz .jpty{ background-position:-132px -389px}
-.c-hz a{ background-image:url(http://img0.yododo.com/images/medal/c-hz.v002.png);background-repeat:no-repeat;text-decoration:none;width:20px; height:20px; line-height: 53px}
-.c-hz .shjz,.c-hz .shjz-s1{ background-position:0 -200px}
-.c-hz .shjz-s2{background-position:-20px -200px}
-.c-hz .shjz-s3{background-position:-40px -200px}
-.c-hz .ytyl,.c-hz .ytyl-s1{ background-position:0 -220px}
-.c-hz .ccml,.c-hz .ccml-s1{ background-position:0 -240px}
-.c-hz .ddtz,.c-hz .ddtz-s1{ background-position:0 0}
-.c-hz .ddtz-s2{background-position:-20px 0}
-.c-hz .xsnd,.c-hz .xsnd-s1{ background-position:0 -300px}
-.c-hz .sxtb,.c-hz .sxtb-s1{ background-position:0 -20px}
-.c-hz .sxtb-s2{background-position:-20px -20px}
-.c-hz .sxtb-s3{background-position:-40px -20px}
-.c-hz .txwh,.c-hz .txwh-s1{ background-position:0 -40px}
-.c-hz .txwh-s2{ background-position:-20px -40px}
-.c-hz .txwh-s3{ background-position:-40px -40px}
-.c-hz .mbsh,.c-hz .mbsh-s1{ background-position:0 -60px}
-.c-hz .mbsh-s2{ background-position:-20px -60px}
-.c-hz .mbsh-s3{ background-position:-40px -60px}
-.c-hz .gldr,.c-hz .gldr-s1{ background-position:0 -80px}
-.c-hz .gldr-s2{ background-position:-20px -80px}
-.c-hz .gldr-s3{ background-position:-40px -80px}
-.c-hz .smyy,.c-hz .smyy-s1{ background-position:0 -100px}
-.c-hz .smyy-s2{ background-position:-20px -100px}
-.c-hz .smyy-s3{ background-position:-40px -100px}
-.c-hz .ddzx,.c-hz .ddzx-s1{ background-position:0 -280px}
-.c-hz .jsy,.c-hz .jsy-s1{ background-position:0 -120px}
-.c-hz .jsy-s2{ background-position:-20px -120px}
-.c-hz .jsy-s3{ background-position:-40px -120px}
-.c-hz .jckj,.c-hz .jckj-s1{ background-position:0 -260px}
-.c-hz .szqr,.c-hz .szqr-s1{ background-position:0 -140px}
-.c-hz .szqr-s2{ background-position:-20px -140px}
-.c-hz .szqr-s3{ background-position:-40px -140px}
-.c-hz .zhsh,.c-hz .zhsh-s1{ background-position:0 -160px}
-.c-hz .zhsh-s2{ background-position:-20px -160px}
-.c-hz .zhsh-s3{ background-position:-40px -160px}
-.c-hz .ygls,.c-hz .ygls-s1{ background-position:0 -180px}
-.c-hz .ygls-s2{ background-position:-20px -180px}
-.c-hz .ygls-s3{ background-position:-40px -180px}
-.c-hz .jpty,.c-hz .jpty-s1{ background-position:0 -320px}
-.c-hz .jpty-s2{ background-position:-20px -320px}
-.c-hz .jpty-s3{ background-position:-40px -320px}
-.hz-xx{position:absolute; font-size:12px;border-bottom: 2px solid #ddd; border-right: 2px solid #ddd;z-index: 9;}
-.hz-xx .hz-xx-inner{width:280px;border: 1px solid #A1BFE3; background-color: #F7FCFF; padding: 10px 5px 10px 10px; position: relative;}
-.hz-xx .hz-xx-inner .lefttop-dot,.hz-xx .hz-xx-inner .righttop-dot,.hz-xx .hz-xx-inner .leftbottom-dot,.hz-xx .hz-xx-inner .rightbottom-dot{ display: block; width:13px; position: absolute; height: 8px; line-height: 8px; overflow: hidden; background-image:url(http://img2.yododo.com/images/medal/hz-sprite.v002.png); background-repeat: no-repeat;}
-.hz-xx .hz-xx-inner .lefttop-dot,.hz-xx .hz-xx-inner .righttop-dot{background-position: -1011px 0; left:30px; top:-8px;}
-.hz-xx .hz-xx-inner .righttop-dot{left:250px; }
-.hz-xx .hz-xx-inner .leftbottom-dot,.hz-xx .hz-xx-inner .rightbottom-dot{background-position: -1011px -8px;left:30px; bottom:-8px;}
-.hz-xx .hz-xx-inner .rightbottom-dot{left:250px;}
-.hz-xx .hz-xx-inner .saleuserTag{ color:#d90000;}
-.addf a.jgz:link,.addf a.jgz:visited{ display:block; width:50px; height:18px; border-bottom:1px solid #0192BE; text-align:center; color:#fff; background-color:#2EB8E2; text-decoration:none;}
-.addf a.jgz:hover{ background-color:#FFACD7;border-bottom:1px solid #FD8EC8;}
-.addf a.jgz span{margin-right:0}
+.c-hz-list li {
+	width: 20px;
+	height: 20px;
+	margin: 3px 5px 3px 0;
+	float: left;
+}
+
+.a-hz a, .b-hz a, .c-hz a {
+	background-image: url(http://img2.yododo.com/images/medal/a-hz.v001.png);
+	display: block;
+	background-repeat: no-repeat;
+	width: 116px;
+	height: 123px;
+	line-height: 225px;
+	overflow: hidden;
+	text-decoration: none
+}
+
+.a-hz .shjz {
+	background-position: 0 0
+}
+
+.a-hz .ytyl {
+	background-position: -116px 0
+}
+
+.a-hz .ccml {
+	background-position: -232px 0
+}
+
+.a-hz .ddtz {
+	background-position: -348px 0
+}
+
+.a-hz .xsnd {
+	background-position: -464px 0
+}
+
+.a-hz .sxtb {
+	background-position: 0 -123px
+}
+
+.a-hz .txwh {
+	background-position: -116px -123px
+}
+
+.a-hz .mbsh {
+	background-position: -232px -123px
+}
+
+.a-hz .gldr {
+	background-position: -348px -123px
+}
+
+.a-hz .smyy {
+	background-position: -464px -123px
+}
+
+.a-hz .ddzx {
+	background-position: 0 -246px
+}
+
+.a-hz .jsy {
+	background-position: -116px -246px
+}
+
+.a-hz .jckj {
+	background-position: -232px -246px
+}
+
+.a-hz .szqr {
+	background-position: -348px -246px
+}
+
+.a-hz .zhsh {
+	background-position: -464px -246px
+}
+
+.a-hz .ygls {
+	background-position: 0 -369px
+}
+
+.a-hz .jpty {
+	background-position: -116px -369px
+}
+
+.b-hz a {
+	width: 100px;
+	height: 103px;
+	line-height: 205px
+}
+
+.b-hz .shjz {
+	background-position: -16px -20px
+}
+
+.b-hz .ytyl {
+	background-position: -132px -20px
+}
+
+.b-hz .ccml {
+	background-position: -248px -20px
+}
+
+.b-hz .ddtz {
+	background-position: -364px -20px
+}
+
+.b-hz .xsnd {
+	background-position: -480px -20px
+}
+
+.b-hz .sxtb {
+	background-position: -16px -143px
+}
+
+.b-hz .txwh {
+	background-position: -132px -143px
+}
+
+.b-hz .mbsh {
+	background-position: -248px -143px
+}
+
+.b-hz .gldr {
+	background-position: -364px -143px
+}
+
+.b-hz .smyy {
+	background-position: -480px -143px
+}
+
+.b-hz .ddzx {
+	background-position: -16px -266px
+}
+
+.b-hz .jsy {
+	background-position: -132px -266px
+}
+
+.b-hz .jckj {
+	background-position: -248px -266px
+}
+
+.b-hz .szqr {
+	background-position: -364px -266px
+}
+
+.b-hz .zhsh {
+	background-position: -480px -266px
+}
+
+.b-hz .ygls {
+	background-position: -16px -389px
+}
+
+.b-hz .jpty {
+	background-position: -132px -389px
+}
+
+.c-hz a {
+	background-image: url(http://img0.yododo.com/images/medal/c-hz.v002.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	width: 20px;
+	height: 20px;
+	line-height: 53px
+}
+
+.c-hz .shjz, .c-hz .shjz-s1 {
+	background-position: 0 -200px
+}
+
+.c-hz .shjz-s2 {
+	background-position: -20px -200px
+}
+
+.c-hz .shjz-s3 {
+	background-position: -40px -200px
+}
+
+.c-hz .ytyl, .c-hz .ytyl-s1 {
+	background-position: 0 -220px
+}
+
+.c-hz .ccml, .c-hz .ccml-s1 {
+	background-position: 0 -240px
+}
+
+.c-hz .ddtz, .c-hz .ddtz-s1 {
+	background-position: 0 0
+}
+
+.c-hz .ddtz-s2 {
+	background-position: -20px 0
+}
+
+.c-hz .xsnd, .c-hz .xsnd-s1 {
+	background-position: 0 -300px
+}
+
+.c-hz .sxtb, .c-hz .sxtb-s1 {
+	background-position: 0 -20px
+}
+
+.c-hz .sxtb-s2 {
+	background-position: -20px -20px
+}
+
+.c-hz .sxtb-s3 {
+	background-position: -40px -20px
+}
+
+.c-hz .txwh, .c-hz .txwh-s1 {
+	background-position: 0 -40px
+}
+
+.c-hz .txwh-s2 {
+	background-position: -20px -40px
+}
+
+.c-hz .txwh-s3 {
+	background-position: -40px -40px
+}
+
+.c-hz .mbsh, .c-hz .mbsh-s1 {
+	background-position: 0 -60px
+}
+
+.c-hz .mbsh-s2 {
+	background-position: -20px -60px
+}
+
+.c-hz .mbsh-s3 {
+	background-position: -40px -60px
+}
+
+.c-hz .gldr, .c-hz .gldr-s1 {
+	background-position: 0 -80px
+}
+
+.c-hz .gldr-s2 {
+	background-position: -20px -80px
+}
+
+.c-hz .gldr-s3 {
+	background-position: -40px -80px
+}
+
+.c-hz .smyy, .c-hz .smyy-s1 {
+	background-position: 0 -100px
+}
+
+.c-hz .smyy-s2 {
+	background-position: -20px -100px
+}
+
+.c-hz .smyy-s3 {
+	background-position: -40px -100px
+}
+
+.c-hz .ddzx, .c-hz .ddzx-s1 {
+	background-position: 0 -280px
+}
+
+.c-hz .jsy, .c-hz .jsy-s1 {
+	background-position: 0 -120px
+}
+
+.c-hz .jsy-s2 {
+	background-position: -20px -120px
+}
+
+.c-hz .jsy-s3 {
+	background-position: -40px -120px
+}
+
+.c-hz .jckj, .c-hz .jckj-s1 {
+	background-position: 0 -260px
+}
+
+.c-hz .szqr, .c-hz .szqr-s1 {
+	background-position: 0 -140px
+}
+
+.c-hz .szqr-s2 {
+	background-position: -20px -140px
+}
+
+.c-hz .szqr-s3 {
+	background-position: -40px -140px
+}
+
+.c-hz .zhsh, .c-hz .zhsh-s1 {
+	background-position: 0 -160px
+}
+
+.c-hz .zhsh-s2 {
+	background-position: -20px -160px
+}
+
+.c-hz .zhsh-s3 {
+	background-position: -40px -160px
+}
+
+.c-hz .ygls, .c-hz .ygls-s1 {
+	background-position: 0 -180px
+}
+
+.c-hz .ygls-s2 {
+	background-position: -20px -180px
+}
+
+.c-hz .ygls-s3 {
+	background-position: -40px -180px
+}
+
+.c-hz .jpty, .c-hz .jpty-s1 {
+	background-position: 0 -320px
+}
+
+.c-hz .jpty-s2 {
+	background-position: -20px -320px
+}
+
+.c-hz .jpty-s3 {
+	background-position: -40px -320px
+}
+
+.hz-xx {
+	position: absolute;
+	font-size: 12px;
+	border-bottom: 2px solid #ddd;
+	border-right: 2px solid #ddd;
+	z-index: 9;
+}
+
+.hz-xx .hz-xx-inner {
+	width: 280px;
+	border: 1px solid #A1BFE3;
+	background-color: #F7FCFF;
+	padding: 10px 5px 10px 10px;
+	position: relative;
+}
+
+.hz-xx .hz-xx-inner .lefttop-dot, .hz-xx .hz-xx-inner .righttop-dot,
+	.hz-xx .hz-xx-inner .leftbottom-dot, .hz-xx .hz-xx-inner .rightbottom-dot
+	{
+	display: block;
+	width: 13px;
+	position: absolute;
+	height: 8px;
+	line-height: 8px;
+	overflow: hidden;
+	background-image:
+		url(http://img2.yododo.com/images/medal/hz-sprite.v002.png);
+	background-repeat: no-repeat;
+}
+
+.hz-xx .hz-xx-inner .lefttop-dot, .hz-xx .hz-xx-inner .righttop-dot {
+	background-position: -1011px 0;
+	left: 30px;
+	top: -8px;
+}
+
+.hz-xx .hz-xx-inner .righttop-dot {
+	left: 250px;
+}
+
+.hz-xx .hz-xx-inner .leftbottom-dot, .hz-xx .hz-xx-inner .rightbottom-dot
+	{
+	background-position: -1011px -8px;
+	left: 30px;
+	bottom: -8px;
+}
+
+.hz-xx .hz-xx-inner .rightbottom-dot {
+	left: 250px;
+}
+
+.hz-xx .hz-xx-inner .saleuserTag {
+	color: #d90000;
+}
+
+.addf a.jgz:link, .addf a.jgz:visited {
+	display: block;
+	width: 50px;
+	height: 18px;
+	border-bottom: 1px solid #0192BE;
+	text-align: center;
+	color: #fff;
+	background-color: #2EB8E2;
+	text-decoration: none;
+}
+
+.addf a.jgz:hover {
+	background-color: #FFACD7;
+	border-bottom: 1px solid #FD8EC8;
+}
+
+.addf a.jgz span {
+	margin-right: 0
+}
 
 /* wei button */
-.ydd-btn01,.ydd-btn01:link,.ydd-btn01:visited{ display: inline-block; _width:90px; border:0; border:none; color:#fff; text-decoration:none; height:25px; line-height:22px; padding:0 15px; text-align:center; overflow:hidden; background: url(http://img0.yododo.com/images/sprite_ydd_module.v001.png) 0 -181px no-repeat;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px; cursor:pointer}
-.ydd-btn02,.ydd-btn02:link,.ydd-btn02:visited,.ydd-btn03,.ydd-btn03:link,.ydd-btn03:visited,.ydd-btn04,.ydd-btn04:link,.ydd-btn04:visited,.ydd-btn05,.ydd-btn05:link,.ydd-btn05:visited{ display: inline-block; border:0; border:none; color:#fff; text-decoration:none; height:36px; line-height:36px; padding:0 15px 0 50px;  overflow:hidden; font-size:16px; font-weight:bold; background: #0089CF url(http://img3.yododo.com/images/sprite_ydd_dot_ico.v004.png) -16px -437px no-repeat;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px; cursor:pointer}
-.ydd-btn03,.ydd-btn03:link,.ydd-btn03:visited,.ydd-btn04,.ydd-btn04:link,.ydd-btn04:visited,.ydd-btn05,.ydd-btn05:link,.ydd-btn05:visited{padding:0 25px;background:none; background-color:#0066CB}
-.ydd-btn03 strong{ padding-left:25px; background-image:url(http://img0.yododo.com/images/sprite_wei_s_ico.v001.png); background-repeat:no-repeat; margin-left:-10px}
-.ydd-btn03 strong.s01{ background-position:-34px -293px;}
-.ydd-btn03 strong.s02{ background-position:-30px -698px;}
-.ydd-btn03 strong.s03{ padding-right:25px;background-position:right -135px;}
-.ydd-btn03 strong.s04{ background-position:-37px -321px}
-.ydd-btn03 strong.s05{ background-position:-30px -665px}
-.ydd-btn04,.ydd-btn04:link,.ydd-btn04:visited{padding:0 15px;font-size:12px;height:24px; line-height:24px;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px; margin:0 5px}
-.ydd-btn05,.ydd-btn05:link,.ydd-btn05:visited{background-color:#ccc}
+.ydd-btn01, .ydd-btn01:link, .ydd-btn01:visited {
+	display: inline-block;
+	_width: 90px;
+	border: 0;
+	border: none;
+	color: #fff;
+	text-decoration: none;
+	height: 25px;
+	line-height: 22px;
+	padding: 0 15px;
+	text-align: center;
+	overflow: hidden;
+	background:
+		url(http://img0.yododo.com/images/sprite_ydd_module.v001.png) 0 -181px
+		no-repeat;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	cursor: pointer
+}
 
-/* ·ÖÏí */
-.ydd_share{ display:inline-block; position:relative; margin:0 0; padding:0 0; float:none; font-size:12px;}
-.ashare:link,.ashare:visited{ text-decoration:none; display:block; width:119px; height:26px; line-height:26px; text-indent:30px; font-size:14px; text-align:center; border:1px solid #4CB7EF; color:#fff; background-image:url(http://img0.yododo.com/images/share/sprite-share.v001.png); background-color:#4CB7EF; background-position:-10px -503px; background-repeat:no-repeat}
-.ydd_share_subjects{ position:absolute; left:0; top:27px; width:119px; overflow:hidden; border:1px solid #4CB7EF; background-color:#fff; font-size:0; z-index: 1000;}
-.ydd_share_subjects a:link,.ydd_share_subjects a:visited{ text-decoration:none; display:inline-block; text-align:center; width:59px;+width:58px; height:59px; line-height:88px; overflow:hidden; font-size:12px; color:#666; border-right:1px solid #F4F4F4; border-bottom:1px solid #F4F4F4; background-image:url(http://img0.yododo.com/images/share/sprite-share.v001.png); background-repeat:no-repeat; background-color:#fff;}
-.ydd_share_subjects a:hover{ background-color:#F1F6F9}
-.ydd_share_subjects a.ydd_share_renren,.ydd_share_subjects a.ydd_share_qqweibo,.ydd_share_subjects a.ydd_share_weixin{border-right:none;}
-.ydd_share_subjects a.ydd_share_sina{ background-position:10px 5px}
-.ydd_share_subjects a.ydd_share_renren{ background-position:5px -90px}
-.ydd_share_subjects a.ydd_share_qzone{ background-position:8px -183px}
-.ydd_share_subjects a.ydd_share_qqweibo{ background-position:8px -275px}
-.ydd_share_subjects a.ydd_share_weixin{ background-position:5px -368px; width:119px; border-bottom:none; line-height:59px; text-indent:30px}
-.c1 .ashare:link,.c1 .ashare:visited{ border:1px solid #eee; color:#4CB7EF; background-color:#fff; background-position:-10px -559px;}
-.c1 .ydd_share_subjects{border:1px solid #eee;}
-.pabs-win{ position:fixed;_position: absolute; width:600px; height:260px; left:50%; top:50%; margin:-130px 0 0 -300px; background-color:#fff; border:1px solid #eee; -webkit-box-shadow:1px 1px 3px 0 rgba(34, 25, 25, 0.2);-moz-box-shadow: 1px 1px 3px 0 rgba(34, 25, 25, 0.2);box-shadow:1px 1px 3px 0 rgba(34, 25, 25, 0.2); z-index: 1000;}
-.pabs-win div{ position:relative; padding:40px 50px;}
-.pabs-win a:link,.pabs-win a:visited{ position:absolute; right:10px; top:10px; text-indent:-1000px; display:block; background: url(http://img0.yododo.com/images/share/sprite-share.v001.png) 0 -599px; width:23px; height:22px; overflow:hidden}
-.pabs-win .img2d{ display:inline-block; width:156px; height:156px; padding:10px; border:1px solid #ccc;}
-.pabs-win .img2d img{ width:156px; height:156px; vertical-align:top}
-.pabs-win .img2d-sm{ display:inline-block; width:300px; vertical-align:top; padding:50px 0 0 10px;font-family:Verdana,"Microsoft YaHei"; font-size:18px; }
-.pabs-win .img2d-sm strong{ display:block; color:#156BFE; font-size:30px; font-weight:normal; margin-bottom:10px;}
-.pabs-win .img2d-sm em{ display:inline-block; background: url(http://img0.yododo.com/images/share/sprite-share.v001.png) -4px -638px no-repeat; width:92px; height:31px; text-indent:-99999px; overflow:hidden; vertical-align:middle; margin-left:10px; }
+.ydd-btn02, .ydd-btn02:link, .ydd-btn02:visited, .ydd-btn03, .ydd-btn03:link,
+	.ydd-btn03:visited, .ydd-btn04, .ydd-btn04:link, .ydd-btn04:visited,
+	.ydd-btn05, .ydd-btn05:link, .ydd-btn05:visited {
+	display: inline-block;
+	border: 0;
+	border: none;
+	color: #fff;
+	text-decoration: none;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 15px 0 50px;
+	overflow: hidden;
+	font-size: 16px;
+	font-weight: bold;
+	background: #0089CF
+		url(http://img3.yododo.com/images/sprite_ydd_dot_ico.v004.png) -16px
+		-437px no-repeat;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	cursor: pointer
+}
 
+.ydd-btn03, .ydd-btn03:link, .ydd-btn03:visited, .ydd-btn04, .ydd-btn04:link,
+	.ydd-btn04:visited, .ydd-btn05, .ydd-btn05:link, .ydd-btn05:visited {
+	padding: 0 25px;
+	background: none;
+	background-color: #0066CB
+}
+
+.ydd-btn03 strong {
+	padding-left: 25px;
+	background-image:
+		url(http://img0.yododo.com/images/sprite_wei_s_ico.v001.png);
+	background-repeat: no-repeat;
+	margin-left: -10px
+}
+
+.ydd-btn03 strong.s01 {
+	background-position: -34px -293px;
+}
+
+.ydd-btn03 strong.s02 {
+	background-position: -30px -698px;
+}
+
+.ydd-btn03 strong.s03 {
+	padding-right: 25px;
+	background-position: right -135px;
+}
+
+.ydd-btn03 strong.s04 {
+	background-position: -37px -321px
+}
+
+.ydd-btn03 strong.s05 {
+	background-position: -30px -665px
+}
+
+.ydd-btn04, .ydd-btn04:link, .ydd-btn04:visited {
+	padding: 0 15px;
+	font-size: 12px;
+	height: 24px;
+	line-height: 24px;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	margin: 0 5px
+}
+
+.ydd-btn05, .ydd-btn05:link, .ydd-btn05:visited {
+	background-color: #ccc
+}
+
+/* ï¿½ï¿½ï¿½ï¿½ */
+.ydd_share {
+	display: inline-block;
+	position: relative;
+	margin: 0 0;
+	padding: 0 0;
+	float: none;
+	font-size: 12px;
+}
+
+.ashare:link, .ashare:visited {
+	text-decoration: none;
+	display: block;
+	width: 119px;
+	height: 26px;
+	line-height: 26px;
+	text-indent: 30px;
+	font-size: 14px;
+	text-align: center;
+	border: 1px solid #4CB7EF;
+	color: #fff;
+	background-image:
+		url(http://img0.yododo.com/images/share/sprite-share.v001.png);
+	background-color: #4CB7EF;
+	background-position: -10px -503px;
+	background-repeat: no-repeat
+}
+
+.ydd_share_subjects {
+	position: absolute;
+	left: 0;
+	top: 27px;
+	width: 119px;
+	overflow: hidden;
+	border: 1px solid #4CB7EF;
+	background-color: #fff;
+	font-size: 0;
+	z-index: 1000;
+}
+
+.ydd_share_subjects a:link, .ydd_share_subjects a:visited {
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	width: 59px; +
+	width: 58px;
+	height: 59px;
+	line-height: 88px;
+	overflow: hidden;
+	font-size: 12px;
+	color: #666;
+	border-right: 1px solid #F4F4F4;
+	border-bottom: 1px solid #F4F4F4;
+	background-image:
+		url(http://img0.yododo.com/images/share/sprite-share.v001.png);
+	background-repeat: no-repeat;
+	background-color: #fff;
+}
+
+.ydd_share_subjects a:hover {
+	background-color: #F1F6F9
+}
+
+.ydd_share_subjects a.ydd_share_renren, .ydd_share_subjects a.ydd_share_qqweibo,
+	.ydd_share_subjects a.ydd_share_weixin {
+	border-right: none;
+}
+
+.ydd_share_subjects a.ydd_share_sina {
+	background-position: 10px 5px
+}
+
+.ydd_share_subjects a.ydd_share_renren {
+	background-position: 5px -90px
+}
+
+.ydd_share_subjects a.ydd_share_qzone {
+	background-position: 8px -183px
+}
+
+.ydd_share_subjects a.ydd_share_qqweibo {
+	background-position: 8px -275px
+}
+
+.ydd_share_subjects a.ydd_share_weixin {
+	background-position: 5px -368px;
+	width: 119px;
+	border-bottom: none;
+	line-height: 59px;
+	text-indent: 30px
+}
+
+.c1 .ashare:link, .c1 .ashare:visited {
+	border: 1px solid #eee;
+	color: #4CB7EF;
+	background-color: #fff;
+	background-position: -10px -559px;
+}
+
+.c1 .ydd_share_subjects {
+	border: 1px solid #eee;
+}
+
+.pabs-win {
+	position: fixed;
+	_position: absolute;
+	width: 600px;
+	height: 260px;
+	left: 50%;
+	top: 50%;
+	margin: -130px 0 0 -300px;
+	background-color: #fff;
+	border: 1px solid #eee;
+	-webkit-box-shadow: 1px 1px 3px 0 rgba(34, 25, 25, 0.2);
+	-moz-box-shadow: 1px 1px 3px 0 rgba(34, 25, 25, 0.2);
+	box-shadow: 1px 1px 3px 0 rgba(34, 25, 25, 0.2);
+	z-index: 1000;
+}
+
+.pabs-win div {
+	position: relative;
+	padding: 40px 50px;
+}
+
+.pabs-win a:link, .pabs-win a:visited {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	text-indent: -1000px;
+	display: block;
+	background:
+		url(http://img0.yododo.com/images/share/sprite-share.v001.png) 0
+		-599px;
+	width: 23px;
+	height: 22px;
+	overflow: hidden
+}
+
+.pabs-win .img2d {
+	display: inline-block;
+	width: 156px;
+	height: 156px;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+
+.pabs-win .img2d img {
+	width: 156px;
+	height: 156px;
+	vertical-align: top
+}
+
+.pabs-win .img2d-sm {
+	display: inline-block;
+	width: 300px;
+	vertical-align: top;
+	padding: 50px 0 0 10px;
+	font-family: Verdana, "Microsoft YaHei";
+	font-size: 18px;
+}
+
+.pabs-win .img2d-sm strong {
+	display: block;
+	color: #156BFE;
+	font-size: 30px;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+.pabs-win .img2d-sm em {
+	display: inline-block;
+	background:
+		url(http://img0.yododo.com/images/share/sprite-share.v001.png) -4px
+		-638px no-repeat;
+	width: 92px;
+	height: 31px;
+	text-indent: -99999px;
+	overflow: hidden;
+	vertical-align: middle;
+	margin-left: 10px;
+}

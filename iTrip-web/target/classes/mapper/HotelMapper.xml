@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.itrip.mapper.HotelMapper">
+	<select id="getRecommend" resultType="org.itrip.pojo.Hotel">
+		select h.hotelLevel,h.id,h.hotelName,p.picturepath,max(s.roomPrice) as
+		maxroomPrice,min(s.roomPrice) minroomPrice,s.hotelId from hotel h
+		INNER JOIN house s on h.id=s.id
+		INNER JOIN picture p on h.id=p.hotelid
+		GROUP BY h.hotelName
+		ORDER BY h.hotelLevel DESC LIMIT 0,8
+	</select>
+</mapper>

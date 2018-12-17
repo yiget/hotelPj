@@ -1,150 +1,773 @@
 @charset "utf-8";
 /* CSS Document */
+.morerooms {
+	padding-top: 10px
+}
 
-.morerooms{ padding-top: 10px}
-.morerooms li{  float: left; width:110px; padding: 0 7px; margin-bottom: 10px;}
-.morerooms li img{ width: 100px; height: 75px; border: 1px solid #ddd; padding: 4px;}
-.morerooms li div{ text-align: center; margin-bottom: 3px;}
-.morerooms li div p{ height: 18px; overflow: hidden}
-.morerooms li span{ color:#f60; margin-right: 3px;}
-.morerooms li span strong{font-size: 18px; margin-left: 3px;}
-.new-lc{ width:984px; margin:0 auto;}
-.new-lc .flow-steps .num3 li { width: 313px; }
-.new-lc .steps-hd h2{ color:#000}
-.new-lc .steps-bd .steps-tips h4{font-size:10pt;}
-.new-lc .steps-bd .steps-main { float: left; width:680px;padding: 10px 23px 10px 15px;border-right: 1px solid #ddd; }
-.new-lc .steps-bd .steps-tips{margin: 0 0;padding: 0 8px 0 0;border-left: none;}
-.lccx{ margin-bottom:15px;}
-.lccx td{background: none repeat scroll 0 0 #F4F9FF;padding: 10px 10px 0 10px;}
-.lccx li{padding-bottom:5px; margin-bottom:10px; cursor:pointer;}
-.lccx strong{ color:#C00; margin-right:10px; font-size:14px}
-.lcline{ margin:20px 0; border-bottom:1px dashed #ddd; height:1px; line-height:1px; overflow:hidden}
-.lctab .fgspan{ margin:0 10px; font-size:10pt}
-.lctab strong{ color:#f60; font-size:16px;}
-.fgdiv{ margin:10px 0;}
-.lctab .ggbtn:link,.lctab .ggbtn:hover,.lctab .ggbtn:visited{ display: inline-block; margin-left:15px; color:#000; line-height:25px; text-decoration:none; text-align:center; width:80px; height:25px;background: url("http://img1.yododo.com/images/market/sprite_mall.v009.png") no-repeat scroll -360px -390px transparent;}
-.lc-dhp{ float:left;width:635px; padding-left:26px; line-height:18px;margin:0;}
+.morerooms li {
+	float: left;
+	width: 110px;
+	padding: 0 7px;
+	margin-bottom: 10px;
+}
 
-.new-idea,a.new-idea{ border:1px solid #E7D3B8; background-color:#FFFFE3; padding:5px 5px 5px 22px;background-image: url("http://img1.yododo.com/images/icon_lightbulb.gif");background-position: 3px 50%; background-repeat: no-repeat;}
-a.new-idea:link,a.new-idea:visited{ display: inline-block; padding:2px 5px 2px 22px; color:#000; margin-left:15px; text-decoration:none}
-.lcqr-btn:link,.lcqr-btn:visited{ display:block; width:205px; height:36px; line-height:36px;background:url(http://img1.yododo.com/images/lcqr-btn.gif) no-repeat; text-decoration:none; text-align:center; color:#fff; font-size:18px; font-weight: bold}
-.new-lc .price-detail{ margin-bottom:15px}
-.new-ydsm{border:1px solid #FFE580; background-color:#FFF5CC; padding:10px}
+.morerooms li img {
+	width: 100px;
+	height: 75px;
+	border: 1px solid #ddd;
+	padding: 4px;
+}
 
-.new-lc{ width:984px; margin:0 auto;}
-.new-lc .flow-steps .num3 li { width: 313px; }
-.new-lc .steps-hd h2{ color:#000}
-.new-lc .steps-bd .steps-tips h4{font-size:10pt;}
-.new-lc .steps-bd .steps-main { float: left; /*width:680px;*/padding: 10px 23px 10px 15px;/*border-right: 1px solid #ddd; */}
-.new-lc .steps-bd .steps-tips{margin: 0 0;padding: 0 8px 0 0;border-left: none;}
-.lccx{ margin-bottom:15px;}
-.lccx td{background: none repeat scroll 0 0 #F4F9FF;padding: 10px 10px 0 10px;}
-.lccx li{padding-bottom:5px; margin-bottom:10px; cursor:pointer;}
-.lccx strong{ color:#C00; margin-right:10px; font-size:14px}
-.lcline{ margin:20px 0; border-bottom:1px dashed #ddd; height:1px; line-height:1px; overflow:hidden}
-.lctab td{padding: 3px 0; line-height: 22px; vertical-align: top}
-.lctab td input{ vertical-align: top;}
-.lctab td span{ margin: 0 3px}
-.lctab .fgspan{ margin:0 10px; font-size:10pt}
-.lctab strong{ color:#f60; font-size:16px;}
-.fgdiv{ margin:10px 0;}
-.lctab .ggbtn:link,.lctab .ggbtn:hover,.lctab .ggbtn:visited{ display: inline-block; margin-left:15px; color:#000; line-height:25px; text-decoration:none; text-align:center; width:80px; height:25px;background: url("http://img1.yododo.com/images/market/sprite_mall.v009.png") no-repeat scroll -360px -390px transparent;}
-.lc-dhp{ float:left;width:635px; padding-left:26px; line-height:18px;margin:0;}
-.lcxxb{ /*border:1px solid #E7D3B8; background-color:#FFFFE3; padding:15px;*/}
-.lcxxb td{ padding-bottom:10px; vertical-align: top; }
-.lcxxb td span{ margin-left:10px; font-size:12px}
-.lcxxb td textarea{ font-size:10pt; width:350px; padding:5px}
-.new-idea,a.new-idea{ border:1px solid #E7D3B8; background-color:#FFFFE3; padding:5px 5px 5px 22px;background-image: url("http://img1.yododo.com/images/icon_lightbulb.gif");background-position: 3px 50%; background-repeat: no-repeat;}
-a.new-idea:link,a.new-idea:visited{ display: inline-block; padding:2px 5px 2px 22px; color:#000; margin-left:15px; text-decoration:none}
-.new-box a:link,.new-box a:visited{border:1px solid #ccc; color: #999; background-color:#FFF; display: inline-block; text-decoration: none; padding:0 5px; height: 20px; line-height:20px; margin-right: 10px }
-.new-box a:hover{border: 1px solid #f60;color:#f60}
-.new-box a.current,.new-box a.current:visited{ border: 2px solid #f60;color:#f60}
-.new-box2,a.new-box2:link,a.new-box2:visited{ display: inline-block; border:1px solid #FFAA00; background-color:#FFFFE3; padding:2px 5px;}
-.new-box3,a.new-box3:link,a.new-box3:visited{ display: inline-block; border:1px solid #FFFFE3; background-color:#FFFFE3; padding:5px;}
-.lcqr-btn:link,.lcqr-btn:visited{ display:block; width:205px; height:36px; line-height:36px;background:url(http://img1.yododo.com/images/lcqr-btn.gif) no-repeat; text-decoration:none; text-align:center; color:#fff; font-size:18px; font-weight: bold}
-.new-lc .price-detail{ margin-bottom:15px}
-.new-ydsm{border:1px solid #FFE580; background-color:#FFF5CC; padding:10px}
+.morerooms li div {
+	text-align: center;
+	margin-bottom: 3px;
+}
+
+.morerooms li div p {
+	height: 18px;
+	overflow: hidden
+}
+
+.morerooms li span {
+	color: #f60;
+	margin-right: 3px;
+}
+
+.morerooms li span strong {
+	font-size: 18px;
+	margin-left: 3px;
+}
+
+.new-lc {
+	width: 984px;
+	margin: 0 auto;
+}
+
+.new-lc .flow-steps .num3 li {
+	width: 313px;
+}
+
+.new-lc .steps-hd h2 {
+	color: #000
+}
+
+.new-lc .steps-bd .steps-tips h4 {
+	font-size: 10pt;
+}
+
+.new-lc .steps-bd .steps-main {
+	float: left;
+	width: 680px;
+	padding: 10px 23px 10px 15px;
+	border-right: 1px solid #ddd;
+}
+
+.new-lc .steps-bd .steps-tips {
+	margin: 0 0;
+	padding: 0 8px 0 0;
+	border-left: none;
+}
+
+.lccx {
+	margin-bottom: 15px;
+}
+
+.lccx td {
+	background: none repeat scroll 0 0 #F4F9FF;
+	padding: 10px 10px 0 10px;
+}
+
+.lccx li {
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.lccx strong {
+	color: #C00;
+	margin-right: 10px;
+	font-size: 14px
+}
+
+.lcline {
+	margin: 20px 0;
+	border-bottom: 1px dashed #ddd;
+	height: 1px;
+	line-height: 1px;
+	overflow: hidden
+}
+
+.lctab .fgspan {
+	margin: 0 10px;
+	font-size: 10pt
+}
+
+.lctab strong {
+	color: #f60;
+	font-size: 16px;
+}
+
+.fgdiv {
+	margin: 10px 0;
+}
+
+.lctab .ggbtn:link, .lctab .ggbtn:hover, .lctab .ggbtn:visited {
+	display: inline-block;
+	margin-left: 15px;
+	color: #000;
+	line-height: 25px;
+	text-decoration: none;
+	text-align: center;
+	width: 80px;
+	height: 25px;
+	background:
+		url("http://img1.yododo.com/images/market/sprite_mall.v009.png")
+		no-repeat scroll -360px -390px transparent;
+}
+
+.lc-dhp {
+	float: left;
+	width: 635px;
+	padding-left: 26px;
+	line-height: 18px;
+	margin: 0;
+}
+
+.new-idea, a.new-idea {
+	border: 1px solid #E7D3B8;
+	background-color: #FFFFE3;
+	padding: 5px 5px 5px 22px;
+	background-image:
+		url("http://img1.yododo.com/images/icon_lightbulb.gif");
+	background-position: 3px 50%;
+	background-repeat: no-repeat;
+}
+
+a.new-idea:link, a.new-idea:visited {
+	display: inline-block;
+	padding: 2px 5px 2px 22px;
+	color: #000;
+	margin-left: 15px;
+	text-decoration: none
+}
+
+.lcqr-btn:link, .lcqr-btn:visited {
+	display: block;
+	width: 205px;
+	height: 36px;
+	line-height: 36px;
+	background: url(http://img1.yododo.com/images/lcqr-btn.gif) no-repeat;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold
+}
+
+.new-lc .price-detail {
+	margin-bottom: 15px
+}
+
+.new-ydsm {
+	border: 1px solid #FFE580;
+	background-color: #FFF5CC;
+	padding: 10px
+}
+
+.new-lc {
+	width: 984px;
+	margin: 0 auto;
+}
+
+.new-lc .flow-steps .num3 li {
+	width: 313px;
+}
+
+.new-lc .steps-hd h2 {
+	color: #000
+}
+
+.new-lc .steps-bd .steps-tips h4 {
+	font-size: 10pt;
+}
+
+.new-lc .steps-bd .steps-main {
+	float: left; /*width:680px;*/
+	padding: 10px 23px 10px 15px; /*border-right: 1px solid #ddd; */
+}
+
+.new-lc .steps-bd .steps-tips {
+	margin: 0 0;
+	padding: 0 8px 0 0;
+	border-left: none;
+}
+
+.lccx {
+	margin-bottom: 15px;
+}
+
+.lccx td {
+	background: none repeat scroll 0 0 #F4F9FF;
+	padding: 10px 10px 0 10px;
+}
+
+.lccx li {
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.lccx strong {
+	color: #C00;
+	margin-right: 10px;
+	font-size: 14px
+}
+
+.lcline {
+	margin: 20px 0;
+	border-bottom: 1px dashed #ddd;
+	height: 1px;
+	line-height: 1px;
+	overflow: hidden
+}
+
+.lctab td {
+	padding: 3px 0;
+	line-height: 22px;
+	vertical-align: top
+}
+
+.lctab td input {
+	vertical-align: top;
+}
+
+.lctab td span {
+	margin: 0 3px
+}
+
+.lctab .fgspan {
+	margin: 0 10px;
+	font-size: 10pt
+}
+
+.lctab strong {
+	color: #f60;
+	font-size: 16px;
+}
+
+.fgdiv {
+	margin: 10px 0;
+}
+
+.lctab .ggbtn:link, .lctab .ggbtn:hover, .lctab .ggbtn:visited {
+	display: inline-block;
+	margin-left: 15px;
+	color: #000;
+	line-height: 25px;
+	text-decoration: none;
+	text-align: center;
+	width: 80px;
+	height: 25px;
+	background:
+		url("http://img1.yododo.com/images/market/sprite_mall.v009.png")
+		no-repeat scroll -360px -390px transparent;
+}
+
+.lc-dhp {
+	float: left;
+	width: 635px;
+	padding-left: 26px;
+	line-height: 18px;
+	margin: 0;
+}
+
+.lcxxb {
+	/*border:1px solid #E7D3B8; background-color:#FFFFE3; padding:15px;*/
+	
+}
+
+.lcxxb td {
+	padding-bottom: 10px;
+	vertical-align: top;
+}
+
+.lcxxb td span {
+	margin-left: 10px;
+	font-size: 12px
+}
+
+.lcxxb td textarea {
+	font-size: 10pt;
+	width: 350px;
+	padding: 5px
+}
+
+.new-idea, a.new-idea {
+	border: 1px solid #E7D3B8;
+	background-color: #FFFFE3;
+	padding: 5px 5px 5px 22px;
+	background-image:
+		url("http://img1.yododo.com/images/icon_lightbulb.gif");
+	background-position: 3px 50%;
+	background-repeat: no-repeat;
+}
+
+a.new-idea:link, a.new-idea:visited {
+	display: inline-block;
+	padding: 2px 5px 2px 22px;
+	color: #000;
+	margin-left: 15px;
+	text-decoration: none
+}
+
+.new-box a:link, .new-box a:visited {
+	border: 1px solid #ccc;
+	color: #999;
+	background-color: #FFF;
+	display: inline-block;
+	text-decoration: none;
+	padding: 0 5px;
+	height: 20px;
+	line-height: 20px;
+	margin-right: 10px
+}
+
+.new-box a:hover {
+	border: 1px solid #f60;
+	color: #f60
+}
+
+.new-box a.current, .new-box a.current:visited {
+	border: 2px solid #f60;
+	color: #f60
+}
+
+.new-box2, a.new-box2:link, a.new-box2:visited {
+	display: inline-block;
+	border: 1px solid #FFAA00;
+	background-color: #FFFFE3;
+	padding: 2px 5px;
+}
+
+.new-box3, a.new-box3:link, a.new-box3:visited {
+	display: inline-block;
+	border: 1px solid #FFFFE3;
+	background-color: #FFFFE3;
+	padding: 5px;
+}
+
+.lcqr-btn:link, .lcqr-btn:visited {
+	display: block;
+	width: 205px;
+	height: 36px;
+	line-height: 36px;
+	background: url(http://img1.yododo.com/images/lcqr-btn.gif) no-repeat;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold
+}
+
+.new-lc .price-detail {
+	margin-bottom: 15px
+}
+
+.new-ydsm {
+	border: 1px solid #FFE580;
+	background-color: #FFF5CC;
+	padding: 10px
+}
 
 /* Flow Step*/
-.flow-steps { margin: 20px 0; overflow: hidden; }
-.flow-steps li span, .flow-steps li strong { display: block; }
-.flow-steps li.done { background-color: #ffe6ba; background-position: 100% -46px; color: #f60; }
-.flow-steps li.current-prev { background-position: 100% -23px !important; }
-.flow-steps li { background: url("http://img1.yododo.com/images/market/flow_steps_bg.png") no-repeat scroll 100% 0 #e4e4e4;color: #404040;float: left; font-size: 14px; font-weight: bold; height: 23px; line-height: 23px; overflow: hidden; padding: 0 15px 0 0; text-align:center;}
-.flow-steps li.current { background-color: #f60; color:#fff; }
-.flow-steps li.done .first { background-color: #ffe6ba; background-position: -12px -115px; }
-.flow-steps li.current .first { background: url("http://img1.yododo.com/images/market/flow_steps_bg.png") no-repeat scroll -12px -92px; }
-.flow-steps li .first { background: url("http://img1.yododo.com/images/market/flow_steps_bg.png") no-repeat scroll -12px -69px; }
-.flow-steps li.current-last { background: #f60 url("http://img1.yododo.com/images/market/flow_steps_bg.png") no-repeat right -161px; color: #fff; }
-.flow-steps li.last { background-position: right -138px; }
-.flow-steps .num3 li { width: 309px; }
-.flow-steps .num4 li { width: 228px; }
-.flow-steps .num5 li { width: 179px; }
+.flow-steps {
+	margin: 20px 0;
+	overflow: hidden;
+}
+
+.flow-steps li span, .flow-steps li strong {
+	display: block;
+}
+
+.flow-steps li.done {
+	background-color: #ffe6ba;
+	background-position: 100% -46px;
+	color: #f60;
+}
+
+.flow-steps li.current-prev {
+	background-position: 100% -23px !important;
+}
+
+.flow-steps li {
+	background:
+		url("http://img1.yododo.com/images/market/flow_steps_bg.png")
+		no-repeat scroll 100% 0 #e4e4e4;
+	color: #404040;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	height: 23px;
+	line-height: 23px;
+	overflow: hidden;
+	padding: 0 15px 0 0;
+	text-align: center;
+}
+
+.flow-steps li.current {
+	background-color: #f60;
+	color: #fff;
+}
+
+.flow-steps li.done .first {
+	background-color: #ffe6ba;
+	background-position: -12px -115px;
+}
+
+.flow-steps li.current .first {
+	background:
+		url("http://img1.yododo.com/images/market/flow_steps_bg.png")
+		no-repeat scroll -12px -92px;
+}
+
+.flow-steps li .first {
+	background:
+		url("http://img1.yododo.com/images/market/flow_steps_bg.png")
+		no-repeat scroll -12px -69px;
+}
+
+.flow-steps li.current-last {
+	background: #f60
+		url("http://img1.yododo.com/images/market/flow_steps_bg.png")
+		no-repeat right -161px;
+	color: #fff;
+}
+
+.flow-steps li.last {
+	background-position: right -138px;
+}
+
+.flow-steps .num3 li {
+	width: 309px;
+}
+
+.flow-steps .num4 li {
+	width: 228px;
+}
+
+.flow-steps .num5 li {
+	width: 179px;
+}
 
 /* Flow Step Block */
-.steps-mod { border: 1px solid #cfdae4; }
-.steps-hd { height: 30px; line-height: 30px; padding-left: 15px; background: #FFFDE6; }
-.steps-hd h2 { font-size: 14px; }
-.steps-bd { padding: 10px 15px; }
-.steps-bd .steps-main { float: left; /*width:670px;*/ }
-.steps-bd .steps-complete { float: left; width: 234px; margin: 10px 15px 10px 0; padding: 0 10px; background: #fff; }
-.steps-bd .steps-tips { float: right; width: 200px; margin: 10px 0; padding: 0 8px 0 10px;border-left: 1px solid #ddd; background: #fff; }
-.steps-bd .steps-tips h4 { margin-bottom:5px; color:#333; }
-.steps-bd .steps-tips ol li,.steps-body .steps-tips ol li { list-style:decimal; margin-left:20px; margin-bottom:5px; }
-.steps-bd table td { height: 26px; }
-.steps-bd .booking table td { height: 0; }
-.steps-bd h3 { margin: 0 0 8px; font-size: 14px; }
-.steps-bd .checkbox { margin-right: 5px; }
-.info-mod { width: 660px; padding: 15px; }
-.info-mod p { margin-bottom:10px; }
-.highlight-mod { margin: 10px 0; padding: 10px 15px; border: 1px solid #d6d6d6; background: #fffee2; }
-.highlight-mod table td { vertical-align: top; }
-.highlight-mod #order-detail-box { margin:10px 20px; }
-.highlight-mod .confirm-box { padding:8px 0; }
-.highlight-mod .errMsg { font-size: 12px; }
-.submit-mod { width: 660px; margin: 10px 0; padding: 10px 15px; }
-.pay-mod table { border: 1px solid #ccc; }
-.pay-mod table td { padding: 10px; border: 1px solid #ccc; }
-.info-mod ul li { padding: 5px; }
-.info-mod table td { vertical-align: top; }
-.info-mod input.modify-button { padding: 1px; border: 1px solid #1a67b2; background: #5c8fd0; color: #fff; font-weight: bold; font-size:13px; height:20px; cursor: pointer; }
+.steps-mod {
+	border: 1px solid #cfdae4;
+}
 
-.labelRadio { margin: 0 5px 0 0; cursor: pointer; }
-.inputRadio { margin: 0 5px 0 0; }
+.steps-hd {
+	height: 30px;
+	line-height: 30px;
+	padding-left: 15px;
+	background: #FFFDE6;
+}
 
-.cancel { margin-left: 20px; text-decoration: underline; }
+.steps-hd h2 {
+	font-size: 14px;
+}
 
+.steps-bd {
+	padding: 10px 15px;
+}
+
+.steps-bd .steps-main {
+	float: left; /*width:670px;*/
+}
+
+.steps-bd .steps-complete {
+	float: left;
+	width: 234px;
+	margin: 10px 15px 10px 0;
+	padding: 0 10px;
+	background: #fff;
+}
+
+.steps-bd .steps-tips {
+	float: right;
+	width: 200px;
+	margin: 10px 0;
+	padding: 0 8px 0 10px;
+	border-left: 1px solid #ddd;
+	background: #fff;
+}
+
+.steps-bd .steps-tips h4 {
+	margin-bottom: 5px;
+	color: #333;
+}
+
+.steps-bd .steps-tips ol li, .steps-body .steps-tips ol li {
+	list-style: decimal;
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+
+.steps-bd table td {
+	height: 26px;
+}
+
+.steps-bd .booking table td {
+	height: 0;
+}
+
+.steps-bd h3 {
+	margin: 0 0 8px;
+	font-size: 14px;
+}
+
+.steps-bd .checkbox {
+	margin-right: 5px;
+}
+
+.info-mod {
+	width: 660px;
+	padding: 15px;
+}
+
+.info-mod p {
+	margin-bottom: 10px;
+}
+
+.highlight-mod {
+	margin: 10px 0;
+	padding: 10px 15px;
+	border: 1px solid #d6d6d6;
+	background: #fffee2;
+}
+
+.highlight-mod table td {
+	vertical-align: top;
+}
+
+.highlight-mod #order-detail-box {
+	margin: 10px 20px;
+}
+
+.highlight-mod .confirm-box {
+	padding: 8px 0;
+}
+
+.highlight-mod .errMsg {
+	font-size: 12px;
+}
+
+.submit-mod {
+	width: 660px;
+	margin: 10px 0;
+	padding: 10px 15px;
+}
+
+.pay-mod table {
+	border: 1px solid #ccc;
+}
+
+.pay-mod table td {
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+
+.info-mod ul li {
+	padding: 5px;
+}
+
+.info-mod table td {
+	vertical-align: top;
+}
+
+.info-mod input.modify-button {
+	padding: 1px;
+	border: 1px solid #1a67b2;
+	background: #5c8fd0;
+	color: #fff;
+	font-weight: bold;
+	font-size: 13px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.labelRadio {
+	margin: 0 5px 0 0;
+	cursor: pointer;
+}
+
+.inputRadio {
+	margin: 0 5px 0 0;
+}
+
+.cancel {
+	margin-left: 20px;
+	text-decoration: underline;
+}
 
 /* hostel steps */
-.room-price { margin: 0 0 5px; }
-.room-price table { width: 100%; border: 2px solid #fff; background-color: #f4f8fb; }
-.room-price table thead { height: 26px; line-height: 26px; }
-.room-price table thead th { border: 2px solid #fff; background-color: #D7E6FF; color: #333; font-weight:normal; text-align: center; }
-.room-price table tbody tr { line-height: 30px; }
-.room-price table tbody td { border: 2px solid #fff; background-color: #F8F8F8; color: #000; line-height: 24px; text-align: center; }
-.room-price table tbody td .booking-date { color: #000; background-color: #eee; line-height: 20px; }
-.room-price table tbody td .no-room { color: #f00; }
-.room-price table tbody td .few-room { color: #f60; }
-.room-price table tbody td .has-room { color: #393; }
-.room-price table tbody td .new-price {color: #FF0000; cursor:help;font-size:14px;}
-.room-price table tbody td .price-help { color: #00f; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; }
-.room-price table tbody td .orig-price { color: #666; }
-.room-price table tbody td strike { color: #666; }
-.room-price table tbody td.inactive { background-color: #f4f8fb; filter:alpha(opacity=35); -moz-opacity: 0.35; opacity: 0.35; }
-table.price-list .price-detail-box{ font-size:9pt;font-weight:normal;font-family:Arial, Helvetica Neue, Helvetica, sans-serif; }
-table.price-list .price-detail-box td{ border-top:none; }
+.room-price {
+	margin: 0 0 5px;
+}
 
-.noroom-msg { padding-left:15px; margin-bottom:10px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:14px; font-weight:bold; }
-.noroom-msg ol { margin: 8px 0 0 25px; }
-.noroom-msg ol li { list-style: decimal; margin-left: 10px; line-height:1.7; }
+.room-price table {
+	width: 100%;
+	border: 2px solid #fff;
+	background-color: #f4f8fb;
+}
 
-.product-price-detail { margin: 0 0 5px; }
-.price-detail { font-size:100%; font-family:Arial, Helvetica Neue, Helvetica, sans-serif; border: 1px solid #aec7e5; background-color: #fff; }
-.price-detail .title { border: 1px solid #aec7e5; background-color: #e8f2ff; color: #333;  height:24px;line-height:24px; font-weight:bold; text-align:center; }
-.price-detail .date { border: 1px solid #aec7e5; background-color:#fff; height: 24px; line-height: 24px;  font-weight:bold;text-align:center; }
-.price-detail .pricelist { border: 1px solid #aec7e5; background-color:#fff;text-align:center; height: 24px; line-height: 24px; }
-.price-detail .normalPrice { color:green; }
-.price-detail .rulePrice { color:brown; }
-.price-detail .paidTotal { color:green; font-weight:bold; }
-.price-detail .remainTotal { color:brown; font-weight:bold; }
+.room-price table thead {
+	height: 26px;
+	line-height: 26px;
+}
 
+.room-price table thead th {
+	border: 2px solid #fff;
+	background-color: #D7E6FF;
+	color: #333;
+	font-weight: normal;
+	text-align: center;
+}
+
+.room-price table tbody tr {
+	line-height: 30px;
+}
+
+.room-price table tbody td {
+	border: 2px solid #fff;
+	background-color: #F8F8F8;
+	color: #000;
+	line-height: 24px;
+	text-align: center;
+}
+
+.room-price table tbody td .booking-date {
+	color: #000;
+	background-color: #eee;
+	line-height: 20px;
+}
+
+.room-price table tbody td .no-room {
+	color: #f00;
+}
+
+.room-price table tbody td .few-room {
+	color: #f60;
+}
+
+.room-price table tbody td .has-room {
+	color: #393;
+}
+
+.room-price table tbody td .new-price {
+	color: #FF0000;
+	cursor: help;
+	font-size: 14px;
+}
+
+.room-price table tbody td .price-help {
+	color: #00f;
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.room-price table tbody td .orig-price {
+	color: #666;
+}
+
+.room-price table tbody td strike {
+	color: #666;
+}
+
+.room-price table tbody td.inactive {
+	background-color: #f4f8fb;
+	filter: alpha(opacity = 35);
+	-moz-opacity: 0.35;
+	opacity: 0.35;
+}
+
+table.price-list .price-detail-box {
+	font-size: 9pt;
+	font-weight: normal;
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+
+table.price-list .price-detail-box td {
+	border-top: none;
+}
+
+.noroom-msg {
+	padding-left: 15px;
+	margin-bottom: 10px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.noroom-msg ol {
+	margin: 8px 0 0 25px;
+}
+
+.noroom-msg ol li {
+	list-style: decimal;
+	margin-left: 10px;
+	line-height: 1.7;
+}
+
+.product-price-detail {
+	margin: 0 0 5px;
+}
+
+.price-detail {
+	font-size: 100%;
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	border: 1px solid #aec7e5;
+	background-color: #fff;
+}
+
+.price-detail .title {
+	border: 1px solid #aec7e5;
+	background-color: #e8f2ff;
+	color: #333;
+	height: 24px;
+	line-height: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.price-detail .date {
+	border: 1px solid #aec7e5;
+	background-color: #fff;
+	height: 24px;
+	line-height: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.price-detail .pricelist {
+	border: 1px solid #aec7e5;
+	background-color: #fff;
+	text-align: center;
+	height: 24px;
+	line-height: 24px;
+}
+
+.price-detail .normalPrice {
+	color: green;
+}
+
+.price-detail .rulePrice {
+	color: brown;
+}
+
+.price-detail .paidTotal {
+	color: green;
+	font-weight: bold;
+}
+
+.price-detail .remainTotal {
+	color: brown;
+	font-weight: bold;
+}

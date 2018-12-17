@@ -30,6 +30,8 @@ public interface UserMapper {
 	
 	
 	int getQueryUserName(User user);
+	
+
 
 
 }

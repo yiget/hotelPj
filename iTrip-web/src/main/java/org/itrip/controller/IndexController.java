@@ -80,13 +80,13 @@ public class IndexController {
 	 */
 	@RequestMapping("test")
 	public String test() {
-		return"order";
+		return "order";
 	}
 	
 	
 	@RequestMapping("gethome")
 	public String gethome() {
-		return"home";
+		return "home";
 	}
 	
 	/**

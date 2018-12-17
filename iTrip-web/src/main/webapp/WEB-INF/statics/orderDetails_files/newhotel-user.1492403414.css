@@ -1,351 +1,1933 @@
 @charset "utf-8";
 /* CSS Document */
-
-html,body{background: #F4F4F4 url(http://img1.yododo.com/images/newhotel/user-ht/ht-bg.gif) repeat-x; background-color:#F4F4F4 }
-
-
+html, body {
+	background: #F4F4F4
+		url(http://img1.yododo.com/images/newhotel/user-ht/ht-bg.gif) repeat-x;
+	background-color: #F4F4F4
+}
 
 /* user center */
-.new-hotel-bottom .box1{ background-color:#FFF}
+.new-hotel-bottom .box1 {
+	background-color: #FFF
+}
 
-.ht-main{ margin:0 auto 10px auto; width:984px;}
-.ht-main-left{ width:208px; float:left;}
-.ht-main-right{ width:728px; float:right;background-color:#FFF; padding:24px 24px 14px 24px; height:auto; min-height:426px;  _overflow: hidden}
-.ht-menu-inner{ border:1px solid #fff; border-bottom:none; border-right:none;background:url(http://img0.yododo.com/images/newhotel/user-ht/ht-menu-bg.gif) repeat-y; padding:20px 0 10px 0}
-.ht-menu .tright{background:url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png) 1px -124px no-repeat;}
-.ht-menu-t{ height:42px; line-height:38px; text-align:center; color:#fff; font-size:16px; position: relative}
-.ht-menu-t .title{ width:161px;height:42px; position:absolute; left:-8px; top:0; background:url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png) 0 -81px no-repeat;}
-.ht-menu-inner ul{ margin-bottom:7px;}
-.ht-menu-inner li{ padding-left:31px; margin:0 0 5px 0; height:25px; line-height:25px;}
-.ht-menu-inner li.current{background: #FFF url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png) right -224px no-repeat;}
-.ht-menu-inner li a:link,.ht-menu-inner li a:visited{ background-image:url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png); background-repeat:no-repeat; padding-left:23px; color:#000}
-.ht-menu-inner li a:hover{ color:#f60}
-.ht-menu-inner li.current a{ color:#f60}
-.ht-menu-inner li a.s01{ background-position:-653px -12px}
-.ht-menu-inner li a.s02{ background-position:-653px -40px}
-.ht-menu-inner li a.s03{ background-position:-653px -70px}
-.ht-menu-inner li a.s04{ background-position:-653px -98px}
-.ht-menu-inner li a.s05{ background-position:-653px -126px}
-.ht-menu-inner li a.s06{ background-position:-653px -153px}
-.ht-menu-inner li a.s07{ background-position:-653px -182px}
-.ht-menu-inner li a.s08{ background-position:-653px -261px}
-.ht-menu-inner li a.s09{ background-position:-653px -290px}
-.ht-menu-inner li a.s10{ background-position:-653px -372px}
+.ht-main {
+	margin: 0 auto 10px auto;
+	width: 984px;
+}
 
-.ht-btitle,.ht-btitle2{ border:1px solid #CCCCCC;-moz-border-radius:8px;-webkit-border-radius : 8px;margin:25px 0 10px; position:relative; padding:20px 10px 10px 10px}
-.ht-btitle h3,.ht-btitle2 h3{ font-size:16px; display:block; background-color:#FFF; padding:0 5px; position:absolute; left:15px; top:-12px; color:#000;}
-.ht-btitle2{border:1px dashed #f60;}
-.ht-btitle2 h3{ font-size:10pt; color:#f60}
-.ht-btitle-bg{ background: #F2F2F2 url(http://img0.yododo.com/images/newhotel/user-ht/ht-bg2.gif) repeat-x;}
-.ht-btitle-bg h3{ display:block; width:126px; height:66px; text-indent:126px; line-height:66px; overflow:hidden; background:url(http://img3.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht_ico.v001.png);padding:0; top:-10px; left:-10px}
+.ht-main-left {
+	width: 208px;
+	float: left;
+}
 
-.ht-ul01{ margin-bottom:15px;}
-.ht-ul01 li{background:url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png) -657px -205px no-repeat; padding-left:18px}
-.ht-ul01 strong{ color:#F00; font-weight:bold; margin:0 3px}
-.ht-main-right td{ padding:5px}
-.ht-bigbox{ width:279px; height:144px; margin:100px auto 0 auto;background:url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png) 0 -276px no-repeat; padding:55px 0 0 20px; text-align:center}
-.ht-wbox{ background-color:#E1F5FE; padding:12px; margin-bottom:10px;}
-.ht-wbox2{ background-color:#EBEBEB;padding:12px 12px 0 12px; margin-bottom:10px;}
-.ht-wbox2 img{ float:left; margin:0 10px 10px 0; height:120px}
-.w532{ float:left; width:532px;}
-.w532 div{ margin-bottom:9px;}
-.w175{ float:right; width:175px;}
-.w175 div{ margin-bottom:9px;}
-.w171{ width:171px; margin-right:9px; float:left}
-.w172{ width:172px; float:right}
-.h115{ height:115px; line-height:115px; text-align:center}
-.h266{ height:266px; line-height:266px; text-align:center}
-.h570{ height:570px; line-height:570px; text-align:center}
-.bgcblu{ background-color:#E1F3FD}
-.bgcyel{ background-color:#FFFAC2}
-.bgcgray{ background-color:#E7E7E7}
-.ht-floatbox{ position:absolute; padding:4px;background-color:rgba(000,000,000,.5);background-color:#000\9; left:50%; top:200px; margin:0 0 0 -312px}
-.ht-floatbox .inner{width:625px; padding:30px; background-color:#FFF; position:relative}
-.ht-floatbox .inner .closebox{ position:absolute; right:10px; top:10px; width:15px; height:15px; background: url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png) -173px -83px no-repeat; cursor:pointer}
-.ht-secmenu{ border-bottom:1px solid #FBA51A; margin-bottom:10px}
-.ht-secmenu a:link,.ht-secmenu a:visited{ display: block; float:left; margin:0 5px 0 0; padding:0 15px; height:25px; line-height:25px; background-color:#D4D4D4; color:#000;-moz-border-radius: 5px 5px 0 0; -webkit-border-radius: 5px 5px 0 0; text-decoration:none}
-.ht-secmenu a:hover,.ht-secmenu a.current:link,.ht-secmenu a.current:visited{ background-color:#F9A61A; color:#fff}
-input.text01{ border:1px solid #B4B4B4; padding:0 5px; height:21px; line-height:21px;}
-.btn01:link,.btn01:visited{border:1px solid #0065CD; display: inline-block; color:#fff; width:90px; text-decoration:none;  height:28px; line-height:28px; text-align:center; overflow:hidden; background: url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png) 0 0 no-repeat; margin:0 10px 5px 0; font-weight:bold; font-size:14px;-moz-border-radius: 5px; -webkit-border-radius: 5px;}
-.btn02:link,.btn02:visited,.btn03:link,.btn03:visited{display: inline-block; color:#fff; width:90px; text-decoration:none;  height:26px; line-height:26px; text-align:center; overflow:hidden; background: url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png) 0 -54px no-repeat; margin:0 10px 5px 0; font-weight:bold; font-size:14px;-moz-border-radius: 5px; -webkit-border-radius: 5px;}
-.btn03:link,.btn03:visited{border:1px solid #999999; font-weight:normal; height:24px; line-height:24px;color:#000; background: url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png) 0 -29px no-repeat;}
-textarea{border:1px solid #B4B4B4;padding:5px; }
+.ht-main-right {
+	width: 728px;
+	float: right;
+	background-color: #FFF;
+	padding: 24px 24px 14px 24px;
+	height: auto;
+	min-height: 426px;
+	_overflow: hidden
+}
 
-.userht-tx{ margin-bottom:10px; border-bottom:1px dotted #ddd; padding-bottom:10px}
-.userht-tx li,.userht-tx-dd,.ht-btitle .inner .stlist li{ padding-left:25px;background:url(http://img2.yododo.com/images/newhotel/sprite_newhotel_dot1.v010.png) -95px -398px no-repeat; line-height:25px}
-.ht-btitle table{ margin-bottom:10px}
-.ht-btitle td{ padding:10px 0}
-.ht-btitle .ddan th,.ht-btitle .ddan td{ padding:6px 0}
-.ht-btitle .ddan th{ background-color:#FFFDE6}
-.ht-btitle .ddan td{ border-bottom:1px dotted #ddd;}
+.ht-menu-inner {
+	border: 1px solid #fff;
+	border-bottom: none;
+	border-right: none;
+	background:
+		url(http://img0.yododo.com/images/newhotel/user-ht/ht-menu-bg.gif)
+		repeat-y;
+	padding: 20px 0 10px 0
+}
 
-.dt-shortcut{ padding:10px 0 10px 70px; width:623px; height:100px;_overflow:hidden}
-.dt-shortcut a{ display:block; float:left; width:82px; padding-top:90px; text-align:center; margin-right:40px; background-image:url(http://img3.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht_ico.v001.png); background-repeat:no-repeat;}
-.dt-shortcut a.dts1{ background-position:0 -70px;}
-.dt-shortcut a.dts2{ background-position:-83px -70px;}
-.dt-shortcut a.dts3{ background-position:-166px -70px;}
-.dt-shortcut a.dts4{ background-position:-249px -70px;}
-.dt-shortcut a.dts5{ background-position:-332px -70px;}
-.ht-interactive{ margin-bottom:15px;}
-.ht-interactive li{border-bottom:1px dotted #ddd; padding:18px 10px; _position:relative}
-.ht-interactive .userpic{ float:left; width:65px;}
-.ht-interactive .userpic img{ width:48px; height:48px;}
-.ht-interactive .userquestion{ width:620px; float:right}
-.userquestion div{ margin-bottom:7px}
-.userquestion .question{ padding-right:60px; position:relative}
-.userquestion .question a:link,.userquestion .question a:visited{ position:absolute; right:0; top:0; color:#f60;}
-.userquestion .answer,.userquestion .no-answer{ background-color:#FFFEEC; padding:12px}
-.usersms{ padding:0 20px 20px 20px}
-.usersms .smstitle{ float:left; width:590px;}
-.usersms .smstitle td{ padding:3px 0}
-.usersms .smsintro{ padding-top:16px; border-top:1px dashed #ddd; margin-bottom:25px}
-.ht-btitle .w280{ width:150px; padding:0 5px; height:22px; line-height:22px; border:1px solid #ccc; margin-right:5px}
-.ht-btitle td.tdline{ height:1px ;  border-bottom:1px dashed #ccc; line-height:1px; padding:0}
-.ht-btitle .inner{ width:310px; margin:0 20px 20px;}
-.ht-btitle .inner .head{ padding-bottom:10px; margin-bottom:10px; border-bottom:1px dotted #ddd; color:#f60; font-weight:bold}
-.ht-btitle .inner .stlist li{line-height:22px; height:22px; overflow:hidden}
+.ht-menu .tright {
+	background:
+		url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png)
+		1px -124px no-repeat;
+}
 
+.ht-menu-t {
+	height: 42px;
+	line-height: 38px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	position: relative
+}
 
-.ddjl-tab,.ddjl-tab2{border-collapse: collapse;border-spacing: 0; border:1px solid #ccc; font-size:12px; margin-bottom:15px}
-.ddjl-tab td,.ddjl-tab th,.ddjl-tab2 td{ border:1px solid #ccc; padding:8px 5px; text-align:center}
-.ddjl-tab2 td{ text-align:left; padding:8px; }
-.ddjl-tab .bg01 td,.ddjl-tab .bg01 th,.ddjl-tab td.bg01,.ddjl-tab2 .bg01 td,.ddjl-tab2 td.bg01{ background-color:#F0F0F0}
-.ddjl-tab2 td.bg01{ color:#000;}
-.ddjl-tab .bg02 td,.ddjl-tab .bg02 th,.ddjl-tab td.bg02{ background-color:#E3FFFF}
-.ddjl-tab .bg03 td,.ddjl-tab .bg03 th,.ddjl-tab td.bg03{ background-color:#FFFDE8}
-.ddjl-tab3{ font-size:100%; border: 1px solid #aec7e5; background-color: #fff;margin-bottom:15px}
-.ddjl-tab3 td,.ddjl-tab3 th{ border:1px solid #aec7e5; padding:8px 5px; text-align:center}
-.ddjl-tab3 th { background-color: #e8f2ff; color: #333;  height:24px;line-height:24px; font-weight:bold; text-align:center; }
-.ddjl-tab4{border-collapse: collapse;border-spacing: 0; font-size:12px; margin-bottom:15px}
-.ddjl-tab4 img{ width:150px; height:90px; padding:2px; border:1px solid #ddd; margin-right:10px;}
+.ht-menu-t .title {
+	width: 161px;
+	height: 42px;
+	position: absolute;
+	left: -8px;
+	top: 0;
+	background:
+		url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png)
+		0 -81px no-repeat;
+}
 
-.product-price-detail { margin: 0 0 5px; }
-.price-detail { font-size:100%; font-family:Arial, Helvetica Neue, Helvetica, sans-serif; border: 1px solid #aec7e5; background-color: #fff; }
-.price-detail .title { border: 1px solid #aec7e5; background-color: #e8f2ff; color: #333;  height:24px;line-height:24px; font-weight:bold; text-align:center; }
-.price-detail .date { border: 1px solid #aec7e5; background-color:#fff; height: 24px; line-height: 24px;  font-weight:bold;text-align:center; }
-.price-detail .pricelist { border: 1px solid #aec7e5; background-color:#fff;text-align:center; height: 24px; line-height: 24px; }
-.price-detail .normalPrice { color:green; }
-.price-detail .rulePrice { color:brown; }
-.price-detail .paidTotal { color:green; font-weight:bold; }
-.price-detail .remainTotal { color:brown; font-weight:bold; }
+.ht-menu-inner ul {
+	margin-bottom: 7px;
+}
 
-.ddjl-time{ width:800px;background:url(http://img0.yododo.com/images/zd-time-bg.jpg) no-repeat; height:144px; margin-bottom:15px}
-.ddjl-time .time{ float:left; width:246px; padding:50px 0 0 5px; font-size:36px; color:#fff;}
-.ddjl-time .time span{ margin: 0 4px 0 10px; display:block; width:63px; height:40px; line-height:40px; _display:inline; float:left; text-align:center}
-.ddjl-time .time-sm{ float:right; width:536px; padding:20px 10px 0 0;}
-.ddjl-time .time-sm h3{ color:#FF0; font-size:24px; margin-bottom:10px}
-.ddjl-time .time-sm div{color:#fff; line-height:18px}
-.ddjl-time .time-sm strong,.ddjl-time .time-sm a:link,.ddjl-time .time-sm a:visited{ color:#ff0; margin:0 5px; font-weight:normal}
+.ht-menu-inner li {
+	padding-left: 31px;
+	margin: 0 0 5px 0;
+	height: 25px;
+	line-height: 25px;
+}
 
+.ht-menu-inner li.current {
+	background: #FFF
+		url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png)
+		right -224px no-repeat;
+}
 
-.mydplist li{ margin-bottom:15px; padding:10px}
-.mydplist li.bgy{ background-color:#FFFEEC}
-.mydplist li div{ margin-top:5px;}
-.mydplist li span{ margin:0 5px 0 0}
-.mydplist li strong span{ font-weight:normal; margin: 0 20px 0 0}
-.mydplist li .mydp{ padding:5px 0; border:1px dotted #ddd; border-left:none; border-right:none; font-size:14px; line-height:24px;}
-.mydplist li .mydp p{ margin: 5px 0; }
-.mydplist li .htdel,.mydplist li .htrevise{ margin-right:15px}
+.ht-menu-inner li a:link, .ht-menu-inner li a:visited {
+	background-image:
+		url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png);
+	background-repeat: no-repeat;
+	padding-left: 23px;
+	color: #000
+}
 
-.user-ht-ad{ height:85px; margin-bottom:10px;}
+.ht-menu-inner li a:hover {
+	color: #f60
+}
+
+.ht-menu-inner li.current a {
+	color: #f60
+}
+
+.ht-menu-inner li a.s01 {
+	background-position: -653px -12px
+}
+
+.ht-menu-inner li a.s02 {
+	background-position: -653px -40px
+}
+
+.ht-menu-inner li a.s03 {
+	background-position: -653px -70px
+}
+
+.ht-menu-inner li a.s04 {
+	background-position: -653px -98px
+}
+
+.ht-menu-inner li a.s05 {
+	background-position: -653px -126px
+}
+
+.ht-menu-inner li a.s06 {
+	background-position: -653px -153px
+}
+
+.ht-menu-inner li a.s07 {
+	background-position: -653px -182px
+}
+
+.ht-menu-inner li a.s08 {
+	background-position: -653px -261px
+}
+
+.ht-menu-inner li a.s09 {
+	background-position: -653px -290px
+}
+
+.ht-menu-inner li a.s10 {
+	background-position: -653px -372px
+}
+
+.ht-btitle, .ht-btitle2 {
+	border: 1px solid #CCCCCC;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	margin: 25px 0 10px;
+	position: relative;
+	padding: 20px 10px 10px 10px
+}
+
+.ht-btitle h3, .ht-btitle2 h3 {
+	font-size: 16px;
+	display: block;
+	background-color: #FFF;
+	padding: 0 5px;
+	position: absolute;
+	left: 15px;
+	top: -12px;
+	color: #000;
+}
+
+.ht-btitle2 {
+	border: 1px dashed #f60;
+}
+
+.ht-btitle2 h3 {
+	font-size: 10pt;
+	color: #f60
+}
+
+.ht-btitle-bg {
+	background: #F2F2F2
+		url(http://img0.yododo.com/images/newhotel/user-ht/ht-bg2.gif)
+		repeat-x;
+}
+
+.ht-btitle-bg h3 {
+	display: block;
+	width: 126px;
+	height: 66px;
+	text-indent: 126px;
+	line-height: 66px;
+	overflow: hidden;
+	background:
+		url(http://img3.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht_ico.v001.png);
+	padding: 0;
+	top: -10px;
+	left: -10px
+}
+
+.ht-ul01 {
+	margin-bottom: 15px;
+}
+
+.ht-ul01 li {
+	background:
+		url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png)
+		-657px -205px no-repeat;
+	padding-left: 18px
+}
+
+.ht-ul01 strong {
+	color: #F00;
+	font-weight: bold;
+	margin: 0 3px
+}
+
+.ht-main-right td {
+	padding: 5px
+}
+
+.ht-bigbox {
+	width: 279px;
+	height: 144px;
+	margin: 100px auto 0 auto;
+	background:
+		url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png)
+		0 -276px no-repeat;
+	padding: 55px 0 0 20px;
+	text-align: center
+}
+
+.ht-wbox {
+	background-color: #E1F5FE;
+	padding: 12px;
+	margin-bottom: 10px;
+}
+
+.ht-wbox2 {
+	background-color: #EBEBEB;
+	padding: 12px 12px 0 12px;
+	margin-bottom: 10px;
+}
+
+.ht-wbox2 img {
+	float: left;
+	margin: 0 10px 10px 0;
+	height: 120px
+}
+
+.w532 {
+	float: left;
+	width: 532px;
+}
+
+.w532 div {
+	margin-bottom: 9px;
+}
+
+.w175 {
+	float: right;
+	width: 175px;
+}
+
+.w175 div {
+	margin-bottom: 9px;
+}
+
+.w171 {
+	width: 171px;
+	margin-right: 9px;
+	float: left
+}
+
+.w172 {
+	width: 172px;
+	float: right
+}
+
+.h115 {
+	height: 115px;
+	line-height: 115px;
+	text-align: center
+}
+
+.h266 {
+	height: 266px;
+	line-height: 266px;
+	text-align: center
+}
+
+.h570 {
+	height: 570px;
+	line-height: 570px;
+	text-align: center
+}
+
+.bgcblu {
+	background-color: #E1F3FD
+}
+
+.bgcyel {
+	background-color: #FFFAC2
+}
+
+.bgcgray {
+	background-color: #E7E7E7
+}
+
+.ht-floatbox {
+	position: absolute;
+	padding: 4px;
+	background-color: rgba(000, 000, 000, .5);
+	background-color: #000\9;
+	left: 50%;
+	top: 200px;
+	margin: 0 0 0 -312px
+}
+
+.ht-floatbox .inner {
+	width: 625px;
+	padding: 30px;
+	background-color: #FFF;
+	position: relative
+}
+
+.ht-floatbox .inner .closebox {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 15px;
+	height: 15px;
+	background:
+		url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png)
+		-173px -83px no-repeat;
+	cursor: pointer
+}
+
+.ht-secmenu {
+	border-bottom: 1px solid #FBA51A;
+	margin-bottom: 10px
+}
+
+.ht-secmenu a:link, .ht-secmenu a:visited {
+	display: block;
+	float: left;
+	margin: 0 5px 0 0;
+	padding: 0 15px;
+	height: 25px;
+	line-height: 25px;
+	background-color: #D4D4D4;
+	color: #000;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	text-decoration: none
+}
+
+.ht-secmenu a:hover, .ht-secmenu a.current:link, .ht-secmenu a.current:visited
+	{
+	background-color: #F9A61A;
+	color: #fff
+}
+
+input.text01 {
+	border: 1px solid #B4B4B4;
+	padding: 0 5px;
+	height: 21px;
+	line-height: 21px;
+}
+
+.btn01:link, .btn01:visited {
+	border: 1px solid #0065CD;
+	display: inline-block;
+	color: #fff;
+	width: 90px;
+	text-decoration: none;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	overflow: hidden;
+	background:
+		url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png)
+		0 0 no-repeat;
+	margin: 0 10px 5px 0;
+	font-weight: bold;
+	font-size: 14px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.btn02:link, .btn02:visited, .btn03:link, .btn03:visited {
+	display: inline-block;
+	color: #fff;
+	width: 90px;
+	text-decoration: none;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	overflow: hidden;
+	background:
+		url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png)
+		0 -54px no-repeat;
+	margin: 0 10px 5px 0;
+	font-weight: bold;
+	font-size: 14px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.btn03:link, .btn03:visited {
+	border: 1px solid #999999;
+	font-weight: normal;
+	height: 24px;
+	line-height: 24px;
+	color: #000;
+	background:
+		url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png)
+		0 -29px no-repeat;
+}
+
+textarea {
+	border: 1px solid #B4B4B4;
+	padding: 5px;
+}
+
+.userht-tx {
+	margin-bottom: 10px;
+	border-bottom: 1px dotted #ddd;
+	padding-bottom: 10px
+}
+
+.userht-tx li, .userht-tx-dd, .ht-btitle .inner .stlist li {
+	padding-left: 25px;
+	background:
+		url(http://img2.yododo.com/images/newhotel/sprite_newhotel_dot1.v010.png)
+		-95px -398px no-repeat;
+	line-height: 25px
+}
+
+.ht-btitle table {
+	margin-bottom: 10px
+}
+
+.ht-btitle td {
+	padding: 10px 0
+}
+
+.ht-btitle .ddan th, .ht-btitle .ddan td {
+	padding: 6px 0
+}
+
+.ht-btitle .ddan th {
+	background-color: #FFFDE6
+}
+
+.ht-btitle .ddan td {
+	border-bottom: 1px dotted #ddd;
+}
+
+.dt-shortcut {
+	padding: 10px 0 10px 70px;
+	width: 623px;
+	height: 100px;
+	_overflow: hidden
+}
+
+.dt-shortcut a {
+	display: block;
+	float: left;
+	width: 82px;
+	padding-top: 90px;
+	text-align: center;
+	margin-right: 40px;
+	background-image:
+		url(http://img3.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht_ico.v001.png);
+	background-repeat: no-repeat;
+}
+
+.dt-shortcut a.dts1 {
+	background-position: 0 -70px;
+}
+
+.dt-shortcut a.dts2 {
+	background-position: -83px -70px;
+}
+
+.dt-shortcut a.dts3 {
+	background-position: -166px -70px;
+}
+
+.dt-shortcut a.dts4 {
+	background-position: -249px -70px;
+}
+
+.dt-shortcut a.dts5 {
+	background-position: -332px -70px;
+}
+
+.ht-interactive {
+	margin-bottom: 15px;
+}
+
+.ht-interactive li {
+	border-bottom: 1px dotted #ddd;
+	padding: 18px 10px;
+	_position: relative
+}
+
+.ht-interactive .userpic {
+	float: left;
+	width: 65px;
+}
+
+.ht-interactive .userpic img {
+	width: 48px;
+	height: 48px;
+}
+
+.ht-interactive .userquestion {
+	width: 620px;
+	float: right
+}
+
+.userquestion div {
+	margin-bottom: 7px
+}
+
+.userquestion .question {
+	padding-right: 60px;
+	position: relative
+}
+
+.userquestion .question a:link, .userquestion .question a:visited {
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #f60;
+}
+
+.userquestion .answer, .userquestion .no-answer {
+	background-color: #FFFEEC;
+	padding: 12px
+}
+
+.usersms {
+	padding: 0 20px 20px 20px
+}
+
+.usersms .smstitle {
+	float: left;
+	width: 590px;
+}
+
+.usersms .smstitle td {
+	padding: 3px 0
+}
+
+.usersms .smsintro {
+	padding-top: 16px;
+	border-top: 1px dashed #ddd;
+	margin-bottom: 25px
+}
+
+.ht-btitle .w280 {
+	width: 150px;
+	padding: 0 5px;
+	height: 22px;
+	line-height: 22px;
+	border: 1px solid #ccc;
+	margin-right: 5px
+}
+
+.ht-btitle td.tdline {
+	height: 1px;
+	border-bottom: 1px dashed #ccc;
+	line-height: 1px;
+	padding: 0
+}
+
+.ht-btitle .inner {
+	width: 310px;
+	margin: 0 20px 20px;
+}
+
+.ht-btitle .inner .head {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px dotted #ddd;
+	color: #f60;
+	font-weight: bold
+}
+
+.ht-btitle .inner .stlist li {
+	line-height: 22px;
+	height: 22px;
+	overflow: hidden
+}
+
+.ddjl-tab, .ddjl-tab2 {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid #ccc;
+	font-size: 12px;
+	margin-bottom: 15px
+}
+
+.ddjl-tab td, .ddjl-tab th, .ddjl-tab2 td {
+	border: 1px solid #ccc;
+	padding: 8px 5px;
+	text-align: center
+}
+
+.ddjl-tab2 td {
+	text-align: left;
+	padding: 8px;
+}
+
+.ddjl-tab .bg01 td, .ddjl-tab .bg01 th, .ddjl-tab td.bg01, .ddjl-tab2 .bg01 td,
+	.ddjl-tab2 td.bg01 {
+	background-color: #F0F0F0
+}
+
+.ddjl-tab2 td.bg01 {
+	color: #000;
+}
+
+.ddjl-tab .bg02 td, .ddjl-tab .bg02 th, .ddjl-tab td.bg02 {
+	background-color: #E3FFFF
+}
+
+.ddjl-tab .bg03 td, .ddjl-tab .bg03 th, .ddjl-tab td.bg03 {
+	background-color: #FFFDE8
+}
+
+.ddjl-tab3 {
+	font-size: 100%;
+	border: 1px solid #aec7e5;
+	background-color: #fff;
+	margin-bottom: 15px
+}
+
+.ddjl-tab3 td, .ddjl-tab3 th {
+	border: 1px solid #aec7e5;
+	padding: 8px 5px;
+	text-align: center
+}
+
+.ddjl-tab3 th {
+	background-color: #e8f2ff;
+	color: #333;
+	height: 24px;
+	line-height: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.ddjl-tab4 {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 12px;
+	margin-bottom: 15px
+}
+
+.ddjl-tab4 img {
+	width: 150px;
+	height: 90px;
+	padding: 2px;
+	border: 1px solid #ddd;
+	margin-right: 10px;
+}
+
+.product-price-detail {
+	margin: 0 0 5px;
+}
+
+.price-detail {
+	font-size: 100%;
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	border: 1px solid #aec7e5;
+	background-color: #fff;
+}
+
+.price-detail .title {
+	border: 1px solid #aec7e5;
+	background-color: #e8f2ff;
+	color: #333;
+	height: 24px;
+	line-height: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.price-detail .date {
+	border: 1px solid #aec7e5;
+	background-color: #fff;
+	height: 24px;
+	line-height: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.price-detail .pricelist {
+	border: 1px solid #aec7e5;
+	background-color: #fff;
+	text-align: center;
+	height: 24px;
+	line-height: 24px;
+}
+
+.price-detail .normalPrice {
+	color: green;
+}
+
+.price-detail .rulePrice {
+	color: brown;
+}
+
+.price-detail .paidTotal {
+	color: green;
+	font-weight: bold;
+}
+
+.price-detail .remainTotal {
+	color: brown;
+	font-weight: bold;
+}
+
+.ddjl-time {
+	width: 800px;
+	background: url(http://img0.yododo.com/images/zd-time-bg.jpg) no-repeat;
+	height: 144px;
+	margin-bottom: 15px
+}
+
+.ddjl-time .time {
+	float: left;
+	width: 246px;
+	padding: 50px 0 0 5px;
+	font-size: 36px;
+	color: #fff;
+}
+
+.ddjl-time .time span {
+	margin: 0 4px 0 10px;
+	display: block;
+	width: 63px;
+	height: 40px;
+	line-height: 40px;
+	_display: inline;
+	float: left;
+	text-align: center
+}
+
+.ddjl-time .time-sm {
+	float: right;
+	width: 536px;
+	padding: 20px 10px 0 0;
+}
+
+.ddjl-time .time-sm h3 {
+	color: #FF0;
+	font-size: 24px;
+	margin-bottom: 10px
+}
+
+.ddjl-time .time-sm div {
+	color: #fff;
+	line-height: 18px
+}
+
+.ddjl-time .time-sm strong, .ddjl-time .time-sm a:link, .ddjl-time .time-sm a:visited
+	{
+	color: #ff0;
+	margin: 0 5px;
+	font-weight: normal
+}
+
+.mydplist li {
+	margin-bottom: 15px;
+	padding: 10px
+}
+
+.mydplist li.bgy {
+	background-color: #FFFEEC
+}
+
+.mydplist li div {
+	margin-top: 5px;
+}
+
+.mydplist li span {
+	margin: 0 5px 0 0
+}
+
+.mydplist li strong span {
+	font-weight: normal;
+	margin: 0 20px 0 0
+}
+
+.mydplist li .mydp {
+	padding: 5px 0;
+	border: 1px dotted #ddd;
+	border-left: none;
+	border-right: none;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.mydplist li .mydp p {
+	margin: 5px 0;
+}
+
+.mydplist li .htdel, .mydplist li .htrevise {
+	margin-right: 15px
+}
+
+.user-ht-ad {
+	height: 85px;
+	margin-bottom: 10px;
+}
 /*.user-ht-ad img{ width:728px; height:90px;}*/
+a.user-ht-card, a.user-ht-card:visited {
+	display: block;
+	width: 150px;
+	text-decoration: none;
+	padding: 20px 20px 20px 90px;
+	border: 1px solid #FFCC99;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: #000;
+	background: #FFFFE3
+		url(http://img3.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht_ico.v001.png)
+		-340px 20px no-repeat;
+}
 
-a.user-ht-card,a.user-ht-card:visited{ display:block; width:150px; text-decoration:none; padding:20px 20px 20px 90px; border: 1px solid #FFCC99;border-radius: 5px;-moz-border-radius: 5px; -webkit-border-radius: 5px; color:#000;background: #FFFFE3 url(http://img3.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht_ico.v001.png) -340px 20px no-repeat;}
-.user-ht-card strong{ display:block; font-size:18px; font-weight:normal}
+.user-ht-card strong {
+	display: block;
+	font-size: 18px;
+	font-weight: normal
+}
 
 /* new 130701 sct */
-.ht-btitle .ddan .nline td{ border-bottom:none}
+.ht-btitle .ddan .nline td {
+	border-bottom: none
+}
 
 /* new 130902 sct */
-.hyfx-box1{ padding:32px 30px 0; position:relative}
-.hyfx-box1 span{ display:block; width:43px; height:34px; text-indent:-999px; overflow:hidden; position:absolute; left:0; top:0; background:url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png) 0 -160px no-repeat;}
-.hyfx-box1 strong{ display:block; margin-bottom:5px; color:#98530E; font-size:16px; }
-.hyfx-boxff{ position:relative; overflow:hidden; padding:20px;}
-.hyfx-boxff .ff01,.hyfx-boxff .ff02,.hyfx-boxff .ff03{ display:block; width:63px; height:66px; position:absolute; left:0; top:0; background-image:url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png); background-position: 0 -216px; background-repeat: no-repeat; text-indent:-999px}
-.hyfx-boxff .ff02{background-position: -63px -216px;}
-.hyfx-boxff .ff03{background-position: -128px -216px;}
-.hyfx-boxff strong{ display:block; margin:0 0 30px 50px; font-size:14px;}
-.hyfx-boxff textarea{ border:1px solid #CCCCCC; background-color:#F9F9F9; font-size:12px; vertical-align:bottom; margin-bottom:0}
-a.hyfx-btn:link,a.hyfx-btn:visited{ padding:0 16px; height:33px; line-height:33px; color:#fff; background-color:#F6801E; text-decoration:none; font-weight:bold; display:inline-block}
+.hyfx-box1 {
+	padding: 32px 30px 0;
+	position: relative
+}
+
+.hyfx-box1 span {
+	display: block;
+	width: 43px;
+	height: 34px;
+	text-indent: -999px;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background:
+		url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png)
+		0 -160px no-repeat;
+}
+
+.hyfx-box1 strong {
+	display: block;
+	margin-bottom: 5px;
+	color: #98530E;
+	font-size: 16px;
+}
+
+.hyfx-boxff {
+	position: relative;
+	overflow: hidden;
+	padding: 20px;
+}
+
+.hyfx-boxff .ff01, .hyfx-boxff .ff02, .hyfx-boxff .ff03 {
+	display: block;
+	width: 63px;
+	height: 66px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-image:
+		url(http://img1.yododo.com/images/newhotel/user-ht/sprite_newhotel_ht.v001.png);
+	background-position: 0 -216px;
+	background-repeat: no-repeat;
+	text-indent: -999px
+}
+
+.hyfx-boxff .ff02 {
+	background-position: -63px -216px;
+}
+
+.hyfx-boxff .ff03 {
+	background-position: -128px -216px;
+}
+
+.hyfx-boxff strong {
+	display: block;
+	margin: 0 0 30px 50px;
+	font-size: 14px;
+}
+
+.hyfx-boxff textarea {
+	border: 1px solid #CCCCCC;
+	background-color: #F9F9F9;
+	font-size: 12px;
+	vertical-align: bottom;
+	margin-bottom: 0
+}
+
+a.hyfx-btn:link, a.hyfx-btn:visited {
+	padding: 0 16px;
+	height: 33px;
+	line-height: 33px;
+	color: #fff;
+	background-color: #F6801E;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block
+}
 
 /*2013-09-18 order today json*/
-.dryd{ width:650px; padding:15px; font-size:12px; color:#666;}
-.dryd strong,.dryd em{ font-size:14px;}
-.dryd strong,.yd_process strong{ color:#333;}
-.dryd em{ font-style:normal; font-weight:bold; color:#e87808;}
-.yd a:link,.yd a:visited{ width:284px; height:43px; display:inline-block; border:1px solid  #54c1fa; margin-right:5px; border-radius:8px; padding:15px; color:#666;}
-.kaiqi,.unkaiqi{ background-image:url(http://img3.yododo.com/images/newhotel/user-ht/sprite8_yd.v001.png); background-repeat:no-repeat; width:41px; height:32px; display:inline-block; margin-top:6px;}
-.kaiqi{ background-position:-4px -8px;}
-.unkaiqi{background-position:-4px -199px;}
-.current .kaiqi{background-position:-4px -149px;}
-.current .unkaiqi{background-position:-4px -55px;}
-.yd{ margin-bottom:20px;}
-.yd .fright{ width:230px;}
-.yd .fright strong{ font-size:14px; color:#e87808; display:block;}
-.yd .current:link,.yd .current:visited{ background-color:#ecf7fe;}
-.yd .current .fright strong{ color:#666;}
-.yd_process strong{ display:block; margin-bottom:20px;}
-.yd_process span{ width:161px; height:164px; border:1px solid #ccc; background-color:#f8f8f8; display:inline-block; vertical-align:middle; border-radius:8px; padding:10px;}
-.dryd .yd_process em{ background-image:url(http://img3.yododo.com/images/newhotel/user-ht/sprite8_yd.v001.png); background-repeat:no-repeat; width:32px; height:32px; background-position:-14px -101px; display:inline-block; margin-left:5px;}
-.dryd .yd_process span b{ display:block; text-align:center; font-size:14px; color:#333; margin-bottom:15px;}
-.dryd .yd_process span i{ width:18px; height:18px; background-color:#C0611B; display:inline-block; text-align:center; color:#FFF; line-height:18px; font-style:normal; margin-right:5px; border-radius:9px;}
-.dryd .yd_process span p{ line-height:22px;}
-.dryd .yd_process span p strong{ display:inline; color:#f36f20; margin-bottom:0px; font-size:12px;}
-.yd-lbox{ width:421px; height:201px; border:2px solid #f2b579; overflow:hidden; border-radius:8px;}
-.yd-lbox strong{ display:block; height:33px; width:100%; background-color:#e9e9e9; line-height:33px; font-size:14px; color:#333; padding:0 15px;}
-.yd-lbox span{ display:block; text-align:center; margin:40px 0;}
-.yd-set{ text-align:center;}
-.yd-set a:link,.yd-set a:visited{ display:inline-block; width:90px; height:35px; background-color:#898989; line-height:35px; text-align:center; color:#FFF; text-decoration:none; margin-right:15px; border-radius:5px; font-weight:bold; font-size:14px;}
-.yd-set .current:link,.yd-set .current:visited{ background-color:#f36f20;}
+.dryd {
+	width: 650px;
+	padding: 15px;
+	font-size: 12px;
+	color: #666;
+}
 
+.dryd strong, .dryd em {
+	font-size: 14px;
+}
+
+.dryd strong, .yd_process strong {
+	color: #333;
+}
+
+.dryd em {
+	font-style: normal;
+	font-weight: bold;
+	color: #e87808;
+}
+
+.yd a:link, .yd a:visited {
+	width: 284px;
+	height: 43px;
+	display: inline-block;
+	border: 1px solid #54c1fa;
+	margin-right: 5px;
+	border-radius: 8px;
+	padding: 15px;
+	color: #666;
+}
+
+.kaiqi, .unkaiqi {
+	background-image:
+		url(http://img3.yododo.com/images/newhotel/user-ht/sprite8_yd.v001.png);
+	background-repeat: no-repeat;
+	width: 41px;
+	height: 32px;
+	display: inline-block;
+	margin-top: 6px;
+}
+
+.kaiqi {
+	background-position: -4px -8px;
+}
+
+.unkaiqi {
+	background-position: -4px -199px;
+}
+
+.current .kaiqi {
+	background-position: -4px -149px;
+}
+
+.current .unkaiqi {
+	background-position: -4px -55px;
+}
+
+.yd {
+	margin-bottom: 20px;
+}
+
+.yd .fright {
+	width: 230px;
+}
+
+.yd .fright strong {
+	font-size: 14px;
+	color: #e87808;
+	display: block;
+}
+
+.yd .current:link, .yd .current:visited {
+	background-color: #ecf7fe;
+}
+
+.yd .current .fright strong {
+	color: #666;
+}
+
+.yd_process strong {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.yd_process span {
+	width: 161px;
+	height: 164px;
+	border: 1px solid #ccc;
+	background-color: #f8f8f8;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 8px;
+	padding: 10px;
+}
+
+.dryd .yd_process em {
+	background-image:
+		url(http://img3.yododo.com/images/newhotel/user-ht/sprite8_yd.v001.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 32px;
+	background-position: -14px -101px;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.dryd .yd_process span b {
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 15px;
+}
+
+.dryd .yd_process span i {
+	width: 18px;
+	height: 18px;
+	background-color: #C0611B;
+	display: inline-block;
+	text-align: center;
+	color: #FFF;
+	line-height: 18px;
+	font-style: normal;
+	margin-right: 5px;
+	border-radius: 9px;
+}
+
+.dryd .yd_process span p {
+	line-height: 22px;
+}
+
+.dryd .yd_process span p strong {
+	display: inline;
+	color: #f36f20;
+	margin-bottom: 0px;
+	font-size: 12px;
+}
+
+.yd-lbox {
+	width: 421px;
+	height: 201px;
+	border: 2px solid #f2b579;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.yd-lbox strong {
+	display: block;
+	height: 33px;
+	width: 100%;
+	background-color: #e9e9e9;
+	line-height: 33px;
+	font-size: 14px;
+	color: #333;
+	padding: 0 15px;
+}
+
+.yd-lbox span {
+	display: block;
+	text-align: center;
+	margin: 40px 0;
+}
+
+.yd-set {
+	text-align: center;
+}
+
+.yd-set a:link, .yd-set a:visited {
+	display: inline-block;
+	width: 90px;
+	height: 35px;
+	background-color: #898989;
+	line-height: 35px;
+	text-align: center;
+	color: #FFF;
+	text-decoration: none;
+	margin-right: 15px;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.yd-set .current:link, .yd-set .current:visited {
+	background-color: #f36f20;
+}
 
 /*2013-11-05 json*/
-.app-yh{ width:730px; height:102px; border:1px solid #fbbc42;}
-.appyh-left{ line-height:24px; float:left; position:relative; background:url('http://img3.yododo.com/images/events/20130829/sprite8_app.v005.png') no-repeat right -456px; height:60px; padding:20px 55px 20px 90px; background-color:#fffde6;}
-.appyh-left strong{ display:block; margin-bottom:10px; font-size:24px; color:#666; font-family:Verdana, Microsoft Yahei; font-weight:normal;}
-.appyh-left span{ font-size:14px; color:#666;}
-.appyh-left span em{ font-style:normal;}
-.appyh-left .jrw{ width:87px; height:0; padding-top:71px; overflow:hidden; background:url('http://img3.yododo.com/images/events/20130829/sprite8_app.v005.png') no-repeat 0 -231px; position:absolute; left:0; top:0;}
-.appyh-right{float:right; margin-top:15px; width:215px; margin-right:10px; _margin-right:5px;}
-.appyh-right .fleft{ margin-right:5px;}
-.ft12{ font-size:12px;}
-.ft36{ font-size:36px;}
-.col666{ color:#666;}
-.noapp .appyh-left{ padding:40px 55px 40px 20px; height:20px;}
-.noapp .jrw{ display:none;}
-.noapp .appyh-left strong{ font-size:24px; font-family:Verdana, Microsoft Yahei;}
-.noapp .appyh-left strong em{font-style:normal;}
+.app-yh {
+	width: 730px;
+	height: 102px;
+	border: 1px solid #fbbc42;
+}
 
+.appyh-left {
+	line-height: 24px;
+	float: left;
+	position: relative;
+	background:
+		url('http://img3.yododo.com/images/events/20130829/sprite8_app.v005.png')
+		no-repeat right -456px;
+	height: 60px;
+	padding: 20px 55px 20px 90px;
+	background-color: #fffde6;
+}
+
+.appyh-left strong {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 24px;
+	color: #666;
+	font-family: Verdana, Microsoft Yahei;
+	font-weight: normal;
+}
+
+.appyh-left span {
+	font-size: 14px;
+	color: #666;
+}
+
+.appyh-left span em {
+	font-style: normal;
+}
+
+.appyh-left .jrw {
+	width: 87px;
+	height: 0;
+	padding-top: 71px;
+	overflow: hidden;
+	background:
+		url('http://img3.yododo.com/images/events/20130829/sprite8_app.v005.png')
+		no-repeat 0 -231px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.appyh-right {
+	float: right;
+	margin-top: 15px;
+	width: 215px;
+	margin-right: 10px;
+	_margin-right: 5px;
+}
+
+.appyh-right .fleft {
+	margin-right: 5px;
+}
+
+.ft12 {
+	font-size: 12px;
+}
+
+.ft36 {
+	font-size: 36px;
+}
+
+.col666 {
+	color: #666;
+}
+
+.noapp .appyh-left {
+	padding: 40px 55px 40px 20px;
+	height: 20px;
+}
+
+.noapp .jrw {
+	display: none;
+}
+
+.noapp .appyh-left strong {
+	font-size: 24px;
+	font-family: Verdana, Microsoft Yahei;
+}
+
+.noapp .appyh-left strong em {
+	font-style: normal;
+}
 
 /*131213 sct*/
-.pstar {position: relative;display: inline-block;width: 132px;height: 22px;overflow: hidden;padding: 0;margin: 0;vertical-align: middle;background:url(/images/newhotel/user-ht/sprite-levm1.png) repeat-x; font-size:0;}
-.pstar strong,.pstar a:link,.pstar a:visited,.pstar a em,.pstar strong em{display: inline-block;width: 26px;height: 22px;line-height: 22px;overflow: hidden; text-decoration:none;}
-.pstar strong,.pstar a:link,.pstar a:visited{ position:absolute; z-index:2; top:0}
-.pstar strong.n1,.pstar a.n1{left: 0px;}
-.pstar strong.n2,.pstar a.n2{left: 26px;}
-.pstar strong.n3,.pstar a.n3{left: 52px;}
-.pstar strong.n4,.pstar a.n4{left: 78px;}
-.pstar strong.n5,.pstar a.n5{left: 104px;}
-.pstar a.current,.pstar strong.current{ left:0; width:auto}
-.pstar a:hover{left:0; z-index:1; width:auto}
-.pstar a:hover em,.pstar a.current em,.pstar strong.current em{ width:100%; background: url(/images/newhotel/user-ht/sprite-levm1.png) 0 -26px repeat-x; }
-.pstar a:hover em.n1,.pstar a.current:link em.n1,.pstar a.current:visited em.n1,.pstar .current em.n1{width: 26px;}
-.pstar a:hover em.n2,.pstar a.current:link em.n2,.pstar a.current:visited em.n2,.pstar .current em.n2{width: 52px;}
-.pstar a:hover em.n3,.pstar a.current:link em.n3,.pstar a.current:visited em.n3,.pstar .current em.n3{width: 78px;}
-.pstar a:hover em.n4,.pstar a.current:link em.n4,.pstar a.current:visited em.n4,.pstar .current em.n4{width: 104px;}
-.pstar a:hover em.n5,.pstar a.current:link em.n5,.pstar a.current:visited em.n5,.pstar .current em.n5{width: 130px;}
-.pl-area{ background-color: #eee; padding: 10px;}
-.pl-area .addpl:link,.pl-area .addpl:visited{ width: 78px; height: 78px; line-height: 70px; font-size: 40px; color: #ddd; border: 2px dotted #ddd; text-decoration: none; background-color: #F7F7F7}
-.pl-area .addpl:hover{ background-color: #fff;}
+.pstar {
+	position: relative;
+	display: inline-block;
+	width: 132px;
+	height: 22px;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+	background: url(/images/newhotel/user-ht/sprite-levm1.png) repeat-x;
+	font-size: 0;
+}
+
+.pstar strong, .pstar a:link, .pstar a:visited, .pstar a em, .pstar strong em
+	{
+	display: inline-block;
+	width: 26px;
+	height: 22px;
+	line-height: 22px;
+	overflow: hidden;
+	text-decoration: none;
+}
+
+.pstar strong, .pstar a:link, .pstar a:visited {
+	position: absolute;
+	z-index: 2;
+	top: 0
+}
+
+.pstar strong.n1, .pstar a.n1 {
+	left: 0px;
+}
+
+.pstar strong.n2, .pstar a.n2 {
+	left: 26px;
+}
+
+.pstar strong.n3, .pstar a.n3 {
+	left: 52px;
+}
+
+.pstar strong.n4, .pstar a.n4 {
+	left: 78px;
+}
+
+.pstar strong.n5, .pstar a.n5 {
+	left: 104px;
+}
+
+.pstar a.current, .pstar strong.current {
+	left: 0;
+	width: auto
+}
+
+.pstar a:hover {
+	left: 0;
+	z-index: 1;
+	width: auto
+}
+
+.pstar a:hover em, .pstar a.current em, .pstar strong.current em {
+	width: 100%;
+	background: url(/images/newhotel/user-ht/sprite-levm1.png) 0 -26px
+		repeat-x;
+}
+
+.pstar a:hover em.n1, .pstar a.current:link em.n1, .pstar a.current:visited em.n1,
+	.pstar .current em.n1 {
+	width: 26px;
+}
+
+.pstar a:hover em.n2, .pstar a.current:link em.n2, .pstar a.current:visited em.n2,
+	.pstar .current em.n2 {
+	width: 52px;
+}
+
+.pstar a:hover em.n3, .pstar a.current:link em.n3, .pstar a.current:visited em.n3,
+	.pstar .current em.n3 {
+	width: 78px;
+}
+
+.pstar a:hover em.n4, .pstar a.current:link em.n4, .pstar a.current:visited em.n4,
+	.pstar .current em.n4 {
+	width: 104px;
+}
+
+.pstar a:hover em.n5, .pstar a.current:link em.n5, .pstar a.current:visited em.n5,
+	.pstar .current em.n5 {
+	width: 130px;
+}
+
+.pl-area {
+	background-color: #eee;
+	padding: 10px;
+}
+
+.pl-area .addpl:link, .pl-area .addpl:visited {
+	width: 78px;
+	height: 78px;
+	line-height: 70px;
+	font-size: 40px;
+	color: #ddd;
+	border: 2px dotted #ddd;
+	text-decoration: none;
+	background-color: #F7F7F7
+}
+
+.pl-area .addpl:hover {
+	background-color: #fff;
+}
 
 /*2013-12-25 json*/
-.quzhifu:link,.quzhifu:visited{width:121px; height:34px; display:block; background-color:#F6801E; line-height:34px; text-align:center; color:#fff; font-family:Verdana,Microsoft Yahei; font-size:24px; border-radius:8px; position:relative;}
-.quzhifu span{color:#fff;}
+.quzhifu:link, .quzhifu:visited {
+	width: 121px;
+	height: 34px;
+	display: block;
+	background-color: #F6801E;
+	line-height: 34px;
+	text-align: center;
+	color: #fff;
+	font-family: Verdana, Microsoft Yahei;
+	font-size: 24px;
+	border-radius: 8px;
+	position: relative;
+}
 
-.cn-combox{width:500px;  border:1px solid #ccc; padding-bottom:20px;}
-.cn-combox strong{display:block; height:35px; line-height:35px; text-align:center; background-color:#eee; border-bottom:1px solid #ccc;}
-.cn-combox-txt{padding:15px 10px; font-size:14px;text-align: left;}
-.cn-combox-txt b{color:#333; font-size:16px;}
-.cn-combox-txt label{ margin:5px 0;display: block;}
-.combox-btn{ text-align:center;}
-.combtn-1:link,.combtn-1:visited,.combtn-2:link,.combtn-2:visited{width:85px; height:35px; border:1px solid #ccc; text-decoration:none; color:#333; display:inline-block; margin-right:35px; background:#eee; background:-moz-linear-gradient(center top , #efefef 5%, #ccc 50%);  line-height:35px; text-align:center;}
-.combtn-2:hover,.combtn-1:hover{background:#efefef; background:-moz-linear-gradient(center top , #e3e3e3 5%, #aaa 50%); }
-.combtn-1:link,.combtn-1:visited{background:#f60; background:-moz-linear-gradient(center top , #FF9934 5%, #F5772B 50%);  border:1px solid #f60; color:#fff;}
-.combtn-1:hover{background:#f50; background:-moz-linear-gradient(center top , #f90 5%, #f50 50%); }
-.combox-success{ font-family:Verdana, Microsoft Yahei; font-size:14px; text-align:center; margin:15px 0; color:#333;}
+.quzhifu span {
+	color: #fff;
+}
 
+.cn-combox {
+	width: 500px;
+	border: 1px solid #ccc;
+	padding-bottom: 20px;
+}
+
+.cn-combox strong {
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	background-color: #eee;
+	border-bottom: 1px solid #ccc;
+}
+
+.cn-combox-txt {
+	padding: 15px 10px;
+	font-size: 14px;
+	text-align: left;
+}
+
+.cn-combox-txt b {
+	color: #333;
+	font-size: 16px;
+}
+
+.cn-combox-txt label {
+	margin: 5px 0;
+	display: block;
+}
+
+.combox-btn {
+	text-align: center;
+}
+
+.combtn-1:link, .combtn-1:visited, .combtn-2:link, .combtn-2:visited {
+	width: 85px;
+	height: 35px;
+	border: 1px solid #ccc;
+	text-decoration: none;
+	color: #333;
+	display: inline-block;
+	margin-right: 35px;
+	background: #eee;
+	background: -moz-linear-gradient(center top, #efefef 5%, #ccc 50%);
+	line-height: 35px;
+	text-align: center;
+}
+
+.combtn-2:hover, .combtn-1:hover {
+	background: #efefef;
+	background: -moz-linear-gradient(center top, #e3e3e3 5%, #aaa 50%);
+}
+
+.combtn-1:link, .combtn-1:visited {
+	background: #f60;
+	background: -moz-linear-gradient(center top, #FF9934 5%, #F5772B 50%);
+	border: 1px solid #f60;
+	color: #fff;
+}
+
+.combtn-1:hover {
+	background: #f50;
+	background: -moz-linear-gradient(center top, #f90 5%, #f50 50%);
+}
+
+.combox-success {
+	font-family: Verdana, Microsoft Yahei;
+	font-size: 14px;
+	text-align: center;
+	margin: 15px 0;
+	color: #333;
+}
 
 /*2016-06-25myoder*/
-.jcmyodertop{position: relative;}
-.jcmyodertop a{display: block; width:148px; height: 42px; line-height: 42px; font-size: 20px; text-align: center; background-color:#f7941c; color:#fff; border:1px solid #fff; border-radius: .3em; position: absolute; right:10px; top:20px;}
-.jcmyodercont{border:1px solid #ccc; border-radius: .3em; padding: 20px 10px 10px 10px; position: relative; margin: 25px 0 20px;}
-.jcmyodercont h3{position: absolute; left:15px; top:-10px; background: #fff; font-size: 14px; color: #333; width:60px; height: 20px;}
-.jcmyodercont .dp{display:inline-block; width:55px; height: 20px;line-height: 20px; text-align: center; border:1px solid #fe9751; background-color: #fedbb3; border-radius: .4em;}
-.jcmyodercont span{color: #f36f20; padding-left: 5px;}
-.jcmyodercont .xbut{display: inline-block; font-size: 12px; color: #333; margin: 6px 5px 0 5px;}
+.jcmyodertop {
+	position: relative;
+}
 
+.jcmyodertop a {
+	display: block;
+	width: 148px;
+	height: 42px;
+	line-height: 42px;
+	font-size: 20px;
+	text-align: center;
+	background-color: #f7941c;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: .3em;
+	position: absolute;
+	right: 10px;
+	top: 20px;
+}
+
+.jcmyodercont {
+	border: 1px solid #ccc;
+	border-radius: .3em;
+	padding: 20px 10px 10px 10px;
+	position: relative;
+	margin: 25px 0 20px;
+}
+
+.jcmyodercont h3 {
+	position: absolute;
+	left: 15px;
+	top: -10px;
+	background: #fff;
+	font-size: 14px;
+	color: #333;
+	width: 60px;
+	height: 20px;
+}
+
+.jcmyodercont .dp {
+	display: inline-block;
+	width: 55px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	border: 1px solid #fe9751;
+	background-color: #fedbb3;
+	border-radius: .4em;
+}
+
+.jcmyodercont span {
+	color: #f36f20;
+	padding-left: 5px;
+}
+
+.jcmyodercont .xbut {
+	display: inline-block;
+	font-size: 12px;
+	color: #333;
+	margin: 6px 5px 0 5px;
+}
 
 /*2016-06-26myaddreview*/
-.jcmyreviewtop{width:690px; padding: 10px 20px;border: 1px solid #ffce7b; background-color: #fffdec;}
-.jcmyreviewtop span{ font-size: 14px; color: #666;}
-.jcmyreviewtop a{ font-size: 14px; color: #f15a21; font-weight: bold;}
-.jcmyreviewcont{width:690px; padding: 25px 20px 0; border:1px solid #ccc; border-radius: .3em; position: relative;}
-.jcmyreviewcont h3{color: #333; position: absolute; top:-10px; background-color: #fff;width:70px; height: 20px;}
-.jcmyreviewcont p{color: #9a5110; font-size: 14px; margin-bottom: 20px;}
-.rating{ display:block; margin:10px 40px; background:url(http://img1.yododo.com/images/newhotel/starbg.png) 0 -57px no-repeat; width:175px; height:30px; position:relative}
-.rating a{ display:block; text-decoration:none; width:31px; height:30px; position:absolute; z-index:3}
-a.s1{ left:0;}
-a.s2{ left:40px;}
-a.s3{ left:70px;}
-a.s4{ left:105px;}
-a.s5{ left:140px;}
-.rating a:hover{ width:175px; background:url(http://img2.yododo.com/images/newhotel/starbg.png) 0 -57px no-repeat; z-index:2; left:0; top:0}
-a.s1current,a.s2current,a.s3current,a.s4current,a.s5current{ z-index:1;}
-.rating a:hover span,.rating a span{ position:absolute; display:block; text-indent:-1000px; left:-4px; width:0px; height:30px; background:url(http://img3.yododo.com/images/newhotel/starbg.png) 4px 0 no-repeat;}
-a.s1:hover span,a.s1current span{ width:35px;}
-a.s2:hover span,a.s2current span{ width:70px;}
-a.s3:hover span,a.s3current span{ width:105px;}
-a.s4:hover span,a.s4current span{ width:140px;}
-a.s5:hover span,a.s5current span{ width:175px;}
-a.s1current span,a.s2current span,a.s3current span,a.s4current span,a.s5current span{ left:auto; right:0;}
+.jcmyreviewtop {
+	width: 690px;
+	padding: 10px 20px;
+	border: 1px solid #ffce7b;
+	background-color: #fffdec;
+}
 
-.rating strong,.rating i{ position:absolute; left:-40px; top:8px; font-weight:normal; font-style:normal}
-.rating i{ left:180px; width:100px; margin:0 0; color:#999; font-size:12px;}
-.rating em{ position:absolute; display:block; visibility:hidden; width:100px; color:#f60; height:30px; line-height:32px; font-style:normal; font-size:14px; background-color:#fff; font-weight:normal}
-.rating a:hover em,a.s1current em{ visibility:visible; left:180px;}
-a.s2current em{ visibility:visible; left:145px;}
-a.s3current em{ visibility:visible; left:110px;}
-a.s4current em{ visibility:visible; left:75px;}
-a.s5current em{ visibility:visible; left:40px;}
+.jcmyreviewtop span {
+	font-size: 14px;
+	color: #666;
+}
 
+.jcmyreviewtop a {
+	font-size: 14px;
+	color: #f15a21;
+	font-weight: bold;
+}
 
+.jcmyreviewcont {
+	width: 690px;
+	padding: 25px 20px 0;
+	border: 1px solid #ccc;
+	border-radius: .3em;
+	position: relative;
+}
 
-.rating strong,.rating i{ position:absolute; left:-40px; top:8px; font-weight:normal; font-style:normal}
-.rating i{ left:180px; width:100px; margin:0 0; color:#999; font-size:12px;}
-.rating em{ position:absolute; display:block; visibility:hidden; width:100px; color:#f60; height:30px; line-height:32px; font-style:normal; font-size:14px; background-color:#fff; font-weight:normal}
-.rating a:hover em,a.s1current em{ visibility:visible; left:180px;}
-a.s2current em{ visibility:visible; left:140px;}
-a.s3current em{ visibility:visible; left:110px;}
-a.s4current em{ visibility:visible; left:75px;}
-a.s5current em{ visibility:visible; left:40px;}
-.jcmyreviewcont textarea{width:680px; height: 100px; border-radius: .3em; margin-bottom: 20px; border:1px solid #ccc; font-size: 12px; color: #999;}
-.jcmyreviewcont .addpic{width:680px; background: #eee; padding: 10px; border-radius: .3em;}
-.jcmyreviewcont .addpic p{font-size: 12px; color: #666; margin-bottom: 5px;}
-.jcmyreviewcont .addpic ul li{display: block; float: left;}
-.jcmyreviewcont .addpic ul li a{border:none;}
-.jcmyreviewcont .addpic ul li img{width:61px; height: 61px;}
+.jcmyreviewcont h3 {
+	color: #333;
+	position: absolute;
+	top: -10px;
+	background-color: #fff;
+	width: 70px;
+	height: 20px;
+}
 
-.jcmyreviewcont .addpic .mgr20{margin-right: 20px;}
-.jcmyreviewcont .addpic a{display: block; float: left; *margin-left: 20px; width:60px; height: 60px;border: 1px dashed #ccc; background-color: #fff; background-image: url(/images/newhotel/addpic.png); background-position: 15px 15px; background-repeat: no-repeat;}
+.jcmyreviewcont p {
+	color: #9a5110;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.rating {
+	display: block;
+	margin: 10px 40px;
+	background: url(http://img1.yododo.com/images/newhotel/starbg.png) 0
+		-57px no-repeat;
+	width: 175px;
+	height: 30px;
+	position: relative
+}
+
+.rating a {
+	display: block;
+	text-decoration: none;
+	width: 31px;
+	height: 30px;
+	position: absolute;
+	z-index: 3
+}
+
+a.s1 {
+	left: 0;
+}
+
+a.s2 {
+	left: 40px;
+}
+
+a.s3 {
+	left: 70px;
+}
+
+a.s4 {
+	left: 105px;
+}
+
+a.s5 {
+	left: 140px;
+}
+
+.rating a:hover {
+	width: 175px;
+	background: url(http://img2.yododo.com/images/newhotel/starbg.png) 0
+		-57px no-repeat;
+	z-index: 2;
+	left: 0;
+	top: 0
+}
+
+a.s1current, a.s2current, a.s3current, a.s4current, a.s5current {
+	z-index: 1;
+}
+
+.rating a:hover span, .rating a span {
+	position: absolute;
+	display: block;
+	text-indent: -1000px;
+	left: -4px;
+	width: 0px;
+	height: 30px;
+	background: url(http://img3.yododo.com/images/newhotel/starbg.png) 4px 0
+		no-repeat;
+}
+
+a.s1:hover span, a.s1current span {
+	width: 35px;
+}
+
+a.s2:hover span, a.s2current span {
+	width: 70px;
+}
+
+a.s3:hover span, a.s3current span {
+	width: 105px;
+}
+
+a.s4:hover span, a.s4current span {
+	width: 140px;
+}
+
+a.s5:hover span, a.s5current span {
+	width: 175px;
+}
+
+a.s1current span, a.s2current span, a.s3current span, a.s4current span,
+	a.s5current span {
+	left: auto;
+	right: 0;
+}
+
+.rating strong, .rating i {
+	position: absolute;
+	left: -40px;
+	top: 8px;
+	font-weight: normal;
+	font-style: normal
+}
+
+.rating i {
+	left: 180px;
+	width: 100px;
+	margin: 0 0;
+	color: #999;
+	font-size: 12px;
+}
+
+.rating em {
+	position: absolute;
+	display: block;
+	visibility: hidden;
+	width: 100px;
+	color: #f60;
+	height: 30px;
+	line-height: 32px;
+	font-style: normal;
+	font-size: 14px;
+	background-color: #fff;
+	font-weight: normal
+}
+
+.rating a:hover em, a.s1current em {
+	visibility: visible;
+	left: 180px;
+}
+
+a.s2current em {
+	visibility: visible;
+	left: 145px;
+}
+
+a.s3current em {
+	visibility: visible;
+	left: 110px;
+}
+
+a.s4current em {
+	visibility: visible;
+	left: 75px;
+}
+
+a.s5current em {
+	visibility: visible;
+	left: 40px;
+}
+
+.rating strong, .rating i {
+	position: absolute;
+	left: -40px;
+	top: 8px;
+	font-weight: normal;
+	font-style: normal
+}
+
+.rating i {
+	left: 180px;
+	width: 100px;
+	margin: 0 0;
+	color: #999;
+	font-size: 12px;
+}
+
+.rating em {
+	position: absolute;
+	display: block;
+	visibility: hidden;
+	width: 100px;
+	color: #f60;
+	height: 30px;
+	line-height: 32px;
+	font-style: normal;
+	font-size: 14px;
+	background-color: #fff;
+	font-weight: normal
+}
+
+.rating a:hover em, a.s1current em {
+	visibility: visible;
+	left: 180px;
+}
+
+a.s2current em {
+	visibility: visible;
+	left: 140px;
+}
+
+a.s3current em {
+	visibility: visible;
+	left: 110px;
+}
+
+a.s4current em {
+	visibility: visible;
+	left: 75px;
+}
+
+a.s5current em {
+	visibility: visible;
+	left: 40px;
+}
+
+.jcmyreviewcont textarea {
+	width: 680px;
+	height: 100px;
+	border-radius: .3em;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	font-size: 12px;
+	color: #999;
+}
+
+.jcmyreviewcont .addpic {
+	width: 680px;
+	background: #eee;
+	padding: 10px;
+	border-radius: .3em;
+}
+
+.jcmyreviewcont .addpic p {
+	font-size: 12px;
+	color: #666;
+	margin-bottom: 5px;
+}
+
+.jcmyreviewcont .addpic ul li {
+	display: block;
+	float: left;
+}
+
+.jcmyreviewcont .addpic ul li a {
+	border: none;
+}
+
+.jcmyreviewcont .addpic ul li img {
+	width: 61px;
+	height: 61px;
+}
+
+.jcmyreviewcont .addpic .mgr20 {
+	margin-right: 20px;
+}
+
+.jcmyreviewcont .addpic a {
+	display: block;
+	float: left;
+	*margin-left: 20px;
+	width: 60px;
+	height: 60px;
+	border: 1px dashed #ccc;
+	background-color: #fff;
+	background-image: url(/images/newhotel/addpic.png);
+	background-position: 15px 15px;
+	background-repeat: no-repeat;
+}
 
 /*2014-06-26myreviews*/
-.jcreview{border: 1px solid #cccccc; margin: 25px 0 10px; padding: 20px 10px 10px; position: relative;}
-.jcreview h3{font-size: 14px; color: #333; position: absolute;top:-10px; width:70px; height: 20px; background: #fff;}
-.jcreview .jctname{width:690px;background: #fffde5; padding: 10px; margin-bottom: 5px;}
-.jcreview .jctname strong{font-size: 14px; color: #666;}
-.jcreview .jctname span{float:right; padding-right:10px;font-size:14px; color:#FF6600}
-.jcreview i{font-style: normal; color: #999; padding-left: 10px; display: block; margin-bottom: 10px;}
-.jcreview .sp1{font-size: 12px; color: #666; padding-left: 10px;}
-.jcreview .sp2{font-size:14px;color:#f2934c;}
-.jcreview p{padding: 10px 10px; line-height: 20px;}
-.jcreview ul li{margin-left: 10px; display: block; float: left;}
-.jcreview ul li img{width: 100px; height: 75px;}
-.jcreview .jcbotpic{width:690px; margin: 10px 10px 20px;}
-.jcreview .jcbotpic span{font-size:12px;color: #999;}
-.jcreview .jcbotpic a{float:right;font-size:12px;color: #333;}
-.jcreview .jcbotpic b{float: right; padding: 0 5px;}
+.jcreview {
+	border: 1px solid #cccccc;
+	margin: 25px 0 10px;
+	padding: 20px 10px 10px;
+	position: relative;
+}
 
+.jcreview h3 {
+	font-size: 14px;
+	color: #333;
+	position: absolute;
+	top: -10px;
+	width: 70px;
+	height: 20px;
+	background: #fff;
+}
+
+.jcreview .jctname {
+	width: 690px;
+	background: #fffde5;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+.jcreview .jctname strong {
+	font-size: 14px;
+	color: #666;
+}
+
+.jcreview .jctname span {
+	float: right;
+	padding-right: 10px;
+	font-size: 14px;
+	color: #FF6600
+}
+
+.jcreview i {
+	font-style: normal;
+	color: #999;
+	padding-left: 10px;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.jcreview .sp1 {
+	font-size: 12px;
+	color: #666;
+	padding-left: 10px;
+}
+
+.jcreview .sp2 {
+	font-size: 14px;
+	color: #f2934c;
+}
+
+.jcreview p {
+	padding: 10px 10px;
+	line-height: 20px;
+}
+
+.jcreview ul li {
+	margin-left: 10px;
+	display: block;
+	float: left;
+}
+
+.jcreview ul li img {
+	width: 100px;
+	height: 75px;
+}
+
+.jcreview .jcbotpic {
+	width: 690px;
+	margin: 10px 10px 20px;
+}
+
+.jcreview .jcbotpic span {
+	font-size: 12px;
+	color: #999;
+}
+
+.jcreview .jcbotpic a {
+	float: right;
+	font-size: 12px;
+	color: #333;
+}
+
+.jcreview .jcbotpic b {
+	float: right;
+	padding: 0 5px;
+}
 
 /*2014-06-27mypay*/
-.jcpay{width:730px;}
-.jcpay a{position:relative;background-color: #ff9900; border: medium none;  color: #fff;  display: inline-block; font-family: Verdana,"Microsoft YaHei"; font-size: 24px; height: 50px; line-height: 50px; text-align: center; width: 205px; float: left; margin-top: 20px;}
-.jcpay a span{display: block; width:50px; height: 22px; line-height: 22px; border-radius: .3em; background: #f60101; color: #fff; font-size: 12px; position: absolute;left:180px; top:-15px;z-index: 2;}
-.jcpay a span em{display: block;width:0; height: 0;line-height: 0; border-top:10px dashed transparent; border-bottom:10px dashed transparent; border-left: 10px solid #f60101; position: absolute;top:8px; left: 12px;z-index: -1;}
-.jcpay .amar{margin: 20px 30px 0 0;}
+.jcpay {
+	width: 730px;
+}
 
+.jcpay a {
+	position: relative;
+	background-color: #ff9900;
+	border: medium none;
+	color: #fff;
+	display: inline-block;
+	font-family: Verdana, "Microsoft YaHei";
+	font-size: 24px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	width: 205px;
+	float: left;
+	margin-top: 20px;
+}
+
+.jcpay a span {
+	display: block;
+	width: 50px;
+	height: 22px;
+	line-height: 22px;
+	border-radius: .3em;
+	background: #f60101;
+	color: #fff;
+	font-size: 12px;
+	position: absolute;
+	left: 180px;
+	top: -15px;
+	z-index: 2;
+}
+
+.jcpay a span em {
+	display: block;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	border-top: 10px dashed transparent;
+	border-bottom: 10px dashed transparent;
+	border-left: 10px solid #f60101;
+	position: absolute;
+	top: 8px;
+	left: 12px;
+	z-index: -1;
+}
+
+.jcpay .amar {
+	margin: 20px 30px 0 0;
+}
 
 /*2016-08-24*/
+.blkbg {
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 11111
+}
 
-.blkbg{ background-color: rgba(0, 0, 0, 0.7); width: 100%; height: 100%; position: fixed; z-index: 11111}
-.blkbg .r-order2{width: 505px; height: auto; left: 50%; margin-left: -252px; top:20%; position: fixed;z-index: 11112}
-.blkbg .r-order2 > img{ width: 130px; position: absolute; left:100px; top:156px;}
+.blkbg .r-order2 {
+	width: 505px;
+	height: auto;
+	left: 50%;
+	margin-left: -252px;
+	top: 20%;
+	position: fixed;
+	z-index: 11112
+}
+
+.blkbg .r-order2>img {
+	width: 130px;
+	position: absolute;
+	left: 100px;
+	top: 156px;
+}

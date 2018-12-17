@@ -1,4 +1,0 @@
-var pixel = {
-parse : function() {
-}
-};
