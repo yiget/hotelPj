@@ -523,10 +523,20 @@ function addTrackEvent(action, opt_label, opt_value){
       <strong class="fleft"><i title="价格" class="iconfont"></i>价格</strong>
       <ul class="fleft clearfix">
         <li class="current"><input type="radio" name="price" value="0" checked="checked"><span class="priceLink">全部</span></li>
-        <li><input name="price" type="radio" value="100"><span class="priceLink">100元以下</span></li>
-        <li><input name="price" type="radio" value="100-200"><span class="priceLink">100-200元</span></li>
-        <li><input name="price" type="radio" value="200-300"><span class="priceLink">200-300元</span></li>
-        <li><input name="price" type="radio" value="300"><span class="priceLink">300元以上</span></li>
+       
+        <c:forEach items="${price}" var="prices">
+        
+        <c:if test="${prices.haschild==0}">
+        <li><input name="price" type="radio" value="100"><span class="priceLink">${prices.seq}元以下</span></li>
+        </c:if>
+        <c:if test="${prices.haschild !=0 and prices.haschild != 2}">
+        	<li><input name="price" type="radio" value="100"><span class="priceLink">100-${prices.seq}元 </span></li>
+        </c:if>
+        <c:if test="${prices.haschild==2}">
+        	<li><input name="price" type="radio" value="100"><span class="priceLink">${prices.seq}元以上</span></li>
+        </c:if>
+       
+        </c:forEach>
         <li class="sp"> 自定义
           <input id="spprice" type="radio" value="-" name="price" style="display: none;">
           <input class="spinput" type="text" id="spstart" value="">到<input class="spinput" type="text" id="spend" value="">
@@ -539,50 +549,19 @@ function addTrackEvent(action, opt_label, opt_value){
         <strong class="fleft"><i title="位置" class="iconfont"></i>位置</strong>
         <ul class="fleft clearfix">
           <li class="current"><input name="zoneid" type="radio" value="" checked="checked"><span class="zoneLink">全部</span></li>
-          <li><input type="radio" name="zoneid" value="867"><span class="zoneLink" title="景洪市">景洪市</span></li>
-              <li><input type="radio" name="zoneid" value="868"><span class="zoneLink" title="云南省昆明">云南省昆明</span></li>
-              <li><input type="radio" name="zoneid" value="869"><span class="zoneLink" title="西双版纳国际机场">西双版纳国际机场</span></li>
-              <li><input type="radio" name="zoneid" value="865"><span class="zoneLink" title="勐泐大佛寺风景区">勐泐大佛寺风景区</span></li>
-              <li><input type="radio" name="zoneid" value="864"><span class="zoneLink" title="告庄西双景">告庄西双景</span></li>
+              <c:forEach items="${ctid}" var="ctid" begin="0" end="5">
+              <li><input type="radio" name="zoneid" value="868"><span class="zoneLink" title="云南省昆明">${ctid.districtname}</span></li>
+              </c:forEach>
               </ul>
       </div>
       <div class="more">
         <a id="zone-trigger" href="javaScript:void(0);" class="fcorange2">更多<i class="iconfont"></i></a><div id="zone" class="sub clearfix" style="display:none">
             <ul class="fleft of-y clearfix">
-              <li><input name="zoneid" type="radio" value="866"><span class="zoneLink" title="傣族园风景区">傣族园风景区</span></li>
-                  <li><input name="zoneid" type="radio" value="Xishuangbannadaizuyuan"><span class="zoneLink" title="西双版纳傣族园">西双版纳傣族园</span></li>
-                  <li><input name="zoneid" type="radio" value="Lancangjiang"><span class="zoneLink" title="澜沧江风光">澜沧江风光</span></li>
-                  <li><input name="zoneid" type="radio" value="Mantinggongyuan"><span class="zoneLink" title="曼听公园">曼听公园</span></li>
-                  <li><input name="zoneid" type="radio" value="Kongquehu"><span class="zoneLink" title="孔雀湖">孔雀湖</span></li>
-                  <li><input name="zoneid" type="radio" value="Redaihuahuiyuan"><span class="zoneLink" title="热带花卉园">热带花卉园</span></li>
-                  <li><input name="zoneid" type="radio" value="Mengledafosi"><span class="zoneLink" title="勐泐大佛寺">勐泐大佛寺</span></li>
-                  <li><input name="zoneid" type="radio" value="Qinghongjichang"><span class="zoneLink" title="景洪机场">景洪机场</span></li>
-                  <li><input name="zoneid" type="radio" value="Yuanshisenlingongyuan"><span class="zoneLink" title="原始森林公园">原始森林公园</span></li>
-                  <li><input name="zoneid" type="radio" value="Jinghong"><span class="zoneLink" title="景洪">景洪</span></li>
-                  <li><input name="zoneid" type="radio" value="Jinuoshan"><span class="zoneLink" title="基诺山">基诺山</span></li>
-                  <li><input name="zoneid" type="radio" value="Redaizhiwuyuan"><span class="zoneLink" title="热带植物园">热带植物园</span></li>
-                  <li><input name="zoneid" type="radio" value="Yexianggu"><span class="zoneLink" title="野象谷">野象谷</span></li>
-                  <li><input name="zoneid" type="radio" value="mantinggongyuan"><span class="zoneLink" title="曼听公园">曼听公园</span></li>
-                  <li><input name="zoneid" type="radio" value="Menglawangtianshu"><span class="zoneLink" title="勐腊望天树">勐腊望天树</span></li>
-                  <li><input name="zoneid" type="radio" value="Poshuijieguanlitai"><span class="zoneLink" title="泼水节观礼台">泼水节观礼台</span></li>
-                  <li><input name="zoneid" type="radio" value="Mengla"><span class="zoneLink" title="勐腊县">勐腊县</span></li>
-                  <li><input name="zoneid" type="radio" value="Minzufengqingyuan"><span class="zoneLink" title="民族风情园">民族风情园</span></li>
-                  <li><input name="zoneid" type="radio" value="xishuangbannazongfosi"><span class="zoneLink" title="西双版纳总佛寺">西双版纳总佛寺</span></li>
-                  <li><input name="zoneid" type="radio" value="Manjinglanlvyouyitiaojie"><span class="zoneLink" title="曼景兰旅游一条街">曼景兰旅游一条街</span></li>
-                  <li><input name="zoneid" type="radio" value="Ganlanba"><span class="zoneLink" title="橄榄坝">橄榄坝</span></li>
-                  <li><input name="zoneid" type="radio" value="Mengbalanaxi"><span class="zoneLink" title="勐巴拉娜西">勐巴拉娜西</span></li>
-                  <li><input name="zoneid" type="radio" value="Manchunmanfosi"><span class="zoneLink" title="曼春满佛寺">曼春满佛寺</span></li>
-                  <li><input name="zoneid" type="radio" value=""><span class="zoneLink" title="西双版纳雨林谷">西双版纳雨林谷</span></li>
-                  <li><input name="zoneid" type="radio" value="lancangjiangpiaoliu"><span class="zoneLink" title="澜沧江漂流">澜沧江漂流</span></li>
-                  <li><input name="zoneid" type="radio" value="mengyuanxianjingjingqu"><span class="zoneLink" title="勐远仙境景区">勐远仙境景区</span></li>
-                  <li><input name="zoneid" type="radio" value="Mojiangbeihuiguixianbiaozhiyuan"><span class="zoneLink" title="墨江北回归线标志园">墨江北回归线标志</span></li>
-                  <li><input name="zoneid" type="radio" value=""><span class="zoneLink" title="勐仑植物园">勐仑植物园</span></li>
-                  <li><input name="zoneid" type="radio" value="meigonghegouhuowanhui"><span class="zoneLink" title="湄公河篝火晚会">湄公河篝火晚会</span></li>
-                  <li><input name="zoneid" type="radio" value="Manfeilongfota"><span class="zoneLink" title="曼飞龙佛塔">曼飞龙佛塔</span></li>
-                  <li><input name="zoneid" type="radio" value="Daluosenlingongyuan"><span class="zoneLink" title="打洛森林公园">打洛森林公园</span></li>
-                  <li><input name="zoneid" type="radio" value="Baixianghu"><span class="zoneLink" title="白象湖">白象湖</span></li>
-                  <li><input name="zoneid" type="radio" value="Yulingu"><span class="zoneLink" title="雨林谷">雨林谷</span></li>
-                  </ul>
+              <c:forEach items="${ctid}" var="ctid" begin="6" >
+              <li><input name="zoneid" type="radio" value="Yulingu"><span class="zoneLink" title="雨林谷">${ctid.districtname}</span></li>
+                 
+               </c:forEach>
+                   </ul>
             <a rel="nofollow" title="关闭" class="close" href="javascript:void(0);" id="zone-close"><i class="iconfont" title="关闭"></i></a>
           </div>
         </div>
@@ -590,15 +569,9 @@ function addTrackEvent(action, opt_label, opt_value){
       <strong class="fleft"><i title="类型" class="iconfont" style="font-size: 34px"></i>类型</strong>
       <ul class="fleft clearfix">
         <li class="current"><input type="radio" checked="checked" value="" name="type" typeurl="hotels"><span class="typeLink" rel="nofollow">全部</span></li>
-        <li><input name="type" type="radio" value="1" typeurl="lvshe"><span class="typeLink">青年旅社</span></li>  
-        <li><input name="type" type="radio" value="2" typeurl="kezhan"><span class="typeLink">客栈</span></li>  
-        <li><input name="type" type="radio" value="3" typeurl="lvguan"><span class="typeLink">家庭旅馆</span></li>  
-        <li><input name="type" type="radio" value="5" typeurl="gongyu"><span class="typeLink">酒店式公寓</span></li>  
-        <li><input name="type" type="radio" value="6" typeurl="jingji"><span class="typeLink">经济型酒店</span></li>  
-        <li><input name="type" type="radio" value="7" typeurl="dujia"><span class="typeLink">度假酒店</span></li>  
-        <li><input name="type" type="radio" value="8" typeurl="jingpin"><span class="typeLink">精品酒店</span></li>  
-        <li><input name="type" type="radio" value="9" typeurl="duanzu"><span class="typeLink">短租公寓</span></li>  
-        <li><input name="type" type="radio" value="10" typeurl="nongjiale"><span class="typeLink">农家乐</span></li>  
+      	<c:forEach items="${hotelType}" var="hotelType">
+        <li><input name="type" type="radio" value="10" typeurl="nongjiale"><span class="typeLink">${hotelType.property}</span></li>  
+           </c:forEach>
         </ul>
       
     </div>
