@@ -130,7 +130,7 @@ function addTrackEvent(action, opt_label, opt_value){
 			<div class="head-menu-t clearfix">
 				<a class="current" href="home.jsp" title="游多多客栈首页">首页</a> <a
 					href="http://www.yododo.cn/hotelinn" title="游多多品牌客栈">品牌客栈</a> <a
-					href="accommodation.jsp" title="旅游住宿大全" target="_blank">旅游住宿</a> <a
+					href="accommodation" title="旅游住宿大全" target="_blank">旅游住宿</a> <a
 					href="http://www.yododo.cn/hotel/map" target="_blank" title="地图搜索">地图搜索</a>
 				<a class="dn " href="http://www.yododo.cn/hotel/hotelexp"
 					onclick="try{_gaq.push([&#39;_trackEvent&#39;, &#39;cnheadermenu&#39;, &#39;hotelexp&#39;]);}catch(e){}"
@@ -393,7 +393,7 @@ function addTrackEvent(action, opt_label, opt_value){
 					<p>拥有全国超过20,000家驿站</p>
 					<p>从青年旅舍到度假酒店，民俗客栈到经济酒店，总有适合的</p>
 					<form class="normalForm"
-						action="http://www.yododo.cn/hotel/search.ydd" method="post"
+						action="accommodation" method="post"
 						onsubmit="return checkForm(this);" id="searchTable">
 						<div class="cn-l-sbox">
 							<div class="head">
@@ -409,7 +409,7 @@ function addTrackEvent(action, opt_label, opt_value){
 										name="parentid" id="parentid" value=""> <input
 											type="hidden" name="placeType" id="placeType" value="j">
 												<input type="hidden" name="targetUrl" id="targetUrl"
-												value="accommodation.jsp">
+												value="accommodation">
 													<div class="nodate" style="display: none;"></div> <span><input
 														class="date hasDatepicker" type="text" value="2018-12-02"
 														autocomplete="off" title="入住日期" name="starttime"
