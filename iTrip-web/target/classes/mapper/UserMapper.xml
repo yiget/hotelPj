@@ -37,6 +37,23 @@
 		insert into user(id,username,password) values(null,#{username},#{password})
 	</insert>
 
-
+	<select id="querycity" resultType="org.itrip.pojo.country" parameterType="Map">
+		select * from country where 1=1
+		<if test="status==1">
+			and spell=1
+		</if>
+		<if test="status==2">
+			and spell=2
+		</if>
+		<if test="status==3">
+			and spell=3
+		</if>
+		<if test="status==4">
+			and spell=4
+		</if>
+		<if test="status==5">
+			and spell=5
+		</if>
+	</select>
 
 </mapper>

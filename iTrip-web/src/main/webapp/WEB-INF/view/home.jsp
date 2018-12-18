@@ -351,13 +351,11 @@ function addTrackEvent(action, opt_label, opt_value){
     $j.blockUI({message:$j("#popupLogin"),css:{top: '50%','margin-top': -150, left: '50%', 'margin-left': -275, border:'none', 'background-color': 'transparent', cursor: 'default', width:570, height:'auto', 'text-align':'left'},overlayCSS:{cursor: 'default'}});
   }
   function recommend(){
-		alert(1)
 	 	  $j.ajax({
 	          url: 'getRecommend.ydd',
 	          type: 'POST',
 	          dataType: 'json',
 	          success: function(data) {
-	        	 alert(data.length)
 	        	 var names="";
 	        for(var i=0;i<data.length;i++){
 	        	names+=  '<li> <a href="http://www.yododo.cn/hotel/'+data[i].id+'" target="_blank"> <div style="background-image:url(statics/home_files/'+data[i].picturepath+');"><i class="iconfont"><span>214</span></i></div> <strong>'+data[i].hotelname+'</strong> <p>¥<span>'+data[i].maxroomPrice+'</span>&nbsp;∼&nbsp;¥<span>'+data[i].minroomPrice+'</span></p> </a> </li>';
@@ -433,114 +431,19 @@ function addTrackEvent(action, opt_label, opt_value){
 											<span>输入中文，拼音，或者直接点选城市（景区）</span><a rel="nofollow"
 												id="quicklinkdiv_from_close"></a>
 										</div>
-										<div class="csb-menu clearfix">
-											<a rel="nofollow" href="javaScript:void(0);"
-												id="hotCitys_tab"
-												onclick="showTab(citytypes, &#39;hotCitys&#39;);"
-												class="current">热 门</a> <a rel="nofollow"
-												href="javaScript:void(0);" id="levelA_tab"
-												onclick="showTab(citytypes, &#39;levelA&#39;);">ABCDE</a> <a
-												rel="nofollow" href="javaScript:void(0);" id="levelF_tab"
-												onclick="showTab(citytypes, &#39;levelF&#39;);">FGHJ</a> <a
-												rel="nofollow" href="javaScript:void(0);" id="levelK_tab"
-												onclick="showTab(citytypes, &#39;levelK&#39;);">KLMNPQ</a> <a
-												rel="nofollow" href="javaScript:void(0);" id="levelP_tab"
-												onclick="showTab(citytypes, &#39;levelP&#39;);">RSTW</a> <a
-												rel="nofollow" href="javaScript:void(0);" id="levelU_tab"
-												onclick="showTab(citytypes, &#39;levelU&#39;);">XYZ</a>
-										</div>
-										<ul class="csb-list clearfix" id="hotCitys">
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-03-56-01" placename="Xiamen"
-												href="javascript:void(0);">厦门</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-29-23-01" placename="Lijiang"
-												href="javascript:void(0);">丽江</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-08-15-01" placename="Sanya"
-												href="javascript:void(0);">三亚</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-06-45-01" placename="Yangshuo"
-												href="javascript:void(0);">阳朔</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-30-19-01" placename="Xitang"
-												href="javascript:void(0);">西塘</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-13-10-02" placename="Fenghuang"
-												href="javascript:void(0);">凤凰</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-29-07-01" placename="Dali"
-												href="javascript:void(0);">大理</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-11-15-02" placename="Xuexiang"
-												href="javascript:void(0);">雪乡</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-14-08-02" placename="Wusongdao"
-												href="javascript:void(0);">雾凇岛</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-14-01-01"
-												placename="Changbaishan" href="javascript:void(0);">长白山</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-16-22-01" placename="Wuyuan"
-												href="javascript:void(0);">婺源</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-29-56-01" placename="Xianggelila"
-												href="javascript:void(0);">香格里拉</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-30-16-01" placename="Hangzhou"
-												href="javascript:void(0);">杭州</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-01-29-01" placename="Huangshan"
-												href="javascript:void(0);">黄山</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-25-05-01" placename="Chengdu"
-												href="javascript:void(0);">成都</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-13-26-01" placename="Zhangjiajie"
-												href="javascript:void(0);">张家界</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-30-54-01" placename="Wuzhen"
-												href="javascript:void(0);">乌镇</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-29-02-01" placename="Baoshan"
-												href="javascript:void(0);">保山</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-02-01-01" placename="Beijing"
-												href="javascript:void(0);">北京</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-22-27-01" placename="Pingyao"
-												href="javascript:void(0);">平遥</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-29-29-01" placename="Luguhu"
-												href="javascript:void(0);">泸沽湖</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-01-77-01" placename="Hongcun"
-												href="javascript:void(0);">宏村</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-21-29-01" placename="Qingdao"
-												href="javascript:void(0);">青岛</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-21-33-01" placename="Taishan"
-												href="javascript:void(0);">泰山</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-34-07-01" placename="Taizhong"
-												href="javascript:void(0);">台中</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-32-01-01" placename="HongKong"
-												href="javascript:void(0);">香港</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-03-54-01" placename="Wuyishan"
-												href="javascript:void(0);">武夷山</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-15-22-01" placename="Nanjing"
-												href="javascript:void(0);">南京</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-11-05-01" placename="Haerbin"
-												href="javascript:void(0);">哈尔滨</a></li>
-											<li><a rel="nofollow"
-												id="quicklinkdiv_from_1-01-03-65-01" placename="Zhangzhou"
-												href="javascript:void(0);">漳州</a></li>
-										</ul>
+										    <div class="csb-menu clearfix">
+										      <a rel="nofollow" href="javaScript:show(0);">全部</a>
+										      <a rel="nofollow" href="javaScript:show(1);">ABCDE</a>
+										      <a rel="nofollow" href="javaScript:show(2);">FGHJ</a>
+										      <a rel="nofollow" href="javaScript:show(3);" >KLMNPQ</a>
+										      <a rel="nofollow" href="javaScript:show(4);" >RSTW</a>
+										      <a rel="nofollow" href="javaScript:show(5);" >XYZ</a>
+										    </div>
+										    <ul class="csb-list clearfix" id="hotCitys">
+										       <c:forEach var="country" items="${list}">
+										      		<li><a rel="nofollow" id="quicklinkdiv_from_1-01-03-56-01" placename="Xiamen" href="javascript:void(0);">${country.name}</a></li>
+										        </c:forEach>
+										    </ul>
 										<ul class="csb-list clearfix" id="levelA"
 											style="display: none;">
 											<li><a rel="nofollow"
@@ -2154,6 +2057,25 @@ function addTrackEvent(action, opt_label, opt_value){
         asynLoadScriptJs("http://www.googleadservices.com/pagead/conversion.js", true, "text/javascript");
 
     })();
+    function show(id){
+		$j.ajax({
+			type:"POST",//请求类型
+			url:"iquerycity",//请求的url
+			dataTypee:"json",
+			data:{id:id},//请求参数
+			success:function(data){
+				var obj = eval(data);  
+				var ulval ="";
+				for (var i = 0; i < obj.length; i++) {
+					ulval += "<li><a rel=\"nofollow\" id=\"quicklinkdiv_from_1-01-03-56-01\" onclick=showname('"+obj[i].name+"') placename=\"Xiamen\" href=\"javascript:void(0);\">"+obj[i].name+"</a></li>";
+				}
+				$j("#hotCitys").html(ulval);
+			},
+		});
+    }
+    function showname(name){
+    	$j("#from").val(name);
+    }
     // conversion();
     /* ]]> */
 </script>

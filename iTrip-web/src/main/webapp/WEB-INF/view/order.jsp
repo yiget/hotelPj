@@ -303,7 +303,7 @@ div.tip-yellowsimple div.tip-arrow {
                  "ajaxRememberMe" : rememberMe
                }, function(json){
             if( json == 'verifyfailed'){
-            	window.location.href="gethome";
+            	window.location.href="querycity";
             }else if( json == 'failemail'){
             	$j('#errMsg').html('用户名错误!');
             }else{

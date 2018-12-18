@@ -3,8 +3,10 @@ package org.itrip.mapper;
 
 
 import java.util.List;
+import java.util.Map;
 
 import org.itrip.pojo.User;
+import org.itrip.pojo.country;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -32,6 +34,10 @@ public interface UserMapper {
 	int getQueryUserName(User user);
 	
 
-
+	/**
+	 * 查询城市
+	 * @return
+	 */
+	List<country> querycity(Map<String, Object> map);
 
 }

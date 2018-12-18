@@ -3,8 +3,10 @@ package org.itrip.service;
 
 
 import java.util.List;
+import java.util.Map;
 
 import org.itrip.pojo.User;
+import org.itrip.pojo.country;
 
 public interface UserService {
 	/**
@@ -27,5 +29,11 @@ public interface UserService {
 	
 	
 	int getQueryUserName(User user);
+	
+	/**
+	 * 查询城市
+	 * @return
+	 */
+	List<country> querycity(Map<String, Object> map);
 
 }

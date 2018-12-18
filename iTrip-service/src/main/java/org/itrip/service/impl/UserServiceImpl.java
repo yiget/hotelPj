@@ -3,9 +3,11 @@ package org.itrip.service.impl;
 
 
 import java.util.List;
+import java.util.Map;
 
 import org.itrip.mapper.UserMapper;
 import org.itrip.pojo.User;
+import org.itrip.pojo.country;
 import org.itrip.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +33,12 @@ public class UserServiceImpl implements UserService {
 	public int getQueryUserName(User user) {
 		// TODO Auto-generated method stub
 		return userMapper.getQueryUserName(user);
+	}
+
+	@Override
+	public List<country> querycity(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		return userMapper.querycity(map);
 	}
 
 }
