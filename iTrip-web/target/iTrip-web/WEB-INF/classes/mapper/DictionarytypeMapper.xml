@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.itrip.mapper.DictionarytypeMapper">
+  	<!-- 
+  		查询字典表的价格
+  	 -->
+  	 <select id="getPrice" resultType="org.itrip.pojo.Dictionarytype">
+		SELECT * from dictionarytype WHERE name='price'
+	</select>
+	
+	<!-- 
+	查询字典表下的酒店类型
+	 -->
+	 <select id="getHotelType" resultType="org.itrip.pojo.Dictionarytype">
+		SELECT *from dictionarytype WHERE name='hotelType'
+	</select>
+</mapper>

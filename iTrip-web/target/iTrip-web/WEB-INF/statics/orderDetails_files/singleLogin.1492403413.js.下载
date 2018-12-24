@@ -1,0 +1,74 @@
+;function checkSingleLogin() {
+    $j.getJSON("http://www.yododo.com/go/app/cn/login-api.ydd?callback=?",
+        function(json){
+          var login_name;
+          var login_password;
+          for(i = 0; i < json.length; i++) {
+            if (json[i].name== 'UIBSU'){
+              login_name = json[i].value;
+            }
+            else if(json[i].name == 'SUBUY'){
+              login_password = json[i].value;
+            }
+          }
+          if(login_name != undefined && login_password != undefined ){
+             ajaxSynchroLogin(login_name, login_password, function(){location.reload();});
+          }
+        });
+    }
+
+    // better not use this... causes session problems (by Michael)
+    function checkSingleLogout() {
+        $j.getJSON("http://www.yododo.com/go/app/cn/login-api.ydd?callback=?",
+        function(json){
+          var login_name;
+          var login_password;
+          for(i = 0; i < json.length; i++) {
+            if (json[i].name== 'UIBSU'){
+              login_name = json[i].value;
+            }
+            else if(json[i].name == 'SUBUY'){
+              login_password = json[i].value;
+            }
+          }
+          if(login_name == undefined && login_password == undefined ){
+            ajaxLogout();
+          }
+        });
+    }
+
+    function autoLoginComSimple(userId){
+        $j.getJSON("http://www.yododo.com/go/app/com/userAutoLoginSimple.ydd?callback=?",
+       {
+         "ajaxloginmid" : userId
+       },
+        function(json){
+           //do nothing
+        });
+    }
+  function ajaxLoginComUser(){
+      ajaxLoginComUser2(false);
+  }
+   function ajaxLoginComUser2(remeber){
+        $j.getJSON("/user/ajaxGetLoginName.ydd?callback=?",
+                   function(json){
+                       loginComUserSimple2(json.loginname, json.loginpwd, false,remeber);
+                   });
+   }
+   function loginComUserSimple(loginname, loginpassword, unencrypted){
+       loginComUserSimple2(loginname, loginpassword, unencrypted, false);
+   }
+
+    function loginComUserSimple2(loginname, loginpassword, unencrypted, remeber){
+        $j.getJSON("http://www.yododo.com/go/app/cn/ajaxHotelLogin.ydd?callback=?",
+           {
+               "ajaxloginemail" : loginname,
+               "ajaxloginpassword" : loginpassword,
+               "unencrypted" : unencrypted,
+               "rememberMe" : remeber
+           },
+           function(json){
+               //do nothing
+           });
+    }
+

@@ -1,0 +1,774 @@
+#lightbox {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	text-align: center;
+	line-height: 0;
+}
+
+#lightbox a img {
+	border: none;
+}
+
+#outerImageContainer {
+	position: relative;
+	background-color: #fff;
+	width: 300px;
+	height: 225px;
+	margin: 0 auto;
+}
+
+#imageContainer {
+	padding: 10px;
+}
+
+#lightboxLoading {
+	position: absolute;
+	top: 40%;
+	left: 0%;
+	height: 25%;
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+}
+
+#hoverNav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+
+#imageContainer>#hoverNav {
+	left: 0;
+}
+
+#hoverNav a {
+	outline: none;
+}
+
+#prevLink, #nextLink {
+	width: 49%;
+	height: 100%;
+	background: transparent
+		url(http://img2.yododo.com/images/lightbox_blank.gif) no-repeat;
+	display: block;
+}
+
+#prevLink {
+	left: 0;
+	float: left;
+}
+
+#nextLink {
+	right: 0;
+	float: right;
+}
+
+#prevLink:hover, #prevLink:visited:hover {
+	background: url(http://img3.yododo.com/images/lightbox_prev.gif) left
+		53% no-repeat;
+}
+
+#nextLink:hover, #nextLink:visited:hover {
+	background: url(http://img2.yododo.com/images/lightbox_next.gif) right
+		53% no-repeat;
+}
+
+#bottomNavZoom {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	z-index: 20;
+}
+
+#bottomNavZoom:hover {
+	background-color: transparent;
+}
+
+#imageDataContainer {
+	font-size: 90%;
+	background-color: #fff;
+	margin: 0 auto;
+	line-height: 1.4em;
+}
+
+#imageData {
+	padding: 0 10px;
+}
+
+#imageData #imageDetails {
+	width: 90%;
+	float: left;
+	text-align: left;
+	overflow: hidden;
+	word-break: break-all;
+}
+
+#imageData #caption {
+	font-weight: bold;
+	color: #666;
+	padding-bottom: 3px;
+	line-height: 1.2em;
+}
+
+#imageData #numberDisplay {
+	display: block;
+	clear: left;
+	padding-bottom: 8px;
+}
+
+#imageData #numberDisplay #text-nav {
+	margin-bottom: 2px;
+	padding-bottom: 3px;
+	border-bottom: 1px dashed #d8d8d8;
+}
+
+#imageData #numberDisplay .detail-info {
+	padding-right: 20px;
+	float: left;
+}
+
+#imageData #numberDisplay .detail-info .has-comment {
+	font-weight: bold;
+	color: #d93d76;
+}
+
+#imageData #numberDisplay .post-info {
+	margin: 0;
+	padding-top: 0;
+	border: 0;
+	font-size: 100%;
+	float: left;
+	width: 295px;
+}
+
+#imageData #numberDisplay .post-info .postcard {
+	color: #2D5680;
+}
+
+#imageData #numberDisplay .post-info .postcard a {
+	color: #2D5680;
+}
+
+#imageData #numberDisplay .post-info .postcard a:hover {
+	color: #2D5680;
+	background-color: #FFE0BF;
+}
+
+#imageData #bottomNavClose {
+	width: 30px;
+	float: right;
+	margin-bottom: 10px;
+}
+
+#imageData #bottomNavClose:hover {
+	background-color: transparent;
+}
+
+#overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 500px;
+	background-color: #000;
+	filter: alpha(opacity = 60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+
+.lb-wrap {
+	position: relative;
+}
+
+.lb-trigger {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	background: url(http://img3.yododo.com/images/icon_lightbox.gif)
+		no-repeat 50% 4px;
+	width: 40px;
+	height: 24px !important;
+	height: 28px;
+	cursor: pointer;
+}
+
+.lb-jing {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	overflow: hidden;
+	background: url(http://img3.yododo.com/images/jing.png) 0 0;
+	width: 14px;
+	height: 14px;
+}
+
+.overlay_dialog {
+	background-color: #000;
+	filter: alpha(opacity = 60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+
+.overlay___invisible__ {
+	background-color: #000;
+	filter: alpha(opacity = 60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+
+.dialog_nw {
+	width: 9px;
+	height: 23px;
+	background: transparent
+		url(http://img3.yododo.com/images/window/default/top_left.gif)
+		no-repeat 0 0;
+}
+
+.dialog_n {
+	background: transparent
+		url(http://img3.yododo.com/images/window/default/top_mid.gif) repeat-x
+		0 0;
+	height: 23px;
+}
+
+.dialog_ne {
+	width: 9px;
+	height: 23px;
+	background: transparent
+		url(http://img1.yododo.com/images/window/default/top_right.gif)
+		no-repeat 0 0;
+}
+
+.dialog_e {
+	width: 2px;
+	background: transparent
+		url(http://img3.yododo.com/images/window/default/center_right.gif)
+		repeat-y 0 0;
+}
+
+.dialog_w {
+	width: 2px;
+	background: transparent
+		url(http://img1.yododo.com/images/window/default/center_left.gif)
+		repeat-y 0 0;
+}
+
+.dialog_sw {
+	width: 9px;
+	height: 19px;
+	background: transparent
+		url(http://img2.yododo.com/images/window/default/bottom_left.gif)
+		no-repeat 0 0;
+}
+
+.dialog_s {
+	background: transparent
+		url(http://img0.yododo.com/images/window/default/bottom_mid.gif)
+		repeat-x 0 0;
+	height: 19px;
+}
+
+.dialog_se {
+	width: 9px;
+	height: 19px;
+	background: transparent
+		url(http://img3.yododo.com/images/window/default/bottom_right.gif)
+		no-repeat 0 0;
+}
+
+.dialog_sizer {
+	width: 9px;
+	height: 19px;
+	background: transparent
+		url(http://img2.yododo.com/images/window/default/sizer.gif) no-repeat
+		0 0;
+	cursor: se-resize;
+}
+
+.dialog_close {
+	width: 14px;
+	height: 14px;
+	background: transparent
+		url(http://img2.yododo.com/images/window/default/close.gif) no-repeat
+		0 0;
+	position: absolute;
+	top: 5px;
+	right: 8px;
+	cursor: pointer;
+	z-index: 2000;
+}
+
+.dialog_minimize {
+	width: 14px;
+	height: 15px;
+	background: transparent
+		url(http://img2.yododo.com/images/window/default/minimize.gif)
+		no-repeat 0 0;
+	position: absolute;
+	top: 5px;
+	right: 28px;
+	cursor: pointer;
+	z-index: 2000;
+}
+
+.dialog_maximize {
+	width: 14px;
+	height: 15px;
+	background: transparent
+		url(http://img0.yododo.com/images/window/default/maximize.gif)
+		no-repeat 0 0;
+	position: absolute;
+	top: 5px;
+	right: 49px;
+	cursor: pointer;
+	z-index: 2000;
+}
+
+.dialog_title {
+	float: left;
+	height: 14px;
+	font-size: 100%;
+	text-align: center;
+	width: 100%;
+	color: #000;
+}
+
+.dialog_content {
+	overflow: auto;
+	color: #000;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 90%;
+	background-color: #FFFBF8;
+	background-color: #FFF;
+	text-align: left;
+}
+
+.top_draggable, .bottom_draggable {
+	cursor: move;
+}
+
+.status_bar {
+	font-size: 100%;
+	line-height: 100%;
+}
+
+.status_bar input {
+	font-size: 100%;
+}
+
+.wired_frame {
+	display: block;
+	position: absolute;
+	border: 1px #000 dashed;
+}
+
+.dialog {
+	display: block;
+	position: absolute;
+}
+
+.dialog table.table_window {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.dialog table.table_window td, .dialog table.table_window th {
+	padding: 0;
+}
+
+.dialog .title_window {
+	-moz-user-select: none;
+}
+
+.overlay_alert {
+	background-color: #85BBEF;
+	background-color: #555;
+	filter: alpha(opacity = 60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+
+.alert_nw {
+	width: 5px;
+	height: 5px;
+}
+
+.alert_n {
+	height: 5px;
+	border-bottom: 1px double #000;
+}
+
+.alert_ne {
+	width: 5px;
+	height: 5px;
+}
+
+.alert_e {
+	width: 5px;
+	border-left: 1px double #000;
+}
+
+.alert_w {
+	width: 5px;
+	border-right: 1px double #000;
+}
+
+.alert_sw {
+	width: 5px;
+	height: 5px;
+}
+
+.alert_s {
+	height: 5px;
+	border-top: 1px double #000;
+}
+
+.alert_se, .alert_sizer {
+	width: 5px;
+	height: 5px;
+}
+
+.alert_close {
+	width: 0px;
+	height: 0px;
+	display: none;
+}
+
+.alert_minimize {
+	width: 0px;
+	height: 0px;
+	display: none;
+}
+
+.alert_maximize {
+	width: 0px;
+	height: 0px;
+	display: none;
+}
+
+.alert_title {
+	float: left;
+	height: 1px;
+	width: 100%;
+}
+
+.alert_content {
+	overflow: visible;
+	color: #000;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 100%;
+	background: #FFF;
+}
+
+.alert_window {
+	background: #FFF;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+}
+
+.alert_message {
+	font-size: 105%;
+	width: 95%;
+	padding: 0 15px;
+}
+
+.alert_buttons {
+	text-align: center;
+	width: 100%;
+}
+
+.alert_buttons input {
+	width: 30%;
+	margin: 10px;
+}
+
+.alert_progress {
+	float: left;
+	margin: auto;
+	text-align: center;
+	width: 100%;
+	height: 32px;
+	background: #FFF
+		url(http://img2.yododo.com/images/window/alert/ajax-loader-bar.gif)
+		no-repeat center center;
+}
+
+.overlay_alert_lite {
+	background-color: #85BBEF;
+	background-color: #555;
+	filter: alpha(opacity = 15);
+	-moz-opacity: 0.15;
+	opacity: 0.15;
+}
+
+.alert_lite_sizer {
+	width: 0px;
+	height: 0px;
+	display: none;
+}
+
+.alert_lite_close {
+	width: 0px;
+	height: 0px;
+	display: none;
+}
+
+.alert_lite_minimize {
+	width: 0px;
+	height: 0px;
+	display: none;
+}
+
+.alert_lite_maximize {
+	width: 0px;
+	height: 0px;
+	display: none;
+}
+
+.alert_lite_title {
+	width: 0px;
+	height: 0px;
+	display: none;
+}
+
+.alert_lite_content {
+	overflow: auto;
+	color: #000;
+	font-family: Tahoma, Geneva, Verdana;
+	font-size: 100%;
+	background: #FFF;
+	background: #ffd;
+}
+
+.alert_lite_window {
+	border: 1px solid #F00;
+	border: 2px solid #9cf;
+	background: #ffd;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+}
+
+.alert_lite_message {
+	font-size: 105%;
+	text-align: center;
+	width: 100%;
+	color: #333;
+	padding-bottom: 10px;
+}
+
+.alert_lite_buttons {
+	text-align: center;
+	width: 100%;
+}
+
+.alert_lite_buttons input {
+	width: 20%;
+	margin: 10px;
+}
+
+.alert_lite_progress {
+	float: left;
+	margin: auto;
+	text-align: center;
+	width: 100%;
+	height: 32px;
+	background: #ffd
+		url(http://img3.yododo.com/images/window/alert/progress.gif) no-repeat
+		center center;
+}
+
+table.alert_lite_header {
+	border: 1px solid #F00;
+	border: 2px solid #9cf;
+	background: #f2f9ff;
+}
+
+.overlay_alphacube {
+	background-color: #85BBEF;
+	background-color: #000;
+	filter: alpha(opacity = 60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+
+.alphacube_nw {
+	background: transparent
+		url(http://img2.yododo.com/images/window/alphacube/sprite_alphacube.png)
+		no-repeat 0 -30px;
+	width: 10px;
+	height: 25px;
+}
+
+.alphacube_n {
+	background: transparent
+		url(http://img2.yododo.com/images/window/alphacube/sprite_alphacube.png)
+		repeat-x 0 0;
+	height: 25px;
+}
+
+.alphacube_ne {
+	background: transparent
+		url(http://img2.yododo.com/images/window/alphacube/sprite_alphacube.png)
+		no-repeat right -30px;
+	width: 10px;
+	height: 25px;
+}
+
+.alphacube_w {
+	border-left: 1px solid #b9b9b9;
+	background: #fff
+		url(http://img1.yododo.com/images/window/alphacube/frame-left.gif)
+		repeat-y -1px 0;
+	width: 7px;
+}
+
+.alphacube_e {
+	border-right: 1px solid #b9b9b9;
+	background: #fff
+		url(http://img1.yododo.com/images/window/alphacube/frame-right.gif)
+		repeat-y 8px 0;
+	width: 7px;
+}
+
+.alphacube_sw {
+	background: transparent
+		url(http://img2.yododo.com/images/window/alphacube/sprite_alphacube.png)
+		no-repeat 0 -55px;
+	width: 7px;
+	height: 7px;
+}
+
+.alphacube_s {
+	background: transparent
+		url(http://img2.yododo.com/images/window/alphacube/sprite_alphacube.png)
+		repeat-x 0 bottom;
+	height: 7px;
+	font-size: 0;
+}
+
+.alphacube_se, .alphacube_sizer {
+	background: transparent
+		url(http://img2.yododo.com/images/window/alphacube/sprite_alphacube.png)
+		no-repeat right -55px;
+	width: 7px;
+	height: 7px;
+}
+
+.alphacube_sizer {
+	cursor: se-resize;
+}
+
+.alphacube_close {
+	width: 23px;
+	height: 23px;
+	background: transparent
+		url(http://img2.yododo.com/images/window/alphacube/sprite_alphacube.png)
+		no-repeat -46px -72px;
+	position: absolute;
+	top: 0px;
+	right: 11px;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+.alphacube_minimize {
+	width: 23px;
+	height: 23px;
+	background: transparent
+		url(http://img2.yododo.com/images/window/alphacube/sprite_alphacube.png)
+		no-repeat 0 -72px;
+	position: absolute;
+	top: 0px;
+	right: 55px;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+.alphacube_maximize {
+	width: 23px;
+	height: 23px;
+	background: transparent
+		url(http://img2.yododo.com/images/window/alphacube/sprite_alphacube.png)
+		no-repeat -23px -72px;
+	position: absolute;
+	top: 0px;
+	right: 33px;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+.alphacube_title {
+	float: left;
+	height: 14px;
+	font-size: 100%;
+	text-align: center;
+	width: 100%;
+	color: #123456;
+}
+
+.alphacube_content {
+	overflow: auto;
+	color: #000;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 90%;
+	background-color: #FFF;
+	background-color: #FDFDFD;
+	text-align: left;
+}
+
+.alphacube_window {
+	border: 1px solid #F00;
+	background: #FFF;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+}
+
+.alphacube_message {
+	font-size: 105%;
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+.alphacube_buttons {
+	text-align: center;
+	width: 100%;
+}
+
+.alphacube_buttons input {
+	width: 20%;
+	margin: 10px;
+}
+
+.alphacube_progress {
+	float: left;
+	margin: auto;
+	text-align: center;
+	width: 100%;
+	height: 16px;
+	background: #FFF
+		url(http://img3.yododo.com/images/window/alert/progress.gif) no-repeat
+		center center;
+}
+
+.alphacube_wired_frame {
+	background: #FFF;
+	filter: alpha(opacity = 60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}

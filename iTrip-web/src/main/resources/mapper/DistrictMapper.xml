@@ -6,5 +6,5 @@
 	 -->
 		 <select id="getCtid" resultType="org.itrip.pojo.District">
 		SELECT *from district
-	</select>
+		</select>
 </mapper>

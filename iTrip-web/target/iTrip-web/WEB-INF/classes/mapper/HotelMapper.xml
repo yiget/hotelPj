@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.itrip.mapper.HotelMapper">
+  <resultMap id="BaseResultMap" type="org.itrip.pojo.Hotel">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="hotelName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="provinceId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="cityId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="address" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="details" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="facilities" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="hotelPolicy" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="hotelType" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="hotelLevel" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="isGroupPurchase" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="creationDate" javaType="java.util.Date" jdbcType="DATE" />
+      <arg column="createdBy" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="modifyDate" javaType="java.util.Date" jdbcType="DATE" />
+      <arg column="modifiedBy" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="logopath" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="CheckIntIme" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+    </constructor>
+    <collection property="house" column="id"                       
+	            select="org.itrip.mapper.HotelMapper.querybyid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, hotelName, provinceId, cityId, address, details, facilities, hotelPolicy, hotelType, 
+    hotelLevel, isGroupPurchase, creationDate, createdBy, modifyDate, modifiedBy, logopath, 
+    CheckIntIme
+  </sql>
+ <select id="getRecommend" resultType="org.itrip.pojo.Hotel">
+		select h.hotelLevel,h.id,h.hotelName,p.picturepath,max(s.roomPrice) as
+		maxroomPrice,min(s.roomPrice) minroomPrice,s.hotelId from hotel h
+		INNER JOIN house s on h.id=s.id
+		INNER JOIN picture p on h.id=p.hotelid
+		GROUP BY h.hotelName
+		ORDER BY h.hotelLevel DESC LIMIT 0,8
+	</select>
+	<select id="gethotel" resultType="org.itrip.pojo.Hotel">
+
+
+	SELECT * from hotel
+	
+	WHERE 1=1 
+	<if test="hotelname!=null">
+		and hotelName LIKE concat('%',#{hotelname},'%')
+	</if>
+	<if test="address!=null">
+		and address LIKE concat('%',#{address},'%')
+	</if>
+	
+	<!-- 
+	<if test="districtname!=null">
+		and disc.districtname LIKE concat('%',#{districtname},'%')
+	</if> -->
+	
+	
+	<!-- <if test="name!=null">
+		and name LIKE concat('%',#{name},'%')
+	</if> -->
+	<if test="cityid!=0">
+		and cityId =#{cityid}
+	</if>
+	<!-- <if test="hoteltype!=0">
+	 	and hotelType=#{hoteltype}
+	</if> -->
+	</select>
+	
+  
+</mapper>

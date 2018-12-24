@@ -19,4 +19,16 @@ public class HotelServiceimpl implements HotelService{
 		return hotelMapper.getRecommend();
 	}
 
+	@Override
+	public List<Hotel> gethotel(Hotel hotel) {
+		// TODO Auto-generated method stub
+		return hotelMapper.gethotel(hotel);
+	}
+
+	@Override
+	public List<Hotel> selectByPrimaryKey(int id) {
+		// TODO Auto-generated method stub
+		return hotelMapper.selectByPrimaryKey(id);
+	}
+
 }

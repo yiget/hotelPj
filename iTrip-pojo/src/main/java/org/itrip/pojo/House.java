@@ -38,7 +38,11 @@ public class House {
 
     private Integer modifiedby;
 
-    public House(Integer id, Integer hotelid, String roomtitle, BigDecimal roomprice, Integer roombedtypeid, Integer ishavingbreakfast, Integer ishavingbathroom, Integer ishavingbroadband, Integer paytype, BigDecimal satisfaction, Integer isbook, Integer iscancel, Integer istimelyresponse, Date creationdate, Integer createdby, Date modifydate, Integer modifiedby) {
+    private Integer store;
+
+    private Integer isstop;
+
+    public House(Integer id, Integer hotelid, String roomtitle, BigDecimal roomprice, Integer roombedtypeid, Integer ishavingbreakfast, Integer ishavingbathroom, Integer ishavingbroadband, Integer paytype, BigDecimal satisfaction, Integer isbook, Integer iscancel, Integer istimelyresponse, Date creationdate, Integer createdby, Date modifydate, Integer modifiedby, Integer store, Integer isstop) {
         this.id = id;
         this.hotelid = hotelid;
         this.roomtitle = roomtitle;
@@ -56,6 +60,8 @@ public class House {
         this.createdby = createdby;
         this.modifydate = modifydate;
         this.modifiedby = modifiedby;
+        this.store = store;
+        this.isstop = isstop;
     }
 
     public House() {
@@ -196,5 +202,21 @@ public class House {
 
     public void setModifiedby(Integer modifiedby) {
         this.modifiedby = modifiedby;
+    }
+
+    public Integer getStore() {
+        return store;
+    }
+
+    public void setStore(Integer store) {
+        this.store = store;
+    }
+
+    public Integer getIsstop() {
+        return isstop;
+    }
+
+    public void setIsstop(Integer isstop) {
+        this.isstop = isstop;
     }
 }

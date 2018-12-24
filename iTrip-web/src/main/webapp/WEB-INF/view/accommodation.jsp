@@ -604,28 +604,32 @@ function addTrackEvent(action, opt_label, opt_value){
   <div style="display: none;">
     
   </div>
+  <c:forEach var="hotel" items="${hotel}">
+  <c:forEach var="house" items="${hotel.houses}">
+   <c:if test="${hotel.id==house.hotelid }">
   <div class="hintro">
-    <div class="himg">
-      <a class="himga" href="http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5" target="_blank">
-        <img class="lazy" src="statics/accommodation_files/01480C5C1347013AFF80808148087FA7_ml.jpg" alt="西双版纳经济型酒店住宿推荐：西双版纳新沙宾馆在线预订" title="西双版纳新沙宾馆" style="display: block;"><span class="cu" id="cuTip-013FC78A40C403F2FF8080813FC4F1D5" style="display: none;">促</span>
+
+  <div class="himg">
+      <a class="himga" href="action?id=${hotel.id}" target="_blank">
+        <img class="lazy" src="statics/accommodation_files/01480C5C1347013AFF80808148087FA7_ml.jpg" alt="${hotel.hotelname}推荐：${hotel.hotelname}在线预订" title="${hotel.hotelname}" style="display: block;"><span class="cu" id="cuTip-013FC78A40C403F2FF8080813FC4F1D5" style="display: none;">促</span>
         <div id="cuInfo-013FC78A40C403F2FF8080813FC4F1D5" style="display: none;"></div>
         </a>
       <p class="level">
         <span class="fright2">
           <a href="http://www.yododo.cn/hotel/events/xfbz.html" rel="nofollow" target="_blank">有房指数<em>10.0</em></a></span>
-        <a rel="nofollow" class="lv1" target="_blank" title="驿站等级6级" href="http://www.yododo.cn/hotel/events/xypj.html"><i title="驿站等级6级" class="iconfont"></i></a></p>
+        <a rel="nofollow" class="lv1" target="_blank" title="驿站等级${hotel.hotellevel}级" href="http://www.yododo.cn/hotel/events/xypj.html"><i title="驿站等级${hotel.hotellevel}级" class="iconfont">&#xF050;&#xF050;&#xF050;&#xF050;&#xF050;</i></a></p>
     </div>
 
     <strong class="htitle">
-      <a class="ft16" href="http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5" target="_blank">西双版纳新沙宾馆</a>
-      <a class="ft12" href="http://www.yododo.cn/jingji/Xishuangbanna">经济型酒店</a><span>
+      <a class="ft16" href="action?id=${hotel.id}" >${hotel.hotelname}</a>
+      <a class="ft12" href="action?id=${hotel.id}">${hotel.hotellevel}</a><span>
         </span>
     </strong>
     <div class="sub">
-      <div><strong>5.0</strong>/5分</div>
-      <a href="http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5?starttime=2018-12-02&amp;endtime=2018-12-03&amp;inittab=reviews" class="fcorange2" target="_blank">6位住客点评</a>
+      <div><strong>${house.satisfaction}</strong>/5分</div>
+      <a href="action?id=${hotel.id}" class="fcorange2" target="_blank">6位住客点评</a>
     </div>
-    <p class="prel"><strong>地址:</strong>云南省景洪市金沙滩3栋7号
+    <p class="prel"><strong>地址:</strong>${hotel.address}
           &nbsp;&nbsp;<a class="fcorange2" rel="nofollow" href="javascript:void(0)" onclick="hotelMapShow(100.808698, 22.015831);">地图</a>
         </p>
       <p class="fcgary"><i class="iconfont"></i><span class="partialDisplay">本来时间改期想退订的，退不了就放弃了，还好吧</span><i class="iconfont"></i></p>
@@ -641,81 +645,47 @@ function addTrackEvent(action, opt_label, opt_value){
       </div><div class="room" id="h1_r1" style="z-index:50;position: relative;">
         <div class="head headhover clearfix">
           <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h1_r1" onclick="javaScript:STroomImgList(&#39;h1_r1&#39;,&#39;51071&#39;);" href="javaScript:void(0);">阳台标准间</a>
+            <a class="ico-inner-down" rel="nofollow" id="roomname_h1_r1" onclick="javaScript:STroomImgList(&#39;h1_r1&#39;,&#39;51071&#39;);" href="javaScript:void(0);"></a>
 
           </span>
+          <c:if test="${house.ishavingbreakfast==0}">
           <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
+          </c:if>
+          <c:if test="${house.ishavingbathroom==0}">
+          <span class="x3">无</span>
+          </c:if>
+          <c:if test="${house.ishavingbroadband==0}">
+          <span class="x4">无</span>
+          </c:if>
+          <c:if test="${house.ishavingbreakfast==1}">
+                    <span class="x2"><span class="fcgary">有</span></span>
+          
+          </c:if>
+          <c:if test="${house.ishavingbathroom==1}">
+           <span class="x3">有</span>
+          </c:if>
+          <c:if test="${house.ishavingbroadband==1}">
           <span class="x4">有</span>
+          </c:if>
+          
           &lt;<span class="x8">
-              <strong class="ydd-price">¥82</strong>
+              <strong class="ydd-price">${house.roomprice}</strong>
           </span>
 
           <span class="x9">
             <span tip="&lt;font color=&#39;red&#39;&gt;¥82&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥73&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥9&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥9</strong></span>
             </span>
+         <c:if test="${house.ishavingbreakfast>0}">
           <span class="x10">
-            <span class="fcblk">剩1间</span></span>
+            <span class="fcblk">剩${house.isbook}间</span></span>
           <span class="x11">
-            <a class="btn-a" href="hotel_details.jsp" target="_blank" title="查看" rel="nofollow">查看</a>
+         </c:if>
+            <a class="btn-a" href="action?id=${hotel.id}" target="_blank" title="查看" rel="nofollow">查看</a>
               </span>
         </div>
 
-        <div class="pic" id="roomImgs_h1_r1" style="display:none">
-          <dl class="clearfix" id="roomImg_h1_r1"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/51071?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><div class="room" id="h1_r2" style="z-index:49;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h1_r2" onclick="javaScript:STroomImgList(&#39;h1_r2&#39;,&#39;51424&#39;);" href="javaScript:void(0);">阳台大床房</a>
+      
 
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥88</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥88&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥79&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥9&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥9</strong></span>
-            </span>
-          <span class="x10">
-            <span class="fcblk">剩1间</span></span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h1_r2" style="display:none">
-          <dl class="clearfix" id="roomImg_h1_r2"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/51424?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><div class="room" id="h1_r3" style="z-index:48;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h1_r3" onclick="javaScript:STroomImgList(&#39;h1_r3&#39;,&#39;51425&#39;);" href="javaScript:void(0);">阳台三人房</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥118</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥118&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥106&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥12&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥12</strong></span>
-            </span>
-          <span class="x10">
-            <span class="fcblk">剩1间</span></span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
 
         <div class="pic" id="roomImgs_h1_r3" style="display:none">
           <dl class="clearfix" id="roomImg_h1_r3"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
@@ -725,747 +695,17 @@ function addTrackEvent(action, opt_label, opt_value){
       </div><span style="text-align: center;display: none;">
         <img src="statics/accommodation_files/cnBigLoading.gif" alt="读取中...">
       </span></div>
+      
+      
   </div>
+   </c:if>
+  	  </c:forEach>
+      </c:forEach>
 </li>
 <li class="yddHotel" style="z-index:49;position: relative;">
   <div style="display: none;">
     
   </div>
-  <div class="hintro">
-    <div class="himg">
-      <a class="himga" href="http://www.yododo.cn/hotel/014FA2F2DEF80015FF8080814FA1AB86" target="_blank">
-        <img class="lazy" src="statics/accommodation_files/white.gif" data-href="http://img2.yododo.com.cn/files/review/015F/015F820BC051008EFF8080815F7F3CC7_ml.jpg" alt="西双版纳度假酒店住宿推荐：春天里花园酒店（曼听公园店）在线预订" title="春天里花园酒店（曼听公园店）"><span class="cu" id="cuTip-014FA2F2DEF80015FF8080814FA1AB86" style="display: none;">促</span>
-        <div id="cuInfo-014FA2F2DEF80015FF8080814FA1AB86" style="display: none;"></div>
-        </a>
-      <p class="level">
-        <span class="fright2">
-          <a href="http://www.yododo.cn/hotel/events/xfbz.html" rel="nofollow" target="_blank">有房指数<em>9.8</em></a></span>
-        <a rel="nofollow" class="lv4" target="_blank" title="驿站等级9级" href="http://www.yododo.cn/hotel/events/xypj.html"><i title="驿站等级9级" class="iconfont"></i></a></p>
-    </div>
-
-    <strong class="htitle">
-      <a class="ft16" href="http://www.yododo.cn/hotel/014FA2F2DEF80015FF8080814FA1AB86" target="_blank">春天里花园酒店（曼听公园店）</a>
-      <a class="ft12" href="http://www.yododo.cn/dujia/Xishuangbanna">度假酒店</a><span>
-        </span>
-    </strong>
-    <div class="sub">
-      <div><strong>4.8</strong>/5分</div>
-      <a href="http://www.yododo.cn/hotel/014FA2F2DEF80015FF8080814FA1AB86?starttime=2018-12-02&amp;endtime=2018-12-03&amp;inittab=reviews" class="fcorange2" target="_blank">25位住客点评</a>
-    </div>
-    <p class="prel"><strong>地址:</strong>西双版纳景洪客运南站东约280米曼听公园旁
-          &nbsp;&nbsp;<a class="fcorange2" rel="nofollow" href="javascript:void(0)" onclick="hotelMapShow(100.810628, 21.998835);">地图</a>
-        </p>
-      <p class="fcgary"><i class="iconfont"></i><span class="partialDisplay">这家酒店位置很好，出行方便，离曼听公园很近。干净卫生，房间无异味。有供客人使用的小厨房，住着舒服。左右两边都是傣味烧烤。很是方便。</span><i class="iconfont"></i></p>
-      <div class="rlist" id="h2"><div class="head clearfix">
-        <span class="x1">房间类型</span>
-        <span class="x2">早餐</span>
-        <span class="x3">卫浴</span>
-        <span class="x4">宽带</span>
-        <span class="x8">多多价</span>
-        <span class="x9" tag="fanxian"></span>
-        <span class="x11 tright fb">
-          今天有人预订！</span>
-      </div><div class="room" id="h2_r1" style="z-index:50;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h2_r1" onclick="javaScript:STroomImgList(&#39;h2_r1&#39;,&#39;87868&#39;);" href="javaScript:void(0);">温馨大床房（含免费接机）</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥108</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥108&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥97&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥11&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥11</strong></span>
-            </span>
-          <span class="x10">
-            <span class="fcblk">剩3间</span></span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/014FA2F2DEF80015FF8080814FA1AB86?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h2_r1" style="display:none">
-          <dl class="clearfix" id="roomImg_h2_r1"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/87868?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><div class="room" id="h2_r2" style="z-index:49;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h2_r2" onclick="javaScript:STroomImgList(&#39;h2_r2&#39;,&#39;87869&#39;);" href="javaScript:void(0);">标准双人间（含免费接机）</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥128</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥128&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥115&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥13&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥13</strong></span>
-            </span>
-          <span class="x10">
-            </span>
-          <span class="x11">
-            <a class="btn-b" href="javaScript:void(0);" title="订完">订完</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h2_r2" style="display:none">
-          <dl class="clearfix" id="roomImg_h2_r2"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/87869?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><div class="room" id="h2_r3" style="z-index:48;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h2_r3" onclick="javaScript:STroomImgList(&#39;h2_r3&#39;,&#39;100711&#39;);" href="javaScript:void(0);">豪华标准间</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥138</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥138&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥124&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥14&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥14</strong></span>
-            </span>
-          <span class="x10">
-            </span>
-          <span class="x11">
-            <a class="btn-b" href="javaScript:void(0);" title="订完">订完</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h2_r3" style="display:none">
-          <dl class="clearfix" id="roomImg_h2_r3"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/100711?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><span style="text-align: center;display: none;">
-        <img src="statics/accommodation_files/cnBigLoading.gif" alt="读取中...">
-      </span></div><div id="more-h2" class="clearfix">
-      <span id="hotelid_2" style="display: none;">014FA2F2DEF80015FF8080814FA1AB86</span>
-      <a id="lookall_h2" class="fleft ico-inner-down" href="javascript:void(0)" rel="nofollow">查看全部房型(6)</a>
-    </div>
-  </div>
-</li>
-<li class="yddHotel" style="z-index:48;position: relative;">
-  <div style="display: none;">
-    
-  </div>
-  <div class="hintro">
-    <div class="himg">
-      <a class="himga" href="http://www.yododo.cn/hotel/013AC976B81B09E7FF8080813AC7C652" target="_blank">
-        <img class="lazy" src="statics/accommodation_files/white.gif" data-href="http://img1.yododo.com.cn/files/review/013A/013AC99F03030B29FF8080813AC7C652_ml.jpg" alt="西双版纳客栈住宿推荐：西双版纳橄榄坝傣族园客栈在线预订" title="西双版纳橄榄坝傣族园客栈"><span class="cu" id="cuTip-013AC976B81B09E7FF8080813AC7C652" style="display: none;">促</span>
-        <div id="cuInfo-013AC976B81B09E7FF8080813AC7C652" style="display: none;"></div>
-        </a>
-      <p class="level">
-        <span class="fright2">
-          <a href="http://www.yododo.cn/hotel/events/xfbz.html" rel="nofollow" target="_blank">有房指数<em>6.7</em></a></span>
-        <a rel="nofollow" class="lv1" target="_blank" title="驿站等级6级" href="http://www.yododo.cn/hotel/events/xypj.html"><i title="驿站等级6级" class="iconfont"></i></a></p>
-    </div>
-
-    <strong class="htitle">
-      <a class="ft16" href="http://www.yododo.cn/hotel/013AC976B81B09E7FF8080813AC7C652" target="_blank">西双版纳橄榄坝傣族园客栈</a>
-      <a class="ft12" href="http://www.yododo.cn/kezhan/Xishuangbanna">客栈</a><span>
-        </span>
-    </strong>
-    <div class="sub">
-      <div><strong>5.0</strong>/5分</div>
-      <a href="http://www.yododo.cn/hotel/013AC976B81B09E7FF8080813AC7C652?starttime=2018-12-02&amp;endtime=2018-12-03&amp;inittab=reviews" class="fcorange2" target="_blank">9位住客点评</a>
-    </div>
-    <p class="prel"><strong>地址:</strong>云南西双版纳橄榄坝傣族园曼乍村庄19号
-          &nbsp;&nbsp;<a class="fcorange2" rel="nofollow" href="javascript:void(0)" onclick="hotelMapShow(100.954474, 21.853964);">地图</a>
-        </p>
-      <p class="fcgary"><i class="iconfont"></i><span class="partialDisplay">老板很热心，服务很周到。不错。</span><i class="iconfont"></i></p>
-      <div class="rlist" id="h3"><div class="head clearfix">
-        <span class="x1">房间类型</span>
-        <span class="x2">早餐</span>
-        <span class="x3">卫浴</span>
-        <span class="x4">宽带</span>
-        <span class="x8">多多价</span>
-        <span class="x9" tag="fanxian"></span>
-        <span class="x11 tright fb">
-          今天有人预订！</span>
-      </div><div class="room" id="h3_r1" style="z-index:50;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h3_r1" onclick="javaScript:STroomImgList(&#39;h3_r1&#39;,&#39;34864&#39;);" href="javaScript:void(0);">二人普通标间</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3"><span class="fcgary">无</span></span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥80</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥80&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥72&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥8&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥8</strong></span>
-            </span>
-          <span class="x10">
-            </span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/013AC976B81B09E7FF8080813AC7C652?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h3_r1" style="display:none">
-          <dl class="clearfix" id="roomImg_h3_r1"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/34864?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="宽带" class="iconfont"></i>宽带</span></div>
-      </div><div class="room" id="h3_r2" style="z-index:49;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h3_r2" onclick="javaScript:STroomImgList(&#39;h3_r2&#39;,&#39;34843&#39;);" href="javaScript:void(0);">大床房</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥100</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥100&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥90&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥10&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥10</strong></span>
-            </span>
-          <span class="x10">
-            </span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/013AC976B81B09E7FF8080813AC7C652?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h3_r2" style="display:none">
-          <dl class="clearfix" id="roomImg_h3_r2"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/34843?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><div class="room" id="h3_r3" style="z-index:48;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h3_r3" onclick="javaScript:STroomImgList(&#39;h3_r3&#39;,&#39;34845&#39;);" href="javaScript:void(0);">标准间</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥100</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥100&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥90&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥10&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥10</strong></span>
-            </span>
-          <span class="x10">
-            <span class="fcblk">剩2间</span></span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/013AC976B81B09E7FF8080813AC7C652?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h3_r3" style="display:none">
-          <dl class="clearfix" id="roomImg_h3_r3"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/34845?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><span style="text-align: center;display: none;">
-        <img src="statics/accommodation_files/cnBigLoading.gif" alt="读取中...">
-      </span></div>
-  </div>
-</li>
-<li class="yddHotel" style="z-index:47;position: relative;">
-  <div style="display: none;">
-    
-  </div>
-  <div class="hintro">
-    <div class="himg">
-      <a class="himga" href="http://www.yododo.cn/hotel/0163394BCAB200E9FF80808163381F39" target="_blank">
-        <img class="lazy" src="statics/accommodation_files/white.gif" data-href="http://img2.yododo.com.cn/files/review/0163/0163394F325800EFFF80808163381F39_ml.jpg" alt="西双版纳度假酒店住宿推荐：西双版纳派尔威汉唐酒店在线预订" title="西双版纳派尔威汉唐酒店"><span class="cu" id="cuTip-0163394BCAB200E9FF80808163381F39" style="display: none;">促</span>
-        <div id="cuInfo-0163394BCAB200E9FF80808163381F39" style="display: none;"></div>
-        </a>
-      <p class="level">
-        <span class="fright2">
-          </span>
-        <a rel="nofollow" class="lv4" target="_blank" title="驿站等级4级" href="http://www.yododo.cn/hotel/events/xypj.html"><i title="驿站等级4级" class="iconfont"></i></a></p>
-    </div>
-
-    <strong class="htitle">
-      <a class="ft16" href="http://www.yododo.cn/hotel/0163394BCAB200E9FF80808163381F39" target="_blank">西双版纳派尔威汉唐酒店</a>
-      <a class="ft12" href="http://www.yododo.cn/dujia/Xishuangbanna">度假酒店</a><span>
-        </span>
-    </strong>
-    <p class="prel"><strong>地址:</strong>景洪 泼水广场C区C栋1楼 ，近勐海路。
-          &nbsp;&nbsp;<a class="fcorange2" rel="nofollow" href="javascript:void(0)" onclick="hotelMapShow(100.813068, 22.00924);">地图</a>
-        </p>
-      <div class="rlist" id="h4"><div class="head clearfix">
-        <span class="x1">房间类型</span>
-        <span class="x2">早餐</span>
-        <span class="x3">卫浴</span>
-        <span class="x4">宽带</span>
-        <span class="x8">多多价</span>
-        <span class="x9" tag="fanxian"></span>
-        <span class="x11 tright fb">
-          </span>
-      </div><div class="room" id="h4_r1" style="z-index:50;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h4_r1" onclick="javaScript:STroomImgList(&#39;h4_r1&#39;,&#39;102363&#39;);" href="javaScript:void(0);">东南亚江景大床</a>
-
-          </span>
-          <span class="x2">免费</span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥258</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥258&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥232&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥26&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥26</strong></span>
-            </span>
-          <span class="x10">
-            </span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/0163394BCAB200E9FF80808163381F39?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h4_r1" style="display:none">
-          <dl class="clearfix" id="roomImg_h4_r1"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/102363?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><div class="room" id="h4_r2" style="z-index:49;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h4_r2" onclick="javaScript:STroomImgList(&#39;h4_r2&#39;,&#39;102362&#39;);" href="javaScript:void(0);">东南亚江景标间</a>
-
-          </span>
-          <span class="x2">免费</span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥258</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥258&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥232&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥26&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥26</strong></span>
-            </span>
-          <span class="x10">
-            </span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/0163394BCAB200E9FF80808163381F39?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h4_r2" style="display:none">
-          <dl class="clearfix" id="roomImg_h4_r2"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/102362?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><span style="text-align: center;display: none;">
-        <img src="statics/accommodation_files/cnBigLoading.gif" alt="读取中...">
-      </span></div>
-  </div>
-</li>
-<li class="yddHotel" style="z-index:46;position: relative;">
-  <div style="display: none;">
-    
-  </div>
-  <div class="hintro">
-    <div class="himg">
-      <a class="himga" href="http://www.yododo.cn/hotel/01231250403820A9FF8080812310525E" target="_blank">
-        <img class="lazy" src="statics/accommodation_files/white.gif" data-href="http://img3.yododo.com.cn/files/review/0123/01231278873823B3FF8080812310525E_ml.jpg" alt="西双版纳家庭旅馆住宿推荐：西双版纳晓娟家庭旅馆在线预订" title="西双版纳晓娟家庭旅馆"><span class="cu" id="cuTip-01231250403820A9FF8080812310525E" style="display: none;">促</span>
-        <div id="cuInfo-01231250403820A9FF8080812310525E" style="display: none;"></div>
-        </a>
-      <p class="level">
-        <span class="fright2">
-          </span>
-        <a rel="nofollow" class="lv2" target="_blank" title="驿站等级7级" href="http://www.yododo.cn/hotel/events/xypj.html"><i title="驿站等级7级" class="iconfont"></i></a></p>
-    </div>
-
-    <strong class="htitle">
-      <a class="ft16" href="http://www.yododo.cn/hotel/01231250403820A9FF8080812310525E" target="_blank">西双版纳晓娟家庭旅馆</a>
-      <a class="ft12" href="http://www.yododo.cn/lvguan/Xishuangbanna">家庭旅馆</a><span>
-        </span>
-    </strong>
-    <div class="sub">
-      <div><strong>4.8</strong>/5分</div>
-      <a href="http://www.yododo.cn/hotel/01231250403820A9FF8080812310525E?starttime=2018-12-02&amp;endtime=2018-12-03&amp;inittab=reviews" class="fcorange2" target="_blank">4位住客点评</a>
-    </div>
-    <p class="prel"><strong>地址:</strong>西双版纳州景洪市假日湾、丽水景苑
-          &nbsp;&nbsp;<a class="fcorange2" rel="nofollow" href="javascript:void(0)" onclick="hotelMapShow(100.80824584045, 21.993767805943);">地图</a>
-        </p>
-      <p class="fcgary"><i class="iconfont"></i><span class="partialDisplay">非常适合家庭旅游，很方便很热闹！可以自己做饭吃</span><i class="iconfont"></i></p>
-      <div class="rlist" id="h5"><div class="head clearfix">
-        <span class="x1">房间类型</span>
-        <span class="x2">早餐</span>
-        <span class="x3">卫浴</span>
-        <span class="x4">宽带</span>
-        <span class="x8">多多价</span>
-        <span class="x9" tag="fanxian"></span>
-        <span class="x11 tright fb">
-          </span>
-      </div><div class="room" id="h5_r1" style="z-index:50;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h5_r1" onclick="javaScript:STroomImgList(&#39;h5_r1&#39;,&#39;12647&#39;);" href="javaScript:void(0);">白象城公寓套房</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥130</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥130&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥117&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥13&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥13</strong></span>
-            </span>
-          <span class="x10">
-            <span class="fcblk">剩1间</span></span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/01231250403820A9FF8080812310525E?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h5_r1" style="display:none">
-          <dl class="clearfix" id="roomImg_h5_r1"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/12647?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><div class="room" id="h5_r2" style="z-index:49;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h5_r2" onclick="javaScript:STroomImgList(&#39;h5_r2&#39;,&#39;17145&#39;);" href="javaScript:void(0);">假日湾502房</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥320</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥320&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥288&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥32&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥32</strong></span>
-            </span>
-          <span class="x10">
-            <span class="fcblk">剩1套</span></span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/01231250403820A9FF8080812310525E?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h5_r2" style="display:none">
-          <dl class="clearfix" id="roomImg_h5_r2"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/17145?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><div class="room" id="h5_r3" style="z-index:48;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h5_r3" onclick="javaScript:STroomImgList(&#39;h5_r3&#39;,&#39;17143&#39;);" href="javaScript:void(0);">假日湾501房</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥380</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥380&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥342&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥38&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥38</strong></span>
-            </span>
-          <span class="x10">
-            </span>
-          <span class="x11">
-            <a class="btn-b" href="javaScript:void(0);" title="订完">订完</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h5_r3" style="display:none">
-          <dl class="clearfix" id="roomImg_h5_r3"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/17143?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><span style="text-align: center;display: none;">
-        <img src="statics/accommodation_files/cnBigLoading.gif" alt="读取中...">
-      </span></div><div id="more-h5" class="clearfix">
-      <span id="hotelid_5" style="display: none;">01231250403820A9FF8080812310525E</span>
-      <a id="lookall_h5" class="fleft ico-inner-down" href="javascript:void(0)" rel="nofollow">查看全部房型(4)</a>
-    </div>
-  </div>
-</li>
-<li class="yddHotel" style="z-index:45;position: relative;">
-  <div style="display: none;">
-    
-  </div>
-  <div class="hintro">
-    <div class="himg">
-      <a class="himga" href="http://www.yododo.cn/hotel/0147E749156701F4FF80808147E571A0" target="_blank">
-        <img class="lazy" src="statics/accommodation_files/white.gif" data-href="http://img0.yododo.com.cn/files/review/0148/01481149F60E0420FF808081480EA9E0_ml.jpg" alt="西双版纳度假酒店住宿推荐：西双版纳宝牛山庄在线预订" title="西双版纳宝牛山庄"><span class="cu" id="cuTip-0147E749156701F4FF80808147E571A0" style="display: none;">促</span>
-        <div id="cuInfo-0147E749156701F4FF80808147E571A0" style="display: none;"></div>
-        </a>
-      <p class="level">
-        <span class="fright2">
-          </span>
-        <a rel="nofollow" class="lv1" target="_blank" title="驿站等级6级" href="http://www.yododo.cn/hotel/events/xypj.html"><i title="驿站等级6级" class="iconfont"></i></a></p>
-    </div>
-
-    <strong class="htitle">
-      <a class="ft16" href="http://www.yododo.cn/hotel/0147E749156701F4FF80808147E571A0" target="_blank">西双版纳宝牛山庄</a>
-      <a class="ft12" href="http://www.yododo.cn/dujia/Xishuangbanna">度假酒店</a><span>
-        </span>
-    </strong>
-    <p class="prel"><strong>地址:</strong>西双版纳勐腊县关累镇勐远仙境景区内
-          &nbsp;&nbsp;<a class="fcorange2" rel="nofollow" href="javascript:void(0)" onclick="hotelMapShow(101.294041, 21.703722);">地图</a>
-        </p>
-      <div class="rlist" id="h6"><div class="head clearfix">
-        <span class="x1">房间类型</span>
-        <span class="x2">早餐</span>
-        <span class="x3">卫浴</span>
-        <span class="x4">宽带</span>
-        <span class="x8">多多价</span>
-        <span class="x9" tag="fanxian"></span>
-        <span class="x11 tright fb">
-          </span>
-      </div><div class="room" id="h6_r1" style="z-index:50;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h6_r1" onclick="javaScript:STroomImgList(&#39;h6_r1&#39;,&#39;77591&#39;);" href="javaScript:void(0);">商务双床房</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥228</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥228&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥205&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥23&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥23</strong></span>
-            </span>
-          <span class="x10">
-            <span class="fcblk">剩1间</span></span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/0147E749156701F4FF80808147E571A0?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h6_r1" style="display:none">
-          <dl class="clearfix" id="roomImg_h6_r1"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/77591?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><div class="room" id="h6_r2" style="z-index:49;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h6_r2" onclick="javaScript:STroomImgList(&#39;h6_r2&#39;,&#39;77577&#39;);" href="javaScript:void(0);">豪华山景双人标间</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥228</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥228&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥205&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥23&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥23</strong></span>
-            </span>
-          <span class="x10">
-            <span class="fcblk">剩2间</span></span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/0147E749156701F4FF80808147E571A0?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h6_r2" style="display:none">
-          <dl class="clearfix" id="roomImg_h6_r2"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/77577?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><div class="room" id="h6_r3" style="z-index:48;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h6_r3" onclick="javaScript:STroomImgList(&#39;h6_r3&#39;,&#39;77584&#39;);" href="javaScript:void(0);">豪华水景双人标间</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥238</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥238&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥214&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥24&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥24</strong></span>
-            </span>
-          <span class="x10">
-            <span class="fcblk">剩2间</span></span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/0147E749156701F4FF80808147E571A0?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h6_r3" style="display:none">
-          <dl class="clearfix" id="roomImg_h6_r3"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/77584?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><span style="text-align: center;display: none;">
-        <img src="statics/accommodation_files/cnBigLoading.gif" alt="读取中...">
-      </span></div><div id="more-h6" class="clearfix">
-      <span id="hotelid_6" style="display: none;">0147E749156701F4FF80808147E571A0</span>
-      <a id="lookall_h6" class="fleft ico-inner-down" href="javascript:void(0)" rel="nofollow">查看全部房型(4)</a>
-    </div>
-  </div>
-</li>
-<li class="yddHotel" style="z-index:44;position: relative;">
-  <div style="display: none;">
-    
-  </div>
-  <div class="hintro">
-    <div class="himg">
-      <a class="himga" href="http://www.yododo.cn/hotel/016228FA798A0069FF8080816226C3C0" target="_blank">
-        <img class="lazy" src="statics/accommodation_files/white.gif" data-href="http://img1.yododo.com.cn/files/review/0162/01622907067E008FFF8080816226C3C0_ml.jpg" alt="西双版纳青年旅社住宿推荐：西双版纳那年住这国际青年旅舍在线预订" title="西双版纳那年住这国际青年旅舍"><span class="cu" id="cuTip-016228FA798A0069FF8080816226C3C0" style="display: none;">促</span>
-        <div id="cuInfo-016228FA798A0069FF8080816226C3C0" style="display: none;"></div>
-        </a>
-      <p class="level">
-        <span class="fright2">
-          </span>
-        <a rel="nofollow" class="lv1" target="_blank" title="驿站等级6级" href="http://www.yododo.cn/hotel/events/xypj.html"><i title="驿站等级6级" class="iconfont"></i></a></p>
-    </div>
-
-    <strong class="htitle">
-      <a class="ft16" href="http://www.yododo.cn/hotel/016228FA798A0069FF8080816226C3C0" target="_blank">西双版纳那年住这国际青年旅舍</a>
-      <a class="ft12" href="http://www.yododo.cn/lvshe/Xishuangbanna">青年旅社</a><span>
-        </span>
-    </strong>
-    <div class="sub">
-      <div><strong>5.0</strong>/5分</div>
-      <a href="http://www.yododo.cn/hotel/016228FA798A0069FF8080816226C3C0?starttime=2018-12-02&amp;endtime=2018-12-03&amp;inittab=reviews" class="fcorange2" target="_blank">2位住客点评</a>
-    </div>
-    <p class="prel"><strong>地址:</strong>西双版纳景洪园林巷6号3栋（景洪南站前方加油站直行约500<a href="javascript:void(0)">...</a>
-          &nbsp;&nbsp;<a class="fcorange2" rel="nofollow" href="javascript:void(0)" onclick="hotelMapShow(100.800624, 21.997133);">地图</a>
-        </p>
-      <p class="fcgary"><i class="iconfont"></i><span class="partialDisplay">老板很不错啊，客栈干净，离市里的游玩地儿都很近。</span><i class="iconfont"></i></p>
-      <div class="rlist" id="h7"><div class="head clearfix">
-        <span class="x1">房间类型</span>
-        <span class="x2">早餐</span>
-        <span class="x3">卫浴</span>
-        <span class="x4">宽带</span>
-        <span class="x8">多多价</span>
-        <span class="x9" tag="fanxian"></span>
-        <span class="x11 tright fb">
-          今天有人预订！</span>
-      </div><div class="room" id="h7_r1" style="z-index:50;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h7_r1" onclick="javaScript:STroomImgList(&#39;h7_r1&#39;,&#39;101682&#39;);" href="javaScript:void(0);">女生四人床位间</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3"><span class="fcgary">无</span></span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥25</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥25&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥22&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥3&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥3</strong></span>
-            </span>
-          <span class="x10">
-            </span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/016228FA798A0069FF8080816226C3C0?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h7_r1" style="display:none">
-          <dl class="clearfix" id="roomImg_h7_r1"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/101682?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="宽带" class="iconfont"></i>宽带</span></div>
-      </div><div class="room" id="h7_r2" style="z-index:49;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h7_r2" onclick="javaScript:STroomImgList(&#39;h7_r2&#39;,&#39;101681&#39;);" href="javaScript:void(0);">男生四人床位间</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3"><span class="fcgary">无</span></span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥25</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥25&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥22&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥3&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥3</strong></span>
-            </span>
-          <span class="x10">
-            </span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/016228FA798A0069FF8080816226C3C0?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h7_r2" style="display:none">
-          <dl class="clearfix" id="roomImg_h7_r2"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/101681?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="宽带" class="iconfont"></i>宽带</span></div>
-      </div><div class="room" id="h7_r3" style="z-index:48;position: relative;">
-        <div class="head headhover clearfix">
-          <span class="x1">
-            <a class="ico-inner-down" rel="nofollow" id="roomname_h7_r3" onclick="javaScript:STroomImgList(&#39;h7_r3&#39;,&#39;101684&#39;);" href="javaScript:void(0);">大床房</a>
-
-          </span>
-          <span class="x2"><span class="fcgary">无</span></span>
-          <span class="x3">有</span>
-          <span class="x4">有</span>
-          &lt;<span class="x8">
-              <strong class="ydd-price">¥68</strong>
-          </span>
-
-          <span class="x9">
-            <span tip="&lt;font color=&#39;red&#39;&gt;¥68&lt;/font&gt;，现在预定，只需支付&lt;font color=&#39;red&#39;&gt;¥61&lt;/font&gt;，游多多客栈为您节省&lt;font color=&#39;red&#39;&gt;¥7&lt;/font&gt;，多订多省！" class="fcsalebox seopromnum" style="display: none;">立减<strong>¥7</strong></span>
-            </span>
-          <span class="x10">
-            <span class="fcblk">剩1间</span></span>
-          <span class="x11">
-            <a class="btn-a" href="http://www.yododo.cn/hotel/016228FA798A0069FF8080816226C3C0?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03" target="_blank" title="查看" rel="nofollow">查看</a>
-              </span>
-        </div>
-
-        <div class="pic" id="roomImgs_h7_r3" style="display:none">
-          <dl class="clearfix" id="roomImg_h7_r3"><span style="text-align: center;display: block;"><img alt="读取中..." src="statics/accommodation_files/loading.gif"></span></dl>
-          <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/101684?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
-          房型设施：
-          <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span></div>
-      </div><span style="text-align: center;display: none;">
-        <img src="statics/accommodation_files/cnBigLoading.gif" alt="读取中...">
-      </span></div><div id="more-h7" class="clearfix">
-      <span id="hotelid_7" style="display: none;">016228FA798A0069FF8080816226C3C0</span>
-      <a id="lookall_h7" class="fleft ico-inner-down" href="javascript:void(0)" rel="nofollow">查看全部房型(4)</a>
-    </div>
-  </div>
-</li>
-</ul>
-      </div>
-      </div>
 
 
 <div class="par_index">
@@ -1785,7 +1025,7 @@ function addTrackEvent(action, opt_label, opt_value){
 
 <script type="text/javascript" src="statics/accommodation_files/h-1388473613.js.下载" charset="utf-8"></script><script type="text/javascript">
 //<![CDATA[
-var pageHotelMarkers = new Array();
+/* var pageHotelMarkers = new Array();
 
     pageHotelMarkers.push({lng:"100.808698", lat:"22.015831", hotelName:"西双版纳新沙宾馆", hotelUrl:"/hotel/013FC78A40C403F2FF8080813FC4F1D5?starttime=2018-12-02&endtime=2018-12-03", lowPrice:82, imgUrl:"http://img1.yododo.com.cn/files/review/0148/01480C5C1347013AFF80808148087FA7_m.jpg", hotelType:'经济型酒店', address:"云南省景洪市金沙滩3栋7号", satisficing:"99%", hasRoomIndex:'10.0'});
   
@@ -1801,7 +1041,7 @@ var pageHotelMarkers = new Array();
   
     pageHotelMarkers.push({lng:"100.800624", lat:"21.997133", hotelName:"西双版纳那年住这国际青年旅舍", hotelUrl:"/hotel/016228FA798A0069FF8080816226C3C0?starttime=2018-12-02&endtime=2018-12-03", lowPrice:25, imgUrl:"http://img3.yododo.com.cn/files/review/0162/01622907067E008FFF8080816226C3C0_m.jpg", hotelType:'青年旅社', address:"西双版纳景洪园林巷6号3栋（景洪南站前方加油站直行约500米）", satisficing:"100%", hasRoomIndex:'收集中'});
   
-//]]>
+//]]> */
 </script>
 <script type="text/javascript" src="statics/accommodation_files/api"></script><script type="text/javascript" src="statics/accommodation_files/getscript"></script><link rel="stylesheet" type="text/css" href="statics/accommodation_files/bmap.css">  
 <link rel="stylesheet" type="text/css" href="statics/accommodation_files/h811864636.css" media="screen" charset="utf-8"><script type="text/javascript" src="statics/accommodation_files/h-1760648725.js.下载" charset="utf-8"></script><script type="text/javascript" src="statics/accommodation_files/jquery.yddCnAutocomplete.1492403413.js.下载"></script>

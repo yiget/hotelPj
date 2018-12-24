@@ -8,4 +8,6 @@ import org.springframework.stereotype.Component;
 @Component
 public interface HotelMapper {
 	List<Hotel> getRecommend();
+	List<Hotel> gethotel(Hotel hotel);
+	List<Hotel>	selectByPrimaryKey(int id);
 }

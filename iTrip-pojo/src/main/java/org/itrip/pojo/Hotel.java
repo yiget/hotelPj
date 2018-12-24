@@ -1,49 +1,35 @@
 package org.itrip.pojo;
 
 import java.util.Date;
+import java.util.List;
 
 public class Hotel {
     private Integer id;
 
     private String hotelname;
-    
-    private String picturepath;
 
     private Integer provinceid;
 
-    private String maxroomPrice;
-    
-    private String minroomPrice;
-
-	
-
-	public String getMaxroomPrice() {
-		return maxroomPrice;
-	}
-
-	public void setMaxroomPrice(String maxroomPrice) {
-		this.maxroomPrice = maxroomPrice;
-	}
-
-	public String getMinroomPrice() {
-		return minroomPrice;
-	}
-
-	public void setMinroomPrice(String minroomPrice) {
-		this.minroomPrice = minroomPrice;
-	}
-
-	
-
-	private Integer cityid;
+    private Integer cityid;
 
     private String address;
+
+    private String details;
+
+    private String facilities;
+
+    private String hotelpolicy;
+    private String picturepath;
+    private String maxroomPrice;
+    private String minroomPrice;
 
     private Integer hoteltype;
 
     private Integer hotellevel;
 
-    private Integer isgrouppurchase;
+ 
+
+	private Integer isgrouppurchase;
 
     private Date creationdate;
 
@@ -53,12 +39,28 @@ public class Hotel {
 
     private Integer modifiedby;
 
-    public Hotel(Integer id, String hotelname, Integer provinceid, Integer cityid, String address, Integer hoteltype, Integer hotellevel, Integer isgrouppurchase, Date creationdate, Integer createdby, Date modifydate, Integer modifiedby) {
+    private String logopath;
+
+    private Date checkintime;
+    private List<House> houses;
+
+    public List<House> getHouses() {
+		return houses;
+	}
+
+	public void setHouses(List<House> houses) {
+		this.houses = houses;
+	}
+
+	public Hotel(Integer id, String hotelname, Integer provinceid, Integer cityid, String address, String details, String facilities, String hotelpolicy, Integer hoteltype, Integer hotellevel, Integer isgrouppurchase, Date creationdate, Integer createdby, Date modifydate, Integer modifiedby, String logopath, Date checkintime) {
         this.id = id;
         this.hotelname = hotelname;
         this.provinceid = provinceid;
         this.cityid = cityid;
         this.address = address;
+        this.details = details;
+        this.facilities = facilities;
+        this.hotelpolicy = hotelpolicy;
         this.hoteltype = hoteltype;
         this.hotellevel = hotellevel;
         this.isgrouppurchase = isgrouppurchase;
@@ -66,6 +68,8 @@ public class Hotel {
         this.createdby = createdby;
         this.modifydate = modifydate;
         this.modifiedby = modifiedby;
+        this.logopath = logopath;
+        this.checkintime = checkintime;
     }
 
     public Hotel() {
@@ -107,9 +111,55 @@ public class Hotel {
     public String getAddress() {
         return address;
     }
+    public String getPicturepath() {
+ 		return picturepath;
+ 	}
 
+ 	public void setPicturepath(String picturepath) {
+ 		this.picturepath = picturepath;
+ 	}
+
+ 	public String getMaxroomPrice() {
+ 		return maxroomPrice;
+ 	}
+
+ 	public void setMaxroomPrice(String maxroomPrice) {
+ 		this.maxroomPrice = maxroomPrice;
+ 	}
+
+ 	public String getMinroomPrice() {
+ 		return minroomPrice;
+ 	}
+
+ 	public void setMinroomPrice(String minroomPrice) {
+ 		this.minroomPrice = minroomPrice;
+ 	}
     public void setAddress(String address) {
         this.address = address == null ? null : address.trim();
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details == null ? null : details.trim();
+    }
+
+    public String getFacilities() {
+        return facilities;
+    }
+
+    public void setFacilities(String facilities) {
+        this.facilities = facilities == null ? null : facilities.trim();
+    }
+
+    public String getHotelpolicy() {
+        return hotelpolicy;
+    }
+
+    public void setHotelpolicy(String hotelpolicy) {
+        this.hotelpolicy = hotelpolicy == null ? null : hotelpolicy.trim();
     }
 
     public Integer getHoteltype() {
@@ -123,13 +173,7 @@ public class Hotel {
     public Integer getHotellevel() {
         return hotellevel;
     }
-    public String getPicturepath() {
-		return picturepath;
-	}
 
-	public void setPicturepath(String picturepath) {
-		this.picturepath = picturepath;
-	}
     public void setHotellevel(Integer hotellevel) {
         this.hotellevel = hotellevel;
     }
@@ -173,5 +217,20 @@ public class Hotel {
     public void setModifiedby(Integer modifiedby) {
         this.modifiedby = modifiedby;
     }
-    
+
+    public String getLogopath() {
+        return logopath;
+    }
+
+    public void setLogopath(String logopath) {
+        this.logopath = logopath == null ? null : logopath.trim();
+    }
+
+    public Date getCheckintime() {
+        return checkintime;
+    }
+
+    public void setCheckintime(Date checkintime) {
+        this.checkintime = checkintime;
+    }
 }

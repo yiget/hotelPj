@@ -1,10 +1,22 @@
 package org.itrip.pojo;
 
+import java.util.List;
+
 public class country {
 	private int id;
 	private String name;
 	private int province_id;
 	private String spell;
+	private List<Hotel> hotelList;
+	
+	
+	public List<Hotel> getHotelList() {
+		return hotelList;
+	}
+	public void setHotelList(List<Hotel> hotelList) {
+		this.hotelList = hotelList;
+	}
+
 	
 	public int getId() {
 		return id;

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0112)http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5?tab=roomlist&starttime=2018-12-02&endtime=2018-12-03 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -341,7 +342,7 @@ function addTrackEvent(action, opt_label, opt_value){
 					<a href="http://www.yododo.cn/hotels/Xishuangbanna">西双版纳住宿</a> <span>&gt;</span>
 					<a href="http://www.yododo.cn/jingji/Xishuangbanna">西双版纳经济型酒店</a> <span>&gt;</span>
 					<a
-						href="http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5">西双版纳新沙宾馆</a>
+						href="http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5">${hotel.hotelname }</a>
 					<script type="text/javascript">
     //<![CDATA[
       $j('#mainmenus, #areaHotelMenu, #adHotelMenu').mouseleave(function(){
@@ -355,16 +356,17 @@ function addTrackEvent(action, opt_label, opt_value){
 			</div>
 			<div class="hhead2 w984 mauto">
 				<div class="clearfix">
-					<h1>西双版纳新沙宾馆</h1>
+					<h1>${hotel.hotelname }</h1>
 					<span class="level"> <a rel="nofollow" class="lv1"
 						target="_blank" title="驿站等级6级"
 						href="http://www.yododo.cn/hotel/events/xypj.html"><i
 							title="驿站等级6级" class="iconfont"></i></a></span>
 				</div>
 				<div class="pd10">
-					地址: 云南省景洪市金沙滩3栋7号 (<a target="_blank"
-						href="http://www.yododo.cn/jingji/Xishuangbanna">西双版纳经济型酒店</a>， 靠近
-					<a href="http://www.yododo.cn/hotels/Xishuangbanna/Redaihuahuiyuan"
+					地址: ${hotel.address } (<a target="_blank"
+						href="http://www.yododo.cn/jingji/Xishuangbanna">${country.name }${dictionarytype.property}</a>
+					<!--	， 靠近
+				 	<a href="http://www.yododo.cn/hotels/Xishuangbanna/Redaihuahuiyuan"
 						title="热带花卉园" target="_blank">热带花卉园</a>，<a
 						href="http://www.yododo.cn/hotels/Xishuangbanna/Mantinggongyuan"
 						title="曼听公园" target="_blank">曼听公园</a>，<a
@@ -372,7 +374,7 @@ function addTrackEvent(action, opt_label, opt_value){
 						title="澜沧江风光" target="_blank">澜沧江风光</a>) <a class="fcorange2"
 						href="javascript:void(0);" id="hotelMapBtn" title="驿站地图"
 						rel="nofollow"> <i class="iconfont"></i>地图
-					</a>
+					</a> -->
 				</div>
 				<div class="sub">
 					<span class="sub-p"><em>¥</em><strong>82</strong>起</span> <a
@@ -599,30 +601,30 @@ function addTrackEvent(action, opt_label, opt_value){
 							</div>
 						</form>
 					</div>
-
+				
 					<div class="rlist">
 						<div class="head clearfix">
 							<span class="x1">房间类型</span> <span class="x2">早餐</span> <span
 								class="x3">卫浴</span> <span class="x4">宽带</span> <span class="x8">多多价</span>
 
 						</div>
-
+					<c:forEach items="${hotel.houses }" var="house">
 						<div class="room" id="room_51071" style="z-index: 3;">
 							<a class="pabs" href="javascript:;"
 								onclick="$j(&#39;#pic_51071&#39;).toggle();return false;"><img
 								alt="" title="阳台标准间"
 								src="statics/hotel_details_files/01404C7635D50021FF808081404B2E36_s.jpg"></a>
-
 							<div class="head clearfix">
 								<span class="x1"> <a class="ico-inner-down"
 									target="_blank"
 									href="http://www.yododo.cn/hotel/room/51071?starttime=2018-12-02&amp;endtime=2018-12-03">
-										阳台标准间<i class="iconfont"></i>
+										${house.roomtitle }<i class="iconfont"></i>
 								</a>
-								</span> <span class="x2"><span class="fcgary">无</span></span> <span
-									class="x3">有</span> <span class="x4">有</span> <span class="x8"><strong
-									class="ydd-price">¥82</strong></span> <span class="x9"></span> <span
-									class="x10"><span class="fcblk">剩1间</span></span> <span
+								</span> <span class="x2"><span class="fcgary"><c:if test="${house.ishavingbreakfast == 0 }"> 无</c:if><c:if test="${house.ishavingbreakfast == 1 }"> 有</c:if></span></span> <span
+									class="x3"><c:if test="${house.ishavingbathroom == 0 }"> 无</c:if><c:if test="${house.ishavingbathroom == 1 }"> 有</c:if></span>
+									 <span class="x4"><c:if test="${house.ishavingbroadband == 0 }"> 无</c:if><c:if test="${house.ishavingbroadband == 1 }"> 有</c:if></span> <span class="x8"><strong
+									class="ydd-price">¥${house.roomprice}</strong></span> <span class="x9"></span> <span
+									class="x10"><span class="fcblk">剩${house.store }间</span></span> <span
 									class="x11"> <a class="btn-a" href="order.jsp"
 									target="_blank" title="预订" rel="nofollow">预订</a></span>
 								<!-- <a class="btn-a" href="http://www.yododo.cn/sale/addHotelOrderInitShortcut.ydd?rid=51071&amp;starttime=2018-12-02&amp;endtime=2018-12-03&amp;number=1" target="_blank" title="预订" rel="nofollow">预订</a></span> -->
@@ -677,148 +679,14 @@ function addTrackEvent(action, opt_label, opt_value){
 								<div>房型简介：阳光舒适双人房，面积36㎡，位于2-4层，双床1.2m(不可以加床)，最多入住人数2人</div>
 							</div>
 						</div>
-						<div class="room" id="room_51424" style="z-index: 2;">
-							<a class="pabs" href="javascript:;"
-								onclick="$j(&#39;#pic_51424&#39;).toggle();return false;"><img
-								alt="" title="阳台大床房"
-								src="statics/hotel_details_files/01404C81B6840025FF808081404B2E36_s.jpg"></a>
-
-							<div class="head clearfix">
-								<span class="x1"> <a class="ico-inner-down"
-									target="_blank"
-									href="http://www.yododo.cn/hotel/room/51424?starttime=2018-12-02&amp;endtime=2018-12-03">
-										阳台大床房<i class="iconfont"></i>
-								</a>
-								</span> <span class="x2"><span class="fcgary">无</span></span> <span
-									class="x3">有</span> <span class="x4">有</span> <span class="x8"><strong
-									class="ydd-price">¥88</strong></span> <span class="x9"></span> <span
-									class="x10"><span class="fcblk">剩1间</span></span> <span
-									class="x11"> <a class="btn-a"
-									href="http://www.yododo.cn/sale/addHotelOrderInitShortcut.ydd?rid=51424&amp;starttime=2018-12-02&amp;endtime=2018-12-03&amp;number=1"
-									target="_blank" title="预订" rel="nofollow">预订</a></span>
-							</div>
-
-							<div class="head subhead clearfix">&nbsp;</div>
-							<div class="pic" id="pic_51424" style="display: none">
-								<dl class="clearfix">
-									<dd>
-										<a class="simg" href="javascript:;"> <img class="lazy"
-											title="" alt=""
-											src="statics/hotel_details_files/0152EDCAD7D40084FF80808152EC0ADA_m.jpg"
-											style="display: block;"></a> <span style="display: none;"
-											class="bimg"> <img class="lazy" title="" alt="大图预览"
-											src="statics/hotel_details_files/0152EDCAD7D40084FF80808152EC0ADA.jpg"
-											style="display: inline;"></span>
-									</dd>
-									<dd>
-										<a class="simg" href="javascript:;"> <img class="lazy"
-											title="" alt=""
-											src="statics/hotel_details_files/0152EDCAD2D20083FF80808152EC0ADA_m.jpg"
-											style="display: block;"></a> <span style="display: none;"
-											class="bimg"> <img class="lazy" title="" alt="大图预览"
-											src="statics/hotel_details_files/0152EDCAD2D20083FF80808152EC0ADA.jpg"
-											style="display: inline;"></span>
-									</dd>
-									<dd>
-										<a class="simg" href="javascript:;"> <img class="lazy"
-											title="" alt=""
-											src="statics/hotel_details_files/0152EDCACFF90082FF80808152EC0ADA_m.jpg"
-											style="display: block;"></a> <span style="display: none;"
-											class="bimg"> <img class="lazy" title="" alt="大图预览"
-											src="statics/hotel_details_files/0152EDCACFF90082FF80808152EC0ADA.jpg"
-											style="display: inline;"></span>
-									</dd>
-									<dd>
-										<a class="simg" href="javascript:;"> <img class="lazy"
-											title="" alt=""
-											src="statics/hotel_details_files/01404C81B6840025FF808081404B2E36_m.jpg"
-											style="display: block;"></a> <span style="display: none;"
-											class="bimg"> <img class="lazy" title="" alt="大图预览"
-											src="statics/hotel_details_files/01404C81B6840025FF808081404B2E36.jpg"
-											style="display: inline;"></span>
-									</dd>
-								</dl>
-								<div class="mb10">
-									<span><i title="空调" class="iconfont"></i>空调</span><span><i
-										title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i
-										title="宽带" class="iconfont"></i>宽带</span><span><i title="电视"
-										class="iconfont"></i>电视</span>
-								</div>
-								<div>房型简介：温馨大床房，面积32㎡，位于2-3层，大床1.8m（不可以加床），最多入住人数2人</div>
-							</div>
-						</div>
-						<div class="room" id="room_51425" style="z-index: 1;">
-							<a class="pabs" href="javascript:;"
-								onclick="$j(&#39;#pic_51425&#39;).toggle();return false;"><img
-								alt="" title="阳台三人房"
-								src="statics/hotel_details_files/01404C865A370026FF808081404B2E36_s.jpg"></a>
-
-							<div class="head clearfix">
-								<span class="x1"> <a class="ico-inner-down"
-									target="_blank"
-									href="http://www.yododo.cn/hotel/room/51425?starttime=2018-12-02&amp;endtime=2018-12-03">
-										阳台三人房<i class="iconfont"></i>
-								</a>
-								</span> <span class="x2"><span class="fcgary">无</span></span> <span
-									class="x3">有</span> <span class="x4">有</span> <span class="x8"><strong
-									class="ydd-price">¥118</strong></span> <span class="x9"></span> <span
-									class="x10"><span class="fcblk">剩1间</span></span> <span
-									class="x11"> <a class="btn-a"
-									href="http://www.yododo.cn/sale/addHotelOrderInitShortcut.ydd?rid=51425&amp;starttime=2018-12-02&amp;endtime=2018-12-03&amp;number=1"
-									target="_blank" title="预订" rel="nofollow">预订</a></span>
-							</div>
-
-							<div class="head subhead clearfix">&nbsp;</div>
-							<div class="pic" id="pic_51425" style="display: none">
-								<dl class="clearfix">
-									<dd>
-										<a class="simg" href="javascript:;"> <img class="lazy"
-											title="" alt=""
-											src="statics/hotel_details_files/0152EDCAB96F007EFF80808152EC0ADA_m.jpg"
-											style="display: block;"></a> <span style="display: none;"
-											class="bimg"> <img class="lazy" title="" alt="大图预览"
-											src="statics/hotel_details_files/0152EDCAB96F007EFF80808152EC0ADA.jpg"
-											style="display: inline;"></span>
-									</dd>
-									<dd>
-										<a class="simg" href="javascript:;"> <img class="lazy"
-											title="" alt=""
-											src="statics/hotel_details_files/0152EDCAB5EC007DFF80808152EC0ADA_m.jpg"
-											style="display: block;"></a> <span style="display: none;"
-											class="bimg"> <img class="lazy" title="" alt="大图预览"
-											src="statics/hotel_details_files/0152EDCAB5EC007DFF80808152EC0ADA.jpg"
-											style="display: inline;"></span>
-									</dd>
-									<dd>
-										<a class="simg" href="javascript:;"> <img class="lazy"
-											title="" alt=""
-											src="statics/hotel_details_files/01404C865A370026FF808081404B2E36_m.jpg"
-											style="display: block;"></a> <span style="display: none;"
-											class="bimg"> <img class="lazy" title="" alt="大图预览"
-											src="statics/hotel_details_files/01404C865A370026FF808081404B2E36.jpg"
-											style="display: inline;"></span>
-									</dd>
-								</dl>
-								<div class="mb10">
-									<span><i title="空调" class="iconfont"></i>空调</span><span><i
-										title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i
-										title="宽带" class="iconfont"></i>宽带</span><span><i title="电视"
-										class="iconfont"></i>电视</span>
-								</div>
-								<div>房型简介：阳台舒适三人间，面积15㎡，位于2-4层，单人床1.2m(不可以加床)，最多入住人数3人</div>
-							</div>
-						</div>
+					</c:forEach>
 					</div>
 					<span id="hotelinfo"></span>
 					<div class="dpintro3 mb30">
 						<strong class="dp-t">简介</strong>
 						<div class="smb15">
 							<p>
-								新沙宾馆地址是云南省景洪市滨江大道金沙滩3幢7号。酒店地理位置优越，位于闻名遐尔澜沧江边傣江南国际风情美食酒吧街旁金沙滩小区，西双版纳新大桥旁，是景洪离江边最近的宾馆.当您踏上西双版纳大桥，首先映入眼帘的是江边具有泰傣风情的傣江南国际风情美食酒吧街傣楼式酒吧，离有“东方多瑙河”之称的澜沧江---湄公河仅寸步之遥。
-								雄伟的西双版纳大桥，美丽多情的澜沧江尽收眼底。
-								距离车站、机场较近，交通便利，环境优雅。周边银行、医院、餐饮、酒吧等配套齐全。距滨江公园，滨江夜市200米，距泼水广场，大润发超市500米，距泰国街，龙舟广场800米。公寓式宾馆，是您旅游休闲的理想住所。
-								本着以人性化个性化服务打造精致公寓的宗旨,每个房间都有阳台，提供液晶电视和宽带网络服务、空调、免费国内长途电话、24小时热水，豪华房间设有电脑、吧台，夜晚可观赏美丽的澜沧江夜景，房型有：单人间、标间、套间、三人间等多种房型，为客人提供最服务打造精致公寓的宗旨,提供液晶电视和宽带网络服务、空调、免费国内长途电话、24小时热水，个性化超值的享受，欢迎亲们、驴友们入住。
-								宾馆提供免费接机、车服务。旅游包车、自驾车导游服务，优惠预订景区、晚会门票。</p>
+								${hotel.details }</p>
 						</div>
 
 						<strong class="dp-t">驿站设施</strong>
