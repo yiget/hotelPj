@@ -30,39 +30,22 @@ function searchHotels(name,val){
   if(star != ""){
     fromUrl = "star" + star;
   }
-  var link = (fromUrl == "" ? "/hotels/" : ("/" + fromUrl + "/")) + $j("#placeEnName").val();
-  
-  if(name == "type"){
-    
-  } else if(name == "zoneid"){
-    if(val != ""){
-      link += "/" + val;
-      if(/^[0-9]+$/.test(val)) {
-        link += "/sq";
-      } 
-    }
-  } else {
-    var zoneid = $j("#zoneid").val();
-    if(zoneid != ""){
-      link += "/" + zoneid + "/sq";
-    }
-  }
-  
-  var price_sort = "/";
-  if(name == "price"){
-    price_sort += (val == "" ? 0 : val); 
-  }else{
-    var price = $j("#price").val();
-    price_sort += (price == "" ? 0 : price);
-  }
-  var sort = $j("#sort").val();
-  price_sort += "_" + (sort == "" ? "default" : sort);
-  if(price_sort != "/0_default"){
-    link += price_sort;
-  }
+ 	var link='Xishuangbanna';
+ 	$j("#froms").val($j("#from").val());
+ 	$j("#namea").val($j("#name").val());
+ 	
+ 	if(name=="price"){
+ 		$j("#namesy").val(name);
+ 		$j("#zice").val(val);
+ 	}else{
+ 	$j("#types").val(name);
+ 	$j("#types1").val(val);
+ 	}
+ 	
+ 
   showWait();
   //location.href = link;
-  $j("#dateParamFrom").attr("action",link);
+ // $j("#dateParamFrom").attr("action",link);
   $j("#dateParamFrom").submit();
 }
 

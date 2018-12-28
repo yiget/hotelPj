@@ -12,9 +12,9 @@ public class DistrictServiceimpl implements DistrictService{
 	@Autowired
 	DistrictMapper districtMapper;
 	@Override
-	public List<District> getCtid() {
+	public List<District> getCtid(int cityid) {
 		// TODO Auto-generated method stub
-		return districtMapper.getCtid();
+		return districtMapper.getCtid(cityid);
 	}
 
 }

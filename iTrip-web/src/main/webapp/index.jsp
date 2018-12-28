@@ -3,12 +3,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<title>layPage title here</title>
+  <link rel="stylesheet" href="statics/layui/css/layui.css" media="all">
 </head>
-<body>
-<li style="width: 1519px;"> <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/200k0u000000j2iy38ADC_R_300_225.jpg"/> <a href="id=?data[i].id" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);"> <p class="ft14 fb">200k0u000000j2iy38ADC_R_300_225.jpg</p> <p><span class="fb">￥820.00</span> <span class="fb">￥820.00</span></p> </a> </li><li style="width: 1519px;"> <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/42fa9a3f36a347fdbcb25a112903cb53R130130.jpg"/> <a href="id=?data[i].id" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);"> <p class="ft14 fb">42fa9a3f36a347fdbcb25a112903cb53R130130.jpg</p> <p><span class="fb">￥1028.00</span> <span class="fb">￥1028.00</span></p> </a> </li><li style="width: 1519px;"> <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/200g0y000000lnus3CB71_R_300_225.jpg"/> <a href="id=?data[i].id" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);"> <p class="ft14 fb">200g0y000000lnus3CB71_R_300_225.jpg</p> <p><span class="fb">￥239.00</span> <span class="fb">￥239.00</span></p> </a> </li><li style="width: 1519px;"> <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/200j0r000000h3yyaBA5A_R_130_130.jpg"/> <a href="id=?data[i].id" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);"> <p class="ft14 fb">200j0r000000h3yyaBA5A_R_130_130.jpg</p> <p><span class="fb">￥1271.00</span> <span class="fb">￥1271.00</span></p> </a> </li><li style="width: 1519px;"> <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/200r0k000000b5cmt974D_R_130_130.jpg"/> <a href="id=?data[i].id" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);"> <p class="ft14 fb">200r0k000000b5cmt974D_R_130_130.jpg</p> <p><span class="fb">￥869.00</span> <span class="fb">￥869.00</span></p> </a> </li><li style="width: 1519px;"> <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/20030n000000elkiy794E_R_300_225.jpg"/> <a href="id=?data[i].id" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);"> <p class="ft14 fb">20030n000000elkiy794E_R_300_225.jpg</p> <p><span class="fb">￥3589.00</span> <span class="fb">￥3589.00</span></p> </a> </li><li style="width: 1519px;"> <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/200b0l000000cu5h11BEA_R_300_225.jpg"/> <a href="id=?data[i].id" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);"> <p class="ft14 fb">200b0l000000cu5h11BEA_R_300_225.jpg</p> <p><span class="fb">￥1211.00</span> <span class="fb">￥1211.00</span></p> </a> </li><li style="width: 1519px;"> <img onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);" src="statics/home_files/200d0u000000iwsqr5A9D_R_300_225.jpg"/> <a href="id=?data[i].id" target="_blank" onmouseover="isStopScroll(true);" onmouseout="isStopScroll(false);"> <p class="ft14 fb">200d0u000000iwsqr5A9D_R_300_225.jpg</p> <p><span class="fb">￥898.00</span> <span class="fb">￥898.00</span></p> </a> </li>
 
+<body>
+
+
+ 
+<div id="demo1"></div>
+ 
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+  <legend>显示完整功能</legend>
+</fieldset>
+ 
+<div id="demo7"></div>
+ 
+
+<script src="statics/layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+layui.use(['laypage', 'layer'], function(){
+	  var laypage = layui.laypage
+	  ,layer = layui.layer;
+  //完整功能
+  laypage.render({
+    elem: 'demo7'
+    ,count: 100
+    ,layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+    ,jump: function(obj){
+      console.log(obj)
+    }
+  });
+ 
+  
+});
+</script>
 
 </body>
 </html>

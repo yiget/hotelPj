@@ -1,15 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+            + path + "/";
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0041)http://www.yododo.cn/hotels/Xishuangbanna -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<base href="<%=basePath%>">
 <meta name="robots" content="all">
   <meta http-equiv="imagetoolbar" content="no">
 <title>
 西双版纳住宿预订_西双版纳旅游住宿_价格_攻略_推荐_游多多客栈2018</title>
-<meta name="keywords" content=",">  
+<meta name="keywords" content=",">  	
   <meta name="description" content="西双版纳住宿预订,游多多客栈为您提供西双版纳旅游住宿攻略,酒店,家庭旅馆,公寓,青年旅舍,客栈,农家乐,度假精品酒店等预订,全网最低价!">
   <meta name="mobile-agent" content="format=html5;url=http://m.yododo.cn/hotels/Xishuangbanna">
 <link rel="icon" href="http://img0.yododo.com.cn/favicon.ico" sizes="16x16">
@@ -286,13 +293,18 @@ function addTrackEvent(action, opt_label, opt_value){
   <div class="safety" id="safety_top_div" style="cursor: pointer;display: none;" onclick="window.open(&#39;/hotel/events/safetyws.html&#39;,&#39;_blank&#39;)">
                     中国最大、最安全的驿站住宿预订平台,入住保障，无房双倍赔偿,游多多获得两千五百万投资！游多多客栈天猫专营店铺开张
     </div>
-  <form class="normalForm" id="searchTable" action="http://www.yododo.cn/hotels/Xishuangbanna" method="post" onsubmit="return checkForm(this);">
+  <form class="normalForm" id="searchTable" action="Xishuangbanna " method="post" >
     <div class="head">
-      城市/景区 <span><input id="from" class="city ui-autocomplete-input" type="text" value="西双版纳" onclick="if(this.value == &#39;&#39;){$j(&#39;#quicklinkdiv_from_content&#39;).show();}" onblur="if (value==&#39;&#39;) {value=&#39;选择城市/景区&#39;}" onkeydown="$j(&#39;#quicklinkdiv_from_content&#39;).hide();" onfocus="if(value==&#39;选择城市/景区&#39;) {value=&#39;&#39;}" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span></span>
+      城市/景区 <span><input id="from" class="city ui-autocomplete-input"
+									style="width: 250px" type="text" name="from" value="${froms}"
+									onclick="$j(&#39;#quicklinkdiv_from_content&#39;).show();"
+									onkeydown="$j(&#39;#quicklinkdiv_from_content&#39;).hide();"
+									autocomplete="off"><span role="status"
+										aria-live="polite" class="ui-helper-hidden-accessible"></span>
     <input type="hidden" name="pid" id="pid" value="1-01-29-41-01">
     <input type="hidden" name="placeName" id="placeName" value="Xishuangbanna">
     <input type="hidden" name="spotName" id="spotName" value="">
-    <input type="hidden" name="targetUrl" id="targetUrl" value="/hotels/Xishuangbanna">
+    <input type="hidden" name="targetUrl" id="targetUrl" value="Xishuangbanna">
     <div class="nodate" style="display: none; left:87px"></div>
         入住 <span><input class="date hasDatepicker" type="text" autocomplete="off" title="入住日期" name="starttime" id="starttime" value="2018-12-02"></span>
         离店 <span><input class="date hasDatepicker" type="text" autocomplete="off" title="离店日期" name="endtime" id="endtime" value="2018-12-03"></span>
@@ -307,198 +319,27 @@ function addTrackEvent(action, opt_label, opt_value){
 
 <div class="city-sel-box" style="display:none;" id="quicklinkdiv_from_content" onmouseover="changeCanCloseDivStatus(false)" onmouseout="changeCanCloseDivStatus(true)">
   <div class="csb-inner">
-    <div class="csb-head clearfix"><span>输入中文，拼音，或者直接点选城市（景区）</span><a rel="nofollow" id="quicklinkdiv_from_close"></a></div>
-    <div class="csb-menu clearfix">
-      <a rel="nofollow" href="javaScript:void(0);" id="hotCitys_tab" onclick="showTab(citytypes, &#39;hotCitys&#39;);" class="current">热 门</a>
-      <a rel="nofollow" href="javaScript:void(0);" id="levelA_tab" onclick="showTab(citytypes, &#39;levelA&#39;);">ABCDE</a>
-      <a rel="nofollow" href="javaScript:void(0);" id="levelF_tab" onclick="showTab(citytypes, &#39;levelF&#39;);">FGHJ</a>
-      <a rel="nofollow" href="javaScript:void(0);" id="levelK_tab" onclick="showTab(citytypes, &#39;levelK&#39;);">KLMNPQ</a>
-      <a rel="nofollow" href="javaScript:void(0);" id="levelP_tab" onclick="showTab(citytypes, &#39;levelP&#39;);">RSTW</a>
-      <a rel="nofollow" href="javaScript:void(0);" id="levelU_tab" onclick="showTab(citytypes, &#39;levelU&#39;);">XYZ</a>
-    </div>
-    <ul class="csb-list clearfix" id="hotCitys">
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-03-56-01" placename="Xiamen" href="javascript:void(0);">厦门</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-23-01" placename="Lijiang" href="javascript:void(0);">丽江</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-08-15-01" placename="Sanya" href="javascript:void(0);">三亚</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-06-45-01" placename="Yangshuo" href="javascript:void(0);">阳朔</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-19-01" placename="Xitang" href="javascript:void(0);">西塘</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-13-10-02" placename="Fenghuang" href="javascript:void(0);">凤凰</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-07-01" placename="Dali" href="javascript:void(0);">大理</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-11-15-02" placename="Xuexiang" href="javascript:void(0);">雪乡</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-14-08-02" placename="Wusongdao" href="javascript:void(0);">雾凇岛</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-14-01-01" placename="Changbaishan" href="javascript:void(0);">长白山</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-16-22-01" placename="Wuyuan" href="javascript:void(0);">婺源</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-56-01" placename="Xianggelila" href="javascript:void(0);">香格里拉</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-16-01" placename="Hangzhou" href="javascript:void(0);">杭州</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-01-29-01" placename="Huangshan" href="javascript:void(0);">黄山</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-25-05-01" placename="Chengdu" href="javascript:void(0);">成都</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-13-26-01" placename="Zhangjiajie" href="javascript:void(0);">张家界</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-54-01" placename="Wuzhen" href="javascript:void(0);">乌镇</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-02-01" placename="Baoshan" href="javascript:void(0);">保山</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-02-01-01" placename="Beijing" href="javascript:void(0);">北京</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-22-27-01" placename="Pingyao" href="javascript:void(0);">平遥</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-29-01" placename="Luguhu" href="javascript:void(0);">泸沽湖</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-01-77-01" placename="Hongcun" href="javascript:void(0);">宏村</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-21-29-01" placename="Qingdao" href="javascript:void(0);">青岛</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-21-33-01" placename="Taishan" href="javascript:void(0);">泰山</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-34-07-01" placename="Taizhong" href="javascript:void(0);">台中</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-32-01-01" placename="HongKong" href="javascript:void(0);">香港</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-03-54-01" placename="Wuyishan" href="javascript:void(0);">武夷山</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-15-22-01" placename="Nanjing" href="javascript:void(0);">南京</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-11-05-01" placename="Haerbin" href="javascript:void(0);">哈尔滨</a></li>
-          <li><a rel="nofollow" id="quicklinkdiv_from_1-01-03-65-01" placename="Zhangzhou" href="javascript:void(0);">漳州</a></li>
-        </ul>
-    <ul class="csb-list clearfix" id="levelA" style="display: none;">
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-25-55-01" placename="Aba" href="javascript:void(0);">阿坝</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-18-47-111" placename="Alashanmeng" href="javascript:void(0);">阿拉善盟</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-09-02-01" placename="Baoding" href="javascript:void(0);">保定</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-09-51-01" placename="Bashangcaoyuan" href="javascript:void(0);">坝上草原</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-06-03-01" placename="Beihai" href="javascript:void(0);">北海</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-02-01-01" placename="Beijing" href="javascript:void(0);">北京</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-14-01-01" placename="Changbaishan" href="javascript:void(0);">长白山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-13-03-01" placename="Changsha" href="javascript:void(0);">长沙</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-05-90-111" placename="Chaozhou" href="javascript:void(0);">潮州</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-09-04-01" placename="Chengde" href="javascript:void(0);">承德</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-25-05-01" placename="Chengdu" href="javascript:void(0);">成都</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-31-01-01" placename="Chongqing" href="javascript:void(0);">重庆市</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-07-01" placename="Dali" href="javascript:void(0);">大理</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-17-09-01" placename="Dalian" href="javascript:void(0);">大连</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-25-08-01" placename="Danba" href="javascript:void(0);">丹巴</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-17-11-01" placename="Dandong" href="javascript:void(0);">丹东</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-25-09-01" placename="Daocheng" href="javascript:void(0);">稻城</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-11-10-01" placename="Daxinganling" href="javascript:void(0);">大兴安岭</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-09-01" placename="Diqing" href="javascript:void(0);">迪庆</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-05-04-01" placename="Dongguan" href="javascript:void(0);">东莞</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-04-09-01" placename="Dunhuang" href="javascript:void(0);">敦煌</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-18-48-01" placename="Ejinaqi" href="javascript:void(0);">额济纳旗</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-25-11-01" placename="Emeishan" href="javascript:void(0);">峨眉山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-12-04-01" placename="Enshi" href="javascript:void(0);">恩施</a></li>
-    </ul>
-    <ul class="csb-list clearfix" id="levelF" style="display: none;">
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-13-10-02" placename="Fenghuang" href="javascript:void(0);">凤凰</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-04-78-01" placename="Gannan" href="javascript:void(0);">甘南</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-25-56-01" placename="Ganzi" href="javascript:void(0);">甘孜</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-05-08-01" placename="Guangzhou" href="javascript:void(0);">广州</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-06-13-01" placename="Guilin" href="javascript:void(0);">桂林</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-07-09-01" placename="Guiyang" href="javascript:void(0);">贵阳</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-11-05-01" placename="Haerbin" href="javascript:void(0);">哈尔滨</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-08-08-01" placename="Haikou" href="javascript:void(0);">海口</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-18-18-01" placename="Hailaer" href="javascript:void(0);">海拉尔</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-25-60-01" placename="Hailuogou" href="javascript:void(0);">海螺沟</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-16-01" placename="Hangzhou" href="javascript:void(0);">杭州</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-01-23-01" placename="Hefei" href="javascript:void(0);">合肥</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-32-01-01" placename="HongKong" href="javascript:void(0);">香港</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-01-77-01" placename="Hongcun" href="javascript:void(0);">宏村</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-12-24-01" placename="Huanggang" href="javascript:void(0);">黄冈</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-01-29-01" placename="Huangshan" href="javascript:void(0);">黄山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-05-16-01" placename="Huizhou" href="javascript:void(0);">惠州</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-17-25-01" placename="Huludao" href="javascript:void(0);">葫芦岛</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-18-92-111" placename="Hulunbeier" href="javascript:void(0);">呼伦贝尔</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-10-11-01" placename="Jiaozuo" href="javascript:void(0);">焦作</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-20-01" placename="Jiaxing" href="javascript:void(0);">嘉兴</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-21-13-01" placename="Jinan" href="javascript:void(0);">济南</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-24-01" placename="Jinhua" href="javascript:void(0);">金华</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-22-90-111" placename="Jinzhong" href="javascript:void(0);">晋中</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-01-50-01" placename="Jiuhuashan" href="javascript:void(0);">九华山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-16-12-02" placename="Jiujiang" href="javascript:void(0);">九江</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-25-19-01" placename="Jiuzhaigou" href="javascript:void(0);">九寨沟</a></li>
-    </ul>
-    <ul class="csb-list clearfix" id="levelK" style="display: none;">
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-28-44-01" placename="Kanasi" href="javascript:void(0);">喀纳斯</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-22-01" placename="Kunming" href="javascript:void(0);">昆明</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-15-18-01" placename="Kunshan" href="javascript:void(0);">昆山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-04-32-01" placename="Lanzhou" href="javascript:void(0);">兰州</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-21-29-02" placename="Laoshan" href="javascript:void(0);">崂山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-27-18-01" placename="Lasa" href="javascript:void(0);">拉萨</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-25-92-111" placename="Liangshan" href="javascript:void(0);">凉山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-15-19-01" placename="Lianyungang" href="javascript:void(0);">连云港</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-23-01" placename="Lijiang" href="javascript:void(0);">丽江</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-29-01" placename="Lishui" href="javascript:void(0);">丽水</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-06-21-01" placename="Liuzhou" href="javascript:void(0);">柳州</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-29-01" placename="Luguhu" href="javascript:void(0);">泸沽湖</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-10-14-01" placename="Luoyang" href="javascript:void(0);">洛阳</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-16-12-01" placename="Lushan" href="javascript:void(0);">庐山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-33-01-01" placename="Macau" href="javascript:void(0);">澳门</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-16-14-01" placename="Nanchang" href="javascript:void(0);">南昌</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-15-22-01" placename="Nanjing" href="javascript:void(0);">南京</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-33-01" placename="Ningbo" href="javascript:void(0);">宁波</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-03-35-01" placename="Ningde" href="javascript:void(0);">宁德</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-21-25-01" placename="Penglai" href="javascript:void(0);">蓬莱</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-16-16-02" placename="Pingxiang" href="javascript:void(0);">萍乡</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-22-27-01" placename="Pingyao" href="javascript:void(0);">平遥</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-39-01" placename="Putuoshan" href="javascript:void(0);">普陀山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-05-01" placename="Qiandaohu" href="javascript:void(0);">千岛湖</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-07-90-111" placename="Qiandongnan" href="javascript:void(0);">黔东南</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-21-29-01" placename="Qingdao" href="javascript:void(0);">青岛</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-09-28-01" placename="Qinhuangdao" href="javascript:void(0);">秦皇岛</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-21-31-01" placename="Qufu" href="javascript:void(0);">曲阜</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-42-01" placename="Quzhou" href="javascript:void(0);">衢州</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-11-15-02" placename="Qinghaihu" href="javascript:void(0);">青海湖</a></li>
-    </ul>
-    <ul class="csb-list clearfix" id="levelP" style="display: none;">
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-21-52-01" placename="Rizhao" href="javascript:void(0);">日照</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-03-44-01" placename="Sanming" href="javascript:void(0);">三明</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-16-03-01" placename="Sanqingshan" href="javascript:void(0);">三清山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-08-15-01" placename="Sanya" href="javascript:void(0);">三亚</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-24-01-01" placename="Shanghai" href="javascript:void(0);">上海</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-16-19-111" placename="Shangrao" href="javascript:void(0);">上饶</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-05-33-01" placename="Shaoguan" href="javascript:void(0);">韶关</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-46-01" placename="Shaoxing" href="javascript:void(0);">绍兴</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-39-05" placename="Shengsi" href="javascript:void(0);">嵊泗</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-12-10-01" placename="Shennongjia" href="javascript:void(0);">神农架</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-17-36-01" placename="Shenyang" href="javascript:void(0);">沈阳</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-05-34-01" placename="Shenzhen" href="javascript:void(0);">深圳</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-09-35-01" placename="Shijiazhuang" href="javascript:void(0);">石家庄</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-23-03" placename="Shuhe" href="javascript:void(0);">束河</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-15-31-01" placename="Suzhou" href="javascript:void(0);">苏州</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-21-33-111" placename="Taian" href="javascript:void(0);">泰安</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-34-04-01" placename="Taibei" href="javascript:void(0);">台北</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-21-33-01" placename="Taishan" href="javascript:void(0);">泰山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-22-35-01" placename="Taiyuan" href="javascript:void(0);">太原</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-26-01-01" placename="Tianjin" href="javascript:void(0);">天津</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-15-38-01" placename="Tongli" href="javascript:void(0);">同里</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-21-35-01" placename="Weihai" href="javascript:void(0);">威海</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-56-01" placename="Wenzhou" href="javascript:void(0);">温州</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-12-13-01" placename="Wuhan" href="javascript:void(0);">武汉</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-28-34-01" placename="Wulumuqi" href="javascript:void(0);">乌鲁木齐</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-15-37-01" placename="Wuxi" href="javascript:void(0);">无锡</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-03-54-01" placename="Wuyishan" href="javascript:void(0);">武夷山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-16-22-01" placename="Wuyuan" href="javascript:void(0);">婺源</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-54-01" placename="Wuzhen" href="javascript:void(0);">乌镇</a></li>
-    </ul>
-    <ul class="csb-list clearfix" id="levelU" style="display: none;">
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-03-56-01" placename="Xiamen" href="javascript:void(0);">厦门</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-23-37-01" placename="Xian" href="javascript:void(0);">西安</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-56-01" placename="Xianggelila" href="javascript:void(0);">香格里拉</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-13-10-01" placename="Xiangxi" href="javascript:void(0);">湘西</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-25-53-01" placename="Xichang" href="javascript:void(0);">西昌</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-01-77-02" placename="Xidi" href="javascript:void(0);">西递</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-07-43-01" placename="Xijiangqianhumiaozhai" href="javascript:void(0);">西江千户苗寨</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-18-96-111" placename="Xinganmeng" href="javascript:void(0);">兴安盟</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-07-29-01" placename="Xingyi" href="javascript:void(0);">兴义</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-20-33-01" placename="Xining" href="javascript:void(0);">西宁</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-41-01" placename="Xishuangbanna" href="javascript:void(0);">西双版纳</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-19-01" placename="Xitang" href="javascript:void(0);">西塘</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-11-15-02" placename="Xuexiang" href="javascript:void(0);">雪乡</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-25-69-01" placename="Yaan" href="javascript:void(0);">雅安</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-14-18-01" placename="Yanbian" href="javascript:void(0);">延边</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-28-01" placename="Yandangshan" href="javascript:void(0);">雁荡山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-05-38-01" placename="Yangjiang" href="javascript:void(0);">阳江</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-06-45-01" placename="Yangshuo" href="javascript:void(0);">阳朔</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-15-44-01" placename="Yangzhou" href="javascript:void(0);">扬州</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-21-41-01" placename="Yantai" href="javascript:void(0);">烟台</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-25-47-01" placename="Yibin" href="javascript:void(0);">宜宾</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-16-92-111" placename="Yichun" href="javascript:void(0);">宜春</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-17-48-01" placename="Yingkou" href="javascript:void(0);">营口</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-29-02-01" placename="Baoshan" href="javascript:void(0);">保山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-13-26-01" placename="Zhangjiajie" href="javascript:void(0);">张家界</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-03-65-01" placename="Zhangzhou" href="javascript:void(0);">漳州</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-10-28-01" placename="Zhengzhou" href="javascript:void(0);">郑州</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-07-41-01" placename="Zhenyuan" href="javascript:void(0);">镇远</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-39-04" placename="Zhoushan" href="javascript:void(0);">舟山</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-15-18-02" placename="Zhouzhuang" href="javascript:void(0);">周庄</a></li>
-      <li><a rel="nofollow" id="quicklinkdiv_from_1-01-30-39-02" placename="Zhujiajian" href="javascript:void(0);">朱家尖</a></li>
-    </ul>
+										<div class="csb-head clearfix">
+											<span>输入中文，拼音，或者直接点选城市（景区）</span><a rel="nofollow"
+												id="quicklinkdiv_from_close"></a>
+										</div>
+										    <div class="csb-menu clearfix">
+										      <a rel="nofollow" href="javaScript:show(0);">全部</a>
+										      <a rel="nofollow" href="javaScript:show(1);">ABCDE</a>
+										      <a rel="nofollow" href="javaScript:show(2);">FGHJ</a>
+										      <a rel="nofollow" href="javaScript:show(3);" >KLMNPQ</a>
+										      <a rel="nofollow" href="javaScript:show(4);" >RSTW</a>
+										      <a rel="nofollow" href="javaScript:show(5);" >XYZ</a>
+										    </div>
+										    <ul class="csb-list clearfix" id="hotCitys">
+										       <c:forEach var="country" items="${list}">
+										      		<li><a rel="nofollow" id="quicklinkdiv_from_1-01-03-56-01" placename="Xishuangbanna" href="javascript:void(0);">${country.name}</a></li>
+										        </c:forEach>
+										    </ul>
+									
+									</div>
+								</div>
+							</div>
   </div>
 </div>
 </div>
@@ -507,8 +348,8 @@ function addTrackEvent(action, opt_label, opt_value){
     </div>
   </form>
     
-  <div class="opt clearfix">
-    <input type="hidden" name="from" value="">
+  <div class="opt clearfix" style="margin-left: 130px;">
+    <input type="hidden" name="from" value="sddsgsda">
     <input type="hidden" name="starttime" value="2018-12-02">
     <input type="hidden" name="endtime" value="2018-12-03">
     <input type="hidden" id="sort" name="sort" value="">
@@ -517,70 +358,55 @@ function addTrackEvent(action, opt_label, opt_value){
     <input type="hidden" id="zoneid" name="zoneid" value="">
     <input type="hidden" id="distid" name="distid" value="">
     <input type="hidden" id="star" name="star" value="">
-    <input type="hidden" name="fromUrl" id="fromUrl" value="hotels">
+    <input type="hidden" name="fromUrl" id="fromUrl" value="iTrip-web">
     <input type="hidden" name="type" id="type" value="">
-    <div class="slei-b clearfix">
+    <div class="slei-b" >
       <strong class="fleft"><i title="价格" class="iconfont"></i>价格</strong>
       <ul class="fleft clearfix">
-        <li class="current"><input type="radio" name="price" value="0" checked="checked"><span class="priceLink">全部</span></li>
-       
-        <c:forEach items="${price}" var="prices">
-        
+        <li <c:if test="${prices eq '0' or empty prices}">class='current'</c:if>><input type="radio" name="price" value="0" checked="checked"><span class="priceLink">全部</span></li>
+      
+
+      
+      <c:forEach items="${price}" var="prices">
         <c:if test="${prices.haschild==0}">
-        <li><input name="price" type="radio" value="100"><span class="priceLink">${prices.seq}元以下</span></li>
+        
+        <li <c:if test="${type eq '100'}">class='current'</c:if>><input name="price" type="radio" value="${prices.seq}" ><span class="priceLink">${prices.seq}元以下</span></li>
         </c:if>
         <c:if test="${prices.haschild !=0 and prices.haschild != 2}">
-        	<li><input name="price" type="radio" value="100"><span class="priceLink">100-${prices.seq}元 </span></li>
+        	<li <c:if test="${type eq '100-200'}">class='current'</c:if>><input name="price" type="radio" value="100-${prices.seq}"><span class="priceLink">100-${prices.seq}元 </span></li>
         </c:if>
         <c:if test="${prices.haschild==2}">
-        	<li><input name="price" type="radio" value="100"><span class="priceLink">${prices.seq}元以上</span></li>
+        	<li <c:if test="${type eq '500'}">class='current'</c:if>><input name="price" type="radio" value="${prices.seq}"><span class="priceLink">${prices.seq}元以上</span></li>
         </c:if>
        
         </c:forEach>
+        
         <li class="sp"> 自定义
           <input id="spprice" type="radio" value="-" name="price" style="display: none;">
-          <input class="spinput" type="text" id="spstart" value="">到<input class="spinput" type="text" id="spend" value="">
-          <a class="spsubmit" id="spsubmit" href="http://www.yododo.cn/hotels/Xishuangbanna#">确定</a>
+          <input class="spinput" type="text" id="spstart" value="${price1}">到<input class="spinput" type="text" id="spend" value="${price2}">
+          <a class="spsubmit" id="spsubmit" href="Xishuangbanna#">确定</a>
           <span id="sp-errMsg" class="fcred">
         </span></li>
       </ul>
     </div>
-    <div class="slei-b clearfix">
-        <strong class="fleft"><i title="位置" class="iconfont"></i>位置</strong>
-        <ul class="fleft clearfix">
-          <li class="current"><input name="zoneid" type="radio" value="" checked="checked"><span class="zoneLink">全部</span></li>
-              <c:forEach items="${ctid}" var="ctid" begin="0" end="5">
-              <li><input type="radio" name="zoneid" value="868"><span class="zoneLink" title="云南省昆明">${ctid.districtname}</span></li>
-              </c:forEach>
-              </ul>
-      </div>
-      <div class="more">
-        <a id="zone-trigger" href="javaScript:void(0);" class="fcorange2">更多<i class="iconfont"></i></a><div id="zone" class="sub clearfix" style="display:none">
-            <ul class="fleft of-y clearfix">
-              <c:forEach items="${ctid}" var="ctid" begin="6" >
-              <li><input name="zoneid" type="radio" value="Yulingu"><span class="zoneLink" title="雨林谷">${ctid.districtname}</span></li>
-                 
-               </c:forEach>
-                   </ul>
-            <a rel="nofollow" title="关闭" class="close" href="javascript:void(0);" id="zone-close"><i class="iconfont" title="关闭"></i></a>
-          </div>
-        </div>
-    <div class="slei-b clearfix">
+      
+      
+    <div class="slei-b">
       <strong class="fleft"><i title="类型" class="iconfont" style="font-size: 34px"></i>类型</strong>
-      <ul class="fleft clearfix">
-        <li class="current"><input type="radio" checked="checked" value="" name="type" typeurl="hotels"><span class="typeLink" rel="nofollow">全部</span></li>
+      <ul class="fleft clearfix" id="testdiv">
+        <li <c:if test="${empty types or types eq '0'}">class='current'</c:if>><input type="radio" checked="checked" value="0" name="type" typeurl="hotels"><span class="typeLink" rel="nofollow">全部</span></li>
       	<c:forEach items="${hotelType}" var="hotelType">
-        <li><input name="type" type="radio" value="10" typeurl="nongjiale"><span class="typeLink">${hotelType.property}</span></li>  
+        <li  <c:if test="${types eq hotelType.seq}">class='current'</c:if>><input name="type"  type="radio" value="${hotelType.seq}" typeurl="iTrip-web/nongjiale/${hotelType.seq}"><span class="typeLink">${hotelType.property}</span></li>  
            </c:forEach>
         </ul>
-      
     </div>
 
   </div>
   
-  <div class="result clearfix">
-    <h1>西双版纳住宿</h1>
-    <strong><span>7</span>家客栈满足条件</strong>
+  <div class="result clearfix" style="margin-left: 175px;">
+    <h1>${froms}住宿</h1>
+    <strong><span>${mansize}</span>家客栈满足条件</strong>
+    <c:if test=""><strong>筛选条件：</strong></c:if>
     <ul>
       </ul>
   </div>
@@ -591,10 +417,10 @@ function addTrackEvent(action, opt_label, opt_value){
 </form>
 <div class="w984 mb15 mauto clearfix">
   <div class="cn-hfilter clearfix" id="orderDiv">
-            <a title="推荐排序" class="on-down" href="http://www.yododo.cn/hotels/Xishuangbanna">多多推荐</a>
-            <a title="按促销排序" class="down" href="http://www.yododo.cn/hotels/Xishuangbanna/0_promotionDesc">促销优惠</a>
-              <a title="按用户点评数量排序" class="down" href="http://www.yododo.cn/hotels/Xishuangbanna/0_scorenum">点评数量</a>
-              <a href="http://www.yododo.cn/hotels/Xishuangbanna/0_pricefrom" class="up" title="房间价格按照从低到高排序">房间价格</a>
+            <a title="推荐排序" class="on-down" href="Xishuangbanna">多多推荐</a>
+            <a title="按促销排序" class="down" href="Xishuangbanna/0_promotionDesc">促销优惠</a>
+              <a title="按用户点评数量排序" class="down" href="Xishuangbanna/0_scorenum">点评数量</a>
+              <a href="Xishuangbanna/0_pricefrom" class="up" title="房间价格按照从低到高排序">房间价格</a>
               </div>
         <textarea name="hotelIds" id="hotelIds" style="display: none">013FC78A40C403F2FF8080813FC4F1D5_1__014FA2F2DEF80015FF8080814FA1AB86_2__013AC976B81B09E7FF8080813AC7C652_3__0163394BCAB200E9FF80808163381F39_4__01231250403820A9FF8080812310525E_5__0147E749156701F4FF80808147E571A0_6__016228FA798A0069FF8080816226C3C0_7__</textarea>
       <input type="hidden" name="posNums" id="posNums" value="h1_h2_h3_h4_h5_h6_h7_">
@@ -605,13 +431,16 @@ function addTrackEvent(action, opt_label, opt_value){
     
   </div>
   <c:forEach var="hotel" items="${hotel}">
-  <c:forEach var="house" items="${hotel.houses}">
-   <c:if test="${hotel.id==house.hotelid }">
+ 
+		<c:if test="${not empty hotel.houses}">
+		
+  
   <div class="hintro">
 
   <div class="himg">
       <a class="himga" href="action?id=${hotel.id}" target="_blank">
-        <img class="lazy" src="statics/accommodation_files/01480C5C1347013AFF80808148087FA7_ml.jpg" alt="${hotel.hotelname}推荐：${hotel.hotelname}在线预订" title="${hotel.hotelname}" style="display: block;"><span class="cu" id="cuTip-013FC78A40C403F2FF8080813FC4F1D5" style="display: none;">促</span>
+      <img class="lazy" style="width:450px;hight:200px" src="http://img0.yododo.com/white.gif" data-href="statics/${hotel.logopath }" alt="西双版纳经济型酒店住宿推荐：西双版纳新沙宾馆在线预订" title="${hotel.hotelname}"><span class="cu" id="cuTip-013FC78A40C403F2FF8080813FC4F1D5" style="display: none;">促</span>
+
         <div id="cuInfo-013FC78A40C403F2FF8080813FC4F1D5" style="display: none;"></div>
         </a>
       <p class="level">
@@ -622,7 +451,7 @@ function addTrackEvent(action, opt_label, opt_value){
 
     <strong class="htitle">
       <a class="ft16" href="action?id=${hotel.id}" >${hotel.hotelname}</a>
-      <a class="ft12" href="action?id=${hotel.id}">${hotel.hotellevel}</a><span>
+      <a class="ft12" href="action?id=${hotel.id}"></a><span>
         </span>
     </strong>
     <div class="sub">
@@ -642,11 +471,14 @@ function addTrackEvent(action, opt_label, opt_value){
         <span class="x9" tag="fanxian"></span>
         <span class="x11 tright fb">
           </span>
-      </div><div class="room" id="h1_r1" style="z-index:50;position: relative;">
+      </div>
+      <c:forEach var="house" items="${hotel.houses}">
+  	 
+      <div class="room" id="h1_r1" style="z-index:50;position: relative;">
         <div class="head headhover clearfix">
           <span class="x1">
             <a class="ico-inner-down" rel="nofollow" id="roomname_h1_r1" onclick="javaScript:STroomImgList(&#39;h1_r1&#39;,&#39;51071&#39;);" href="javaScript:void(0);"></a>
-
+			${house.roomtitle}
           </span>
           <c:if test="${house.ishavingbreakfast==0}">
           <span class="x2"><span class="fcgary">无</span></span>
@@ -692,17 +524,19 @@ function addTrackEvent(action, opt_label, opt_value){
           <a class="fright" target="_blank" href="http://www.yododo.cn/hotel/room/51425?starttime=2018-12-02&amp;endtime=2018-12-03">查看详细»</a>
           房型设施：
           <span><i title="空调" class="iconfont"></i>空调</span><span><i title="独立卫浴" class="iconfont"></i>独立卫浴</span><span><i title="宽带" class="iconfont"></i>宽带</span><span><i title="电视" class="iconfont"></i>电视</span></div>
-      </div><span style="text-align: center;display: none;">
+      </div>
+       </c:forEach>
+      <span style="text-align: center;display: none;">
         <img src="statics/accommodation_files/cnBigLoading.gif" alt="读取中...">
-      </span></div>
+      </span>
+      </div>
       
-      
-  </div>
-   </c:if>
-  	  </c:forEach>
+</div>   
+</c:if>
       </c:forEach>
 </li>
 <li class="yddHotel" style="z-index:49;position: relative;">
+
   <div style="display: none;">
     
   </div>
@@ -1015,9 +849,16 @@ function addTrackEvent(action, opt_label, opt_value){
     <span class="loading">地图数据读取中, 请稍候...</span>
   </div>
 </div>
-<form id="dateParamFrom" action="http://www.yododo.cn/hotels/Xishuangbanna" method="post">
+<form id="dateParamFrom" action="Xishuangbanna" method="post">
   <input type="hidden" name="starttime" value="2018-12-02">
   <input type="hidden" name="endtime" value="2018-12-03">
+  <input type="hidden" name="from" id="froms" value="">
+  <input type="hidden" name="name" id="names" value="">
+  <input type="hidden" name="names" id="namesy" value="">
+  <input type="hidden" name="zice" id="zice" value="">
+  <input type="hidden" name="types" id="types" value="">
+  <input type="hidden" name="types1" id="types1" value="">
+ 
 </form>
 <input type="hidden" id="placeEnName" value="Xishuangbanna">
 <input type="hidden" id="pricefrom" value="">
@@ -1249,6 +1090,29 @@ function shrinkDiv(){
     $j().ready(function () {
         
     });
+    
+    
+    function show(id){
+		$j.ajax({
+			type:"POST",//请求类型
+			url:"iquerycity",//请求的url
+			dataTypee:"json",
+			data:{id:id},//请求参数
+			success:function(data){
+				var obj = eval(data);  
+				var ulval ="";
+				for (var i = 0; i < obj.length; i++) {
+					ulval += "<li><a rel=\"nofollow\" id=\"quicklinkdiv_from_1-01-03-56-01\" onclick=showname('"+obj[i].name+"') placename=\"Xiamen\" href=\"javascript:void(0);\">"+obj[i].name+"</a></li>";
+				}
+				$j("#hotCitys").html(ulval);
+			},
+		});
+    }
+    function showname(name){
+    	$j("#from").val(name);
+    }
+    
+    
     //-->
 </script>
 

@@ -9,5 +9,5 @@ public interface DistrictMapper {
 	 * 查询省下的城市
 	 */
 	
-	List<District> getCtid();
+	List<District> getCtid(int cityid);
 }

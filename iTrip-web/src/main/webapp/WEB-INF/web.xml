@@ -71,8 +71,15 @@
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:spring/spring-mvc.xml</param-value>
 		</init-param>
+	<init-param>
+		
+		<param-name>readonly</param-name>
+		<param-value>false</param-value>
+	</init-param>
+
 		<load-on-startup>1</load-on-startup>
 		<async-supported>true</async-supported>
+		 
 	</servlet>
 
 	<!-- 生成图片的Servlet，Kaptcha验证码 -->

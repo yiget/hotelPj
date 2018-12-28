@@ -1,0 +1,53 @@
+.firstButton, .prevButton, .pagerButton, .nextButton, .allButton, .pageButton, .lastButton  {
+  font:0.9em/1.4 "Arial Narrow", sans-serif; 
+  color:#000;
+  border:none;
+  background:none;
+  padding:0;
+  margin:0;
+  cursor:pointer;
+}
+
+.pageButton {
+  font:1.0em/1.4 "Arial Narrow", sans-serif;
+}
+
+.actual {
+  text-shadow: 0.5px 0.5px 1px gray;
+  font-size:1.1em;
+}
+
+.prevButton {
+  width:20px;
+  height:20px;
+  background:url('../images/prev.png');
+}
+
+.pagerButton {
+  width:15px;
+  text-align:center;
+}
+
+.nextButton {
+  width:20px;
+  height:20px;
+  margin-left:5px;
+  background:url('../images/next.png');
+}
+
+.allButton {
+  margin-left:5px;
+}
+
+.firstButton, .allButton, .pageButton, .lastButton {
+  text-decoration:underline;
+}
+
+.firstButton:hover, .allButton:hover, .pageButton:hover, .pagerButton:hover, .lastButton:hover {
+  color:#555;
+}
+
+.hide {
+  display:none;
+}
+

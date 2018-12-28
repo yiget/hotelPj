@@ -23,10 +23,8 @@ public class QueryController {
 	
 	@RequestMapping("querycity")
 	public String querycity(HttpServletRequest request) {
-		System.out.println();
 		Map<String, Object> map=new HashMap<>();
 		List<country> list = userService.querycity(map);
-		System.out.println(JSON.toJSONString(list));
 		request.setAttribute("list", list);
 		return "home";
 	}
@@ -34,11 +32,9 @@ public class QueryController {
 	@RequestMapping("iquerycity")
 	@ResponseBody
 	public String iquerycity(HttpServletRequest request,int id) {
-		System.out.println(id);
 		Map<String, Object> map=new HashMap<>();
 		map.put("status", id);
 		List<country> list = userService.querycity(map);
-		System.out.println(JSON.toJSONString(list));
 		request.setAttribute("list", list);
 		return JSON.toJSONString(list);
 	}

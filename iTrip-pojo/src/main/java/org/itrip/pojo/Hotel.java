@@ -6,13 +6,18 @@ import java.util.List;
 public class Hotel {
     private Integer id;
 
-    private String hotelname;
+    
 
-    private Integer provinceid;
 
-    private Integer cityid;
+	private String hotelname;
 
-    private String address;
+    
+	private Integer cityid;
+	private Integer provinceId;
+
+
+
+	private String address;
 
     private String details;
 
@@ -24,6 +29,8 @@ public class Hotel {
     private String minroomPrice;
 
     private Integer hoteltype;
+    
+   
 
     private Integer hotellevel;
 
@@ -40,11 +47,38 @@ public class Hotel {
     private Integer modifiedby;
 
     private String logopath;
-
     private Date checkintime;
+    
+    private Integer roomPrice1;
+    private Integer roomPrice2;
     private List<House> houses;
+    private List<District> district;
 
-    public List<House> getHouses() {
+    public List<District> getDistrict() {
+		return district;
+	}
+    public Integer getRoomPrice1() {
+		return roomPrice1;
+	}
+
+	public void setRoomPrice1(Integer roomPrice1) {
+		this.roomPrice1 = roomPrice1;
+	}
+
+
+	public Integer getRoomPrice2() {
+		return roomPrice2;
+	}
+
+	public void setRoomPrice2(Integer roomPrice2) {
+		this.roomPrice2 = roomPrice2;
+	}
+
+	public void setDistrict(List<District> district) {
+		this.district = district;
+	}
+
+	public List<House> getHouses() {
 		return houses;
 	}
 
@@ -55,7 +89,6 @@ public class Hotel {
 	public Hotel(Integer id, String hotelname, Integer provinceid, Integer cityid, String address, String details, String facilities, String hotelpolicy, Integer hoteltype, Integer hotellevel, Integer isgrouppurchase, Date creationdate, Integer createdby, Date modifydate, Integer modifiedby, String logopath, Date checkintime) {
         this.id = id;
         this.hotelname = hotelname;
-        this.provinceid = provinceid;
         this.cityid = cityid;
         this.address = address;
         this.details = details;
@@ -71,7 +104,12 @@ public class Hotel {
         this.logopath = logopath;
         this.checkintime = checkintime;
     }
-
+    public Integer getProvinceId() {
+		return provinceId;
+	}
+	public void setProvinceId(Integer provinceId) {
+		this.provinceId = provinceId;
+	}
     public Hotel() {
         super();
     }
@@ -92,13 +130,7 @@ public class Hotel {
         this.hotelname = hotelname == null ? null : hotelname.trim();
     }
 
-    public Integer getProvinceid() {
-        return provinceid;
-    }
 
-    public void setProvinceid(Integer provinceid) {
-        this.provinceid = provinceid;
-    }
 
     public Integer getCityid() {
         return cityid;

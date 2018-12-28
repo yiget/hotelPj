@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.itrip.mapper.HotelMapper">
   <resultMap id="BaseResultMap" type="org.itrip.pojo.Hotel">
-   <constructor>
+    <constructor>
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="hotelName" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="provinceId" javaType="java.lang.Integer" jdbcType="INTEGER" />
@@ -19,11 +19,10 @@
       <arg column="modifyDate" javaType="java.util.Date" jdbcType="DATE" />
       <arg column="modifiedBy" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="logopath" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="CheckIntIme" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="CheckIntIme" javaType="java.util.Date" jdbcType="DATE" />
     </constructor>
-    <collection property="houses" column="id"                       
-	            select="org.itrip.mapper.HouseMapper.querybyid" />
   </resultMap>
+  
   <sql id="Base_Column_List">
     id, hotelName, provinceId, cityId, address, details, facilities, hotelPolicy, hotelType, 
     hotelLevel, isGroupPurchase, creationDate, createdBy, modifyDate, modifiedBy, logopath, 
@@ -37,36 +36,28 @@
 		GROUP BY h.hotelName
 		ORDER BY h.hotelLevel DESC LIMIT 0,8
 	</select>
+	
+	
 	<select id="gethotel" resultMap="BaseResultMap" parameterType="org.itrip.pojo.Hotel">
-
-
 	SELECT 
 	<include refid="Base_Column_List"></include>
 	 from hotel
 	
 	WHERE 1=1 
 	<if test="hotelname!=null">
-		and hotelName LIKE concat('%',#{hotelname},'%')
+		and hotelName LIKE concat('%',#{hotelname},'%') 
 	</if>
 	<if test="address!=null">
-		and address LIKE concat('%',#{address},'%')
+		and address LIKE concat('%',#{address},'%') 
 	</if>
 	
-	<!-- 
-	<if test="districtname!=null">
-		and disc.districtname LIKE concat('%',#{districtname},'%')
-	</if> -->
 	
-	
-	<!-- <if test="name!=null">
-		and name LIKE concat('%',#{name},'%')
-	</if> -->
-	<if test="cityid!=0">
-		and cityId =#{cityid}
-	</if>
-	<!-- <if test="hoteltype!=0">
-	 	and hotelType=#{hoteltype}
-	</if> -->
+	<if test="cityid!=null and cityid!=0">
+		 and cityId =#{cityid} 
+	</if> 
+	 <if test="hoteltype!=null and hoteltype!=0">
+	 	 and hotelType=#{hoteltype} 
+	</if> 
 	</select>
 	
 	<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">

@@ -66,7 +66,6 @@ public class UserRegistration {
 		user.setUsername(name);
 		User us=userService.getRegister(user);
 		String ams = null;
-		System.out.println(user);
 		if(us==null) {
 			return ams="false";
 		}else {
@@ -100,7 +99,6 @@ public class UserRegistration {
 	public String getRecommend() {
 		List<Hotel> hotel=hotelService.getRecommend();
 		String str = JSON.toJSONString(hotel);
-		System.out.println(str);
 		return str;
 	}
 

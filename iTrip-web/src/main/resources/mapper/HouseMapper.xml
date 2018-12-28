@@ -21,23 +21,42 @@
       <arg column="modifyDate" javaType="java.util.Date" jdbcType="TIMESTAMP" />
       <arg column="modifiedBy" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="Store" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="isStop" javaType="java.lang.Integer" jdbcType="INTEGER" />
     </constructor>
   </resultMap>
   <sql id="Base_Column_List">
     id, hotelId, roomTitle, roomPrice, roomBedTypeId, isHavingBreakfast, isHavingBathroom, 
     isHavingBroadband, payType, satisfaction, isBook, isCancel, isTimelyResponse, creationDate, 
-    createdBy, modifyDate, modifiedBy, Store, isStop
+    createdBy, modifyDate, modifiedBy, Store
   </sql>
  
    
-    <select id="querybyid" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <select id="querybyid" parameterType="java.lang.Integer"  resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from house
-    where hotelId = #{id,jdbcType=INTEGER}
+    where    hotelId =#{id}
+<!--     <if test="details!=null">
+        and roomPrice BETWEEN 100 and 200
+    </if> -->
+ 	
   </select>
-  
-  
- 
+
+	<select id="querybyhotel" parameterType="org.itrip.pojo.Hotel" resultMap="BaseResultMap">
+		SELECT 
+		<include refid="Base_Column_List" />
+		FROM house
+		WHERE 1=1
+		<if test="id!=0">
+			and hotelId=#{id}
+		</if>
+		<if test="hotellevel==1"> 
+			and roomPrice &lt; #{roomPrice1}
+		</if>
+		<if test="hotellevel==2">
+			and roomPrice &gt; #{roomPrice1}
+		</if>
+		<if test="hotellevel==3">
+			and roomPrice BETWEEN #{roomPrice1} and #{roomPrice2}
+		</if>
+	</select>
 </mapper>

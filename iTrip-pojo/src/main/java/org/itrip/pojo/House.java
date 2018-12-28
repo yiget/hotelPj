@@ -40,9 +40,8 @@ public class House {
 
     private Integer store;
 
-    private Integer isstop;
 
-    public House(Integer id, Integer hotelid, String roomtitle, BigDecimal roomprice, Integer roombedtypeid, Integer ishavingbreakfast, Integer ishavingbathroom, Integer ishavingbroadband, Integer paytype, BigDecimal satisfaction, Integer isbook, Integer iscancel, Integer istimelyresponse, Date creationdate, Integer createdby, Date modifydate, Integer modifiedby, Integer store, Integer isstop) {
+    public House(Integer id, Integer hotelid, String roomtitle, BigDecimal roomprice, Integer roombedtypeid, Integer ishavingbreakfast, Integer ishavingbathroom, Integer ishavingbroadband, Integer paytype, BigDecimal satisfaction, Integer isbook, Integer iscancel, Integer istimelyresponse, Date creationdate, Integer createdby, Date modifydate, Integer modifiedby, Integer store) {
         this.id = id;
         this.hotelid = hotelid;
         this.roomtitle = roomtitle;
@@ -61,7 +60,6 @@ public class House {
         this.modifydate = modifydate;
         this.modifiedby = modifiedby;
         this.store = store;
-        this.isstop = isstop;
     }
 
     public House() {
@@ -212,11 +210,4 @@ public class House {
         this.store = store;
     }
 
-    public Integer getIsstop() {
-        return isstop;
-    }
-
-    public void setIsstop(Integer isstop) {
-        this.isstop = isstop;
-    }
 }
