@@ -6,10 +6,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 	<script charset="utf-8" src="statics/hotel_details_files/v.js.下载"></script>
 	<script async="" type="text/javascript"
 		src="statics/hotel_details_files/v2"></script>
-
+					<style type="text/css">
+						#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+					</style>
 	<meta name="robots" content="all">
 		<meta http-equiv="imagetoolbar" content="no">
 			<title>西双版纳新沙宾馆在线预订_用户点评_地址_联系电话_照片-游多多民宿客栈官网</title>
@@ -54,6 +57,7 @@
 															<script src="statics/hotel_details_files/hm.js.下载"
 																async="true"></script>
 															<script type="text/javascript">
+															
 var _hmt = _hmt || [];
 var _gaq = _gaq || [];
 
@@ -123,7 +127,18 @@ function addTrackEvent(action, opt_label, opt_value){
 																href="statics/hotel_details_files/slide_share.css">
 </head>
 <body>
-
+<div id="mapall" style="background-color:rgb(0,0,0);opacity:0.7;height: 8888px;width: 100%; top: -300px;z-index: 888;position: fixed; ">
+	
+</div>
+<div id="mapdis" style="height: 518px;z-index: 889;width: 700px;position: fixed;top: 40px;left: 430px">
+	<div  style="z-index: 900;height: 7%;width: 100%;"><span style="font-size: 20px;color: white;opacity:1;">${hotel.hotelname}位置图</span></div>
+	<div id="allmap" style="z-index: 900;height: 90%;width: 100%;"></div>
+	<div  style="z-index: 901;height: 7%;width: 100%;">
+		<a id="sb-nav-close" title="关闭" onclick="mapclose()" style="padding: 1px 9px;position: relative;left: 686px"></a>
+	</div>
+	<input type="hidden" id="mapname" value="${country.name}"/>
+	<input type="hidden" id="mapnadd" value="${hotel.address}"/>
+</div>
 	<div class="head-cn-t clearfix">
 		<div class="w984">
 			<a class="fleft" title="多多驿站致力于为全球自助游爱好者提供旅游目的地客栈、旅舍、家庭旅馆的住宿预订平台"
@@ -255,6 +270,15 @@ function addTrackEvent(action, opt_label, opt_value){
 	<script type="text/javascript"
 		src="statics/hotel_details_files/jquery.blockUI-2.60.min.1492403413.js.下载"></script>
 	<script type="text/javascript">
+
+	function mapclose() {
+		$j("#mapall").hide();
+		$j("#mapdis").hide();
+	} 
+	function mapopen() {
+		$j("#mapall").show();
+		$j("#mapdis").show();
+	} 
   //<![CDATA[
   var loginSuccessCallback = null;
   var loginSuccessReload = false;
@@ -354,6 +378,7 @@ function addTrackEvent(action, opt_label, opt_value){
 				</div>
 
 			</div>
+			
 			<div class="hhead2 w984 mauto">
 				<div class="clearfix">
 					<h1>${hotel.hotelname }</h1>
@@ -363,7 +388,7 @@ function addTrackEvent(action, opt_label, opt_value){
 							title="驿站等级6级" class="iconfont"></i></a></span>
 				</div>
 				<div class="pd10">
-					地址: ${hotel.address } (<a target="_blank"
+					地址: ${hotel.address} (<a id="findmap"  onclick="mapopen()" href="javascript:;" style="text-decoration:none">查看地图</a>)<a target="_blank"
 						href="http://www.yododo.cn/jingji/Xishuangbanna">${country.name }${dictionarytype.property}</a>
 					<!--	， 靠近
 				 	<a href="http://www.yododo.cn/hotels/Xishuangbanna/Redaihuahuiyuan"
@@ -376,6 +401,7 @@ function addTrackEvent(action, opt_label, opt_value){
 						rel="nofollow"> <i class="iconfont"></i>地图
 					</a> -->
 				</div>
+
 				<div class="sub">
 					<span class="sub-p"><em>¥</em><strong>82</strong>起</span> <a
 						href="javascript:;"
@@ -447,28 +473,19 @@ function addTrackEvent(action, opt_label, opt_value){
 				</div>
 
 				<div class="fright topcomment">
-					<div class="bgc1">
+					<div class="bgc1" style="height: 275px">
 						<div class="pd10 clearfix">
-							<a
-								href="http://www.yododo.cn/hotel/013FC78A40C403F2FF8080813FC4F1D5?tab=roomlist&amp;starttime=2018-12-02&amp;endtime=2018-12-03#"
-								name="anchorReviews" class="fcorange2 fright" target="_blank">6位住客点评</a>
 							<div class="fleft">
 								<strong>5.0</strong>/5分
+								${hotel.details}
 							</div>
 						</div>
-						<div class="tcbox">
-							<i class="iconfont pabs"></i> <i class="iconfont pabs1"></i> <span
-								class="partialDisplay">本来时间改期想退订的，退不了就放弃了，还好吧</span><i
-								class="iconfont pabs2"></i>
-						</div>
 					</div>
-					<a class="tcmap" href="javascript:;" id="smallMapBtn" title="驿站地图"
-						rel="nofollow"><img
-						src="statics/hotel_details_files/staticimage" alt="西双版纳新沙宾馆位置图"><span>查看地图</span></a>
 				</div>
 			</div>
 
 			<div id="cn_hotel_tab-sticky-wrapper" class="sticky-wrapper">
+			
 				<div class="cn-hfilter2" id="cn_hotel_tab" style="">
 					<div class="w984 mauto">
 						<a class="current" href="javascript:;" name="anchorRoomlist">房型预订</a>
@@ -1307,7 +1324,7 @@ $j("em").click(function(){
 
 			<div class="maskdiv2" style="display: none">&nbsp;</div>
 
-			<script type="text/javascript"> $j("#smallMapBtn").html('<img src="http://api.map.baidu.com/staticimage?width=240&height=140&center=100.808698,22.015831&zoom=15&markers=100.808698,22.015831&markerStyles=m,o" alt="西双版纳新沙宾馆位置图"/><span>查看地图</span>'); </script>
+			
 			<script type="text/javascript" src="statics/hotel_details_files/api"></script>
 			<script type="text/javascript"
 				src="statics/hotel_details_files/getscript"></script>
@@ -1320,14 +1337,57 @@ $j("em").click(function(){
 						src="statics/hotel_details_files/h-1760648725.js.下载"
 						charset="utf-8"></script>
 					<script type="text/javascript">
-    var baiduJd = '100.808698';
-    var baiduWd = '22.015831';
-    var today = new Date();
-    var factor = 0;
-    var limit = 89;
-    var hotelid = "013FC78A40C403F2FF8080813FC4F1D5";
-    var startDate = "2018-12-02";
-    var endDate = "2018-12-03";
+					// 百度地图API功能
+					//酒店名字
+					var name = "北京";
+					//酒店地址
+					var add = "北京 东城区 南河沿大街南湾子胡同1号";
+					var map = new BMap.Map("allmap");
+					var point = new BMap.Point(116.331398,39.897445);
+					map.centerAndZoom(point,12);
+					// 创建地址解析器实例
+					var myGeo = new BMap.Geocoder();
+					// 将地址解析结果显示在地图上,并调整地图视野
+
+					myGeo.getPoint(add, function(point){
+						if (point) {
+							var marker = new BMap.Marker(point);  // 创建标注
+							map.addOverlay(marker);               // 将标注添加到地图中
+							marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+							map.centerAndZoom(point,12);
+							map.addOverlay(marker);
+						}else{
+							alert("您选择地址没有解析到结果!");
+						}
+					}, name);
+					 // 添加带有定位的导航控件
+					  var navigationControl = new BMap.NavigationControl({
+					    // 靠左上角位置
+					    anchor: BMAP_ANCHOR_TOP_LEFT,
+					    // LARGE类型
+					    type: BMAP_NAVIGATION_CONTROL_LARGE,
+					    // 启用显示定位
+					    enableGeolocation: true
+					  });
+					  map.addControl(navigationControl);
+					  // 添加定位控件
+					  var geolocationControl = new BMap.GeolocationControl();
+					  geolocationControl.addEventListener("locationSuccess", function(e){
+						    // 定位成功事件
+						    var address = '';
+						    address += e.addressComponent.province;
+						    address += e.addressComponent.city;
+						    address += e.addressComponent.district;
+						    address += e.addressComponent.street;
+						    address += e.addressComponent.streetNumber;
+						    alert("当前定位地址为：" + address);
+						  });
+					  geolocationControl.addEventListener("locationError",function(e){
+						    // 定位失败事件
+						    alert(e.message);
+						  });
+						  map.addControl(geolocationControl);
+					map.enableScrollWheelZoom(true);
 </script>
 					<script type="text/javascript"
 						src="statics/hotel_details_files/jquery-ui-1.9.2.min.1492403413.js.下载"></script>
@@ -1852,7 +1912,7 @@ $j("em").click(function(){
     });
     //]]>
 </script>
-					<script type="text/javascript">
+	<script type="text/javascript">
         if (document.location.protocol == 'http:') {
             var Tynt = Tynt || [];
             Tynt.push('dxwyzYsv8r4k_sadbi-bnq');
