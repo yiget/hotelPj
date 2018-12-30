@@ -1,6 +1,6 @@
 package org.itrip.controller;
 
-import java.math.BigDecimal;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,19 +8,15 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.itrip.mapper.CountryMapper;
 import org.itrip.pojo.Dictionarytype;
 import org.itrip.pojo.District;
 import org.itrip.pojo.Hotel;
-import org.itrip.pojo.House;
 import org.itrip.pojo.country;
 import org.itrip.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.alibaba.fastjson.JSON;
 
@@ -42,6 +38,9 @@ public class TwolevelPage {
 	
 	@Autowired
 	DistrictService districtService;
+	
+	@Autowired
+	CountryMapper countryService;
 	
 	@RequestMapping("accommodation")
 	public String accommodation(HttpServletRequest request) {
@@ -69,6 +68,8 @@ public class TwolevelPage {
 			hotels.get(i).setHouses(houseService.querybyid(hotels.get(i).getId())) ;
 		
 		}
+		request.getSession().removeAttribute("type");
+		request.getSession().removeAttribute("types");
 		request.setAttribute("hotel", hotels);
 		request.setAttribute("mansize", hotels.size());
 		
@@ -85,7 +86,9 @@ public class TwolevelPage {
 	public String action(HttpServletRequest request,int id) {
 		Hotel hotel =  hotelService.selectByPrimaryKey(id).get(0);
 		hotel.setHouses(houseService.querybyid(hotel.getId())) ;
+		country conutry1 =  countryService.selectByPrimaryKey(hotel.getCityid());
 		request.setAttribute("hotel", hotel);
+		request.setAttribute("conutry", conutry1);
 		return "hotel_details";
 	}
 
@@ -102,31 +105,36 @@ public class TwolevelPage {
 		String prices=request.getParameter("price");
 		Hotel ho=new Hotel();
 		System.out.println(JSON.toJSON(from));
-		String type=request.getParameter("zice");
-		
+		String type=null;
+		String types1=null;
+		System.out.println((String) request.getSession().getAttribute("types"));
+		try {
+			type = request.getParameter("zice")==""?
+				(String) request.getSession().getAttribute("type"):request.getParameter("zice");
+			types1 = request.getParameter("types1")==""?
+				(String) request.getSession().getAttribute("types"):request.getParameter("types1");
+		}catch (Exception e) {
+			System.out.println("空");
+		}
 		String starttime =request.getParameter("starttime");
 		String endtime =request.getParameter("endtime");
 		String name =request.getParameter("name");
 		String names =request.getParameter("names");
 		String types =request.getParameter("types");
-		String types1=request.getParameter("types1");
+		
 		
 		
 		
 		List<Dictionarytype> hotelType=dictionarytypeService.getHotelType();
 		List<Dictionarytype> price=dictionarytypeService.getPrice();
 		System.out.println(types+"types1="+types1+"names="+names+"type="+type);
-		if(types!=null) {
-			
-			if(types.equals("type")) {
-				ho.setHoteltype(Integer.valueOf(types1));
-			}
+		if(types1!=null) {
+			ho.setHoteltype(Integer.valueOf(types1));
 		}
-
 		Map<String, Object> map=new HashMap<>();
 		List<country> list = userService.querycity(map);
 		List<District> ctid=new ArrayList<>();
-		if(name!=null || name.equals("")) {
+		if(name!=null && !"".equals(name)) {
 			ho.setHotelname(name);
 		}
 		for (int i = 0; i < list.size(); i++) {
@@ -140,8 +148,7 @@ public class TwolevelPage {
 		for (int i = 0; i < hotels.size(); i++) {
 			Hotel hotel= hotels.get(i);
 //			System.out.println(names.equals(null));
-			if(names!=null) {
-			if(names.equals("price")) {
+			if(type!=null) {
 				if(type.equals("100")) {
 					hotel.setHotellevel(1);
 					hotel.setRoomPrice1(Integer.valueOf(type));
@@ -157,16 +164,13 @@ public class TwolevelPage {
 					hotel.setHotellevel(3);
 				}
 			}
-			
-			}
 			hotels.get(i).setHouses(houseService.querybyhotel(hotel)) ;
 			
 			}
 		
-		
 		System.out.println(type);
-		request.setAttribute("type",type);
-		request.setAttribute("types",types1);
+		request.getSession().setAttribute("type",type);
+		request.getSession().setAttribute("types",types1);
 //		System.out.println("hotels"+hotels.get(0).getHotelname());
 		request.setAttribute("hotel", hotels);
 		request.setAttribute("prices", type);

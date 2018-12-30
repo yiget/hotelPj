@@ -127,10 +127,10 @@ function addTrackEvent(action, opt_label, opt_value){
 																href="statics/hotel_details_files/slide_share.css">
 </head>
 <body>
-<div id="mapall" style="background-color:rgb(0,0,0);opacity:0.7;height: 8888px;width: 100%; top: -300px;z-index: 888;position: fixed; ">
+<div id="mapall" style="background-color:rgb(0,0,0);opacity:0.7;height: 8888px;width: 100%; top: -300px;z-index: 888;position: fixed; display: none;">
 	
 </div>
-<div id="mapdis" style="height: 518px;z-index: 889;width: 700px;position: fixed;top: 40px;left: 430px">
+<div id="mapdis" style="height: 518px;z-index: 889;width: 700px;position: fixed;top: 40px;left: 430px;display: none;">
 	<div  style="z-index: 900;height: 7%;width: 100%;"><span style="font-size: 20px;color: white;opacity:1;">${hotel.hotelname}位置图</span></div>
 	<div id="allmap" style="z-index: 900;height: 90%;width: 100%;"></div>
 	<div  style="z-index: 901;height: 7%;width: 100%;">
@@ -278,6 +278,7 @@ function addTrackEvent(action, opt_label, opt_value){
 	function mapopen() {
 		$j("#mapall").show();
 		$j("#mapdis").show();
+		point($j("#conutryname").val(),$j("#address").val());
 	} 
   //<![CDATA[
   var loginSuccessCallback = null;
@@ -388,7 +389,9 @@ function addTrackEvent(action, opt_label, opt_value){
 							title="驿站等级6级" class="iconfont"></i></a></span>
 				</div>
 				<div class="pd10">
-					地址: ${hotel.address} (<a id="findmap"  onclick="mapopen()" href="javascript:;" style="text-decoration:none">查看地图</a>)<a target="_blank"
+					地址: ${hotel.address}<input type="hidden" id="address" value="${hotel.address}"/>
+					<input type="hidden" id="conutryname" value="${conutry.name}"/>
+					 (<a id="findmap"  onclick="mapopen()" href="javascript:;" style="text-decoration:none">查看地图</a>)<a target="_blank"
 						href="http://www.yododo.cn/jingji/Xishuangbanna">${country.name }${dictionarytype.property}</a>
 					<!--	， 靠近
 				 	<a href="http://www.yododo.cn/hotels/Xishuangbanna/Redaihuahuiyuan"
@@ -1339,55 +1342,58 @@ $j("em").click(function(){
 					<script type="text/javascript">
 					// 百度地图API功能
 					//酒店名字
-					var name = "北京";
-					//酒店地址
-					var add = "北京 东城区 南河沿大街南湾子胡同1号";
-					var map = new BMap.Map("allmap");
-					var point = new BMap.Point(116.331398,39.897445);
-					map.centerAndZoom(point,12);
-					// 创建地址解析器实例
-					var myGeo = new BMap.Geocoder();
-					// 将地址解析结果显示在地图上,并调整地图视野
+					function point(name,add) {
+/* 						var name = "北京";
+						//酒店地址
+						var add = "北京 东城区 南河沿大街南湾子胡同1号"; */
+						var map = new BMap.Map("allmap");
+						var point = new BMap.Point(116.331398,39.897445);
+						map.centerAndZoom(point,12);
+						// 创建地址解析器实例
+						var myGeo = new BMap.Geocoder();
+						// 将地址解析结果显示在地图上,并调整地图视野
 
-					myGeo.getPoint(add, function(point){
-						if (point) {
-							var marker = new BMap.Marker(point);  // 创建标注
-							map.addOverlay(marker);               // 将标注添加到地图中
-							marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
-							map.centerAndZoom(point,12);
-							map.addOverlay(marker);
-						}else{
-							alert("您选择地址没有解析到结果!");
-						}
-					}, name);
-					 // 添加带有定位的导航控件
-					  var navigationControl = new BMap.NavigationControl({
-					    // 靠左上角位置
-					    anchor: BMAP_ANCHOR_TOP_LEFT,
-					    // LARGE类型
-					    type: BMAP_NAVIGATION_CONTROL_LARGE,
-					    // 启用显示定位
-					    enableGeolocation: true
-					  });
-					  map.addControl(navigationControl);
-					  // 添加定位控件
-					  var geolocationControl = new BMap.GeolocationControl();
-					  geolocationControl.addEventListener("locationSuccess", function(e){
-						    // 定位成功事件
-						    var address = '';
-						    address += e.addressComponent.province;
-						    address += e.addressComponent.city;
-						    address += e.addressComponent.district;
-						    address += e.addressComponent.street;
-						    address += e.addressComponent.streetNumber;
-						    alert("当前定位地址为：" + address);
+						myGeo.getPoint(add, function(point){
+							if (point) {
+								var marker = new BMap.Marker(point);  // 创建标注
+								map.addOverlay(marker);               // 将标注添加到地图中
+								marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+								map.centerAndZoom(point,12);
+								map.addOverlay(marker);
+							}else{
+								alert("您选择地址没有解析到结果!");
+							}
+						}, name);
+						 // 添加带有定位的导航控件
+						  var navigationControl = new BMap.NavigationControl({
+						    // 靠左上角位置
+						    anchor: BMAP_ANCHOR_TOP_LEFT,
+						    // LARGE类型
+						    type: BMAP_NAVIGATION_CONTROL_LARGE,
+						    // 启用显示定位
+						    enableGeolocation: true
 						  });
-					  geolocationControl.addEventListener("locationError",function(e){
-						    // 定位失败事件
-						    alert(e.message);
-						  });
-						  map.addControl(geolocationControl);
-					map.enableScrollWheelZoom(true);
+						  map.addControl(navigationControl);
+						  // 添加定位控件
+						  var geolocationControl = new BMap.GeolocationControl();
+						  geolocationControl.addEventListener("locationSuccess", function(e){
+							    // 定位成功事件
+							    var address = '';
+							    address += e.addressComponent.province;
+							    address += e.addressComponent.city;
+							    address += e.addressComponent.district;
+							    address += e.addressComponent.street;
+							    address += e.addressComponent.streetNumber;
+							    alert("当前定位地址为：" + address);
+							  });
+						  geolocationControl.addEventListener("locationError",function(e){
+							    // 定位失败事件
+							    alert(e.message);
+							  });
+							  map.addControl(geolocationControl);
+						map.enableScrollWheelZoom(true);
+					}
+
 </script>
 					<script type="text/javascript"
 						src="statics/hotel_details_files/jquery-ui-1.9.2.min.1492403413.js.下载"></script>

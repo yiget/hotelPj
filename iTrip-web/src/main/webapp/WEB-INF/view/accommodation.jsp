@@ -91,7 +91,74 @@ function addTrackEvent(action, opt_label, opt_value){
 <script type="text/javascript" src="statics/accommodation_files/h-431559847.js.下载" charset="utf-8"></script><script type="text/javascript"> var $j = jQuery.noConflict(); </script>
 <script src="statics/accommodation_files/ga.js.下载" async="true"></script><script src="statics/accommodation_files/share.js.下载"></script><style id="poshytip-css-tip-yellowsimple" type="text/css">div.tip-yellowsimple{visibility:hidden;position:absolute;top:0;left:0;}div.tip-yellowsimple table.tip-table, div.tip-yellowsimple table.tip-table td{margin:0;font-family:inherit;font-size:inherit;font-weight:inherit;font-style:inherit;font-variant:inherit;vertical-align:middle;}div.tip-yellowsimple td.tip-bg-image span{display:block;font:1px/1px sans-serif;height:9px;width:9px;overflow:hidden;}div.tip-yellowsimple td.tip-right{background-position:100% 0;}div.tip-yellowsimple td.tip-bottom{background-position:100% 100%;}div.tip-yellowsimple td.tip-left{background-position:0 100%;}div.tip-yellowsimple div.tip-inner{background-position:-9px -9px;}div.tip-yellowsimple div.tip-arrow{visibility:hidden;position:absolute;overflow:hidden;font:1px/1px sans-serif;}</style><script src="statics/accommodation_files/f(1).txt"></script><link rel="stylesheet" href="statics/accommodation_files/slide_share.css"></head>
 <body>
+<div id="mapall" style="background-color:rgb(0,0,0);opacity:0.7;height: 8888px;width: 100%; top: -300px;z-index: 888;position: fixed; display: none;">
+	
+</div>
+<div id="mapdis" style="height: 518px;z-index: 889;width: 700px;position: fixed;top: 40px;left: 430px;display: none;">
+	<div  style="z-index: 900;height: 7%;width: 100%;"><span style="font-size: 20px;color: white;opacity:1;">${hoteltp.hotelname}位置图</span></div>
+	<div id="allmap" style="z-index: 900;height: 90%;width: 100%;"></div>
+	<div  style="z-index: 901;height: 7%;width: 100%;">
+		<span  title="关闭" onclick="mapclose()" style="padding: 1px 9px;position: relative;left: 680px;color: white;">关闭</span>
+	</div>
+	<input type="hidden" id="mapname" value="${countrytp.name}"/>
+	<input type="hidden" id="mapnadd" value="${hoteltp.address}"/>
+</div>
+					<script type="text/javascript">
+					// 百度地图API功能
+					//酒店名字
+					function point() {
+						var name = "北京";
+						//酒店地址
+						var add = "北京 东城区 南河沿大街南湾子胡同1号";
+						var map = new BMap.Map("allmap");
+						var point = new BMap.Point(116.331398,39.897445);
+						map.centerAndZoom(point,12);
+						// 创建地址解析器实例
+						var myGeo = new BMap.Geocoder();
+						// 将地址解析结果显示在地图上,并调整地图视野
 
+						myGeo.getPoint(add, function(point){
+							if (point) {
+								var marker = new BMap.Marker(point);  // 创建标注
+								map.addOverlay(marker);               // 将标注添加到地图中
+								marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+								map.centerAndZoom(point,12);
+								map.addOverlay(marker);
+							}else{
+								alert("您选择地址没有解析到结果!");
+							}
+						}, name);
+						 // 添加带有定位的导航控件
+						  var navigationControl = new BMap.NavigationControl({
+						    // 靠左上角位置
+						    anchor: BMAP_ANCHOR_TOP_LEFT,
+						    // LARGE类型
+						    type: BMAP_NAVIGATION_CONTROL_LARGE,
+						    // 启用显示定位
+						    enableGeolocation: true
+						  });
+						  map.addControl(navigationControl);
+						  // 添加定位控件
+						  var geolocationControl = new BMap.GeolocationControl();
+						  geolocationControl.addEventListener("locationSuccess", function(e){
+							    // 定位成功事件
+							    var address = '';
+							    address += e.addressComponent.province;
+							    address += e.addressComponent.city;
+							    address += e.addressComponent.district;
+							    address += e.addressComponent.street;
+							    address += e.addressComponent.streetNumber;
+							    alert("当前定位地址为：" + address);
+							  });
+						  geolocationControl.addEventListener("locationError",function(e){
+							    // 定位失败事件
+							    alert(e.message);
+							  });
+							  map.addControl(geolocationControl);
+						map.enableScrollWheelZoom(true);
+					}
+
+</script>
   <div class="head-cn-t clearfix">
             <div class="w984">
               <a class="fleft" title="多多驿站致力于为全球自助游爱好者提供旅游目的地客栈、旅舍、家庭旅馆的住宿预订平台" href="home.jsp">
@@ -367,16 +434,16 @@ function addTrackEvent(action, opt_label, opt_value){
       
 
       
-      <c:forEach items="${price}" var="prices">
-        <c:if test="${prices.haschild==0}">
+      <c:forEach items="${price}" var="pricetype">
+        <c:if test="${pricetype.haschild==0}">
         
-        <li <c:if test="${type eq '100'}">class='current'</c:if>><input name="price" type="radio" value="${prices.seq}" ><span class="priceLink">${prices.seq}元以下</span></li>
+        <li <c:if test="${type eq '100'}">class='current'</c:if>><input name="price" type="radio" value="${pricetype.seq}" ><span class="priceLink">${pricetype.seq}元以下</span></li>
         </c:if>
-        <c:if test="${prices.haschild !=0 and prices.haschild != 2}">
-        	<li <c:if test="${type eq '100-200'}">class='current'</c:if>><input name="price" type="radio" value="100-${prices.seq}"><span class="priceLink">100-${prices.seq}元 </span></li>
+        <c:if test="${pricetype.haschild !=0 and pricetype.haschild != 2}">
+        	<li <c:if test="${type eq '100-200'}">class='current'</c:if>><input name="price" type="radio" value="100-${pricetype.seq}"><span class="priceLink">100-${pricetype.seq}元 </span></li>
         </c:if>
-        <c:if test="${prices.haschild==2}">
-        	<li <c:if test="${type eq '500'}">class='current'</c:if>><input name="price" type="radio" value="${prices.seq}"><span class="priceLink">${prices.seq}元以上</span></li>
+        <c:if test="${pricetype.haschild==2}">
+        	<li <c:if test="${type eq '500'}">class='current'</c:if>><input name="price" type="radio" value="${pricetype.seq}"><span class="priceLink">${pricetype.seq}元以上</span></li>
         </c:if>
        
         </c:forEach>
@@ -459,7 +526,7 @@ function addTrackEvent(action, opt_label, opt_value){
       <a href="action?id=${hotel.id}" class="fcorange2" target="_blank">6位住客点评</a>
     </div>
     <p class="prel"><strong>地址:</strong>${hotel.address}
-          &nbsp;&nbsp;<a class="fcorange2" rel="nofollow" href="javascript:void(0)" onclick="hotelMapShow(100.808698, 22.015831);">地图</a>
+          &nbsp;&nbsp;<a class="fcorange2" rel="nofollow" href="javascript:void(0)" onclick="mapopen()">地图</a>
         </p>
       <p class="fcgary"><i class="iconfont"></i><span class="partialDisplay">本来时间改期想退订的，退不了就放弃了，还好吧</span><i class="iconfont"></i></p>
       <div class="rlist" id="h1"><div class="head clearfix">
@@ -852,12 +919,12 @@ function addTrackEvent(action, opt_label, opt_value){
 <form id="dateParamFrom" action="Xishuangbanna" method="post">
   <input type="hidden" name="starttime" value="2018-12-02">
   <input type="hidden" name="endtime" value="2018-12-03">
-  <input type="hidden" name="from" id="froms" value="">
-  <input type="hidden" name="name" id="names" value="">
-  <input type="hidden" name="names" id="namesy" value="">
-  <input type="hidden" name="zice" id="zice" value="">
-  <input type="hidden" name="types" id="types" value="">
-  <input type="hidden" name="types1" id="types1" value="">
+  <input type="hidden" name="from" id="froms" value="${from }">
+  <input type="hidden" name="name" id="names" value="${name}">
+  <input type="hidden" name="names" id="namesy" value="${names }">
+  <input type="hidden" name="zice" id="zice" value="${zice }">
+  <input type="hidden" name="types" id="types" value="${types}">
+  <input type="hidden" name="types1" id="types1" value="${types1 }">
  
 </form>
 <input type="hidden" id="placeEnName" value="Xishuangbanna">
@@ -931,7 +998,15 @@ function shrinkDiv(){
     $j("#safetySeven").fadeIn(2000);
   });  
 }
-
+function mapclose() {
+	$j("#mapall").hide();
+	$j("#mapdis").hide();
+} 
+function mapopen() {
+	$j("#mapall").show();
+	$j("#mapdis").show();
+	point();
+} 
 
 //]]>
 </script>
