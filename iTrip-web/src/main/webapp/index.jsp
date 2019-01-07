@@ -11,7 +11,6 @@
 
 
  
-<div id="demo1"></div>
  
 
 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">

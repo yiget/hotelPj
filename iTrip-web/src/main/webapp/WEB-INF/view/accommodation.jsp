@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 	<%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -607,6 +608,24 @@ function addTrackEvent(action, opt_label, opt_value){
   <div style="display: none;">
     
   </div>
+ 
+ 
+ <div class="pageNavi">
+                共${page.pages}页
+                <a  href="Xishuangbanna?from=${froms}&pagenum=${pagenum}"  title="第一页">第一页</a>
+                 <c:if test="${empty pagenum}"> </c:if>
+                <c:forEach items="${page.navigatepageNums}"  var="navigatepageNums"  >
+                  <c:if test="${navigatepageNums eq pagenum}"><span>${navigatepageNums}</span> </c:if>
+                  <c:if test="${navigatepageNums ne pagenum}">	<a href="Xishuangbanna?from=${froms}&pagenum=${navigatepageNums}" title="第${navigatepageNums}页">${navigatepageNums}</a> </c:if>
+              	
+              
+                </c:forEach>
+                
+                  <a  href="Xishuangbanna?from=${froms}&pagenum=${pagenum+1}" title="下一页">下一页</a><a  href="Xishuangbanna?from=${froms}&pagenum=${page.pages}" title="最后一页">最后一页</a></div>
+    </div>
+
+ 
+
 
 
 <div class="par_index">

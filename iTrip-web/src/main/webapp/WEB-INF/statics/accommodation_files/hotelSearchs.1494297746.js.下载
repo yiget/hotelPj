@@ -42,6 +42,8 @@ function searchHotels(name,val){
  	$j("#types1").val(val);
  	}
  	
+ 	
+ 	
  
   showWait();
   //location.href = link;

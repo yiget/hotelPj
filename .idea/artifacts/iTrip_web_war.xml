@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="iTrip-web:war">
+    <output-path>$PROJECT_DIR$/iTrip-web/target</output-path>
+    <root id="archive" name="iTrip-web.war">
+      <element id="artifact" artifact-name="iTrip-web:war exploded" />
+    </root>
+  </artifact>
+</component>

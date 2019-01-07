@@ -6,7 +6,7 @@
 	<settings>
 		<!-- 开启mybatis缓存设置,一般都是true -->
 		<setting name="cacheEnabled" value="true" />
-
+		
 		<!--延迟加载的全局开关 -->
 		<setting name="lazyLoadingEnabled" value="false" />
 
@@ -24,5 +24,15 @@
 		<!--允许JDBC支持自动生成主键,需要驱动的兼容 -->
 		<setting name="useGeneratedKeys" value="true" />
 	</settings>
-
+<plugins>
+    <plugin interceptor="com.github.pagehelper.PageHelper">
+        <property name="dialect" value="mysql"/>
+        <property name="offsetAsPageNum" value="false"/>
+        <property name="rowBoundsWithCount" value="false"/>
+        <property name="pageSizeZero" value="true"/>
+        <property name="reasonable" value="false"/>
+        <property name="supportMethodsArguments" value="false"/>
+        <property name="returnPageInfo" value="none"/>
+    </plugin>
+</plugins>
 </configuration>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="iTrip-dao" />
+        <module name="iTrip-pojo" />
+        <module name="iTrip-service" />
+        <module name="iTrip-utils" />
+        <module name="iTrip-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="iTrip" target="1.8" />
+      <module name="iTrip-dao" target="1.8" />
+      <module name="iTrip-pojo" target="1.8" />
+      <module name="iTrip-service" target="1.8" />
+      <module name="iTrip-utils" target="1.8" />
+      <module name="iTrip-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

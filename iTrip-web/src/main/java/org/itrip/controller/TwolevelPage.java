@@ -19,6 +19,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.alibaba.fastjson.JSON;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 
 @Controller
 public class TwolevelPage {
@@ -44,14 +46,16 @@ public class TwolevelPage {
 	
 	@RequestMapping("accommodation")
 	public String accommodation(HttpServletRequest request) {
-		
+		String pagenum=request.getParameter("pagenum");
 		List<Dictionarytype> hotelType=dictionarytypeService.getHotelType();
 		List<Dictionarytype> price=dictionarytypeService.getPrice();
 		String name =request.getParameter("from");
 		Hotel ho=new Hotel();
+		pagenum=(null==pagenum)?"1":pagenum;
 		Map<String, Object> map=new HashMap<>();
 		List<country> list = userService.querycity(map);
 		country countr=new country();
+			PageHelper.startPage(Integer.valueOf(pagenum),5);
 		
 		for (int i = 0; i < list.size(); i++) {
 			if(name.equals(list.get(i).getName()))
@@ -67,12 +71,17 @@ public class TwolevelPage {
 		for (int i = 0; i < hotels.size(); i++) {
 			hotels.get(i).setHouses(houseService.querybyid(hotels.get(i).getId())) ;
 		
-		}
+		} 
+		
+		PageInfo<Hotel> page=new PageInfo<Hotel>(hotels);
+
 		request.getSession().removeAttribute("type");
 		request.getSession().removeAttribute("types");
 		request.setAttribute("hotel", hotels);
+		request.setAttribute("pagenum", pagenum);
 		request.setAttribute("mansize", hotels.size());
-		
+		//分页结果
+		request.setAttribute("page", page);
 		request.setAttribute("list", list);
 		request.setAttribute("ctid", ctid);
 		request.setAttribute("hotelType", hotelType);
@@ -102,12 +111,16 @@ public class TwolevelPage {
 	 @RequestMapping(value="/Xishuangbanna")
 	 
 	public String Xishuangbanna(HttpServletRequest request,String from) {
+		 String pagenum=request.getParameter("pagenum");
 		String prices=request.getParameter("price");
+		System.out.println(pagenum);
 		Hotel ho=new Hotel();
 		System.out.println(JSON.toJSON(from));
 		String type=null;
+		pagenum=(null==pagenum)?"1":pagenum;
 		String types1=null;
 		System.out.println((String) request.getSession().getAttribute("types"));
+		
 		try {
 			type = request.getParameter("zice")==""?
 				(String) request.getSession().getAttribute("type"):request.getParameter("zice");
@@ -144,6 +157,7 @@ public class TwolevelPage {
 				
 			}
 		}
+		PageHelper.startPage(Integer.valueOf(pagenum),5);
 		List<Hotel> hotels=hotelService.gethotel(ho);
 		for (int i = 0; i < hotels.size(); i++) {
 			Hotel hotel= hotels.get(i);
@@ -167,8 +181,10 @@ public class TwolevelPage {
 			hotels.get(i).setHouses(houseService.querybyhotel(hotel)) ;
 			
 			}
-		
-		System.out.println(type);
+	
+		PageInfo<Hotel> page=new PageInfo<Hotel>(hotels);
+		System.out.println(page.getEndRow());
+		System.out.println(JSON.toJSONString(page.getNavigatepageNums()));
 		request.getSession().setAttribute("type",type);
 		request.getSession().setAttribute("types",types1);
 //		System.out.println("hotels"+hotels.get(0).getHotelname());
@@ -178,8 +194,11 @@ public class TwolevelPage {
 		request.setAttribute("hotelType", hotelType);
 		request.setAttribute("price", price);
 		request.setAttribute("froms", from);
-		request.setAttribute("ctid", ctid);
+		request.setAttribute("ctid", ctid); 
+		request.setAttribute("pagenum", pagenum);
 		request.setAttribute("mansize", hotels.size());
+		request.setAttribute("page", page);
+		
 		return "accommodation";
 	}
 }

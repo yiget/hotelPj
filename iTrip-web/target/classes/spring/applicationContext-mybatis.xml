@@ -23,8 +23,8 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="org.itrip.mapper" />
 		<property name="sqlSessionFactoryBeanName"
-			value="sqlSessionFactory"></property>
+			value="sqlSessionFactory"> </property>
+	
 	</bean>
-
 
 </beans>
