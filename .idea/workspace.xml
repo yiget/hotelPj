@@ -2,61 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a73ca923-2211-4617-ad8e-fb9eaa8a107b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/iTrip_web_war.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/iTrip_web_war_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_54.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alipay_sdk_alipay_sdk_java_3_4_49_ALL.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_5.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_1_6.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_penggle_kaptcha_2_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jhlabs_filters_2_0_235_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_10.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_7_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_7.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_7.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_6_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_6_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_6_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_6_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_6_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_6_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_6_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_2_6_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_6_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/iTrip-dao/iTrip-dao.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/iTrip-pojo/iTrip-pojo.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/iTrip-service/iTrip-service.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/iTrip-utils/iTrip-utils.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/iTrip-web/iTrip-web.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/iTrip.iml" />
-      <change beforePath="$PROJECT_DIR$/iTrip-dao/target/classes/META-INF/maven/com.ketai/iTrip-dao/pom.properties" afterPath="$PROJECT_DIR$/iTrip-dao/target/classes/META-INF/maven/com.ketai/iTrip-dao/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/iTrip-pojo/target/classes/META-INF/maven/com.ketai/iTrip-pojo/pom.properties" afterPath="$PROJECT_DIR$/iTrip-pojo/target/classes/META-INF/maven/com.ketai/iTrip-pojo/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/iTrip-pojo/target/classes/org/itrip/pojo/country.class" afterPath="$PROJECT_DIR$/iTrip-pojo/target/classes/org/itrip/pojo/country.class" />
-      <change beforePath="$PROJECT_DIR$/iTrip-service/target/classes/META-INF/maven/com.ketai/iTrip-service/pom.properties" afterPath="$PROJECT_DIR$/iTrip-service/target/classes/META-INF/maven/com.ketai/iTrip-service/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/iTrip-utils/target/classes/META-INF/maven/com.ketai/iTrip-utils/pom.properties" afterPath="$PROJECT_DIR$/iTrip-utils/target/classes/META-INF/maven/com.ketai/iTrip-utils/pom.properties" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/iTrip-web/.classpath" afterPath="$PROJECT_DIR$/iTrip-web/.classpath" />
-      <change beforePath="$PROJECT_DIR$/iTrip-web/src/main/java/org/itrip/controller/TwolevelPage.java" afterPath="$PROJECT_DIR$/iTrip-web/src/main/java/org/itrip/controller/TwolevelPage.java" />
-      <change beforePath="$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/view/accommodation.jsp" afterPath="$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/view/accommodation.jsp" />
-      <change beforePath="$PROJECT_DIR$/iTrip-web/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/iTrip-web/src/main/webapp/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/iTrip-web/target/m2e-wtp/web-resources/META-INF/maven/com.ketai/iTrip-web/pom.properties" afterPath="$PROJECT_DIR$/iTrip-web/target/m2e-wtp/web-resources/META-INF/maven/com.ketai/iTrip-web/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/iTrip-utils/target/" />
@@ -72,11 +19,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="cn2014-commons.1509415012.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/accommodation_files/cn2014-commons.1509415012.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
+            <state relative-caret-position="5775">
               <caret line="231" column="1" lean-forward="false" selection-start-line="231" selection-start-column="1" selection-end-line="231" selection-end-column="1" />
               <folding />
             </state>
@@ -86,7 +33,7 @@
       <file leaf-file-name="cn2014-commons.1509415012.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/order_files/cn2014-commons.1509415012.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
+            <state relative-caret-position="20550">
               <caret line="822" column="1" lean-forward="false" selection-start-line="822" selection-start-column="1" selection-end-line="822" selection-end-column="1" />
               <folding />
             </state>
@@ -111,7 +58,7 @@
       <file leaf-file-name="cn2014-commons.1509415012.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/home_files/cn2014-commons.1509415012.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
+            <state relative-caret-position="20300">
               <caret line="812" column="1" lean-forward="false" selection-start-line="812" selection-start-column="1" selection-end-line="812" selection-end-column="1" />
               <folding />
             </state>
@@ -121,7 +68,7 @@
       <file leaf-file-name="cn2014-commons.1509415012.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/hotel_details_files/cn2014-commons.1509415012.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
+            <state relative-caret-position="20550">
               <caret line="822" column="1" lean-forward="false" selection-start-line="822" selection-start-column="1" selection-end-line="822" selection-end-column="1" />
               <folding />
             </state>
@@ -131,7 +78,7 @@
       <file leaf-file-name="newhotel-commons.1492403414.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/login_files/newhotel-commons.1492403414.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
+            <state relative-caret-position="155775">
               <caret line="6231" column="1" lean-forward="false" selection-start-line="6231" selection-start-column="1" selection-end-line="6231" selection-end-column="1" />
               <folding />
             </state>
@@ -184,8 +131,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,7 +146,6 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -321,14 +268,16 @@
       <option name="presentableId" value="Default" />
       <updated>1546827103675</updated>
       <workItem from="1546827107718" duration="559000" />
+      <workItem from="1546845678995" duration="59000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="559000" />
+    <option name="totallyTimeSpent" value="618000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -337,15 +286,15 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Redis Servers" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Redis Servers" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2397882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24357034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -375,33 +324,9 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/home_files/cn2014-commons.1509415012.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="812" column="1" lean-forward="false" selection-start-line="812" selection-start-column="1" selection-end-line="812" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/hotel_details_files/cn2014-commons.1509415012.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="822" column="1" lean-forward="false" selection-start-line="822" selection-start-column="1" selection-end-line="822" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/login_files/newhotel-commons.1492403414.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="6231" column="1" lean-forward="false" selection-start-line="6231" selection-start-column="1" selection-end-line="6231" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/accommodation_files/cn2014-commons.1509415012.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
+        <state relative-caret-position="5775">
           <caret line="231" column="1" lean-forward="false" selection-start-line="231" selection-start-column="1" selection-end-line="231" selection-end-column="1" />
           <folding />
         </state>
@@ -409,7 +334,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/order_files/cn2014-commons.1509415012.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
+        <state relative-caret-position="20550">
+          <caret line="822" column="1" lean-forward="false" selection-start-line="822" selection-start-column="1" selection-end-line="822" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/home_files/cn2014-commons.1509415012.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20300">
+          <caret line="812" column="1" lean-forward="false" selection-start-line="812" selection-start-column="1" selection-end-line="812" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/hotel_details_files/cn2014-commons.1509415012.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20550">
+          <caret line="822" column="1" lean-forward="false" selection-start-line="822" selection-start-column="1" selection-end-line="822" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/login_files/newhotel-commons.1492403414.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155775">
+          <caret line="6231" column="1" lean-forward="false" selection-start-line="6231" selection-start-column="1" selection-end-line="6231" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/orderDetails_files/newhotel-commons.1492403414.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155775">
+          <caret line="6231" column="1" lean-forward="false" selection-start-line="6231" selection-start-column="1" selection-end-line="6231" selection-end-column="1" />
+          <folding>
+            <marker date="1545411495706" expanded="true" signature="6567:6600" ph="{...}" />
+            <marker date="1545411495706" expanded="true" signature="79070:79111" ph="{...}" />
+            <marker date="1545411495706" expanded="true" signature="79131:79171" ph="{...}" />
+            <marker date="1545411495706" expanded="true" signature="191870:191903" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/home_files/cn2014-commons.1509415012.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20300">
+          <caret line="812" column="1" lean-forward="false" selection-start-line="812" selection-start-column="1" selection-end-line="812" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/hotel_details_files/cn2014-commons.1509415012.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20550">
+          <caret line="822" column="1" lean-forward="false" selection-start-line="822" selection-start-column="1" selection-end-line="822" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/login_files/newhotel-commons.1492403414.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155775">
+          <caret line="6231" column="1" lean-forward="false" selection-start-line="6231" selection-start-column="1" selection-end-line="6231" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/accommodation_files/cn2014-commons.1509415012.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5775">
+          <caret line="231" column="1" lean-forward="false" selection-start-line="231" selection-start-column="1" selection-end-line="231" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iTrip-web/src/main/webapp/WEB-INF/statics/order_files/cn2014-commons.1509415012.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20550">
           <caret line="822" column="1" lean-forward="false" selection-start-line="822" selection-start-column="1" selection-end-line="822" selection-end-column="1" />
           <folding />
         </state>

@@ -111,11 +111,9 @@ public class TwolevelPage {
 	 @RequestMapping(value="/Xishuangbanna")
 	 
 	public String Xishuangbanna(HttpServletRequest request,String from) {
-		 String pagenum=request.getParameter("pagenum");
+		String pagenum=request.getParameter("pagenum");
 		String prices=request.getParameter("price");
-		System.out.println(pagenum);
 		Hotel ho=new Hotel();
-		System.out.println(JSON.toJSON(from));
 		String type=null;
 		pagenum=(null==pagenum)?"1":pagenum;
 		String types1=null;

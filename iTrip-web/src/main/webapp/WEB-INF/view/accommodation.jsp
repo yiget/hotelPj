@@ -460,6 +460,7 @@ function addTrackEvent(action, opt_label, opt_value){
       
       
     <div class="slei-b">
+    
       <strong class="fleft"><i title="类型" class="iconfont" style="font-size: 34px"></i>类型</strong>
       <ul class="fleft clearfix" id="testdiv">
         <li <c:if test="${empty types or types eq '0'}">class='current'</c:if>><input type="radio" checked="checked" value="0" name="type" typeurl="hotels"><span class="typeLink" rel="nofollow">全部</span></li>
@@ -612,16 +613,15 @@ function addTrackEvent(action, opt_label, opt_value){
  
  <div class="pageNavi">
                 共${page.pages}页
-                <a  href="Xishuangbanna?from=${froms}&pagenum=${pagenum}"  title="第一页">第一页</a>
+                <a  href="Xishuangbanna?from=${froms}&pagenum=1&types=${prices}&types1=${types}"  title="第一页">第一页</a>
                  <c:if test="${empty pagenum}"> </c:if>
                 <c:forEach items="${page.navigatepageNums}"  var="navigatepageNums"  >
                   <c:if test="${navigatepageNums eq pagenum}"><span>${navigatepageNums}</span> </c:if>
-                  <c:if test="${navigatepageNums ne pagenum}">	<a href="Xishuangbanna?from=${froms}&pagenum=${navigatepageNums}" title="第${navigatepageNums}页">${navigatepageNums}</a> </c:if>
+                  <c:if test="${navigatepageNums ne pagenum}">	<a href="Xishuangbanna?from=${froms}&pagenum=${navigatepageNums}&types=${prices}&types1=${types}" title="第${navigatepageNums}页">${navigatepageNums}</a> </c:if>
               	
-              
+             
                 </c:forEach>
-                
-                  <a  href="Xishuangbanna?from=${froms}&pagenum=${pagenum+1}" title="下一页">下一页</a><a  href="Xishuangbanna?from=${froms}&pagenum=${page.pages}" title="最后一页">最后一页</a></div>
+                  <a  href="Xishuangbanna?from=${froms}&pagenum=${pagenum+1}&zice=${type}&types1=${types}" title="下一页">下一页</a><a  href="Xishuangbanna?from=${froms}&pagenum=${page.pages}&zice=${type}&types1=${types}" title="最后一页">最后一页</a></div>
     </div>
 
  
